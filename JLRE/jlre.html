@@ -1,0 +1,933 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- xhtml,html --> 
+<meta name="src" content="jlre.tex" /> 
+<meta name="date" content="2009-01-14 14:04:00" /> 
+<link rel="stylesheet" type="text/css" href="jlre.css" /> 
+</head><body 
+>
+                                                                                                        
+
+                                                                                                        
+           </p><!--l. 64--><p class="noindent" ><span 
+class="ecrm-1440">Annotation of Multiword Expressions in the Prague</span>
+           <span 
+class="ecrm-1440">Dependency Treebank</span>
+           </p><!--l. 64--><p class="noindent" >Eduard
+           Bej&#x010D;ek
+           (<span 
+class="ectt-1095">bejcek@ufal.mff.cuni.cz</span>)
+           and
+           &#x00A0;Pavel
+           Stra&#x0148;ák
+           (<span 
+class="ectt-1095">stranak@ufal.mff.cuni.cz</span>)
+           </p><!--l. 64--><p class="noindent" ><span 
+class="ecti-0900">Institute</span>
+           <span 
+class="ecti-0900">of</span>
+           <span 
+class="ecti-0900">Formal</span>
+           <span 
+class="ecti-0900">and</span>
+           <span 
+class="ecti-0900">Applied</span>
+           <span 
+class="ecti-0900">Linguistics,</span>
+           <span 
+class="ecti-0900">Charles</span>
+           <span 
+class="ecti-0900">University,</span>
+           <span 
+class="ecti-0900">Prague,</span>
+           <span 
+class="ecti-0900">Czech</span>
+           <span 
+class="ecti-0900">Republic</span>
+           </p><!--l. 64--><p class="noindent" >
+           </p><!--l. 52--><p class="noindent" ><span 
+class="ecbx-0900">Abstract.</span><span 
+class="ecbx-0900">&#x00A0; </span><span 
+class="ecrm-0900">In this article we want to demonstrate that annotation of multiword</span>
+           <span 
+class="ecrm-0900">expressions in the Prague Dependency Treebank is a well defined task, that it is useful as</span>
+           <span 
+class="ecrm-0900">well as feasible, and that we can achieve good consistency of such annotations in terms of</span>
+           <span 
+class="ecrm-0900">inter-annotator agreement. We use subtrees of the tectogrammatical tree structures of</span>
+           <span 
+class="ecrm-0900">the Prague dependency treebank to represent the multiword expressions and</span>
+           <span 
+class="ecrm-0900">pre-annotate them automatically. We show a way to measure agreement for this type of</span>
+           <span 
+class="ecrm-0900">annotation. We also argue that some automatic pre-annotation does not damage the</span>
+           <span 
+class="ecrm-0900">results.</span>
+           </p><!--l. 64--><p class="noindent" ><span 
+class="ecbx-0900">Keywords:</span><span 
+class="ecbx-0900">&#x00A0;</span><span 
+class="ecrm-0900">multiword expressions, treebanks, annotation, inter-annotator agreement,</span>
+           <span 
+class="ecrm-0900">named entities</span>
+           <a 
+ id="x1-2r1"></a>
+           <a 
+ id="Q1-1-0"></a>
+           </p><!--l. 72--><p class="noindent" ><span 
+class="ecbx-1095">1.</span>  <span 
+class="ecbx-1095">Motivation</span>
+           </p><!--l. 75--><p class="indent" >   Various projects involving lexico-semantic annotation have been
+           ongoing for many years. Among those there are the projects of word
+           sense annotation, usually for creating training data for word sense
+           disambiguation. However majority of these projects have only annotated
+           very limited number of word senses (cf. Kilgarriff <span class="cite">(<a 
+href="#Xkilgarriff:1998">1998</a>)</span>). Even among
+                                                                                                        
+
+                                                                                                        
+           those that aim towards &#8220;all words&#8221; word-sense annotation, multiword
+           expressions (MWE) are not annotated adequately (see Mihalcea&#x00A0;<span class="cite">(<a 
+href="#Xmihalcea:1998">1998</a>)</span>
+           or Haji&#x010D; et al.&#x00A0;<span class="cite">(<a 
+href="#Xhajic-cwn:04">2004</a>)</span>), because for their successful annotation a
+           methodology allowing identification of new MWEs during annotation is
+           required. Existing dictionaries that include MWEs concentrate only on
+           the most frequent ones, but we argue that there are many more
+           MWEs that can only be identified (and added to the dictionary) by
+           annotation.
+           </p><!--l. 79--><p class="indent" >   There are various projects for identification of named entities (for an
+           overview see &#352;ev&#x010D;íková et al.&#x00A0;<span class="cite">(<a 
+href="#Xsevcikova:2007">2007</a>)</span>). We explain below (mainly in
+           Section&#x00A0;<a 
+href="#x1-8r2">2<!--tex4ht:ref: sec:intro --></a>) why we consider named entities to be concerned with lexical
+           meaning. At this place we just wish to recall that these projects
+           only select some specific parts of text and provide information only
+           for these. They do not aim for full lexico-semantic annotation of
+           texts.
+           </p><!--l. 81--><p class="indent" >   There is also another group of projects that have to tackle the problem of
+           lexical meaning, namely treebanking projects that aim to develop a deeper
+           layer of annotation in addition to a surface syntactic layer. This
+           deeper layer is generally agreed to concern lexical meaning. Therefore
+           the units of this layer cannot be words anymore, they should be
+           <span 
+class="ecti-1095">lexias</span>.
+           </p><!--l. 83--><p class="indent" >   <span 
+class="ecti-1095">Lexia</span>, as defined by Filipec and &#x010C;ermák <span class="cite">(<a 
+href="#Xfilipec:1986">1986</a>)</span>, is equivalent to a
+           &#8220;monosemic lexeme&#8221; of Filipec&#x00A0;<span class="cite">(<a 
+href="#Xfilipec:1994">1994</a>)</span> or a &#8220;lexical unit&#8221; of Cruse&#x00A0;<span class="cite">(<a 
+href="#Xcruse:1986">1986</a>)</span>: <span 
+class="ecti-1095">&#8220;a</span>
+           <span 
+class="ecti-1095">pair of a single sense and a basic form (plus its derived forms) with</span>
+           <span 
+class="ecti-1095">relatively stable semantic properties&#8221;</span>.
+           <a 
+ id="x1-3r1"></a>
+           <a 
+ id="Q1-1-0"></a>
+           </p><!--l. 87--><p class="noindent" >1.1. <span 
+class="eccc-1095">P<span 
+class="small-caps">R</span><span 
+class="small-caps">A</span><span 
+class="small-caps">G</span><span 
+class="small-caps">U</span><span 
+class="small-caps">E</span></span>
+                <span 
+class="eccc-1095">D<span 
+class="small-caps">E</span><span 
+class="small-caps">P</span><span 
+class="small-caps">E</span><span 
+class="small-caps">N</span><span 
+class="small-caps">D</span><span 
+class="small-caps">E</span><span 
+class="small-caps">N</span><span 
+class="small-caps">C</span><span 
+class="small-caps">Y</span></span>
+                <span 
+class="eccc-1095">T<span 
+class="small-caps">R</span><span 
+class="small-caps">E</span><span 
+class="small-caps">E</span><span 
+class="small-caps">B</span><span 
+class="small-caps">A</span><span 
+class="small-caps">N</span><span 
+class="small-caps">K</span></span>
+           </p><!--l. 89--><p class="indent" >   We work with the Prague Dependency Treebank (PDT, see Haji&#x010D;
+           <span class="cite">(<a 
+href="#Xhajic:2005">2005</a>)</span>), which is a large corpus with rich annotation on three layers: it has
+           in addition to the morphological and the surface syntactic layers also the
+           tectogrammatical layer. (In fact, there is also one non-annotation layer,
+           representing the &#8220;raw-text&#8221; segmented into documents, paragraphs, and
+           tokens.) Annotation of a sentence on the morphological layer consists of
+           attaching several attributes to the tokens of the w-layer, the most important
+           of which are morphological lemma and tag. A sentence at the analytical
+           layer is represented as a rooted ordered tree with labeled nodes. The
+           dependency relation between two nodes is captured by an edge with a
+           functional label. The tectogramatical layer has been construed as the
+           layer of the (literal) meaning of the sentence and thus should be
+                                                                                                        
+
+                                                                                                        
+           composed of lexias (lexical units) and the relations between their
+           occurrences.<span class="footnote-mark"><a 
+href="jlre2.html#fn1x0"><sup class="textsuperscript">1</sup></a></span><a 
+ id="x1-4f1"></a> 
+           </p><!--l. 96--><p class="indent" >   On the tectogrammatical layer only the autosemantic words
+           form nodes in a tree (t-nodes). Synsemantic (function) words are
+           represented by various attributes of t-nodes. Each t-node has a
+           lemma: an attribute whose value is the node&#8217;s basic lexical form.
+           Currently t-nodes, and consequently their t-lemmas, are still visibly
+           derived from the morphological division of text into tokens. This
+           preliminary handling has always been considered unsatisfactory in
+           FGD.<span class="footnote-mark"><a 
+href="jlre3.html#fn2x0"><sup class="textsuperscript">2</sup></a></span><a 
+ id="x1-5f2"></a> 
+           There is a clear goal to distinguish t-lemmas through their senses, but this
+           process has not been completed so far (see Section <a 
+href="#x1-10r3">3<!--tex4ht:ref: sec:pdt --></a>).
+           </p><!--l. 102--><p class="indent" >   Figure&#x00A0;<a 
+href="#x1-6r1">1<!--tex4ht:ref: fig:layers --></a> shows the relations between the neighbouring layers of
+           PDT.
+           </p>
+              <hr class="figure" /><div class="figure" 
+><table class="figure"><tr class="figure"><td class="figure" 
+>
+                                                                                                        
+
+                                                                                                        
+                                                                                                        
+
+                                                                                                        
+           </p><!--l. 109--><p class="noindent" ><!--l. 106--><p class="noindent" ><img 
+src="jlre0x.png" alt="PIC" class="graphics" /><!--tex4ht:graphics  
+name="jlre0x.png" src="roviny.pdf"  
+--> <a 
+ id="x1-6r1"></a>
+<span 
+class="ecti-0900">Figure</span><span 
+class="ecti-0900">&#x00A0;1. </span><span 
+class="ecrm-0900">The rendered Czech sentence </span><span 
+class="ecti-0900">Byl by </span><span 
+class="ecti-0900">&#353;el dolesa</span><span 
+class="ecrm-0900">. (lit.: He-was would went</span>
+<span 
+class="ecrm-0900">toforest.) contains past conditional of the verb &#8220;j</span><span 
+class="ecrm-0900">ít&#8221; (to go) and a typo.</span>
+                                                                                                                        
+
+                                                                                                                        
+           </p>
+              </td></tr></table></div><hr class="endfigure" />
+           <!--l. 111--><p class="indent" >     Our project aims at improving the current state of t-lemmas. Our goal is
+           to assign each t-node a t-lemma that would correspond to a lexia, i.e. that
+           would really distinguish the t-node&#8217;s lexical meanings. To achieve this goal,
+           in the first phase of the project, which we report on in this paper, we
+           <span 
+class="ecti-1095">identify multiword expressions and create a lexicon of the corresponding</span>
+           <span 
+class="ecti-1095">lexias</span>. A simple view of the result of our annotations is given in the
+           Figure&#x00A0;<a 
+href="#x1-7r2">2<!--tex4ht:ref: fig:trees --></a>, some technical details are in Section&#x00A0;<a 
+href="#x1-17r2">4.2<!--tex4ht:ref: sec:meth:annot --></a>.
+           </p>
+              <hr class="figure" /><div class="figure" 
+><table class="figure"><tr class="figure"><td class="figure" 
+>
+                                                                                                        
+
+                                                                                                        
+                                                                                                        
+
+                                                                                                        
+           </p><!--l. 122--><p class="noindent" ><!--l. 119--><p class="noindent" ><img 
+src="jlre1x.png" alt="PIC" class="graphics" /><!--tex4ht:graphics  
+name="jlre1x.png" src="stromecky.pdf"  
+--> <a 
+ id="x1-7r2"></a>
+<span 
+class="ecti-0900">Figure</span><span 
+class="ecti-0900">&#x00A0;2. </span><span 
+class="ecrm-0900">Schema of the changes in t-trees after integration of our annotations</span>
+                                                                                                                        
+
+                                                                                                                        
+           </p>
+              </td></tr></table></div><hr class="endfigure" />
+           <a 
+ id="x1-8r2"></a>
+           <a 
+ id="Q1-1-2"></a>
+           <!--l. 133--><p class="noindent" ><span 
+class="ecbx-1095">2.</span>  <span 
+class="ecbx-1095">Introduction</span>
+           </p><!--l. 135--><p class="indent" >   We annotate all occurrences of MWEs (including named entities, see
+           below) in PDT 2.0. When we speak of <span 
+class="ecbx-1095">multiword expressions</span>
+           we mean &#8220;idiosyncratic interpretations that cross word boundaries&#8221;
+           <br 
+class="newline" /><span class="cite">(<a 
+href="#Xsag:2002">Sag et&#x00A0;al., 2002</a>)</span>. We understand multiword expressions as <span 
+class="ecti-1095">a type of lexias</span>. We
+           distinguish also a special type of MWEs, for which we are mainly interested in
+           its type, rather than individual lexias, during the annotation: <span 
+class="ecbx-1095">named entities</span>
+           <span 
+class="ecbx-1095">(NE)</span>.<span class="footnote-mark"><a 
+href="jlre4.html#fn3x0"><sup class="textsuperscript">3</sup></a></span><a 
+ id="x1-9f3"></a> 
+           Treatment of NEs together with other MWEs is important, because
+           syntactic functions are more or less arbitrary inside a NE (consider an
+           address with phone numbers, etc.) and so is the assignment of semantic
+           roles. That is why we need each NE to be combined into a single node, just
+           like we do it with MWEs in general.
+           </p><!--l. 156--><p class="indent" >   For the purpose of annotation we have built a repository of lexias
+           corresponding to MWEs, which we call SemLex. We have built it using
+           entries from some existing dictionaries and it is being enriched during the
+           annotation in order to contain every lexia that was annotated. We explain
+           this in detail in Section&#x00A0;<a 
+href="#x1-16r1">4.1<!--tex4ht:ref: sec:meth:semlex --></a>.
+           <a 
+ id="x1-10r3"></a>
+           <a 
+ id="Q1-1-2"></a>
+           </p><!--l. 164--><p class="noindent" ><span 
+class="ecbx-1095">3.</span>  <span 
+class="ecbx-1095">Current state of MWEs in PDT 2.0</span>
+           </p><!--l. 170--><p class="indent" >   During the annotation of valency that is a part of the tectogrammatical
+           layer of PDT 2.0 the t-lemmas that correspond to lexias have
+           been basically identified for all the verbs and some nouns and
+           adjectives. The resulting valency lexicon is called PDT-VALLEX
+           <span class="cite">(<a 
+href="#Xhajic:2003">Haji&#x010D; et&#x00A0;al., 2003</a>)</span> and we can see it as a repository of lexias
+           based on verbs, adjectives and nouns in PDT that have valency.
+                                                                                                        
+
+                                                                                                        
+           <span class="footnote-mark"><a 
+href="jlre5.html#fn4x0"><sup class="textsuperscript">4</sup></a></span><a 
+ id="x1-11f4"></a>
+           </p><!--l. 175--><p class="indent" >   This is a starting point for having t-nodes corresponding to lexias.
+           However in the current state it is not fully sufficient even for verbs, mainly
+           because parts of MWEs are not joined into one node. Parts of frames
+           marked as idiomatic are still represented by separate t-nodes in a
+           tectogrammatical tree (e.g. nodes with t-lemmas <span 
+class="ectt-1095">&#8220;co&#8221; </span>in Figure&#x00A0;<a 
+href="#x1-12r3">3<!--tex4ht:ref: fig:co-nevidet --></a> or
+           <span 
+class="ectt-1095">&#8220;k_dispozici&#8221; </span>in Figure&#x00A0;<a 
+href="#x1-14r5">5<!--tex4ht:ref: fig:asistent --></a>). Verbonominal phrasemes are also split into
+           two nodes, where the nominal part is governed by the verb. Non-verbal
+           idioms have not been annotated at all.
+           </p><!--l. 177--><p class="indent" >   In Figures&#x00A0;<a 
+href="#x1-12r3">3<!--tex4ht:ref: fig:co-nevidet --></a>, <a 
+href="#x1-13r4">4<!--tex4ht:ref: fig:klaus --></a>, and <a 
+href="#x1-14r5">5<!--tex4ht:ref: fig:asistent --></a> we give several examples of t-trees in PDT 2.0,
+           that include idioms, light verb constructions and named entities:
+           </p><hr class="figure" /><div class="figure" 
+><table class="figure"><tr class="figure"><td class="figure" 
+>
+                                                                                                        
+
+                                                                                                        
+                                                                                                        
+
+                                                                                                        
+           <!--l. 182--><p class="noindent" ><div  
+class="centerline">                                    <img 
+src="jlre2x.png" alt="PIC" class="graphics" /><!--tex4ht:graphics  
+name="jlre2x.png" src="co-nevidet-clause.pdf"  
+-->                                    </div>
+<a 
+ id="x1-12r3"></a>
+<span 
+class="ecti-0900">Figure</span><span 
+class="ecti-0900">&#x00A0;3. </span><span 
+class="ecrm-0900">Idiom </span><span 
+class="ecti-0900">Co nevid</span><span 
+class="ecti-0900">&#x011B;t </span><span 
+class="ecrm-0900">meaning &#8220;in a blink (of an eye)&#8221;, (literally: what not-see)</span>
+                                                                                                                        
+
+                                                                                                                        
+           </p>
+              </td></tr></table></div><hr class="endfigure" />
+              <hr class="figure" /><div class="figure" 
+><table class="figure"><tr class="figure"><td class="figure" 
+>
+                                                                                                                        
+
+                                                                                                                        
+                                                                                                                        
+
+                                                                                                                        
+           <!--l. 188--><p class="noindent" ><div  
+class="centerline">       <img 
+src="jlre3x.png" alt="PIC" class="graphics" width="267.39877pt" height="152.39441pt"  /><!--tex4ht:graphics  
+name="jlre3x.png" src="klaus-a-smlouva.pdf"  
+-->      </div>
+<a 
+ id="x1-13r4"></a>
+<span 
+class="ecti-0900">Figure</span><span 
+class="ecti-0900">&#x00A0;4. </span><span 
+class="ecrm-0900">A sentence featuring a personal name and a name of a bilateral treaty</span>
+<span 
+class="ecrm-0900">(which is not the exact official name, however, thus it is not capitalised)</span>
+                                                                                                                        
+
+                                                                                                                        
+           </p>
+              </td></tr></table></div><hr class="endfigure" />
+              <hr class="figure" /><div class="figure" 
+><table class="figure"><tr class="figure"><td class="figure" 
+>
+                                                                                                                        
+
+                                                                                                                        
+                                                                                                                        
+
+                                                                                                                        
+           <!--l. 194--><p class="noindent" ><div  
+class="centerline">                    <img 
+src="jlre4x.png" alt="PIC" class="graphics" /><!--tex4ht:graphics  
+name="jlre4x.png" src="as-pod.pdf"  
+-->                 </div>
+<a 
+ id="x1-14r5"></a>
+<span 
+class="ecti-0900">Figure</span><span 
+class="ecti-0900">&#x00A0;5. </span><span 
+class="ecrm-0900">A t-tree of a sentence featuring a light verb construction </span><span 
+class="ecti-0900">m</span><span 
+class="ecti-0900">ít k dispozici</span>
+<span 
+class="ecrm-0900">(lit.: to have at [one&#8217;s] disposal) and a named entity (a product name) </span><span 
+class="ecti-0900">Asistent</span>
+<span 
+class="ecti-0900">podnikatele </span><span 
+class="ecrm-0900">(lit.: assistent of-businessman) that looks like a common phrase, except</span>
+<span 
+class="ecrm-0900">for the capital &#8216;A&#8217;.</span>
+                                                                                                                        
+
+                                                                                                                        
+           </p>
+              </td></tr></table></div><hr class="endfigure" />
+           <a 
+ id="x1-15r4"></a>
+           <a 
+ id="Q1-1-5"></a>
+           <!--l. 200--><p class="noindent" ><span 
+class="ecbx-1095">4.</span>  <span 
+class="ecbx-1095">Methodology</span>
+           <a 
+ id="x1-16r1"></a>
+           <a 
+ id="Q1-1-5"></a>
+           </p><!--l. 203--><p class="noindent" >4.1. <span 
+class="eccc-1095">B<span 
+class="small-caps">U</span><span 
+class="small-caps">I</span><span 
+class="small-caps">L</span><span 
+class="small-caps">D</span><span 
+class="small-caps">I</span><span 
+class="small-caps">N</span><span 
+class="small-caps">G</span></span>
+                <span 
+class="eccc-1095">S<span 
+class="small-caps">E</span><span 
+class="small-caps">M</span>L<span 
+class="small-caps">E</span><span 
+class="small-caps">X</span></span>
+           </p><!--l. 205--><p class="indent" >   Each entry we add into SemLex is considered to be a <span 
+class="ecbx-1095">lexia</span>. We have also
+           added nine special entries to identify NE types, so we do not need to add all
+           the expressions themselves. These types are derived from the NE
+           classification by &#352;ev&#x010D;íková et al.&#x00A0;<span class="cite">(<a 
+href="#Xsevcikova:2007">2007</a>)</span>. Some frequent names of persons,
+           institutions or other objects (e.g.&#x00A0;film titles) are being added into SemLex
+           during annotation (while keeping the information about their NE type),
+           because this allows for their following occurrences to be pre-annotated
+           automatically (see Section&#x00A0;<a 
+href="#x1-20r5">5<!--tex4ht:ref: sec:pre --></a>). For others, like addresses or bibliographic
+           entries, it makes but little sense, because they most probably will not
+           reappear during the annotation.
+           </p><!--l. 212--><p class="indent" >   Currently (for the first stage of lexico-semantic annotation of PDT)
+           SemLex contains only lexias corresponding to MWEs. Its base has been
+           composed of MWEs extracted from Czech WordNet <span class="cite">(<a 
+href="#Xsmrz:03">Smr&#382;, 2003</a>)</span>, Eurovoc
+           <span class="cite">(<a 
+href="#Xeurovoc:07">Eurovoc, 2007</a>)</span> and Dictionary of Czech Phraseology and Idiomatics
+           <span class="cite">(<a 
+href="#Xcermak:1988">&#x010C;ermák et&#x00A0;al., 1994</a>)</span>.Currently there are over 30,000 multiword lexias in
+           SemLex and more are being added during annotations.
+           </p><!--l. 218--><p class="indent" >   The entries added by annotators must be lexias as defined above.
+           Annotators define their &#8220;sense&#8221; informally (as well as possible) and we
+           extract an example of usage and the basic form from the annotation
+           automatically. The &#8220;sense&#8221; information will be revised by a lexicographer,
+           based on annotated occurrences.
+           <a 
+ id="x1-17r2"></a>
+           <a 
+ id="Q1-1-5"></a>
+           </p><!--l. 221--><p class="noindent" >4.2. <span 
+class="eccc-1095">A<span 
+class="small-caps">N</span><span 
+class="small-caps">N</span><span 
+class="small-caps">O</span><span 
+class="small-caps">T</span><span 
+class="small-caps">A</span><span 
+class="small-caps">T</span><span 
+class="small-caps">I</span><span 
+class="small-caps">O</span><span 
+class="small-caps">N</span></span>
+           </p><!--l. 224--><p class="indent" >   PDT 2.0 uses PML&#x00A0;<span class="cite">(<a 
+href="#Xpajas:2005">Pajas and &#352;t&#x011B;pánek, 2005</a>)</span>, which is an application
+           of XML that utilises a stand-off annotation scheme. We have extended the
+           PDT-PML with a new schema for so-called s-files. We use these files to
+           store all of our annotation without altering the PDT itself. These
+           s-files are very simple: basically each of them corresponds to one file
+           of PDT and consists of a list of s-nodes. Each s-node corresponds
+                                                                                                        
+
+                                                                                                        
+           to an occurrence of a MWE and is composed of a link to an entry
+           in SemLex and a list of identifiers of t-nodes that correspond to
+           this s-node. Figure&#x00A0;<a 
+href="#x1-19r6">6<!--tex4ht:ref: fig:s-layer --></a> shows a relation of s-layer to PDT layers and
+           SemLex.<span class="footnote-mark"><a 
+href="jlre6.html#fn5x0"><sup class="textsuperscript">5</sup></a></span><a 
+ id="x1-18f5"></a> 
+           </p><hr class="figure" /><div class="figure" 
+><table class="figure"><tr class="figure"><td class="figure" 
+>
+                                                                                                                        
+
+                                                                                                                        
+                                                                                                                        
+
+                                                                                                                        
+           </p><!--l. 232--><p class="noindent" ><!--l. 229--><p class="noindent" ><img 
+src="jlre5x.png" alt="PIC" class="graphics" /><!--tex4ht:graphics  
+name="jlre5x.png" src="layers-with-s-layer.pdf"  
+--> <a 
+ id="x1-19r6"></a>
+<span 
+class="ecti-0900">Figure</span><span 
+class="ecti-0900">&#x00A0;6. </span><span 
+class="ecrm-0900">Relation of s-layer to PDT and SemLex</span>
+                                                                                                                        
+
+                                                                                                                        
+           </p>
+              </td></tr></table></div><hr class="endfigure" />
+           <!--l. 235--><p class="indent" >     Our annotation program reads in a tectogrammatical representation
+           (t-file) and calls TrEd <span class="cite">(<a 
+href="#Xpajas:tred">Pajas, 2007</a>)</span> to generate plain text. This plain text
+           (still linked to the tectogrammatical representation) is presented to the
+           annotator. While the annotator marks MWEs already present in SemLex or
+           adds new MWEs into SemLex, tree representations of these MWEs
+           extracted from underlying t-trees are added into their SemLex entries via
+           TrEd scripts.
+           <a 
+ id="x1-20r5"></a>
+           <a 
+ id="Q1-1-6"></a>
+           </p><!--l. 241--><p class="noindent" ><span 
+class="ecbx-1095">5.</span>  <span 
+class="ecbx-1095">Pre-annotation</span>
+           </p><!--l. 243--><p class="indent" >   Because MWEs tend to occur repeatedly in a text, we have decided to
+           test pre-annotation both for speed improvement and for improving the
+           consistency of annotations. On the assumption that <span 
+class="ecti-1095">all occurrences of a</span>
+           <span 
+class="ecti-1095">MWE share the same tree structure</span>, while there are no restrictions on the
+           surface word order other than those imposed by the tree structure itself we
+           have decided to employ four types of pre-annotation:
+           </p><div class="asparaenum">
+           <!--l. 252--><p class="indent" >
+              A) <a 
+ id="x1-211"></a>External pre-annotation provided by our colleague (see Hnátková
+           <span class="cite">(<a 
+href="#Xhnatkova:2002">2002</a>)</span>). With each MWE a set of rules is associated that limits possible
+           forms and surface word order of parts of a MWE. This approach was
+           devised for corpora that are not syntactically annotated and is very
+           time consuming.
+           </p><!--l. 253--><p class="indent" >
+              B) <a 
+ id="x1-222"></a>Our one-time pre-annotation with those lexias from SemLex that
+           have been previously used in annotation, and thus have a tree structure
+           as a part of their entry.
+           </p><!--l. 254--><p class="indent" >
+              C) <a 
+ id="x1-233"></a>Dynamic pre-annotation as in <a 
+href="#x1-222">B<!--tex4ht:ref: pre-static --></a>, only with the SemLex entries
+           that have been recently added by the annotator.
+           </p><!--l. 255--><p class="indent" >
+              D) <a 
+ id="x1-244"></a>When an annotator tags an occurrence of a MWE in the text,
+                                                                                                        
+
+                                                                                                        
+           other occurrences of this MWE in the article are identified automatically.<span class="footnote-mark"><a 
+href="jlre7.html#fn6x0"><sup class="textsuperscript">6</sup></a></span><a 
+ id="x1-25f6"></a></p></div>
+           <!--l. 267--><p class="indent" >     Pre-annotation (<a 
+href="#x1-211">A<!--tex4ht:ref: pre-hnatkova --></a>)&#x00A0;was executed once for all of the PDT. (<a 
+href="#x1-222">B<!--tex4ht:ref: pre-static --></a>)&#x00A0;is
+           performed each time we merge lexias added by annotators into the
+           main SemLex. We carry out this annotation in one batch for all
+           PDT files remaining to annotate. (<a 
+href="#x1-233">C<!--tex4ht:ref: pre-on-load --></a>)&#x00A0;is done for each file while it
+           is being opened in the annotation environment. (<a 
+href="#x1-244">D<!--tex4ht:ref: pre-on-annot --></a>)&#x00A0;happens each
+           time the annotator adds a new lexia into SemLex and uses it to
+           annotate an occurrence in the text. In subsequent files instances
+           of this lexia are already annotated in step (<a 
+href="#x1-233">C<!--tex4ht:ref: pre-on-load --></a>), and later even in
+           (<a 
+href="#x1-222">B<!--tex4ht:ref: pre-static --></a>).
+           </p><!--l. 274--><p class="indent" >   After the pilot annotation without pre-annotation (<a 
+href="#x1-244">D<!--tex4ht:ref: pre-on-annot --></a>) we have compared
+           instances of the same tags and found that 10.5% of repeated lexias
+           happened to have two different tree representations. Below we analyse
+           several most important sources of these inconsistent t-trees and possible
+           improvements: </p>
+               <ul class="itemize1">
+               <li class="itemize"><span 
+class="ecti-1095">Occasional lemmatisation errors. </span>They are not very frequent, but there
+               is no efficient way to find and correct them before the annotations.
+               So there is not much we can do but it is not very important.
+               Our annotations can however serve as a source for automatic
+               corrections.
+                    <ul class="itemize2">
+                    <li class="itemize"><span 
+class="ecti-1095">ji</span><span 
+class="ecti-1095">&#382;n</span><span 
+class="ecti-1095">í Korea </span>vs. <span 
+class="ecti-1095">Ji</span><span 
+class="ecti-1095">&#382;n</span><span 
+class="ecti-1095">í Korea </span>(southern vs. South Korea)</li></ul>
+               </li>
+               <li class="itemize"><span 
+class="ecti-1095">Annotator&#8217;s mistake (not marking correct words). </span>When an annotator
+               makes an error while marking a first occurrence of a lexia, the tree
+               representation that gets stored in SemLex is incorrect. As a result,
+               pre-annotation gives false positives or fails to work.
+               <!--l. 284--><p class="noindent" >It is therefore necessary to allow annotators to correct the tree
+               structure of a SemLex entry, i.e. extend functionality of the annotation
+               tool. Once all the types of pre-annotation are employed, this error can
+               happen only once, because all the following occurrences of a lexia are
+               pre-annotated automatically. We are currently working on these
+               improvements.
+                                                                                                        
+
+                                                                                                        
+               </p></li>
+               <li class="itemize"><span 
+class="ecti-1095">Gender opposites, diminutives and augmentatives. </span>These are currently
+               represented by variations of t-lemma. We believe that they should be
+               represented by attributes of t-nodes that could be roughly equivalent to
+               some of the lexical functions in the Meaning-text theory (see <span class="cite">(<a 
+href="#Xmelcuk:1992">Mel&#8217;&#x010D;uk,
+               1996</a>)</span>). This should be tackled in some future version of PDT. Once
+               resolved it would allow us to identify following (and many similar) cases
+               automatically.
+                    <ul class="itemize2">
+                    <li class="itemize"><span 
+class="ecti-1095">obchodn</span><span 
+class="ecti-1095">í </span><span 
+class="ecti-1095">&#x0159;editel </span>vs. <span 
+class="ecti-1095">obchodn</span><span 
+class="ecti-1095">í </span><span 
+class="ecti-1095">&#x0159;editelka </span><br 
+class="newline" />(lit.: managing director-man vs. m. director-woman)
+                    </li>
+                    <li class="itemize"><span 
+class="ecti-1095">rodinn</span><span 
+class="ecti-1095">&#x00FD; d</span><span 
+class="ecti-1095">&#x016F;m </span>vs. <span 
+class="ecti-1095">rodinn</span><span 
+class="ecti-1095">&#x00FD; domek </span><br 
+class="newline" />(lit.: family house vs. family little-house; but the diminutive
+                    <span 
+class="ecti-1095">domek </span>means basically &#8220;family house&#8221;)</li></ul>
+               <!--l. 295--><p class="noindent" >Currently we annotate these cases with the same lexias, but all the
+               instances with the derived variants of t-lemma (like <span 
+class="ecti-1095">&#x0159;editelka  </span>or <span 
+class="ecti-1095">domek</span>
+               must be identified manually (see Section&#x00A0;<a 
+href="#x1-20r5">5<!--tex4ht:ref: sec:pre --></a>). We plan to try automatic
+               identification of some diminutives and gender opposites derived by most
+               common patterns.
+               </p></li>
+               <li class="itemize"><span 
+class="ecti-1095">Newly established t-nodes corresponding to elided parts of MWEs in</span>
+               <span 
+class="ecti-1095">coordinations. </span>Since t-layer contains many newly established t-nodes,
+               many of whom cannot be lexicalised, our original decision was to hide
+               all of these nodes from annotators and generate for them pure surface
+               sentence. This decision resulted however in the current situation, when
+               some MWEs in coordinations cannot be correctly annotated. For
+               instance <span 
+class="ecti-1095">Prvn</span><span 
+class="ecti-1095">í a druh</span><span 
+class="ecti-1095">á sv</span><span 
+class="ecti-1095">&#x011B;tov</span><span 
+class="ecti-1095">á v</span><span 
+class="ecti-1095">álka </span>(First and Second World War) is a
+               coordination of two multiword lexemes. A tectogrammatical tree
+               that includes it does have newly established t-nodes for &#8220;world&#8221;
+               and &#8220;war&#8221; of the first lexeme but they are elided in the surface
+               sentence.
+               <!--l. 302--><p class="noindent" >After analysing annotated examples like the one above we have decided
+               to generate surface words from some of the newly established t-nodes in
+               order to allow correct annotation of all the MWEs. These &#8220;added&#8221;
+               words will be displayed in grey and while some morphological forms of
+               these words may be incorrect, we believe they will serve their
+               purpose.
+           </p>
+               </li></ul>
+                                                                                                        
+
+                                                                                                        
+           <!--l. 319--><p class="indent" >    Up to now we have not found any MWE such that its structure cannot
+           be represented by a single tectogrammatical tree. 1.1% of all occurences
+           were not connected graphs, but this happened due to errors in data and to
+           our incorrect handling of coordinations with newly established t-nodes (see
+           above). This corroborates our assumption that (disregarding errors) all
+           occurrences of a MWE share the same tree structure. As a result, we started
+           storing the tree structures in the SemLex entries and employ them in
+           pre-annotation (<a 
+href="#x1-244">D<!--tex4ht:ref: pre-on-annot --></a>). This also allows us to use pre-annotations (<a 
+href="#x1-222">B<!--tex4ht:ref: pre-static --></a>) and (<a 
+href="#x1-233">C<!--tex4ht:ref: pre-on-load --></a>),
+           but we have decided not to use them at the moment, in order to be able to
+           evaluate each pre-annotation step separately. Thus the following section
+           reports on the experiments that employ pre-annotations (<a 
+href="#x1-211">A<!--tex4ht:ref: pre-hnatkova --></a>) and
+           (<a 
+href="#x1-244">D<!--tex4ht:ref: pre-on-annot --></a>).
+           <a 
+ id="x1-30r6"></a>
+           <a 
+ id="Q1-1-6"></a>
+           </p><!--l. 323--><p class="noindent" ><span 
+class="ecbx-1095">6.</span>  <span 
+class="ecbx-1095">Analysis of Annotations</span>
+           </p><!--l. 325--><p class="indent" >   Two annotators have started to use (and test) the tool we have
+           developed. They both have got the same texts. The text is generated from
+           the t-trees and presented as a plain text with pre-annotated words marked
+           by colour labels. Annotators add their tags in the form of different colour
+           labels and they can delete the pre-annotated tags. In this experiment the
+           data consist of approx. 120,000 tokens that correspond to 100,000
+           t-nodes. Both annotators have marked about 15,200 t-nodes (<span 
+class="cmsy-10x-x-109">&#x2248; </span>15%) as
+           parts of MWEs. Annotator <span 
+class="cmmi-10x-x-109">A </span>has grouped them into 7,263 MWEs
+           and annotator <span 
+class="cmmi-10x-x-109">B </span>into 6,888. So the average length of a MWE is 2.2
+           t-nodes.
+           </p><!--l. 332--><p class="indent" >   The ratio of general named entities versus SemLex lexias was 52:48 for
+           annotator <span 
+class="cmmi-10x-x-109">A </span>and 49:51 in the case of annotator <span 
+class="cmmi-10x-x-109">B</span>. Annotator <span 
+class="cmmi-10x-x-109">B </span>used 10%
+           more lexias than annotator <span 
+class="cmmi-10x-x-109">A </span>(3,279 and 3,677), while they both
+           used almost the same number of NEs. Some comparison is given in
+           Table&#x00A0;<span 
+class="ecbx-1095">??</span>.
+                                                                                                        
+
+                                                                                                        
+           </p><!--l. 334--><p class="indent" >   </p><hr class="float" /><div class="float" 
+><table class="float"><tr class="float"><td class="float" 
+>
+                                                                                                        
+
+                                                                                                        
+           <!--l. 347--><p class="indent" >    Both annotators also needed to add missing entries to the originally
+           compiled SemLex or to edit existing entries. Annotator <span 
+class="cmmi-10x-x-109">A </span>added 722 entries
+           while annotator <span 
+class="cmmi-10x-x-109">B </span>added 861. They modified 796 and 809 existing entries,
+           respectively.
+           <a 
+ id="x1-32r1"></a>
+           <a 
+ id="Q1-1-7"></a>
+           </p><!--l. 350--><p class="noindent" >6.1. <span 
+class="eccc-1095">I<span 
+class="small-caps">N</span><span 
+class="small-caps">T</span><span 
+class="small-caps">E</span><span 
+class="small-caps">R</span>-<span 
+class="small-caps">A</span><span 
+class="small-caps">N</span><span 
+class="small-caps">N</span><span 
+class="small-caps">O</span><span 
+class="small-caps">T</span><span 
+class="small-caps">A</span><span 
+class="small-caps">T</span><span 
+class="small-caps">O</span><span 
+class="small-caps">R</span></span>
+                <span 
+class="eccc-1095">A<span 
+class="small-caps">G</span><span 
+class="small-caps">R</span><span 
+class="small-caps">E</span><span 
+class="small-caps">E</span><span 
+class="small-caps">M</span><span 
+class="small-caps">E</span><span 
+class="small-caps">N</span><span 
+class="small-caps">T</span></span>
+           </p><!--l. 353--><p class="indent" >   In this section our primary goal is to assess whether with our current
+           methodology we produce a reliable annotation of MWEs. To that end we
+           measure the amount of inter-annotator agreement that is above chance.
+           There are, however, a few sources of complications in measuring this
+           agreement: </p>
+               <ul class="itemize1">
+               <li class="itemize">Each tag of a MWE identifies a subtree of a tectogrammatical tree
+               (represented on the surface by a set of marked words). This allows
+               for partial agreement of tags at the beginning, at the end, but also
+               in the middle of a surface interval (in a sentence).
+               </li>
+               <li class="itemize">A disagreement of the annotators on the tag is still an agreement
+               on the fact that this t-node is a part of a MWE and thus should
+               be tagged. This means we have to allow for partial agreement on
+               a tag.
+               </li>
+               <li class="itemize">There is no clear upper bound as to how many (and how long)
+               MWEs there are in texts.
+               </li>
+               <li class="itemize">There  is  not  a  clear  and  simple  way  to  estimate  the  amount
+               of  agreement  by  chance,  because  it  must  include  the  partial
+               agreements mentioned above.</li></ul>
+           <!--l. 365--><p class="indent" >    Since we want to keep our agreement calculation as simple as possible
+           but we also need to take into account the issues above, we have decided to
+           start from <span 
+class="cmmi-10x-x-109">&#x03C0; </span>as defined in <span class="cite">(<a 
+href="#Xartstein:2007">Artstein and Poesio, 2007</a>)</span>: <span 
+class="cmmi-10x-x-109">&#x03C0; </span><span 
+class="cmr-10x-x-109">=</span> <img 
+src="jlre6x.png" alt="A1o--AAe-
+    e"  class="frac" align="middle" /> and to
+           make a few adjustments to allow for partial agreement and estimated upper
+           bound.
+           </p><!--l. 368--><p class="indent" >   Because we do not know how many MWEs there are in our texts, we
+           need to <span 
+class="ecti-1095">calculate the agreement over all t-nodes</span>, rather than just the t-nodes
+           that &#8220;should be annotated&#8221;. This also means that the theoretical maximal
+           agreement (upper bound) <span 
+class="cmmi-10x-x-109">U </span>cannot be 1. If it was 1, it would be saying that
+                                                                                                        
+
+                                                                                                        
+           all nodes are part of MWEs.
+           </p><!--l. 370--><p class="indent" >   Since we know that <span 
+class="cmmi-10x-x-109">U &#x003C; </span><span 
+class="cmr-10x-x-109">1 </span>but we do not know its exact value, we use the
+           <span 
+class="ecti-1095">estimated upper bound</span> <img 
+src="jlre7x.png" alt="U^"  class="widehat"  /> (see Equation <a 
+href="#x1-33r1">1<!--tex4ht:ref: eq-upper-bound --></a>). Because we calculate <img 
+src="jlre8x.png" alt="U^"  class="widehat"  /> over all
+           t-nodes, we need to account not only for agreement on tagging a t-node, but
+           also for agreement on a t-node not being a part of a MWE, i.e. not tagged
+           at all. This allows us to positively discriminate the cases where annotators
+           agree that a t-node is not a part of a MWE from the cases where one
+           annotator annotates a t-node and the other one does not, which is evidently
+           worse.
+           </p><!--l. 376--><p class="indent" >
+                                                                                                        
+
+                                                                                                        
+           </p><!--l. 377--><p class="indent" >   If <span 
+class="cmmi-10x-x-109">N </span>is the number of all t-nodes in our data and <span 
+class="cmmi-10x-x-109">n</span><sub><span 
+class="cmmi-8">A</span><span 
+class="cmsy-8">&#x222A;</span><span 
+class="cmmi-8">B</span></sub> is the number of
+           t-nodes annotated by at least one annotator, then we estimate <img 
+src="jlre9x.png" alt="^U"  class="widehat"  /> as
+           follows:
+           </p>
+              <table 
+class="equation"><tr><td>
+              <center class="math-display" >
+           <img 
+src="jlre10x.png" alt="    nA &#x222A;B          N - nA&#x222A;B
+^U = --N-- + 0.052&#x22C5; ---N------= 0.215.
+           " class="math-display"  /><a 
+ id="x1-33r1"></a></center></td><td class="equation-label">(1)</td></tr></table>
+           <!--l. 381--><p class="nopar" >
+           </p><!--l. 383--><p class="indent" >   The weight <span 
+class="cmr-10x-x-109">0</span><span 
+class="cmmi-10x-x-109">.</span><span 
+class="cmr-10x-x-109">052 </span>used for scoring the t-nodes that were not annotated is
+           explained below (<span 
+class="cmmi-10x-x-109">c </span><span 
+class="cmr-10x-x-109">= 4</span>). Because <img 
+src="jlre11x.png" alt="^U"  class="widehat"  /> includes all the disagreements of the
+           annotators, we believe that the real upper bound <span 
+class="cmmi-10x-x-109">U </span>lies somewhat below it
+           and the agreement value 0.215 is not something that should (or could) be
+           achieved. It is however based on the assumption that the data we have not
+           yet seen have similar proportion of MWEs as the data we have used for the
+           upper bound estimate.
+           </p><!--l. 385--><p class="indent" >   To account for partial agreement we divide the t-nodes into 5 classes <span 
+class="cmmi-10x-x-109">c</span>
+           and assign each class a weight <span 
+class="cmmi-10x-x-109">w</span><sub><span 
+class="cmmi-8">c</span></sub> as follows:
+                 </p><dl class="enumerate"><dt class="enumerate">
+           <span 
+class="cmmi-10x-x-109">c </span><span 
+class="cmr-10x-x-109">= 1</span> </dt><dd 
+class="enumerate">If the annotators agree on the exact tag from SemLex, we get
+                 maximum information: <span 
+class="cmmi-10x-x-109">w</span><sub><span 
+class="cmr-8">1</span></sub> <span 
+class="cmr-10x-x-109">= 1</span>
+                 </dd><dt class="enumerate">
+           <span 
+class="cmmi-10x-x-109">c </span><span 
+class="cmr-10x-x-109">= 2</span> </dt><dd 
+class="enumerate">If they agree that the t-node is a part of a NE or they agree that
+                 it is a part of some lexia from SemLex, but they do not agree
+                 which NE or which lexia, we estimate we get about a half of the
+                 information compared to when <span 
+class="cmmi-10x-x-109">c </span><span 
+class="cmr-10x-x-109">= 1</span>: <span 
+class="cmmi-10x-x-109">w</span><sub><span 
+class="cmr-8">2</span></sub> <span 
+class="cmr-10x-x-109">= 0</span><span 
+class="cmmi-10x-x-109">.</span><span 
+class="cmr-10x-x-109">5</span>
+                 </dd><dt class="enumerate">
+           <span 
+class="cmmi-10x-x-109">c </span><span 
+class="cmr-10x-x-109">= 3</span> </dt><dd 
+class="enumerate">If they agree that the t-node is a part of a MWE, but disagree
+                 whether  a  NE  or  a  lexia  from  SemLex,  it  is  again  half  the
+                 information compared to when <span 
+class="cmmi-10x-x-109">c </span><span 
+class="cmr-10x-x-109">= 2</span>, so <span 
+class="cmmi-10x-x-109">w</span><sub><span 
+class="cmr-8">3</span></sub> <span 
+class="cmr-10x-x-109">= 0</span><span 
+class="cmmi-10x-x-109">.</span><span 
+class="cmr-10x-x-109">25</span>
+                                                                                                       
+
+

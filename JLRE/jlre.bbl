@@ -1,0 +1,119 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citeauthoryear{Artstein and Poesio}{2007}]{artstein:2007}
+Artstein, R. and M. Poesio: 2007, `Inter-coder agreement for computational
+  linguistics'.
+\newblock {\em {Submitted to Computational Linguistics}}.
+
+\bibitem[\protect\citeauthoryear{{\v C}erm{\'a}k et~al.}{1994}]{cermak:1988}
+{\v C}erm{\'a}k, F., V. {\v C}erven{\'a}, M. Churav{\'y}, and J. Macha{\v c}:
+  1994, {\em Slovn{\'\i}k {\v c}esk{\'e} frazeologie a idiomatiky}.
+\newblock Academia.
+
+\bibitem[\protect\citeauthoryear{Cohen}{1968}]{cohen:1968}
+Cohen, J.: 1968, `Weighted kappa: Nominal scale agreement with provision for
+  scaled disagreement or partial credit'.
+\newblock {\em Psychological Bulletin} {\bf 70}(4), 213--220.
+
+\bibitem[\protect\citeauthoryear{Eurovoc}{2007}]{eurovoc:07}
+Eurovoc: 2007, {\em {http://europa.eu/eurovoc/}}.
+
+\bibitem[\protect\citeauthoryear{Haji{\v c}}{2005}]{hajic:2005}
+Haji{\v c}, J.: 2005, {\em Insight into Slovak and Czech Corpus Linguistics},
+  Chapt. Complex Corpus Annotation: The Prague Dependency Treebank, pp. 54--73.
+\newblock Veda Bratislava, Slovakia.
+
+\bibitem[\protect\citeauthoryear{Haji{\v c} et~al.}{2004}]{hajic-cwn:04}
+Haji{\v c}, J., M. Holub, M. Hu{\v c}{\'\i}nov{\'a}, M. Pavl{\'\i}k, P. Pecina,
+  P. Stra{\v n}{\'a}k, and P.~M. {\v S}id{\'a}k: 2004, `Validating and
+  Improving the {C}zech {W}ord{N}et via Lexico-Semantic Annotation of the
+  {P}rague {D}ependency {T}reebank'.
+\newblock In: {\em LREC 2004}. Lisbon.
+
+\bibitem[\protect\citeauthoryear{Haji{\v c} et~al.}{2003}]{hajic:2003}
+Haji{\v c}, J., J. Panevov{\'a}, Z. Ure{\v s}ov{\'a}, A. B{\'e}mov{\'a}, V.
+  Kol{\'a}{\v r}ov{\'a}, and P. Pajas: 2003, `{PDT-VALLEX}'.
+\newblock In: J. Nivre and E. Hinrichs (eds.): {\em {Proceedings of The Second
+  Workshop on Treebanks and Linguistic Theories}}, Vol.~9 of {\em Mathematical
+  Modeling in Physics, Engineering and Cognitive Sciences}. Vaxjo, Sweden, pp.
+  57--68, Vaxjo University Press.
+
+\bibitem[\protect\citeauthoryear{Haji{\v c}ov{\'a}
+  et~al.}{1998}]{hajicova:1998}
+Haji{\v c}ov{\'a}, E., B.~H. Partee, and P. Sgall: 1998, {\em Topic-focus
+  articulation, tripartite structures, and semantic content}, Vol.~71 of {\em
+  Studies in Linguistics and Philosophy}.
+\newblock Dordrecht: Kluwer.
+
+\bibitem[\protect\citeauthoryear{Hn{\'a}tkov{\'a}}{2002}]{hnatkova:2002}
+Hn{\'a}tkov{\'a}, M.: 2002, `{Zna{\v c}kov{\'a}n{\'\i} fraz{\'e}m{\r u} a
+  idiom{\r u} v {\v C}esk{\'e}m n{\'a}rodn{\'\i}m korpusu s pomoc{\'\i}
+  Slovn{\'\i}ku {\v c}esk{\'e} frazeologie a idiomatiky}'.
+\newblock {\em {Slovo a slovesnost}}.
+
+\bibitem[\protect\citeauthoryear{Kilgarriff}{1998}]{kilgarriff:1998}
+Kilgarriff, A.: 1998, `SENSEVAL: An Exercise in Evaluating Word Sense
+  Disambiguation Programs'.
+\newblock In: {\em Proc. LREC}. Granada, pp. 581--588.
+
+\bibitem[\protect\citeauthoryear{Krenn and Erbach}{1993}]{krenn}
+Krenn, B. and G. Erbach: 1993, `Idioms and Support Verb Constructions in HPSG'.
+\newblock Technical report, Universität des Saarlandes, Saarbrücken.
+
+\bibitem[\protect\citeauthoryear{Mel'{\v c}uk}{1996}]{melcuk:1992}
+Mel'{\v c}uk, I.: 1996, `Lexical Functions: A Tool for the Description of
+  Lexical Relations in a Lexicon'.
+\newblock In: L. Wanner (ed.): {\em Lexical Functions in Lexicography and
+  Natural Language Processing}, Vol.~31 of {\em Studies in Language Companion
+  Series}.
+\newblock John Benjamins, pp. 37--102.
+
+\bibitem[\protect\citeauthoryear{Meyers et~al.}{2004}]{nombank}
+Meyers, A., R. Reeves, C. Macleod, R. Szekely, V. Zielinska, B. Young, and R.
+  Grishman: 2004, `The NomBank Project: An Interim Report'.
+\newblock In: A. Meyers (ed.): {\em HLT-NAACL 2004 Workshop: Frontiers in
+  Corpus Annotation}. Boston, Massachusetts, USA, pp. 24--31, Association for
+  Computational Linguistics.
+
+\bibitem[\protect\citeauthoryear{Mihalcea}{1998}]{mihalcea:1998}
+Mihalcea, R.: 1998, `SEMCOR Semantically tagged corpus'.
+
+\bibitem[\protect\citeauthoryear{Pajas}{2007}]{pajas:tred}
+Pajas, P.: 2007, `{TrEd. http://ufal.mff.cuni.cz/$\sim$pajas/tred/index.html}'.
+
+\bibitem[\protect\citeauthoryear{Pajas and {\v S}t{\v
+  e}p{\'a}nek}{2005}]{pajas:2005}
+Pajas, P. and J. {\v S}t{\v e}p{\'a}nek: 2005, `{A Generic XML-Based Format for
+  Structured Linguistic Annotation and Its Application to Prague
+  DependencyTreebank 2.0}'.
+\newblock Technical Report TR-2005-29, {\'U}FAL MFF UK, Prague, Czech Rep.
+
+\bibitem[\protect\citeauthoryear{Palmer et~al.}{2005}]{propbank}
+Palmer, M., D. Gildea, and P. Kingsbury: 2005, `The Proposition Bank: A Corpus
+  Annotated with Semantic Roles'.
+\newblock {\em Computational Linguistics Journal} {\bf 31}(1).
+
+\bibitem[\protect\citeauthoryear{Sag et~al.}{2002}]{sag:2002}
+Sag, I.~A., T. Baldwin, F. Bond, A. Copestake, and D. Flickinger: 2002,
+  `Multiword Expressions: A Pain in the Neck for NLP'.
+\newblock In: {\em Third International Conference, CICLing}.
+
+\bibitem[\protect\citeauthoryear{{\v S}ev{\v c}{\'\i}kov{\'a}
+  et~al.}{2007}]{sevcikova:2007}
+{\v S}ev{\v c}{\'\i}kov{\'a}, M., Z. {\v Z}abokrtsk{\'y}, and O. Kr{\r u}za:
+  2007, `Zpracov{\'a}n{\'\i} pojmenovan{\'y}ch entit v {\v c}esk{\'y}ch textech
+  (Treatment of Named Entities in Czech Texts)'.
+\newblock Technical Report TR-2007-36, {\'U}FAL MFF UK, Prague, Czech Republic.
+
+\bibitem[\protect\citeauthoryear{Sgall et~al.}{1986}]{sgall-etal:1986}
+Sgall, P., E. Haji{\v c}ov{\'a}, and J. Panevov{\'a}: 1986, {\em The Meaning of
+  the Sentence in Its Semantic and Pragmatic Aspects}.
+\newblock Praha/Dordrecht: Academia/Reidel Publ. Comp.
+
+\bibitem[\protect\citeauthoryear{Smr{\v z}}{2003}]{smrz:03}
+Smr{\v z}, P.: 2003, `Quality Control for Wordnet Development'.
+\newblock In: P. Sojka, K. Pala, P. Smr{\v z}, C. Fellbaum, and P. Vossen
+  (eds.): {\em Proceedings of the Second International WordNet Conference---GWC
+  2004}. pp. 206--212, Masaryk University Brno, Czech Republic.
+
+\end{thebibliography}

@@ -1,0 +1,47 @@
+This is BibTeX, Version 0.99c (Web2C 7.5.7)
+The top-level auxiliary file: jlre.aux
+The style file: klunamed.bst
+Database file #1: Bibliografie.bib
+Warning--can't use both author and editor fields in hajic:2005
+You've used 21 entries,
+            2424 wiz_defined-function locations,
+            630 strings with 7384 characters,
+and the built_in function-call counts, 8331 in all, are:
+= -- 769
+> -- 432
+< -- 24
++ -- 127
+- -- 121
+* -- 743
+:= -- 1427
+add.period$ -- 45
+call.type$ -- 21
+change.case$ -- 141
+chr.to.int$ -- 21
+cite$ -- 22
+duplicate$ -- 335
+empty$ -- 548
+format.name$ -- 148
+if$ -- 1669
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 19
+newline$ -- 85
+num.names$ -- 71
+pop$ -- 147
+preamble$ -- 1
+purify$ -- 161
+quote$ -- 0
+skip$ -- 260
+stack$ -- 0
+substring$ -- 446
+swap$ -- 95
+text.length$ -- 12
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 118
+warning$ -- 1
+while$ -- 66
+width$ -- 0
+write$ -- 255
+(There was 1 warning)
