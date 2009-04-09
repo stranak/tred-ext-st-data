@@ -1,0 +1,1310 @@
+full/tamw/train-1/cmpr9410_021.t.gz	t-cmpr9410-021-p11s2w9 t-cmpr9410-021-p11s2w8 t-cmpr9410-021-p11s2w2 t-cmpr9410-021-p11s2w3 t-cmpr9410-021-p11s2w4 t-cmpr9410-021-p11s2w5 t-cmpr9410-021-p11s2w6 t-cmpr9410-021-p11s2w7	Services Technical I #Period T #Period E #Period
+full/tamw/train-1/cmpr9410_021.t.gz	t-cmpr9410-021-p12s2w9 t-cmpr9410-021-p12s2w8 t-cmpr9410-021-p12s2w2 t-cmpr9410-021-p12s2w3 t-cmpr9410-021-p12s2w4 t-cmpr9410-021-p12s2w5 t-cmpr9410-021-p12s2w6 t-cmpr9410-021-p12s2w7	Services Technical I #Period T #Period E #Period
+full/tamw/train-1/cmpr9413_019.t.gz	t-cmpr9413-019-p4s1w44 t-cmpr9413-019-p4s1w45	de facto
+full/tamw/train-1/cmpr9413_049.t.gz	t-cmpr9413-049-p11s3w2 t-cmpr9413-049-p11s3w3	TTI Therm
+full/tamw/train-1/cmpr9413_049.t.gz	t-cmpr9413-049-p15s1w1 t-cmpr9413-049-p15s1w2	TTI Therm
+full/tamw/train-1/cmpr9413_049.t.gz	t-cmpr9413-049-p16s1w2 t-cmpr9413-049-p16s1w3	TTI Therm
+full/tamw/train-1/cmpr9413_049.t.gz	t-cmpr9413-049-p17s1w1 t-cmpr9413-049-p17s1w2	TTI Therm
+full/tamw/train-1/cmpr9413_049.t.gz	t-cmpr9413-049-p17s3w1 t-cmpr9413-049-p17s3w2	TTI Therm
+full/tamw/train-1/cmpr9413_049.t.gz	t-cmpr9413-049-p21s1Bw8 t-cmpr9413-049-p21s1Bw9	TTI Therm
+full/tamw/train-1/cmpr9413_049.t.gz	t-cmpr9413-049-p4s5w10 t-cmpr9413-049-p4s5w11	TTI Therm
+full/tamw/train-1/cmpr9415_007.t.gz	t-cmpr9415-007-p4s1w5 t-cmpr9415-007-p4s1w6 t-cmpr9415-007-p4s1w7 t-cmpr9415-007-p4s1w8	Les Marines de Gassin
+full/tamw/train-1/cmpr9415_027.t.gz	t-cmpr9415-027-p4s5w26 t-cmpr9415-027-p4s5w27 t-cmpr9415-027-p4s5w28 t-cmpr9415-027-p4s5w29	Groupe Charbonnages de France
+full/tamw/train-1/cmpr9415_027.t.gz	t-cmpr9415-027-p6s1w7 t-cmpr9415-027-p6s1w8 t-cmpr9415-027-p6s1w9 t-cmpr9415-027-p6s1w10 t-cmpr9415-027-p6s1w11 t-cmpr9415-027-p6s1w12	Koh #Dash i #Dash noor Hardtmuth
+full/tamw/train-1/cmpr9415_037.t.gz	t-cmpr9415-037-p4s1w2 t-cmpr9415-037-p4s1w3	DBV Cycles
+full/tamw/train-1/cmpr9415_037.t.gz	t-cmpr9415-037-p5s1w3 t-cmpr9415-037-p5s1w4	DBV Cycles
+full/tamw/train-1/cmpr9415_047.t.gz	t-cmpr9415-047-p16s6w15 t-cmpr9415-047-p16s6w16 t-cmpr9415-047-p16s6w17	know #Dash how
+full/tamw/train-1/ln94200_114.t.gz	t-ln94200-114-p2s2w7 t-ln94200-114-p2s2w8	Šin Bet
+full/tamw/train-1/ln94200_114.t.gz	t-ln94200-114-p2s3w18 t-ln94200-114-p2s3w19	Šin Bet
+full/tamw/train-1/ln94200_123.t.gz	t-ln94200-123-p10s2w3 t-ln94200-123-p10s2w4 t-ln94200-123-p10s2w5	Čchiao Š '
+full/tamw/train-1/ln94200_123.t.gz	t-ln94200-123-p10s2w8 t-ln94200-123-p10s2w9 t-ln94200-123-p10s2w10 t-ln94200-123-p10s2w11	Čao C ' jang
+full/tamw/train-1/ln94200_123.t.gz	t-ln94200-123-p2s1Bw1 t-ln94200-123-p2s1Bw2 t-ln94200-123-p2s1Bw3 t-ln94200-123-p2s1Bw4	Teng Siao #Dash pching
+full/tamw/train-1/ln94200_123.t.gz	t-ln94200-123-p2s1Bw24 t-ln94200-123-p2s1Bw25 t-ln94200-123-p2s1Bw26 t-ln94200-123-p2s1Bw27 t-ln94200-123-p2s1Bw28 t-ln94200-123-p2s1Bw29	Čchin Š ' Chuang #Dash tim
+full/tamw/train-1/ln94200_123.t.gz	t-ln94200-123-p5s1w17 t-ln94200-123-p5s1w18 t-ln94200-123-p5s1w19 t-ln94200-123-p5s1w20	Ťiang Ce #Dash min
+full/tamw/train-1/ln94200_123.t.gz	t-ln94200-123-p5s1w28 t-ln94200-123-p5s1w29	Li Pcheng
+full/tamw/train-1/ln94200_123.t.gz	t-ln94200-123-p5s1w37 t-ln94200-123-p5s1w38 t-ln94200-123-p5s1w39 t-ln94200-123-p5s1w40	Ču Žung #Dash ťi
+full/tamw/train-1/ln94200_123.t.gz	t-ln94200-123-p7s2w9 t-ln94200-123-p7s2w10 t-ln94200-123-p7s2w11 t-ln94200-123-p7s2w12 t-ln94200-123-p7s2w13	Tchien #Dash an #Dash men
+full/tamw/train-1/ln94200_132.t.gz	t-ln94200-132-p2s1w18 t-ln94200-132-p2s1w19	Pink Floyd
+full/tamw/train-1/ln94200_74.t.gz	t-ln94200-74-p4s1w3 t-ln94200-74-p4s1w4 t-ln94200-74-p4s1w5	sci #Dash fi
+full/tamw/train-1/ln94202_11.t.gz	t-ln94202-11-p3s1w5 t-ln94202-11-p3s1w6 t-ln94202-11-p3s1w7	Harley #Dash Davidson
+full/tamw/train-1/ln94202_11.t.gz	t-ln94202-11-p3s3w3 t-ln94202-11-p3s3w4	Free Wheels
+full/tamw/train-1/ln94202_11.t.gz	t-ln94202-11-p4s1w13 t-ln94202-11-p4s1w14 t-ln94202-11-p4s1w15	Mercedes #Dash Benz
+full/tamw/train-1/ln94202_128.t.gz	t-ln94202-128-p3s3w25 t-ln94202-128-p3s3w26 t-ln94202-128-p3s3w27 t-ln94202-128-p3s3w28 t-ln94202-128-p3s3w29	European market research center Bruxelles
+full/tamw/train-1/ln94202_128.t.gz	t-ln94202-128-p3s3w47 t-ln94202-128-p3s3w48 t-ln94202-128-p3s3w49 t-ln94202-128-p3s3w50 t-ln94202-128-p3s3w51	Euromarket Award #Dash East Europe
+full/tamw/train-1/ln94202_128.t.gz	t-ln94202-128-p4s1w41 t-ln94202-128-p4s1w42 t-ln94202-128-p4s1w43	Quality Management Award
+full/tamw/train-1/ln94202_128.t.gz	t-ln94202-128-p5s2w7 t-ln94202-128-p5s2w8	Wall Street
+full/tamw/train-1/ln94202_93.t.gz	t-ln94202-93-p2s1Bw7 t-ln94202-93-p2s1Bw8	The Flintstones
+full/tamw/train-1/ln94202_93.t.gz	t-ln94202-93-p3s3w28 t-ln94202-93-p3s3w29	Twin Peaks
+full/tamw/train-1/ln94203_110.t.gz	t-ln94203-110-p3s1w4 t-ln94203-110-p3s1w5	Atletico Madrid
+full/tamw/train-1/ln94203_15.t.gz	t-ln94203-15-p2s1Bw23 t-ln94203-15-p2s1Bw24 t-ln94203-15-p2s1Bw25	Siemens AG Mnichov
+full/tamw/train-1/ln94204_105.t.gz	t-ln94204-105-p3s1w22 t-ln94204-105-p3s1w23 t-ln94204-105-p3s1w24	Život bez Soroša
+full/tamw/train-1/ln94204_105.t.gz	t-ln94204-105-p3s1w26 t-ln94204-105-p3s1w27 t-ln94204-105-p3s1w28 t-ln94204-105-p3s1w29 t-ln94204-105-p3s1w30 t-ln94204-105-p3s1w31 t-ln94204-105-p3s1w32 t-ln94204-105-p3s1w33 t-ln94204-105-p3s1w34 t-ln94204-105-p3s1w35 t-ln94204-105-p3s1w36 t-ln94204-105-p3s1w37 t-ln94204-105-p3s1w38	Ťažké je dnes u nás žiť #Slash ak len človek nie je Žid
+full/tamw/train-1/ln94204_105.t.gz	t-ln94204-105-p5s1w11 t-ln94204-105-p5s1w12 t-ln94204-105-p5s1w13 t-ln94204-105-p5s1w14 t-ln94204-105-p5s1w16 t-ln94204-105-p5s1w17 t-ln94204-105-p5s1w18 t-ln94204-105-p5s1w19 t-ln94204-105-p5s1w20 t-ln94204-105-p5s1w21 t-ln94204-105-p5s1w22 t-ln94204-105-p5s1w23 t-ln94204-105-p5s1w24	Židia sa významne pričinili založenie iného #Comma rovnako hrozného totalitného molocha #Dash komunizmu
+full/tamw/train-1/ln94204_105.t.gz	t-ln94204-105-p6s6w39 t-ln94204-105-p6s6w40 t-ln94204-105-p6s6w41	veľmi dobré organizácie
+full/tamw/train-1/ln94204_132.t.gz	t-ln94204-132-p2s1Aw4 t-ln94204-132-p2s1Aw5	Wild Duck
+full/tamw/train-1/ln94204_150.t.gz	t-ln94204-150-p2s1Bw4 t-ln94204-150-p2s1Bw5	Magyar Hírlap
+full/tamw/train-1/ln94204_16.t.gz	t-ln94204-16-p2s1w4 t-ln94204-16-p2s1w5 t-ln94204-16-p2s1w6	Asea Brown Boveri
+full/tamw/train-1/ln94204_96.t.gz	t-ln94204-96-p2s2w14 t-ln94204-96-p2s2w15	Laura Blair
+full/tamw/train-1/ln94205_74.t.gz	t-ln94205-74-p3s1w15 t-ln94205-74-p3s1w16	La Repubblica
+full/tamw/train-1/ln94207_100.t.gz	t-ln94207-100-p1s1Aw4 t-ln94207-100-p1s1Aw5 t-ln94207-100-p1s1Aw6	Miranda Sex Garden
+full/tamw/train-1/ln94207_29.t.gz	t-ln94207-29-p2s1Aw1 t-ln94207-29-p2s1Aw2	Buenos Aires
+full/tamw/train-1/ln94207_65.t.gz	t-ln94207-65-p10s2w10 t-ln94207-65-p10s2w11	tovaryšč Michajlov
+full/tamw/train-1/ln94207_92.t.gz	t-ln94207-92-p16s1w11 t-ln94207-92-p16s1w12	Femina Étranger
+full/tamw/train-1/ln94207_92.t.gz	t-ln94207-92-p17s3w5 t-ln94207-92-p17s3w6 t-ln94207-92-p17s3w7 t-ln94207-92-p17s3w8	tragedia dell ' arte
+full/tamw/train-1/ln94208_11.t.gz	t-ln94208-11-p2s3w3 t-ln94208-11-p2s3w4	enfant terrible
+full/tamw/train-1/ln94208_11.t.gz	t-ln94208-11-p3s26w18 t-ln94208-11-p3s26w19 t-ln94208-11-p3s26w20 t-ln94208-11-p3s26w21 t-ln94208-11-p3s26w22	Capitalism #Comma Socialism and Democracy
+full/tamw/train-1/ln94208_11.t.gz	t-ln94208-11-p3s4w27 t-ln94208-11-p3s4w28 t-ln94208-11-p3s4w29 t-ln94208-11-p3s4w30	Theorie der wirtshaftlichen Entwicklung
+full/tamw/train-1/ln94208_11.t.gz	t-ln94208-11-p6s6w3 t-ln94208-11-p6s6w4	Business Cycles
+full/tamw/train-1/ln94208_138.t.gz	t-ln94208-138-p1s1Aw20 t-ln94208-138-p1s1Aw21	Professional Commando
+full/tamw/train-1/ln94209_102.t.gz	t-ln94209-102-p2s1Aw6 t-ln94209-102-p2s1Aw7	Wild Duck
+full/tamw/train-1/ln94209_50.t.gz	t-ln94209-50-p3s7w10 t-ln94209-50-p3s7w11	Downing Street
+full/tamw/train-1/ln94209_50.t.gz	t-ln94209-50-p5s12w22 t-ln94209-50-p5s12w23	Sinn Fein
+full/tamw/train-1/ln94209_50.t.gz	t-ln94209-50-p5s16w13 t-ln94209-50-p5s16w14	Sinn Fein
+full/tamw/train-1/ln94209_50.t.gz	t-ln94209-50-p5s5w2 t-ln94209-50-p5s5w3	Sinn Fein
+full/tamw/train-1/ln94209_50.t.gz	t-ln94209-50-p6s5w17 t-ln94209-50-p6s5w18	Sinn Fein
+full/tamw/train-1/ln94209_69.t.gz	t-ln94209-69-p2s1Aw4 t-ln94209-69-p2s1Aw5	Subjective geometry
+full/tamw/train-1/ln94209_87.t.gz	t-ln94209-87-p2s1w2 t-ln94209-87-p2s1w3 t-ln94209-87-p2s1w4 t-ln94209-87-p2s1w5	Michel Preud ' homme
+full/tamw/train-1/ln94210_122.t.gz	t-ln94210-122-p2s1Aw4 t-ln94210-122-p2s1Aw5	Flushing Meadows
+full/tamw/train-1/ln94210_122.t.gz	t-ln94210-122-p3s3w5 t-ln94210-122-p3s3w6	Flushing Meadows
+full/tamw/train-1/ln94210_122.t.gz	t-ln94210-122-p4s14w11 t-ln94210-122-p4s14w12	Forest Hills
+full/tamw/train-1/ln94210_122.t.gz	t-ln94210-122-p5s5w4 t-ln94210-122-p5s5w5	Flushing Meadows
+full/tamw/train-1/ln94210_131.t.gz	t-ln94210-131-p8s1w2 t-ln94210-131-p8s1w3	squadry azzurry
+full/tamw/train-1/ln94211_26.t.gz	t-ln94211-26-p2s5w9 t-ln94211-26-p2s5w10	Sinn Fein
+full/tamw/train-1/ln95045_110.t.gz	t-ln95045-110-p3s2w14 t-ln95045-110-p3s2w16 t-ln95045-110-p3s2w18	B I G
+full/tamw/train-1/ln95046_105.t.gz	t-ln95046-105-p2s1Bw5 t-ln95046-105-p2s1Bw6	Thinking Day
+full/tamw/train-1/ln95047_021.t.gz	t-ln95047-021-p2s1Bw6 t-ln95047-021-p2s1Bw7	play off
+full/tamw/train-1/ln95047_031.t.gz	t-ln95047-031-p3s2w9 t-ln95047-031-p3s2w10 t-ln95047-031-p3s2w11 t-ln95047-031-p3s2w12	Chicago Sun #Dash Times
+full/tamw/train-1/ln95047_041.t.gz	t-ln95047-041-p3s1w3 t-ln95047-041-p3s1w4 t-ln95047-041-p3s1w5	Wide Open Cage
+full/tamw/train-1/ln95047_051.t.gz	t-ln95047-051-p2s3w15 t-ln95047-051-p2s3w16 t-ln95047-051-p2s3w17	Misa #Dash Miserij
+full/tamw/train-1/ln95047_061.t.gz	t-ln95047-061-p7s7w10 t-ln95047-061-p7s7w11 t-ln95047-061-p7s7w12 t-ln95047-061-p7s7w13 t-ln95047-061-p7s7w14	S #Period O #Period S
+full/tamw/train-1/ln95048_004.t.gz	t-ln95048-004-p4s2w25 t-ln95048-004-p4s2w26 t-ln95048-004-p4s2w27	Frisch Rost Kaffee
+full/tamw/train-1/ln95048_014.t.gz	t-ln95048-014-p2s1w4 t-ln95048-014-p2s1w5	Reality Bites
+full/tamw/train-1/ln95048_014.t.gz	t-ln95048-014-p2s4w5 t-ln95048-014-p2s4w6 t-ln95048-014-p2s4w7	Hollywood Classic Entertainment
+full/tamw/train-1/ln95048_041.t.gz	t-ln95048-041-p2s3w11 t-ln95048-041-p2s3w12	minimal art
+full/tamw/train-1/ln95048_041.t.gz	t-ln95048-041-p2s3w5 t-ln95048-041-p2s3w6	pop art
+full/tamw/train-1/ln95048_052.t.gz	t-ln95048-052-p11s1w23 t-ln95048-052-p11s1w24	Pech haben
+full/tamw/train-1/ln95048_052.t.gz	t-ln95048-052-p7s3w19	klinken
+full/tamw/train-1/ln95048_052.t.gz	t-ln95048-052-p8s2w8	cliquer
+full/tamw/train-1/ln95048_052.t.gz	t-ln95048-052-p9s1w18	claquer
+full/tamw/train-1/ln95048_062.t.gz	t-ln95048-062-p3s31w21 t-ln95048-062-p3s31w22	in spiritualibus
+full/tamw/train-1/ln95048_062.t.gz	t-ln95048-062-p3s31w9 t-ln95048-062-p3s31w10	in temporalibus
+full/tamw/train-1/ln95048_092.t.gz	t-ln95048-092-p2s5w15 t-ln95048-092-p2s5w16	Eastern Creek
+full/tamw/train-1/ln95049_037.t.gz	t-ln95049-037-p2s1Aw6 t-ln95049-037-p2s1Aw7	play off
+full/tamw/train-1/ln95049_037.t.gz	t-ln95049-037-p2s1Cw41 t-ln95049-037-p2s1Cw42	play off
+full/tamw/train-1/ln95049_037.t.gz	t-ln95049-037-p3s4w7 t-ln95049-037-p3s4w8	play off
+full/tamw/train-1/ln95049_037.t.gz	t-ln95049-037-p4s6w10 t-ln95049-037-p4s6w11	play off
+full/tamw/train-1/ln95049_057.t.gz	t-ln95049-057-p2s1w15 t-ln95049-057-p2s1w16 t-ln95049-057-p2s1w17	Reflexionen der Fackel
+full/tamw/train-1/ln95049_057.t.gz	t-ln95049-057-p2s1w19 t-ln95049-057-p2s1w20 t-ln95049-057-p2s1w21 t-ln95049-057-p2s1w22 t-ln95049-057-p2s1w23	Neue Studien über Karl Kraus
+full/tamw/train-1/ln95049_057.t.gz	t-ln95049-057-p2s2w11 t-ln95049-057-p2s2w12	Die Fackel
+full/tamw/train-1/ln95049_057.t.gz	t-ln95049-057-p4s1Aw4 t-ln95049-057-p4s1Aw5 t-ln95049-057-p4s1Aw6	Reflexion der Fackel
+full/tamw/train-1/ln95049_067.t.gz	t-ln95049-067-p10s1Aw6 t-ln95049-067-p10s1Aw7 t-ln95049-067-p10s1Aw8 t-ln95049-067-p10s1Aw9 t-ln95049-067-p10s1Aw10	Don Bosco Social Service Society
+full/tamw/train-1/ln95049_067.t.gz	t-ln95049-067-p11s1w5 t-ln95049-067-p11s1w6 t-ln95049-067-p11s1w7 t-ln95049-067-p11s1w8	The New York Times
+full/tamw/train-1/ln95049_067.t.gz	t-ln95049-067-p4s1Aw3 t-ln95049-067-p4s1Aw4	Le Monde
+full/tamw/train-1/ln95049_067.t.gz	t-ln95049-067-p4s3Aw3 t-ln95049-067-p4s3Aw4 t-ln95049-067-p4s3Aw5	The Washington Post
+full/tamw/train-1/ln95049_077.t.gz	t-ln95049-077-p2s3w22 t-ln95049-077-p2s3w23 t-ln95049-077-p2s3w24 t-ln95049-077-p2s3w25	Sun Žen #Dash žu
+full/tamw/train-1/ln95049_077.t.gz	t-ln95049-077-p5s1w170 t-ln95049-077-p5s1w171	joint ventures
+full/tamw/train-1/lnd94103_086.t.gz	t-lnd94103-086-p1s35w8 t-lnd94103-086-p1s35w9	West Side
+full/tamw/train-1/lnd94103_086.t.gz	t-lnd94103-086-p1s3w14 t-lnd94103-086-p1s3w15	NASTY BOY
+full/tamw/train-1/lnd94103_086.t.gz	t-lnd94103-086-p1s5w7 t-lnd94103-086-p1s5w8 t-lnd94103-086-p1s5w9	Lower East Street
+full/tamw/train-1/lnd94103_096.t.gz	t-lnd94103-096-p1s12w41 t-lnd94103-096-p1s12w43 t-lnd94103-096-p1s12w42	Saint Saëns #Dash
+full/tamw/train-1/lnd94103_096.t.gz	t-lnd94103-096-p1s17w15 t-lnd94103-096-p1s17w16	pop music
+full/tamw/train-1/lnd94103_096.t.gz	t-lnd94103-096-p1s17w24 t-lnd94103-096-p1s17w25	MARS Promotion
+full/tamw/train-1/lnd94103_106.t.gz	t-lnd94103-106-p1s2Aw1 t-lnd94103-106-p1s2Aw2 t-lnd94103-106-p1s2Aw3	Val di Fassa
+full/tamw/train-1/lnd94103_106.t.gz	t-lnd94103-106-p1s2Bw25 t-lnd94103-106-p1s2Bw26	Quebec Nordiques
+full/tamw/train-1/lnd94103_116.t.gz	t-lnd94103-116-p1s11w12 t-lnd94103-116-p1s11w13 t-lnd94103-116-p1s11w14	Welt am Sonntag
+full/tamw/train-1/lnd94103_116.t.gz	t-lnd94103-116-p1s2Bw17 t-lnd94103-116-p1s2Bw18	O Globo
+full/tamw/train-1/mf920922_074.t.gz	t-mf920922-074-p2s6Bw16 t-mf920922-074-p2s6Bw17	Czechoslovak Open
+full/tamw/train-1/mf920922_125.t.gz	t-mf920922-125-p1s4w11 t-mf920922-125-p1s4w12	New York
+full/tamw/train-1/mf930709_116.t.gz	t-mf930709-116-p2s1Bw21 t-mf930709-116-p2s1Bw22 t-mf930709-116-p2s1Bw23	International Euromarket Award
+full/tamw/train-1/mf930709_126.t.gz	t-mf930709-126-p100s1w2 t-mf930709-126-p100s1w3	Stars 90
+full/tamw/train-1/mf930709_126.t.gz	t-mf930709-126-p103s1w2	Journal
+full/tamw/train-1/mf930709_126.t.gz	t-mf930709-126-p104s1w2 t-mf930709-126-p104s1w3 t-mf930709-126-p104s1w4	CNN Showbiz Today
+full/tamw/train-1/mf930709_126.t.gz	t-mf930709-126-p21s1w2 t-mf930709-126-p21s1w3 t-mf930709-126-p21s1w4 t-mf930709-126-p21s1w5 t-mf930709-126-p21s1w6	W #Period S #Period Teleshopping
+full/tamw/train-1/mf930709_126.t.gz	t-mf930709-126-p36s1w2 t-mf930709-126-p36s1w3 t-mf930709-126-p36s1w4 t-mf930709-126-p36s1w5 t-mf930709-126-p36s1w6	W #Period S #Period Teleshopping
+full/tamw/train-1/mf930709_126.t.gz	t-mf930709-126-p45s1w2 t-mf930709-126-p45s1w3	JUMP OK
+full/tamw/train-1/mf930709_126.t.gz	t-mf930709-126-p69s1w2 t-mf930709-126-p69s1w3 t-mf930709-126-p69s1w4	Headline News Update
+full/tamw/train-1/mf930709_126.t.gz	t-mf930709-126-p70s1w2 t-mf930709-126-p70s1w3	World News
+full/tamw/train-1/mf930709_126.t.gz	t-mf930709-126-p71s1w2 t-mf930709-126-p71s1w3 t-mf930709-126-p71s1w4	Headline News Update
+full/tamw/train-1/mf930709_126.t.gz	t-mf930709-126-p72s1w2 t-mf930709-126-p72s1w3	World News
+full/tamw/train-1/mf930709_126.t.gz	t-mf930709-126-p73s1w2	Moneyline
+full/tamw/train-1/mf930709_126.t.gz	t-mf930709-126-p74s1w2 t-mf930709-126-p74s1w3	Worldwide Update
+full/tamw/train-1/mf930709_126.t.gz	t-mf930709-126-p75s1w2 t-mf930709-126-p75s1w3 t-mf930709-126-p75s1w4	Headline News Update
+full/tamw/train-1/mf930709_126.t.gz	t-mf930709-126-p76s1w2 t-mf930709-126-p76s1w3	CNN Newsroom
+full/tamw/train-1/mf930709_126.t.gz	t-mf930709-126-p82s1w2 t-mf930709-126-p82s1w3	Business Morning
+full/tamw/train-1/mf930709_126.t.gz	t-mf930709-126-p84s1w2 t-mf930709-126-p84s1w3	Business Day
+full/tamw/train-1/mf930709_126.t.gz	t-mf930709-126-p86s1w2 t-mf930709-126-p86s1w3	Business Asia
+full/tamw/train-1/mf930709_126.t.gz	t-mf930709-126-p87s1w2 t-mf930709-126-p87s1w3	Larry King
+full/tamw/train-1/mf930709_126.t.gz	t-mf930709-126-p95s1w2	Heute
+full/tamw/train-1/mf930709_126.t.gz	t-mf930709-126-p96s1w2	Novosti
+full/tamw/train-1/mf930709_126.t.gz	t-mf930709-126-p97s1w2 t-mf930709-126-p97s1w3	JUMP OK
+full/tamw/train-1/mf930713_015.t.gz	t-mf930713-015-p2s2w27 t-mf930713-015-p2s2w28	Grand Prix
+full/tamw/train-1/mf930713_035.t.gz	t-mf930713-035-p3s1w20 t-mf930713-035-p3s1w21	Doogie Howser
+full/tamw/train-1/mf930713_035.t.gz	t-mf930713-035-p3s1w5 t-mf930713-035-p3s1w6	Santa Fé
+full/tamw/train-1/mf930713_055.t.gz	t-mf930713-055-p2s4w29 t-mf930713-055-p2s4w30	Arca Jimfa
+full/tamw/train-1/mf930713_116.t.gz	t-mf930713-116-p1s1w3 t-mf930713-116-p1s1w4	Czech Made
+full/tamw/train-1/mf930713_116.t.gz	t-mf930713-116-p3s1w2 t-mf930713-116-p3s1w3	Czech Made
+full/tamw/train-2/cmpr9410_002.t.gz	t-cmpr9410-002-p12s1w8 t-cmpr9410-002-p12s1w9 t-cmpr9410-002-p12s1w10	Alfa Omega Travel
+full/tamw/train-2/cmpr9410_002.t.gz	t-cmpr9410-002-p14s1w5 t-cmpr9410-002-p14s1w6 t-cmpr9410-002-p14s1w7 t-cmpr9410-002-p14s1w8 t-cmpr9410-002-p14s1w9	A #Period O #Period Travel
+full/tamw/train-2/cmpr9410_002.t.gz	t-cmpr9410-002-p18s2w7 t-cmpr9410-002-p18s2w8 t-cmpr9410-002-p18s2w9	Alfa Omega Travel
+full/tamw/train-2/cmpr9410_002.t.gz	t-cmpr9410-002-p19s1w3 t-cmpr9410-002-p19s1w4 t-cmpr9410-002-p19s1w5	Alfa Omega Travel
+full/tamw/train-2/cmpr9410_002.t.gz	t-cmpr9410-002-p21s1w2 t-cmpr9410-002-p21s1w3 t-cmpr9410-002-p21s1w4	Alfa Omega Travel
+full/tamw/train-2/cmpr9410_002.t.gz	t-cmpr9410-002-p3s1Bw1 t-cmpr9410-002-p3s1Bw2 t-cmpr9410-002-p3s1Bw3	A O Travel
+full/tamw/train-2/cmpr9410_002.t.gz	t-cmpr9410-002-p4s1w9 t-cmpr9410-002-p4s1w10 t-cmpr9410-002-p4s1w11	Alfa Omega Travel
+full/tamw/train-2/cmpr9410_032.t.gz	t-cmpr9410-032-p9s1w13 t-cmpr9410-032-p9s1w9 t-cmpr9410-032-p9s1w10 t-cmpr9410-032-p9s1w11 t-cmpr9410-032-p9s1w12	box Post #Period Office #Period
+full/tamw/train-2/cmpr9413_030.t.gz	t-cmpr9413-030-p6s1w2 t-cmpr9413-030-p6s1w3 t-cmpr9413-030-p6s1w4 t-cmpr9413-030-p6s1w5	Progress Software Corp #Period
+full/tamw/train-2/cmpr9413_030.t.gz	t-cmpr9413-030-p6s1w7 t-cmpr9413-030-p6s1w8	ITC PragoData
+full/tamw/train-2/cmpr9413_030.t.gz	t-cmpr9413-030-p8s1w18 t-cmpr9413-030-p8s1w19 t-cmpr9413-030-p8s1w20	Digital Music Expres
+full/tamw/train-2/cmpr9413_030.t.gz	t-cmpr9413-030-p8s1w2 t-cmpr9413-030-p8s1w3	Cable Plus
+full/tamw/train-2/cmpr9413_030.t.gz	t-cmpr9413-030-p9s1w3 t-cmpr9413-030-p9s1w4	Cable Plus
+full/tamw/train-2/cmpr9415_008.t.gz	t-cmpr9415-008-p2s1w3 t-cmpr9415-008-p2s1w4	Springer Reisen
+full/tamw/train-2/cmpr9415_058.t.gz	t-cmpr9415-058-p11s1w11 t-cmpr9415-058-p11s1w12	General Motors
+full/tamw/train-2/cmpr9415_058.t.gz	t-cmpr9415-058-p16s4w5 t-cmpr9415-058-p16s4w6	cash flow
+full/tamw/train-2/ln94200_124.t.gz	t-ln94200-124-p5s6w21 t-ln94200-124-p5s6w22 t-ln94200-124-p5s6w23 t-ln94200-124-p5s6w24	Alternatives to Animal Experimentation
+full/tamw/train-2/ln94200_160.t.gz	t-ln94200-160-p6s1w13 t-ln94200-160-p6s1w14	Brynäs Gävle
+full/tamw/train-2/ln94202_101.t.gz	t-ln94202-101-p3s3w32 t-ln94202-101-p3s3w33	Kuala Lumpur
+full/tamw/train-2/ln94202_67.t.gz	t-ln94202-67-p3s1w3 t-ln94202-67-p3s1w4	Air Algérie
+full/tamw/train-2/ln94202_76.t.gz	t-ln94202-76-p2s1w43 t-ln94202-76-p2s1w44 t-ln94202-76-p2s1w45	El Tiempo Latino
+full/tamw/train-2/ln94203_8.t.gz	t-ln94203-8-p2s1w3 t-ln94203-8-p2s1w4	British Petroleum
+full/tamw/train-2/ln94203_89.t.gz	t-ln94203-89-p2s1w11 t-ln94203-89-p2s1w12	Soul Asylum
+full/tamw/train-2/ln94203_89.t.gz	t-ln94203-89-p2s1w6 t-ln94203-89-p2s1w7 t-ln94203-89-p2s1w8 t-ln94203-89-p2s1w9	INSOMNIAC ' S DREAMS
+full/tamw/train-2/ln94203_89.t.gz	t-ln94203-89-p2s2w25 t-ln94203-89-p2s2w26 t-ln94203-89-p2s2w27	Sony #Slash Columbia
+full/tamw/train-2/ln94203_89.t.gz	t-ln94203-89-p2s3w14 t-ln94203-89-p2s3w15 t-ln94203-89-p2s3w16	Grave Dancers Union
+full/tamw/train-2/ln94203_89.t.gz	t-ln94203-89-p2s3w2 t-ln94203-89-p2s3w3	Soul Asylum
+full/tamw/train-2/ln94203_89.t.gz	t-ln94203-89-p3s3w10 t-ln94203-89-p3s3w11 t-ln94203-89-p3s3w12	Without A Trace
+full/tamw/train-2/ln94203_89.t.gz	t-ln94203-89-p3s4w24 t-ln94203-89-p3s4w25	The Waterboys
+full/tamw/train-2/ln94203_89.t.gz	t-ln94203-89-p3s5w1 t-ln94203-89-p3s5w2	Soul Asylum
+full/tamw/train-2/ln94203_89.t.gz	t-ln94203-89-p3s7w15 t-ln94203-89-p3s7w16 t-ln94203-89-p3s7w17	Sony #Slash Columbia
+full/tamw/train-2/ln94203_89.t.gz	t-ln94203-89-p3s7w3 t-ln94203-89-p3s7w4 t-ln94203-89-p3s7w5 t-ln94203-89-p3s7w6	Soul Asylum #Dash Live
+full/tamw/train-2/ln94203_89.t.gz	t-ln94203-89-p3s7w8 t-ln94203-89-p3s7w9 t-ln94203-89-p3s7w10 t-ln94203-89-p3s7w11	Insomniac ' s Dream
+full/tamw/train-2/ln94204_106.t.gz	t-ln94204-106-p3s1w28 t-ln94204-106-p3s1w29 t-ln94204-106-p3s1w30 t-ln94204-106-p3s1w31	TEENAGER OF THE YEAR
+full/tamw/train-2/ln94204_106.t.gz	t-ln94204-106-p3s3w22	Thalassocracy
+full/tamw/train-2/ln94204_106.t.gz	t-ln94204-106-p3s3w24	Bad
+full/tamw/train-2/ln94204_106.t.gz	t-ln94204-106-p3s3w26 t-ln94204-106-p3s3w27	Wicked World
+full/tamw/train-2/ln94204_106.t.gz	t-ln94204-106-p3s4w14 t-ln94204-106-p3s4w15	Speedy Marie
+full/tamw/train-2/ln94204_106.t.gz	t-ln94204-106-p3s4w17	Superabound
+full/tamw/train-2/ln94204_106.t.gz	t-ln94204-106-p4s1w41 t-ln94204-106-p4s1w42 t-ln94204-106-p4s1w43 t-ln94204-106-p4s1w44 t-ln94204-106-p4s1w45 t-ln94204-106-p4s1w46 t-ln94204-106-p4s1w47 t-ln94204-106-p4s1w48	I Want To Live On An Abstract Plain
+full/tamw/train-2/ln94204_106.t.gz	t-ln94204-106-p4s1w56 t-ln94204-106-p4s1w57 t-ln94204-106-p4s1w58	The Vanishing Spies
+full/tamw/train-2/ln94204_106.t.gz	t-ln94204-106-p4s2w9 t-ln94204-106-p4s2w10 t-ln94204-106-p4s2w11 t-ln94204-106-p4s2w12 t-ln94204-106-p4s2w13	rock ' and ' roll
+full/tamw/train-2/ln94204_106.t.gz	t-ln94204-106-p4s7Bw4 t-ln94204-106-p4s7Bw5 t-ln94204-106-p4s7Bw6 t-ln94204-106-p4s7Bw7	Teenager Of The Year
+full/tamw/train-2/ln94204_106.t.gz	t-ln94204-106-p4s9w12 t-ln94204-106-p4s9w13	Mute Czechoslovakia
+full/tamw/train-2/ln94204_151.t.gz	t-ln94204-151-p2s1Bw4 t-ln94204-151-p2s1Bw5	Gazeta Wyborcza
+full/tamw/train-2/ln94204_151.t.gz	t-ln94204-151-p6s4Bw25 t-ln94204-151-p6s4Bw26 t-ln94204-151-p6s4Bw27	Syrena Entertainment Group
+full/tamw/train-2/ln94204_42.t.gz	t-ln94204-42-p2s1Bw7 t-ln94204-42-p2s1Bw8	Wackenhut Czech
+full/tamw/train-2/ln94204_42.t.gz	t-ln94204-42-p2s3w7 t-ln94204-42-p2s3w8	Wackenhut Czech
+full/tamw/train-2/ln94205_132.t.gz	t-ln94205-132-p2s1Aw4 t-ln94205-132-p2s1Aw5	Wild Duck
+full/tamw/train-2/ln94205_132.t.gz	t-ln94205-132-p2s5w10 t-ln94205-132-p2s5w11 t-ln94205-132-p2s5w12 t-ln94205-132-p2s5w13	Tri dny ma naháňali
+full/tamw/train-2/ln94205_3.t.gz	t-ln94205-3-p5s7w37 t-ln94205-3-p5s7w38 t-ln94205-3-p5s7w39	Hewlett #Dash Packard
+full/tamw/train-2/ln94205_3.t.gz	t-ln94205-3-p6s1w9 t-ln94205-3-p6s1w10	de facto
+full/tamw/train-2/ln94206_101.t.gz	t-ln94206-101-p2s1w2 t-ln94206-101-p2s1w3 t-ln94206-101-p2s1w4	Dreams of Sphinx
+full/tamw/train-2/ln94206_101.t.gz	t-ln94206-101-p2s2w1 t-ln94206-101-p2s2w2 t-ln94206-101-p2s2w3 t-ln94206-101-p2s2w4	New age live show
+full/tamw/train-2/ln94206_13.t.gz	t-ln94206-13-p3s1w6 t-ln94206-13-p3s1w7 t-ln94206-13-p3s1w8 t-ln94206-13-p3s1w9	A #Dash Consult plus
+full/tamw/train-2/ln94206_13.t.gz	t-ln94206-13-p3s2w9 t-ln94206-13-p3s2w10 t-ln94206-13-p3s2w11 t-ln94206-13-p3s2w12	A #Dash Consult plus
+full/tamw/train-2/ln94206_139.t.gz	t-ln94206-139-p1s1w1 t-ln94206-139-p1s1w2	RDP Group
+full/tamw/train-2/ln94206_139.t.gz	t-ln94206-139-p2s1Bw26 t-ln94206-139-p2s1Bw27	RDP Group
+full/tamw/train-2/ln94206_139.t.gz	t-ln94206-139-p3s2w33 t-ln94206-139-p3s2w34	RDP Group
+full/tamw/train-2/ln94206_20.t.gz	t-ln94206-20-p2s1Bw3 t-ln94206-20-p2s1Bw4 t-ln94206-20-p2s1Bw5 t-ln94206-20-p2s1Bw6	Mercedes #Dash Benz AG
+full/tamw/train-2/ln94206_3.t.gz	t-ln94206-3-p10s2w9 t-ln94206-3-p10s2w10 t-ln94206-3-p10s2w11	Dun #Amp Bradstreet
+full/tamw/train-2/ln94206_3.t.gz	t-ln94206-3-p5s2w12 t-ln94206-3-p5s2w13 t-ln94206-3-p5s2w14	Business Cooperation Network
+full/tamw/train-2/ln94206_3.t.gz	t-ln94206-3-p5s2w8 t-ln94206-3-p5s2w9 t-ln94206-3-p5s2w10	BC #Dash NET
+full/tamw/train-2/ln94206_3.t.gz	t-ln94206-3-p6s3w1 t-ln94206-3-p6s3w2 t-ln94206-3-p6s3w3	BC #Dash NET
+full/tamw/train-2/ln94207_101.t.gz	t-ln94207-101-p1s1w6 t-ln94207-101-p1s1w7 t-ln94207-101-p1s1w8	Miranda Sex Garden
+full/tamw/train-2/ln94207_101.t.gz	t-ln94207-101-p2s1w15 t-ln94207-101-p2s1w16 t-ln94207-101-p2s1w17	Miranda Sex Garden
+full/tamw/train-2/ln94207_101.t.gz	t-ln94207-101-p2s1w2 t-ln94207-101-p2s1w3	a capella
+full/tamw/train-2/ln94207_101.t.gz	t-ln94207-101-p2s1w30 t-ln94207-101-p2s1w31 t-ln94207-101-p2s1w32	Fairytales Of Slavery
+full/tamw/train-2/ln94207_101.t.gz	t-ln94207-101-p2s3w13 t-ln94207-101-p2s3w14	Mute Night
+full/tamw/train-2/ln94207_101.t.gz	t-ln94207-101-p2s3w28 t-ln94207-101-p2s3w29	Inspiral Carpets
+full/tamw/train-2/ln94207_101.t.gz	t-ln94207-101-p2s3w3 t-ln94207-101-p2s3w4 t-ln94207-101-p2s3w5	Miranda Sex Garden
+full/tamw/train-2/ln94207_101.t.gz	t-ln94207-101-p3s1w1 t-ln94207-101-p3s1w2 t-ln94207-101-p3s1w3	Fairytales Of Slavery
+full/tamw/train-2/ln94207_101.t.gz	t-ln94207-101-p3s3Aw21 t-ln94207-101-p3s3Aw22 t-ln94207-101-p3s3Aw23	Miranda Sex Garden
+full/tamw/train-2/ln94207_57.t.gz	t-ln94207-57-p2s1Aw1 t-ln94207-57-p2s1Aw2 t-ln94207-57-p2s1Aw3	Rio de Janeiro
+full/tamw/train-2/ln94207_75.t.gz	t-ln94207-75-p10s1w15 t-ln94207-75-p10s1w16	English College
+full/tamw/train-2/ln94207_75.t.gz	t-ln94207-75-p11s1w5 t-ln94207-75-p11s1w6	English College
+full/tamw/train-2/ln94207_75.t.gz	t-ln94207-75-p11s4w16 t-ln94207-75-p11s4w17 t-ln94207-75-p11s4w18 t-ln94207-75-p11s4w19 t-ln94207-75-p11s4w20	International Certificate of Secondary Education
+full/tamw/train-2/ln94207_75.t.gz	t-ln94207-75-p11s5w10 t-ln94207-75-p11s5w11	International Baccalaureate
+full/tamw/train-2/ln94207_75.t.gz	t-ln94207-75-p11s6w14 t-ln94207-75-p11s6w15	English College
+full/tamw/train-2/ln94207_75.t.gz	t-ln94207-75-p13s14w20 t-ln94207-75-p13s14w21 t-ln94207-75-p13s14w22	Geelong Grammar School
+full/tamw/train-2/ln94207_75.t.gz	t-ln94207-75-p13s16Bw15 t-ln94207-75-p13s16Bw16	English College
+full/tamw/train-2/ln94207_75.t.gz	t-ln94207-75-p2s1Aw13 t-ln94207-75-p2s1Aw14 t-ln94207-75-p2s1Aw15 t-ln94207-75-p2s1Aw16 t-ln94207-75-p2s1Aw17	The English College in Prague
+full/tamw/train-2/ln94207_75.t.gz	t-ln94207-75-p4s1w35 t-ln94207-75-p4s1w36 t-ln94207-75-p4s1w37 t-ln94207-75-p4s1w38 t-ln94207-75-p4s1w39	The English College in Prague
+full/tamw/train-2/ln94207_75.t.gz	t-ln94207-75-p7s4w3 t-ln94207-75-p7s4w4	English College
+full/tamw/train-2/ln94207_75.t.gz	t-ln94207-75-p8s2w7 t-ln94207-75-p8s2w8	English College
+full/tamw/train-2/ln94207_84.t.gz	t-ln94207-84-p10s4w7 t-ln94207-84-p10s4w8	Taffy Tolu
+full/tamw/train-2/ln94207_84.t.gz	t-ln94207-84-p13s7w6 t-ln94207-84-p13s7w7	Walter Diemer
+full/tamw/train-2/ln94207_84.t.gz	t-ln94207-84-p5s11w6 t-ln94207-84-p5s11w5	sapota achras
+full/tamw/train-2/ln94207_84.t.gz	t-ln94207-84-p5s6w20 t-ln94207-84-p5s6w21	pistacia lenticus
+full/tamw/train-2/ln94207_84.t.gz	t-ln94207-84-p8s6w5 t-ln94207-84-p8s6w6	White Mountain
+full/tamw/train-2/ln94207_93.t.gz	t-ln94207-93-p11s1w3 t-ln94207-93-p11s1w4 t-ln94207-93-p11s1w5	Bocca della veritá
+full/tamw/train-2/ln94208_101.t.gz	t-ln94208-101-p2s1Aw3 t-ln94208-101-p2s1Aw4	US Open
+full/tamw/train-2/ln94208_101.t.gz	t-ln94208-101-p2s1Cw55 t-ln94208-101-p2s1Cw56	US Open
+full/tamw/train-2/ln94208_110.t.gz	t-ln94208-110-p2s2w17 t-ln94208-110-p2s2w18	US Open
+full/tamw/train-2/ln94208_13.t.gz	t-ln94208-13-p2s1Bw7 t-ln94208-13-p2s1Bw8 t-ln94208-13-p2s1Bw9	Westinghouse Electric Corporation
+full/tamw/train-2/ln94208_5.t.gz	t-ln94208-5-p3s5w14 t-ln94208-5-p3s5w15 t-ln94208-5-p3s5w16	d ' Auteuil
+full/tamw/train-2/ln94208_59.t.gz	t-ln94208-59-p4s4w16 t-ln94208-59-p4s4w17 t-ln94208-59-p4s4w18 t-ln94208-59-p4s4w19 t-ln94208-59-p4s4w20 t-ln94208-59-p4s4w21	K #Period J #Period D #Period
+full/tamw/train-2/ln94208_68.t.gz	t-ln94208-68-p5s4w24 t-ln94208-68-p5s4w25	Sinn Fein
+full/tamw/train-2/ln94208_68.t.gz	t-ln94208-68-p6s4w16 t-ln94208-68-p6s4w17	Sinn Fein
+full/tamw/train-2/ln94208_95.t.gz	t-ln94208-95-p2s1Bw20 t-ln94208-95-p2s1Bw21	Grand Prix
+full/tamw/train-2/ln94209_60.t.gz	t-ln94209-60-p2s1Bw24 t-ln94209-60-p2s1Bw25	Mute Night
+full/tamw/train-2/ln94209_60.t.gz	t-ln94209-60-p2s2w10 t-ln94209-60-p2s2w11 t-ln94209-60-p2s2w12	MIRANDY SEX GARDEN
+full/tamw/train-2/ln94209_60.t.gz	t-ln94209-60-p2s2w33 t-ln94209-60-p2s2w34	INSPIRAL CARPETS
+full/tamw/train-2/ln94209_60.t.gz	t-ln94209-60-p3s1w5 t-ln94209-60-p3s1w6 t-ln94209-60-p3s1w7	Miranda Sex Garden
+full/tamw/train-2/ln94209_60.t.gz	t-ln94209-60-p4s3w12 t-ln94209-60-p4s3w13 t-ln94209-60-p4s3w14 t-ln94209-60-p4s3w15 t-ln94209-60-p4s3w16 t-ln94209-60-p4s3w17 t-ln94209-60-p4s3w18 t-ln94209-60-p4s3w19	All That I Need Is To Be Loved
+full/tamw/train-2/ln94209_60.t.gz	t-ln94209-60-p5s1w17 t-ln94209-60-p5s1w18 t-ln94209-60-p5s1w19	I Want You
+full/tamw/train-2/ln94209_60.t.gz	t-ln94209-60-p5s1w7 t-ln94209-60-p5s1w8	Inspiral Carpets
+full/tamw/train-2/ln94209_60.t.gz	t-ln94209-60-p5s2w29 t-ln94209-60-p5s2w30	Devil Hopping
+full/tamw/train-2/ln94209_60.t.gz	t-ln94209-60-p5s2w32 t-ln94209-60-p5s2w33 t-ln94209-60-p5s2w34 t-ln94209-60-p5s2w35	Party In The Sky
+full/tamw/train-2/ln94209_60.t.gz	t-ln94209-60-p5s2w50 t-ln94209-60-p5s2w51 t-ln94209-60-p5s2w52 t-ln94209-60-p5s2w53 t-ln94209-60-p5s2w54	She Comes In The Fall
+full/tamw/train-2/ln94209_60.t.gz	t-ln94209-60-p5s2w58 t-ln94209-60-p5s2w59 t-ln94209-60-p5s2w60 t-ln94209-60-p5s2w61 t-ln94209-60-p5s2w62	This Is How It Feels
+full/tamw/train-2/ln94209_60.t.gz	t-ln94209-60-p5s3w25 t-ln94209-60-p5s3w26 t-ln94209-60-p5s3w27	Dragging Me Down
+full/tamw/train-2/ln94209_60.t.gz	t-ln94209-60-p5s4w13 t-ln94209-60-p5s4w14	Inspiral Carpets
+full/tamw/train-2/ln94209_60.t.gz	t-ln94209-60-p5s5Bw1 t-ln94209-60-p5s5Bw2 t-ln94209-60-p5s5Bw3	Miranda Sex Garden
+full/tamw/train-2/ln94209_60.t.gz	t-ln94209-60-p5s5Bw7 t-ln94209-60-p5s5Bw8	Inspiral Carpets
+full/tamw/train-2/ln94209_97.t.gz	t-ln94209-97-p2s13w17	IndyCar
+full/tamw/train-2/ln94209_97.t.gz	t-ln94209-97-p2s13w6 t-ln94209-97-p2s13w7	Newmann Haas
+full/tamw/train-2/ln94209_97.t.gz	t-ln94209-97-p2s1Bw7 t-ln94209-97-p2s1Bw8	Penske Ilmor
+full/tamw/train-2/ln94210_132.t.gz	t-ln94210-132-p1s2w4 t-ln94210-132-p1s2w5	Pink Floyd
+full/tamw/train-2/ln94210_132.t.gz	t-ln94210-132-p1s5w4 t-ln94210-132-p1s5w5	Pink Floyd
+full/tamw/train-2/ln94210_18.t.gz	t-ln94210-18-p2s1Bw37 t-ln94210-18-p2s1Bw38 t-ln94210-18-p2s1Bw39	Mori Building Co
+full/tamw/train-2/ln94210_81.t.gz	t-ln94210-81-p2s2w3 t-ln94210-81-p2s2w5	ITAR TASS
+full/tamw/train-2/ln94211_1.t.gz	t-ln94211-1-p2s1w11 t-ln94211-1-p2s1w12 t-ln94211-1-p2s1w13	Open GIS Ä
+full/tamw/train-2/ln94211_1.t.gz	t-ln94211-1-p3s4w11 t-ln94211-1-p3s4w12 t-ln94211-1-p3s4w13	D #Dash DATA
+full/tamw/train-2/ln94211_1.t.gz	t-ln94211-1-p4s1w16 t-ln94211-1-p4s1w17 t-ln94211-1-p4s1w18	Siemens #Dash Nixdorf
+full/tamw/train-2/ln94211_1.t.gz	t-ln94211-1-p5s4w11 t-ln94211-1-p5s4w12	Legato Systems
+full/tamw/train-2/ln94211_1.t.gz	t-ln94211-1-p6s3w4 t-ln94211-1-p6s3w5 t-ln94211-1-p6s3w6 t-ln94211-1-p6s3w7 t-ln94211-1-p6s3w8 t-ln94211-1-p6s3w9	4 PLEX PX #Dash 43 CH
+full/tamw/train-2/ln94211_108.t.gz	t-ln94211-108-p3s2w12 t-ln94211-108-p3s2w13 t-ln94211-108-p3s2w14 t-ln94211-108-p3s2w15	Werkstätten #Dash und Kulturhaus
+full/tamw/train-2/ln94211_90.t.gz	t-ln94211-90-p11s1w10 t-ln94211-90-p11s1w11	Meech Lake
+full/tamw/train-2/ln95045_001.t.gz	t-ln95045-001-p3s1w32 t-ln95045-001-p3s1w33 t-ln95045-001-p3s1w34 t-ln95045-001-p3s1w35 t-ln95045-001-p3s1w36 t-ln95045-001-p3s1w37	T #Period I #Period C #Period
+full/tamw/train-2/ln95045_011.t.gz	t-ln95045-011-p2s1Cw14 t-ln95045-011-p2s1Cw15	power play
+full/tamw/train-2/ln95045_011.t.gz	t-ln95045-011-p2s2w15 t-ln95045-011-p2s2w16 t-ln95045-011-p2s2w17	New York Rangers
+full/tamw/train-2/ln95045_011.t.gz	t-ln95045-011-p2s2w8 t-ln95045-011-p2s2w9	New Jersey
+full/tamw/train-2/ln95045_011.t.gz	t-ln95045-011-p2s3w2 t-ln95045-011-p2s3w3	New Jersey
+full/tamw/train-2/ln95045_011.t.gz	t-ln95045-011-p3s1w4 t-ln95045-011-p3s1w5 t-ln95045-011-p3s1w6	New York Rangers
+full/tamw/train-2/ln95045_041.t.gz	t-ln95045-041-p2s1w9 t-ln95045-041-p2s1w10 t-ln95045-041-p2s1w11 t-ln95045-041-p2s1w12 t-ln95045-041-p2s1w13 t-ln95045-041-p2s1w14	Marlboro Rock #Dash in ' 95
+full/tamw/train-2/ln95045_041.t.gz	t-ln95045-041-p2s2w9 t-ln95045-041-p2s2w10	Strange People
+full/tamw/train-2/ln95045_041.t.gz	t-ln95045-041-p2s6w10 t-ln95045-041-p2s6w11 t-ln95045-041-p2s6w12	New Rock Generation
+full/tamw/train-2/ln95046_046.t.gz	t-ln95046-046-p2s2Bw9 t-ln95046-046-p2s2Bw10 t-ln95046-046-p2s2Bw11 t-ln95046-046-p2s2Bw12	VADO MA DOVE ?
+full/tamw/train-2/ln95046_046.t.gz	t-ln95046-046-p4s6w6 t-ln95046-046-p4s6w7 t-ln95046-046-p4s6w8 t-ln95046-046-p4s6w9	Vado ma dove ?
+full/tamw/train-2/ln95046_056.t.gz	t-ln95046-056-p3s1w12 t-ln95046-056-p3s1w13	Top Gun
+full/tamw/train-2/ln95046_056.t.gz	t-ln95046-056-p3s1w15 t-ln95046-056-p3s1w16	Rain Man
+full/tamw/train-2/ln95046_116.t.gz	t-ln95046-116-p1s1w1 t-ln95046-116-p1s1w2	Stock Consult
+full/tamw/train-2/ln95046_116.t.gz	t-ln95046-116-p2s1Bw2 t-ln95046-116-p2s1Bw3	Stock Consult
+full/tamw/train-2/ln95047_052.t.gz	t-ln95047-052-p2s2w3 t-ln95047-052-p2s2w4 t-ln95047-052-p2s2w5	Sotheby ' s
+full/tamw/train-2/ln95048_005.t.gz	t-ln95048-005-p1s1w1 t-ln95048-005-p1s1w2	Dow Jones
+full/tamw/train-2/ln95048_005.t.gz	t-ln95048-005-p2s1Bw14 t-ln95048-005-p2s1Bw15	Dow Jones
+full/tamw/train-2/ln95048_005.t.gz	t-ln95048-005-p2s1Bw27 t-ln95048-005-p2s1Bw28 t-ln95048-005-p2s1Bw29	Wall Street Journal
+full/tamw/train-2/ln95048_015.t.gz	t-ln95048-015-p3s3w1 t-ln95048-015-p3s3w2 t-ln95048-015-p3s3w3	Three of Hearts
+full/tamw/train-2/ln95048_015.t.gz	t-ln95048-015-p3s4w5 t-ln95048-015-p3s4w6 t-ln95048-015-p3s4w7	Falcon Home Video
+full/tamw/train-2/ln95049_028.t.gz	t-ln95049-028-p2s1w8 t-ln95049-028-p2s1w9 t-ln95049-028-p2s1w10	Pico de Regalados
+full/tamw/train-2/ln95049_038.t.gz	t-ln95049-038-p1s1w6 t-ln95049-038-p1s1w7	play off
+full/tamw/train-2/ln95049_038.t.gz	t-ln95049-038-p2s2w29 t-ln95049-038-p2s2w30	play off
+full/tamw/train-2/ln95049_038.t.gz	t-ln95049-038-p3s10w7 t-ln95049-038-p3s10w8	play off
+full/tamw/train-2/ln95049_038.t.gz	t-ln95049-038-p3s11w21 t-ln95049-038-p3s11w22	play off
+full/tamw/train-2/ln95049_038.t.gz	t-ln95049-038-p3s4w8 t-ln95049-038-p3s4w9	play off
+full/tamw/train-2/ln95049_048.t.gz	t-ln95049-048-p1s2w10 t-ln95049-048-p1s2w11 t-ln95049-048-p1s2w12 t-ln95049-048-p1s2w13	k #Period o #Period
+full/tamw/train-2/ln95049_058.t.gz	t-ln95049-058-p4s3w15 t-ln95049-058-p4s3w16	Elm Street
+full/tamw/train-2/ln95049_068.t.gz	t-ln95049-068-p15s4w2 t-ln95049-068-p15s4w3 t-ln95049-068-p15s4w4	Kajn dojč márk
+full/tamw/train-2/ln95049_068.t.gz	t-ln95049-068-p15s6w6 t-ln95049-068-p15s6w7	njů cajt
+full/tamw/train-2/ln95049_078.t.gz	t-ln95049-078-p2s1Bw3 t-ln95049-078-p2s1Bw4	Rolling Stones
+full/tamw/train-2/ln95049_078.t.gz	t-ln95049-078-p2s2w7 t-ln95049-078-p2s2w8	Fllis Park
+full/tamw/train-2/ln95049_078.t.gz	t-ln95049-078-p2s6w16 t-ln95049-078-p2s6w17	Rolling Stones
+full/tamw/train-2/ln95049_098.t.gz	t-ln95049-098-p2s2w9 t-ln95049-098-p2s2w10	Seat Toledo
+full/tamw/train-2/ln95049_128.t.gz	t-ln95049-128-p3s1w5 t-ln95049-128-p3s1w6	Financial Times
+full/tamw/train-2/ln95049_128.t.gz	t-ln95049-128-p6s1w8 t-ln95049-128-p6s1w9	Financial Times
+full/tamw/train-2/lnd94103_046.t.gz	t-lnd94103-046-p1s5w4 t-lnd94103-046-p1s5w5 t-lnd94103-046-p1s5w6 t-lnd94103-046-p1s5w7	Kim Jong #Dash sam
+full/tamw/train-2/lnd94103_056.t.gz	t-lnd94103-056-p1s15w6 t-lnd94103-056-p1s15w7 t-lnd94103-056-p1s15w8	Three Mile Island
+full/tamw/train-2/lnd94103_056.t.gz	t-lnd94103-056-p1s21w6 t-lnd94103-056-p1s21w7 t-lnd94103-056-p1s21w8 t-lnd94103-056-p1s21w9 t-lnd94103-056-p1s21w10 t-lnd94103-056-p1s21w11 t-lnd94103-056-p1s21w12	Tennessee Valley Authority ' s Sequoyah I
+full/tamw/train-2/lnd94103_056.t.gz	t-lnd94103-056-p1s2Bw13 t-lnd94103-056-p1s2Bw14	Chalk River
+full/tamw/train-2/lnd94103_077.t.gz	t-lnd94103-077-p1s2w4 t-lnd94103-077-p1s2w5 t-lnd94103-077-p1s2w6 t-lnd94103-077-p1s2w7	Coca #Dash Cola Refreshments
+full/tamw/train-2/lnd94103_087.t.gz	t-lnd94103-087-p1s14w5 t-lnd94103-087-p1s14w6 t-lnd94103-087-p1s14w7 t-lnd94103-087-p1s14w8 t-lnd94103-087-p1s14w9 t-lnd94103-087-p1s14w10	Garry #Dash El #Dash Baraki Radjan
+full/tamw/train-2/lnd94103_107.t.gz	t-lnd94103-107-p1s1Bw9 t-lnd94103-107-p1s1Bw10	Pikes Peak
+full/tamw/train-2/lnd94103_107.t.gz	t-lnd94103-107-p1s1Ew12 t-lnd94103-107-p1s1Ew13	Colorado Springs
+full/tamw/train-2/lnd94103_107.t.gz	t-lnd94103-107-p1s1Ew26 t-lnd94103-107-p1s1Ew27	Pikes Peak
+full/tamw/train-2/lnd94103_117.t.gz	t-lnd94103-117-p1s12Bw23 t-lnd94103-117-p1s12Bw24 t-lnd94103-117-p1s12Bw25	Val di Fassa
+full/tamw/train-2/lnd94103_117.t.gz	t-lnd94103-117-p1s2Aw1 t-lnd94103-117-p1s2Aw2 t-lnd94103-117-p1s2Aw3	Val di Fassa
+full/tamw/train-2/lnd94103_117.t.gz	t-lnd94103-117-p1s2Bw42 t-lnd94103-117-p1s2Bw43	Calgary Flames
+full/tamw/train-2/lnd94103_117.t.gz	t-lnd94103-117-p1s2Bw68 t-lnd94103-117-p1s2Bw69 t-lnd94103-117-p1s2Bw70	Val di Fassa
+full/tamw/train-2/lnd94103_117.t.gz	t-lnd94103-117-p1s4w11 t-lnd94103-117-p1s4w12	play off
+full/tamw/train-2/lnd94103_117.t.gz	t-lnd94103-117-p1s9Aw20 t-lnd94103-117-p1s9Aw21	play off
+full/tamw/train-2/mf920922_105.t.gz	t-mf920922-105-p2s15w5 t-mf920922-105-p2s15w6	Close Call
+full/tamw/train-2/mf920922_105.t.gz	t-mf920922-105-p2s4w1 t-mf920922-105-p2s4w2	Perceptual Cells
+full/tamw/train-2/mf920925_047.t.gz	t-mf920925-047-p2s2Bw19 t-mf920925-047-p2s2Bw20	Broken Arms
+full/tamw/train-2/mf920925_097.t.gz	t-mf920925-097-p10s1w7 t-mf920925-097-p10s1w8 t-mf920925-097-p10s1w9 t-mf920925-097-p10s1w10	THE NEW YORK TIMES
+full/tamw/train-2/mf920925_107.t.gz	t-mf920925-107-p2s2w8 t-mf920925-107-p2s2w9	New York
+full/tamw/train-2/mf930709_055.t.gz	t-mf930709-055-p1s1Bw1 t-mf930709-055-p1s1Bw2	The Hooters
+full/tamw/train-2/mf930709_055.t.gz	t-mf930709-055-p1s1Bw4 t-mf930709-055-p1s1Bw5 t-mf930709-055-p1s1Bw6 t-mf930709-055-p1s1Bw7	Out Of The Body
+full/tamw/train-2/mf930709_055.t.gz	t-mf930709-055-p1s4w14 t-mf930709-055-p1s4w15 t-mf930709-055-p1s4w16 t-mf930709-055-p1s4w17 t-mf930709-055-p1s4w18 t-mf930709-055-p1s4w19	Twenty Five Hours Of A Day
+full/tamw/train-2/mf930709_086.t.gz	t-mf930709-086-p2s2Bw10 t-mf930709-086-p2s2Bw11 t-mf930709-086-p2s2Bw12	Ol #Period Marseille
+full/tamw/train-2/mf930709_147.t.gz	t-mf930709-147-p2s2w6 t-mf930709-147-p2s2w7 t-mf930709-147-p2s2w8	ITAR #Dash TASS
+full/tamw/train-2/mf930709_147.t.gz	t-mf930709-147-p2s3w35 t-mf930709-147-p2s3w36 t-mf930709-147-p2s3w37	Sina #Dash kana
+full/tamw/train-2/mf930709_147.t.gz	t-mf930709-147-p2s4w4 t-mf930709-147-p2s4w5 t-mf930709-147-p2s4w6	ITAR #Dash TASS
+full/tamw/train-2/mf930709_147.t.gz	t-mf930709-147-p2s6w7 t-mf930709-147-p2s6w8 t-mf930709-147-p2s6w9	ITAR #Dash TASS
+full/tamw/train-2/mf930713_076.t.gz	t-mf930713-076-p3s2w1 t-mf930713-076-p3s2w3 t-mf930713-076-p3s2w5	Viva ANC viva
+full/tamw/train-3/cmpr9410_043.t.gz	t-cmpr9410-043-p23s1w1 t-cmpr9410-043-p23s1w2 t-cmpr9410-043-p23s1w3 t-cmpr9410-043-p23s1w4 t-cmpr9410-043-p23s1w5 t-cmpr9410-043-p23s1w6 t-cmpr9410-043-p23s1w7 t-cmpr9410-043-p23s1w8	Economic Survey of Europe in 1989 #Dash 1990
+full/tamw/train-3/cmpr9410_043.t.gz	t-cmpr9410-043-p24s1w1 t-cmpr9410-043-p24s1w2 t-cmpr9410-043-p24s1w3 t-cmpr9410-043-p24s1w4 t-cmpr9410-043-p24s1w5 t-cmpr9410-043-p24s1w6	OECD Economic Outlook N #Dash 54
+full/tamw/train-3/cmpr9413_011.t.gz	t-cmpr9413-011-p20s4w9 t-cmpr9413-011-p20s4w10 t-cmpr9413-011-p20s4w11	cash #Dash flow
+full/tamw/train-3/cmpr9413_021.t.gz	t-cmpr9413-021-p9s1w3 t-cmpr9413-021-p9s1w4	Victoria Publishing
+full/tamw/train-3/cmpr9415_029.t.gz	t-cmpr9415-029-p12s1w16 t-cmpr9415-029-p12s1w17	Mesag Time
+full/tamw/train-3/cmpr9415_029.t.gz	t-cmpr9415-029-p12s1w3 t-cmpr9415-029-p12s1w4 t-cmpr9415-029-p12s1w5 t-cmpr9415-029-p12s1w6 t-cmpr9415-029-p12s1w7 t-cmpr9415-029-p12s1w8 t-cmpr9415-029-p12s1w9	Ljubljanski Sejem #Comma d #Period d #Period
+full/tamw/train-3/cmpr9415_029.t.gz	t-cmpr9415-029-p19s1w7 t-cmpr9415-029-p19s1w8 t-cmpr9415-029-p19s1w9 t-cmpr9415-029-p19s1w10 t-cmpr9415-029-p19s1w11	Lirea J #Period H #Period
+full/tamw/train-3/cmpr9415_029.t.gz	t-cmpr9415-029-p23s1w16 t-cmpr9415-029-p23s1w17 t-cmpr9415-029-p23s1w18	Vuzrazhdane Bivd #Period
+full/tamw/train-3/cmpr9415_029.t.gz	t-cmpr9415-029-p23s1w6 t-cmpr9415-029-p23s1w7 t-cmpr9415-029-p23s1w9	Meždunaroden Pahair Plovdiv
+full/tamw/train-3/cmpr9415_029.t.gz	t-cmpr9415-029-p5s1w1 t-cmpr9415-029-p5s1w3 t-cmpr9415-029-p5s1w4	AQUA THERM INTERNATIONAL
+full/tamw/train-3/cmpr9415_029.t.gz	t-cmpr9415-029-p6s1w1 t-cmpr9415-029-p6s1w2 t-cmpr9415-029-p6s1w3 t-cmpr9415-029-p6s1w4 t-cmpr9415-029-p6s1w5	INTERNATIONALE PBS PLUS [ 94
+full/tamw/train-3/ln94200_107.t.gz	t-ln94200-107-p2s2w10 t-ln94200-107-p2s2w11 t-ln94200-107-p2s2w12	Simply the best
+full/tamw/train-3/ln94200_134.t.gz	t-ln94200-134-p2s4w19 t-ln94200-134-p2s4w20 t-ln94200-134-p2s4w21 t-ln94200-134-p2s4w22	Tony Ducháček And Garage
+full/tamw/train-3/ln94200_134.t.gz	t-ln94200-134-p2s4w47 t-ln94200-134-p2s4w48	Support Lesbiens
+full/tamw/train-3/ln94200_30.t.gz	t-ln94200-30-p10s2w10 t-ln94200-30-p10s2w11	JV Nikom
+full/tamw/train-3/ln94200_30.t.gz	t-ln94200-30-p10s2w17 t-ln94200-30-p10s2w18	NISHO IWAI
+full/tamw/train-3/ln94200_30.t.gz	t-ln94200-30-p4s2w21 t-ln94200-30-p4s2w22 t-ln94200-30-p4s2w23	know #Dash how
+full/tamw/train-3/ln94200_76.t.gz	t-ln94200-76-p2s3w5 t-ln94200-76-p2s3w6 t-ln94200-76-p2s3w7 t-ln94200-76-p2s3w8 t-ln94200-76-p2s3w9 t-ln94200-76-p2s3w10 t-ln94200-76-p2s3w11	My heart wasn ' t in it
+full/tamw/train-3/ln94202_102.t.gz	t-ln94202-102-p4s2w20 t-ln94202-102-p4s2w21 t-ln94202-102-p4s2w22 t-ln94202-102-p4s2w23	Giro d ' Italia
+full/tamw/train-3/ln94202_102.t.gz	t-ln94202-102-p4s2w27 t-ln94202-102-p4s2w28 t-ln94202-102-p4s2w29	Tour de France
+full/tamw/train-3/ln94202_13.t.gz	t-ln94202-13-p5s1w10 t-ln94202-13-p5s1w11	in natura
+full/tamw/train-3/ln94202_5.t.gz	t-ln94202-5-p2s1Bw7 t-ln94202-5-p2s1Bw8 t-ln94202-5-p2s1Bw9	Hotzenblitz Thüringer GmbH
+full/tamw/train-3/ln94202_59.t.gz	t-ln94202-59-p7s1w1 t-ln94202-59-p7s1w2 t-ln94202-59-p7s1w3	The Washington Post
+full/tamw/train-3/ln94202_59.t.gz	t-ln94202-59-p7s2w1 t-ln94202-59-p7s2w2 t-ln94202-59-p7s2w3	The Washington Post
+full/tamw/train-3/ln94202_77.t.gz	t-ln94202-77-p5s1Aw6 t-ln94202-77-p5s1Aw7 t-ln94202-77-p5s1Aw8 t-ln94202-77-p5s1Aw9	The New York Times
+full/tamw/train-3/ln94202_77.t.gz	t-ln94202-77-p8s1Aw3 t-ln94202-77-p8s1Aw4 t-ln94202-77-p8s1Aw5	International Herald Tribune
+full/tamw/train-3/ln94202_77.t.gz	t-ln94202-77-p8s1Bw14 t-ln94202-77-p8s1Bw15	de facto
+full/tamw/train-3/ln94202_77.t.gz	t-ln94202-77-p9s1w4 t-ln94202-77-p9s1w5 t-ln94202-77-p9s1w6	International Herald Tribune
+full/tamw/train-3/ln94203_112.t.gz	t-ln94203-112-p2s1Bw8 t-ln94203-112-p2s1Bw9	US Open
+full/tamw/train-3/ln94203_112.t.gz	t-ln94203-112-p4s2w8 t-ln94203-112-p4s2w9	Flushing Meadow
+full/tamw/train-3/ln94203_62.t.gz	t-ln94203-62-p4s1w13 t-ln94203-62-p4s1w14	Lycie Warszawy
+full/tamw/train-3/ln94203_62.t.gz	t-ln94203-62-p4s1w19 t-ln94203-62-p4s1w20 t-ln94203-62-p4s1w21 t-ln94203-62-p4s1w22	L ' Unione Sarda
+full/tamw/train-3/ln94203_80.t.gz	t-ln94203-80-p3s5w14 t-ln94203-80-p3s5w15	Čhajori romani
+full/tamw/train-3/ln94203_80.t.gz	t-ln94203-80-p7s4w12 t-ln94203-80-p7s4w13 t-ln94203-80-p7s4w14	Auschwitz #Dash Birkenau
+full/tamw/train-3/ln94203_99.t.gz	t-ln94203-99-p8s1w19 t-ln94203-99-p8s1w20	ad absurdum
+full/tamw/train-3/ln94204_161.t.gz	t-ln94204-161-p6s2w3 t-ln94204-161-p6s2w4	GAD line
+full/tamw/train-3/ln94204_98.t.gz	t-ln94204-98-p1s1w4 t-ln94204-98-p1s1w5	Inspiral Carpets
+full/tamw/train-3/ln94204_98.t.gz	t-ln94204-98-p2s1w16 t-ln94204-98-p2s1w17	Inspiral Carpets
+full/tamw/train-3/ln94204_98.t.gz	t-ln94204-98-p2s2w13 t-ln94204-98-p2s2w14	Happy Mondays
+full/tamw/train-3/ln94204_98.t.gz	t-ln94204-98-p2s2w9 t-ln94204-98-p2s2w10 t-ln94204-98-p2s2w11	The Stone Roses
+full/tamw/train-3/ln94204_98.t.gz	t-ln94204-98-p3s1w9 t-ln94204-98-p3s1w10	Inspiral Carpets
+full/tamw/train-3/ln94204_98.t.gz	t-ln94204-98-p4s1w14 t-ln94204-98-p4s1w15 t-ln94204-98-p4s1w16 t-ln94204-98-p4s1w17	Revenge of The Goldfish
+full/tamw/train-3/ln94204_98.t.gz	t-ln94204-98-p4s1w7 t-ln94204-98-p4s1w8 t-ln94204-98-p4s1w9	The Beast Inside
+full/tamw/train-3/ln94204_98.t.gz	t-ln94204-98-p5s1w4 t-ln94204-98-p5s1w5	Inspiral Carpets
+full/tamw/train-3/ln94204_98.t.gz	t-ln94204-98-p5s1w9 t-ln94204-98-p5s1w10	Devil Hopping
+full/tamw/train-3/ln94204_98.t.gz	t-ln94204-98-p5s2w4 t-ln94204-98-p5s2w5	Inspiral Carpets
+full/tamw/train-3/ln94204_98.t.gz	t-ln94204-98-p5s2w9 t-ln94204-98-p5s2w10	Devil Hopping
+full/tamw/train-3/ln94205_106.t.gz	t-ln94205-106-p1s1w1 t-ln94205-106-p1s1w2	Pink Floyd
+full/tamw/train-3/ln94205_106.t.gz	t-ln94205-106-p2s1Cw5 t-ln94205-106-p2s1Cw6	Pink Floyd
+full/tamw/train-3/ln94205_106.t.gz	t-ln94205-106-p3s1w15 t-ln94205-106-p3s1w16 t-ln94205-106-p3s1w17	The Division Bell
+full/tamw/train-3/ln94205_106.t.gz	t-ln94205-106-p3s2w9 t-ln94205-106-p3s2w10 t-ln94205-106-p3s2w11	Rock #Amp Pop
+full/tamw/train-3/ln94205_106.t.gz	t-ln94205-106-p4s1w11 t-ln94205-106-p4s1w12	Pink Floyd
+full/tamw/train-3/ln94205_106.t.gz	t-ln94205-106-p4s3w22 t-ln94205-106-p4s3w23	Pink Floyd
+full/tamw/train-3/ln94205_106.t.gz	t-ln94205-106-p4s4w48 t-ln94205-106-p4s4w49	Pink Floyd
+full/tamw/train-3/ln94205_106.t.gz	t-ln94205-106-p5s3w11 t-ln94205-106-p5s3w12 t-ln94205-106-p5s3w13	The Division Bell
+full/tamw/train-3/ln94205_124.t.gz	t-ln94205-124-p2s1Bw11 t-ln94205-124-p2s1Bw12	Race Trucks
+full/tamw/train-3/ln94205_4.t.gz	t-ln94205-4-p2s1w5 t-ln94205-4-p2s1w6 t-ln94205-4-p2s1w7	dot per inch
+full/tamw/train-3/ln94205_4.t.gz	t-ln94205-4-p4s1w3 t-ln94205-4-p4s1w4 t-ln94205-4-p4s1w5	Peripheral Component Interconnect
+full/tamw/train-3/ln94205_67.t.gz	t-ln94205-67-p3s6w23 t-ln94205-67-p3s6w24 t-ln94205-67-p3s6w25 t-ln94205-67-p3s6w26	Art Production K #Period
+full/tamw/train-3/ln94205_85.t.gz	t-ln94205-85-p2s1w22 t-ln94205-85-p2s1w23	London Records
+full/tamw/train-3/ln94205_85.t.gz	t-ln94205-85-p3s1w19 t-ln94205-85-p3s1w20	New York
+full/tamw/train-3/ln94205_85.t.gz	t-ln94205-85-p5s2w2 t-ln94205-85-p5s2w3 t-ln94205-85-p5s2w4	ITAR #Dash TASS
+full/tamw/train-3/ln94206_102.t.gz	t-ln94206-102-p4s3w56 t-ln94206-102-p4s3w58	science fiction
+full/tamw/train-3/ln94206_102.t.gz	t-ln94206-102-p4s3w59 t-ln94206-102-p4s3w60	star Trek
+full/tamw/train-3/ln94206_85.t.gz	t-ln94206-85-p2s18w4 t-ln94206-85-p2s18w5	Sinn Fein
+full/tamw/train-3/ln94206_85.t.gz	t-ln94206-85-p2s27w18 t-ln94206-85-p2s27w19	Sinn Fein
+full/tamw/train-3/ln94206_85.t.gz	t-ln94206-85-p2s35w11 t-ln94206-85-p2s35w12	Sinn Fein
+full/tamw/train-3/ln94206_85.t.gz	t-ln94206-85-p2s36w13 t-ln94206-85-p2s36w14	Sinn Fein
+full/tamw/train-3/ln94206_85.t.gz	t-ln94206-85-p2s40w6 t-ln94206-85-p2s40w7	Sinn Fein
+full/tamw/train-3/ln94206_85.t.gz	t-ln94206-85-p2s42w7 t-ln94206-85-p2s42w8	Sinn Fein
+full/tamw/train-3/ln94206_85.t.gz	t-ln94206-85-p2s43w10 t-ln94206-85-p2s43w11	Sinn Fein
+full/tamw/train-3/ln94207_139.t.gz	t-ln94207-139-p1s1w6 t-ln94207-139-p1s1w7	Pink Floyd
+full/tamw/train-3/ln94207_139.t.gz	t-ln94207-139-p1s3w2 t-ln94207-139-p1s3w3 t-ln94207-139-p1s3w4 t-ln94207-139-p1s3w5	Media World #Amp Meco
+full/tamw/train-3/ln94207_67.t.gz	t-ln94207-67-p2s1Aw4 t-ln94207-67-p2s1Aw5	Wild Duck
+full/tamw/train-3/ln94207_76.t.gz	t-ln94207-76-p11s5w16 t-ln94207-76-p11s5w17 t-ln94207-76-p11s5w18 t-ln94207-76-p11s5w19	Mao Ce #Dash tung
+full/tamw/train-3/ln94207_76.t.gz	t-ln94207-76-p12s10w22 t-ln94207-76-p12s10w23	Maul halten
+full/tamw/train-3/ln94207_76.t.gz	t-ln94207-76-p12s4w6 t-ln94207-76-p12s4w7 t-ln94207-76-p12s4w8 t-ln94207-76-p12s4w9 t-ln94207-76-p12s4w10 t-ln94207-76-p12s4w11 t-ln94207-76-p12s4w12 t-ln94207-76-p12s4w13 t-ln94207-76-p12s4w14 t-ln94207-76-p12s4w15	das ist meiner Meinung nach sehr leicht und überaus bequem
+full/tamw/train-3/ln94207_76.t.gz	t-ln94207-76-p1s1w1 t-ln94207-76-p1s1w2 t-ln94207-76-p1s1w3 t-ln94207-76-p1s1w4	Sic transit gloria mundi
+full/tamw/train-3/ln94207_76.t.gz	t-ln94207-76-p2s9w1 t-ln94207-76-p2s9w2 t-ln94207-76-p2s9w3 t-ln94207-76-p2s9w4	Sic transit gloria mundi
+full/tamw/train-3/ln94207_76.t.gz	t-ln94207-76-p4s2w31 t-ln94207-76-p4s2w32 t-ln94207-76-p4s2w33 t-ln94207-76-p4s2w34 t-ln94207-76-p4s2w35 t-ln94207-76-p4s2w36	C #Period H #Period Beck Verlag
+full/tamw/train-3/ln94207_76.t.gz	t-ln94207-76-p5s2w17 t-ln94207-76-p5s2w18	Bayrischer Rundfunk
+full/tamw/train-3/ln94208_50.t.gz	t-ln94208-50-p2s2w20 t-ln94208-50-p2s2w21	a priori
+full/tamw/train-3/ln94208_87.t.gz	t-ln94208-87-p3s2w5 t-ln94208-87-p3s2w6 t-ln94208-87-p3s2w7	New Musical Express
+full/tamw/train-3/ln94209_25.t.gz	t-ln94209-25-p2s1Bw24 t-ln94209-25-p2s1Bw25 t-ln94209-25-p2s1Bw26 t-ln94209-25-p2s1Bw27	Jie Süan #Dash pching
+full/tamw/train-3/ln94209_70.t.gz	t-ln94209-70-p2s1w34 t-ln94209-70-p2s1w35 t-ln94209-70-p2s1w36 t-ln94209-70-p2s1w37	Cantar de mio Cid
+full/tamw/train-3/ln94209_70.t.gz	t-ln94209-70-p3s2w27 t-ln94209-70-p3s2w28 t-ln94209-70-p3s2w29	El Cid Campeador
+full/tamw/train-3/ln94209_70.t.gz	t-ln94209-70-p4s1w29 t-ln94209-70-p4s1w30 t-ln94209-70-p4s1w31	chanson de geste
+full/tamw/train-3/ln94210_19.t.gz	t-ln94210-19-p2s1Bw18 t-ln94210-19-p2s1Bw19	Business Weekly
+full/tamw/train-3/ln94210_19.t.gz	t-ln94210-19-p3s1w7 t-ln94210-19-p3s1w8 t-ln94210-19-p3s1w9 t-ln94210-19-p3s1w10 t-ln94210-19-p3s1w11	Tianjin Automotive Industry Corp #Period
+full/tamw/train-3/ln94210_19.t.gz	t-ln94210-19-p4s1w14 t-ln94210-19-p4s1w15 t-ln94210-19-p4s1w16 t-ln94210-19-p4s1w17	Forever Bicycle Co #Period
+full/tamw/train-3/ln94210_19.t.gz	t-ln94210-19-p4s1w9 t-ln94210-19-p4s1w10 t-ln94210-19-p4s1w11 t-ln94210-19-p4s1w12	Phoenix Bicycle Co #Period
+full/tamw/train-3/ln94210_91.t.gz	t-ln94210-91-p5s5w9 t-ln94210-91-p5s5w10	ad hoc
+full/tamw/train-3/ln94211_109.t.gz	t-ln94211-109-p2s2w16 t-ln94211-109-p2s2w17 t-ln94211-109-p2s2w18	Musica Historica Viva
+full/tamw/train-3/ln94211_109.t.gz	t-ln94211-109-p2s2w9 t-ln94211-109-p2s2w10 t-ln94211-109-p2s2w11	Amsterdam fortepiano trio
+full/tamw/train-3/ln94211_127.t.gz	t-ln94211-127-p3s2w24	MEB
+full/tamw/train-3/ln94211_28.t.gz	t-ln94211-28-p1s1Aw9 t-ln94211-28-p1s1Aw10	Vivat Slovakia
+full/tamw/train-3/ln94211_82.t.gz	t-ln94211-82-p2s1Aw5 t-ln94211-82-p2s1Aw6	Downing Street
+full/tamw/train-3/ln94211_82.t.gz	t-ln94211-82-p2s1Cw5 t-ln94211-82-p2s1Cw6	Sinn Fein
+full/tamw/train-3/ln94211_82.t.gz	t-ln94211-82-p2s2w16 t-ln94211-82-p2s2w17	Downing Street
+full/tamw/train-3/ln94211_82.t.gz	t-ln94211-82-p5s1w14 t-ln94211-82-p5s1w15	Sinn Fein
+full/tamw/train-3/ln94211_91.t.gz	t-ln94211-91-p2s3w10 t-ln94211-91-p2s3w11 t-ln94211-91-p2s3w12 t-ln94211-91-p2s3w13	Ťiang Ce #Dash min
+full/tamw/train-3/ln94211_91.t.gz	t-ln94211-91-p3s2w1 t-ln94211-91-p3s2w2 t-ln94211-91-p3s2w3 t-ln94211-91-p3s2w4	Mao Ce #Dash tung
+full/tamw/train-3/ln95045_032.t.gz	t-ln95045-032-p2s1Bw17 t-ln95045-032-p2s1Bw18	play off
+full/tamw/train-3/ln95045_032.t.gz	t-ln95045-032-p2s4w11 t-ln95045-032-p2s4w12	play off
+full/tamw/train-3/ln95045_032.t.gz	t-ln95045-032-p7s16w32 t-ln95045-032-p7s16w33	play off
+full/tamw/train-3/ln95045_032.t.gz	t-ln95045-032-p7s18w33 t-ln95045-032-p7s18w34	power play
+full/tamw/train-3/ln95045_042.t.gz	t-ln95045-042-p2s2w19 t-ln95045-042-p2s2w20	Luscious Jackson
+full/tamw/train-3/ln95045_042.t.gz	t-ln95045-042-p2s4w1 t-ln95045-042-p2s4w2	Beastie Boys
+full/tamw/train-3/ln95045_042.t.gz	t-ln95045-042-p2s6w16 t-ln95045-042-p2s6w17 t-ln95045-042-p2s6w18	Licenced To Ill
+full/tamw/train-3/ln95045_042.t.gz	t-ln95045-042-p2s6w24 t-ln95045-042-p2s6w25	Def Jam
+full/tamw/train-3/ln95045_042.t.gz	t-ln95045-042-p2s8w5 t-ln95045-042-p2s8w6 t-ln95045-042-p2s8w7 t-ln95045-042-p2s8w8	Paul ' s Boutique
+full/tamw/train-3/ln95045_042.t.gz	t-ln95045-042-p3s1w15 t-ln95045-042-p3s1w16 t-ln95045-042-p3s1w17	Check Your Head
+full/tamw/train-3/ln95045_042.t.gz	t-ln95045-042-p3s2w24 t-ln95045-042-p3s2w25 t-ln95045-042-p3s2w26	Some Old Bullshit
+full/tamw/train-3/ln95046_017.t.gz	t-ln95046-017-p2s1Bw28 t-ln95046-017-p2s1Bw29	play off
+full/tamw/train-3/ln95046_067.t.gz	t-ln95046-067-p2s3w7 t-ln95046-067-p2s3w8 t-ln95046-067-p2s3w9	Le Canard enchainé
+full/tamw/train-3/ln95046_117.t.gz	t-ln95046-117-p2s1Bw29 t-ln95046-117-p2s1Bw30	Deutsche Binnereederei
+full/tamw/train-3/ln95046_117.t.gz	t-ln95046-117-p2s1Bw3 t-ln95046-117-p2s1Bw4 t-ln95046-117-p2s1Bw5 t-ln95046-117-p2s1Bw6 t-ln95046-117-p2s1Bw7	Labe #Slash Elbe Container Line
+full/tamw/train-3/ln95046_117.t.gz	t-ln95046-117-p4s1w1 t-ln95046-117-p4s1w2 t-ln95046-117-p4s1w3 t-ln95046-117-p4s1w4 t-ln95046-117-p4s1w5	Labe #Slash Elbe Container Line
+full/tamw/train-3/ln95047_003.t.gz	t-ln95047-003-p2s1Bw10 t-ln95047-003-p2s1Bw11	Swiss Telecom
+full/tamw/train-3/ln95047_003.t.gz	t-ln95047-003-p2s1Bw6 t-ln95047-003-p2s1Bw7 t-ln95047-003-p2s1Bw8	PTT Telecom Netherlands
+full/tamw/train-3/ln95047_003.t.gz	t-ln95047-003-p3s2w9 t-ln95047-003-p3s2w10 t-ln95047-003-p3s2w11	AT #Amp T
+full/tamw/train-3/ln95047_003.t.gz	t-ln95047-003-p5s2w1 t-ln95047-003-p5s2w2	Swiss Telecom
+full/tamw/train-3/ln95047_073.t.gz	t-ln95047-073-p3s2w10 t-ln95047-073-p3s2w11 t-ln95047-073-p3s2w12 t-ln95047-073-p3s2w13	Iklim at #Dash Toufáh
+full/tamw/train-3/ln95047_123.t.gz	t-ln95047-123-p2s2w15 t-ln95047-123-p2s2w16 t-ln95047-123-p2s2w17	Mecseki Ercbanyaszati Vallálat
+full/tamw/train-3/ln95047_123.t.gz	t-ln95047-123-p2s2w9 t-ln95047-123-p2s2w10	Mecsekuran Kft
+full/tamw/train-3/ln95047_133.t.gz	t-ln95047-133-p4s4w6 t-ln95047-133-p4s4w7	China Daily
+full/tamw/train-3/ln95048_016.t.gz	t-ln95048-016-p3s1w37	Here
+full/tamw/train-3/ln95048_016.t.gz	t-ln95048-016-p3s2w39	go
+full/tamw/train-3/ln95048_016.t.gz	t-ln95048-016-p3s2w43	stop
+full/tamw/train-3/ln95048_016.t.gz	t-ln95048-016-p3s3w18 t-ln95048-016-p3s3w19	Luscious Jackson
+full/tamw/train-3/ln95048_016.t.gz	t-ln95048-016-p3s4w12 t-ln95048-016-p3s4w13 t-ln95048-016-p3s4w14 t-ln95048-016-p3s4w15 t-ln95048-016-p3s4w16	Keep On Rockin ' It
+full/tamw/train-3/ln95048_016.t.gz	t-ln95048-016-p4s2w20 t-ln95048-016-p4s2w21 t-ln95048-016-p4s2w22	Some Old Bullshit
+full/tamw/train-3/ln95048_016.t.gz	t-ln95048-016-p4s2w28 t-ln95048-016-p4s2w29 t-ln95048-016-p4s2w30	Check Your Head
+full/tamw/train-3/ln95048_016.t.gz	t-ln95048-016-p4s2w39 t-ln95048-016-p4s2w40	Ill Communication
+full/tamw/train-3/ln95048_064.t.gz	t-ln95048-064-p10s2w17 t-ln95048-064-p10s2w18 t-ln95048-064-p10s2w19	make #Dash up
+full/tamw/train-3/ln95048_114.t.gz	t-ln95048-114-p1s1w12 t-ln95048-114-p1s1w11 t-ln95048-114-p1s1w10	Janeiro de Rio
+full/tamw/train-3/ln95048_134.t.gz	t-ln95048-134-p2s5w3 t-ln95048-134-p2s5w4	in memoriam
+full/tamw/train-3/ln95049_039.t.gz	t-ln95049-039-p2s6w18 t-ln95049-039-p2s6w19	play off
+full/tamw/train-3/ln95049_059.t.gz	t-ln95049-059-p7s1w9 t-ln95049-059-p7s1w10 t-ln95049-059-p7s1w11	Il Seminario Musicale
+full/tamw/train-3/ln95049_129.t.gz	t-ln95049-129-p2s1Bw19 t-ln95049-129-p2s1Bw20	emerging markets
+full/tamw/train-3/ln95049_129.t.gz	t-ln95049-129-p2s1Bw3 t-ln95049-129-p2s1Bw4	Financial Times
+full/tamw/train-3/ln95049_129.t.gz	t-ln95049-129-p6s2w21 t-ln95049-129-p6s2w22 t-ln95049-129-p6s2w23	Telefonos de Mexico
+full/tamw/train-3/lnd94103_057.t.gz	t-lnd94103-057-p1s14w18 t-lnd94103-057-p1s14w19	Team Spirit
+full/tamw/train-3/lnd94103_098.t.gz	t-lnd94103-098-p1s9w9 t-lnd94103-098-p1s9w10 t-lnd94103-098-p1s9w11 t-lnd94103-098-p1s9w12	St #Period Louis March
+full/tamw/train-3/mf920922_026.t.gz	t-mf920922-026-p2s12Bw7 t-mf920922-026-p2s12Bw8 t-mf920922-026-p2s12Bw9 t-mf920922-026-p2s12Bw10	Publicity and Promotion agency
+full/tamw/train-3/mf920922_056.t.gz	t-mf920922-056-p2s15w30 t-mf920922-056-p2s15w31	pure robbery
+full/tamw/train-3/mf920922_056.t.gz	t-mf920922-056-p2s2w16 t-mf920922-056-p2s2w17 t-mf920922-056-p2s2w18	Detroit Red Wings
+full/tamw/train-3/mf920922_066.t.gz	t-mf920922-066-p5s1w1 t-mf920922-066-p5s1w2	SANTO DOMINGO
+full/tamw/train-3/mf920922_117.t.gz	t-mf920922-117-p4s3w11 t-mf920922-117-p4s3w12	Hezbe vahadat
+full/tamw/train-3/mf920922_117.t.gz	t-mf920922-117-p4s3w2 t-mf920922-117-p4s3w3	Ittiháde islámí
+full/tamw/train-3/mf920925_018.t.gz	t-mf920925-018-p2s11w15 t-mf920925-018-p2s11w16 t-mf920925-018-p2s11w17 t-mf920925-018-p2s11w18 t-mf920925-018-p2s11w19	rock ' n ' roll
+full/tamw/train-3/mf920925_028.t.gz	t-mf920925-028-p2s16w19 t-mf920925-028-p2s16w20	Motor Show
+full/tamw/train-3/mf920925_028.t.gz	t-mf920925-028-p2s23Aw6 t-mf920925-028-p2s23Aw7	Motor Show
+full/tamw/train-3/mf920925_048.t.gz	t-mf920925-048-p2s12w34 t-mf920925-048-p2s12w35	Boreen King
+full/tamw/train-3/mf920925_048.t.gz	t-mf920925-048-p2s12w38 t-mf920925-048-p2s12w39 t-mf920925-048-p2s12w40	Pacha de Fercé
+full/tamw/train-3/mf920925_048.t.gz	t-mf920925-048-p2s5w6 t-mf920925-048-p2s5w7	Seagram Company
+full/tamw/train-3/mf920925_108.t.gz	t-mf920925-108-p6s1w21 t-mf920925-108-p6s1w22	Banja Luka
+full/tamw/train-3/mf930709_056.t.gz	t-mf930709-056-p1s1w1 t-mf930709-056-p1s1w2	Europa Cantat
+full/tamw/train-3/mf930709_056.t.gz	t-mf930709-056-p1s3w13 t-mf930709-056-p1s3w14	Alfa Beat
+full/tamw/train-3/mf930709_097.t.gz	t-mf930709-097-p2s10w2 t-mf930709-097-p2s10w3	Rallye Bohemia
+full/tamw/train-3/mf930709_097.t.gz	t-mf930709-097-p2s10w25 t-mf930709-097-p2s10w26	Escort Cosworth
+full/tamw/train-3/mf930709_097.t.gz	t-mf930709-097-p2s13w1 t-mf930709-097-p2s13w2	Rallye Bohemia
+full/tamw/train-3/mf930709_097.t.gz	t-mf930709-097-p2s1w5 t-mf930709-097-p2s1w6	RALLYE BOHEMIA
+full/tamw/train-3/mf930709_097.t.gz	t-mf930709-097-p2s2Bw5 t-mf930709-097-p2s2Bw6	Rallye Bohemia
+full/tamw/train-3/mf930709_097.t.gz	t-mf930709-097-p2s4w10 t-mf930709-097-p2s4w11	Barum rallye
+full/tamw/train-3/mf930709_097.t.gz	t-mf930709-097-p2s5w8 t-mf930709-097-p2s5w9	Deutschland rallye
+full/tamw/train-3/mf930713_017.t.gz	t-mf930713-017-p2s14w3 t-mf930713-017-p2s14w4 t-mf930713-017-p2s14w5	BVV Prague Open
+full/tamw/train-3/mf930713_017.t.gz	t-mf930713-017-p2s1Bw8 t-mf930713-017-p2s1Bw9 t-mf930713-017-p2s1Bw10	BVV Prague Open
+full/tamw/train-3/mf930713_057.t.gz	t-mf930713-057-p2s1w13 t-mf930713-057-p2s1w14 t-mf930713-057-p2s1w15 t-mf930713-057-p2s1w16	Habent sua fata libelli
+full/tamw/train-3/mf930713_057.t.gz	t-mf930713-057-p3s1w29 t-mf930713-057-p3s1w30 t-mf930713-057-p3s1w31	Slovácko sa súdí
+full/tamw/train-3/mf930713_057.t.gz	t-mf930713-057-p7s4w15 t-mf930713-057-p7s4w16 t-mf930713-057-p7s4w17	Slovácko sa nesúdí
+full/tamw/train-3/mf930713_057.t.gz	t-mf930713-057-p8s1w1 t-mf930713-057-p8s1w2 t-mf930713-057-p8s1w3 t-mf930713-057-p8s1w4	Habent sua fata libelli
+full/tamw/train-3/mf930713_158.t.gz	t-mf930713-158-p1s1w17 t-mf930713-158-p1s1w18	des Moines
+full/tamw/train-4/cmpr9410_014.t.gz	t-cmpr9410-014-p4s1w23 t-cmpr9410-014-p4s1w24 t-cmpr9410-014-p4s1w25 t-cmpr9410-014-p4s1w26 t-cmpr9410-014-p4s1w27 t-cmpr9410-014-p4s1w28	Krems a #Period d #Period Donau
+full/tamw/train-4/cmpr9410_014.t.gz	t-cmpr9410-014-p4s1w3 t-cmpr9410-014-p4s1w4 t-cmpr9410-014-p4s1w5	Europäische Journalismus Akademie
+full/tamw/train-4/cmpr9410_024.t.gz	t-cmpr9410-024-p17s1w3 t-cmpr9410-024-p17s1w4	Inform Katalog
+full/tamw/train-4/cmpr9410_024.t.gz	t-cmpr9410-024-p8s2w19 t-cmpr9410-024-p8s2w20	Inform Katalog
+full/tamw/train-4/cmpr9413_012.t.gz	t-cmpr9413-012-p14s2w16 t-cmpr9413-012-p14s2w17	L Expansion
+full/tamw/train-4/cmpr9415_010.t.gz	t-cmpr9415-010-p2s1w3 t-cmpr9415-010-p2s1w4	Fischer Reisen
+full/tamw/train-4/cmpr9415_010.t.gz	t-cmpr9415-010-p4s1w4 t-cmpr9415-010-p4s1w5 t-cmpr9415-010-p4s1w6	Burgiba Holiday Complex
+full/tamw/train-4/cmpr9415_010.t.gz	t-cmpr9415-010-p9s3w6 t-cmpr9415-010-p9s3w7	The Sienja
+full/tamw/train-4/cmpr9415_040.t.gz	t-cmpr9415-040-p7s1w4 t-cmpr9415-040-p7s1w5 t-cmpr9415-040-p7s1w6 t-cmpr9415-040-p7s1w7 t-cmpr9415-040-p7s1w8 t-cmpr9415-040-p7s1w9 t-cmpr9415-040-p7s1w10 t-cmpr9415-040-p7s1w11	Executive educational program for central European professional leaders
+full/tamw/train-4/cmpr9415_040.t.gz	t-cmpr9415-040-p7s2w21 t-cmpr9415-040-p7s2w22	Training Centre
+full/tamw/train-4/cmpr9415_040.t.gz	t-cmpr9415-040-p7s2w34 t-cmpr9415-040-p7s2w35 t-cmpr9415-040-p7s2w36	International Leadership Institute
+full/tamw/train-4/ln94200_126.t.gz	t-ln94200-126-p7s2w12 t-ln94200-126-p7s2w13	nota bene
+full/tamw/train-4/ln94200_171.t.gz	t-ln94200-171-p2s14w11 t-ln94200-171-p2s14w12 t-ln94200-171-p2s14w13	sex and crime
+full/tamw/train-4/ln94200_31.t.gz	t-ln94200-31-p5s1w30 t-ln94200-31-p5s1w31 t-ln94200-31-p5s1w32	joint #Dash venture
+full/tamw/train-4/ln94202_121.t.gz	t-ln94202-121-p4s2w8 t-ln94202-121-p4s2w9 t-ln94202-121-p4s2w10 t-ln94202-121-p4s2w11	Paris St #Period Germain
+full/tamw/train-4/ln94202_32.t.gz	t-ln94202-32-p4s1w8 t-ln94202-32-p4s1w9	Veteran Car
+full/tamw/train-4/ln94203_131.t.gz	t-ln94203-131-p2s1Aw4 t-ln94203-131-p2s1Aw5	Wild Duck
+full/tamw/train-4/ln94203_131.t.gz	t-ln94203-131-p2s4w2 t-ln94203-131-p2s4w3 t-ln94203-131-p2s4w4	Malu #Dash malu
+full/tamw/train-4/ln94204_144.t.gz	t-ln94204-144-p2s1Bw4 t-ln94204-144-p2s1Bw5	Lettre Internationale
+full/tamw/train-4/ln94204_144.t.gz	t-ln94204-144-p5s2w15	ja
+full/tamw/train-4/ln94204_153.t.gz	t-ln94204-153-p2s2w4 t-ln94204-153-p2s2w5 t-ln94204-153-p2s2w6 t-ln94204-153-p2s2w7 t-ln94204-153-p2s2w8 t-ln94204-153-p2s2w9 t-ln94204-153-p2s2w10	The Czech Republic Fund #Comma Inc #Period
+full/tamw/train-4/ln94204_35.t.gz	t-ln94204-35-p2s1Cw14 t-ln94204-35-p2s1Cw15	Eagle Group
+full/tamw/train-4/ln94204_35.t.gz	t-ln94204-35-p3s1w25 t-ln94204-35-p3s1w26	Eagle Group
+full/tamw/train-4/ln94204_35.t.gz	t-ln94204-35-p4s7w35 t-ln94204-35-p4s7w36 t-ln94204-35-p4s7w37	North American Rockwell
+full/tamw/train-4/ln94204_35.t.gz	t-ln94204-35-p4s7w39	AlliedSignal
+full/tamw/train-4/ln94204_99.t.gz	t-ln94204-99-p2s2w11 t-ln94204-99-p2s2w12	Vox amabilis
+full/tamw/train-4/ln94205_134.t.gz	t-ln94205-134-p2s1Cw12 t-ln94205-134-p2s1Cw13	Eagle Group
+full/tamw/train-4/ln94205_134.t.gz	t-ln94205-134-p3s1w39 t-ln94205-134-p3s1w40	Eagle Group
+full/tamw/train-4/ln94205_40.t.gz	t-ln94205-40-p1s2w16 t-ln94205-40-p1s2w17 t-ln94205-40-p1s2w18	World Press Photo
+full/tamw/train-4/ln94205_5.t.gz	t-ln94205-5-p3s5w24 t-ln94205-5-p3s5w25	Lotus Organizer
+full/tamw/train-4/ln94205_68.t.gz	t-ln94205-68-p2s1Cw13 t-ln94205-68-p2s1Cw14	Bad Hersfeld
+full/tamw/train-4/ln94205_86.t.gz	t-ln94205-86-p7s5w8 t-ln94205-86-p7s5w9	happy end
+full/tamw/train-4/ln94206_15.t.gz	t-ln94206-15-p2s1Bw3 t-ln94206-15-p2s1Bw4 t-ln94206-15-p2s1Bw5	Pansy #Dash role
+full/tamw/train-4/ln94206_86.t.gz	t-ln94206-86-p5s1w12 t-ln94206-86-p5s1w13	Suvo grlo
+full/tamw/train-4/ln94207_112.t.gz	t-ln94207-112-p3s5w5 t-ln94207-112-p3s5w6	Duodeny Cantitans
+full/tamw/train-4/ln94207_112.t.gz	t-ln94207-112-p4s1w11 t-ln94207-112-p4s1w10	Florea Musica
+full/tamw/train-4/ln94207_121.t.gz	t-ln94207-121-p1s1w5 t-ln94207-121-p1s1w6	Sinn Fein
+full/tamw/train-4/ln94207_22.t.gz	t-ln94207-22-p2s1Aw1 t-ln94207-22-p2s1Aw2	New York
+full/tamw/train-4/ln94207_77.t.gz	t-ln94207-77-p1s2w7 t-ln94207-77-p1s2w8 t-ln94207-77-p1s2w9	Daimler #Dash Benz
+full/tamw/train-4/ln94208_122.t.gz	t-ln94208-122-p2s1Bw21 t-ln94208-122-p2s1Bw22	Manchester United
+full/tamw/train-4/ln94208_60.t.gz	t-ln94208-60-p7s2w7 t-ln94208-60-p7s2w8	Unfinished Business
+full/tamw/train-4/ln94208_79.t.gz	t-ln94208-79-p7s1w26 t-ln94208-79-p7s1w27	Mexico City
+full/tamw/train-4/ln94209_17.t.gz	t-ln94209-17-p2s1Bw13 t-ln94209-17-p2s1Bw14	Eagle Group
+full/tamw/train-4/ln94209_17.t.gz	t-ln94209-17-p3s2w5 t-ln94209-17-p3s2w6	Eagle Group
+full/tamw/train-4/ln94209_26.t.gz	t-ln94209-26-p1s1Aw12 t-ln94209-26-p1s1Aw13 t-ln94209-26-p1s1Aw14 t-ln94209-26-p1s1Aw15	Jie Süan #Dash pching
+full/tamw/train-4/ln94209_53.t.gz	t-ln94209-53-p4s5w24 t-ln94209-53-p4s5w25	a priori
+full/tamw/train-4/ln94210_107.t.gz	t-ln94210-107-p7s1w5 t-ln94210-107-p7s1w6 t-ln94210-107-p7s1w7	O sole mio
+full/tamw/train-4/ln94210_116.t.gz	t-ln94210-116-p3s1w24 t-ln94210-116-p3s1w25	Celta Vigo
+full/tamw/train-4/ln94210_38.t.gz	t-ln94210-38-p3s12w2 t-ln94210-38-p3s12w3	OPUS Bergen
+full/tamw/train-4/ln94210_38.t.gz	t-ln94210-38-p3s5w7 t-ln94210-38-p3s5w8 t-ln94210-38-p3s5w9	OPUS holding Bergen
+full/tamw/train-4/ln94211_11.t.gz	t-ln94211-11-p3s1w14 t-ln94211-11-p3s1w15	Inform Katalog
+full/tamw/train-4/ln94211_11.t.gz	t-ln94211-11-p3s1w29 t-ln94211-11-p3s1w30 t-ln94211-11-p3s1w31	International Business Consultants
+full/tamw/train-4/ln94211_11.t.gz	t-ln94211-11-p3s1w33 t-ln94211-11-p3s1w34 t-ln94211-11-p3s1w35 t-ln94211-11-p3s1w36	Czech Business Investment Fund
+full/tamw/train-4/ln94211_11.t.gz	t-ln94211-11-p3s1w5 t-ln94211-11-p3s1w6	Inform Mail
+full/tamw/train-4/ln94211_11.t.gz	t-ln94211-11-p3s3Bw18 t-ln94211-11-p3s3Bw19	Financial Times
+full/tamw/train-4/ln94211_29.t.gz	t-ln94211-29-p2s1Bw4 t-ln94211-29-p2s1Bw5	KCF Petrol
+full/tamw/train-4/ln94211_29.t.gz	t-ln94211-29-p2s2w15	Agip
+full/tamw/train-4/ln94211_29.t.gz	t-ln94211-29-p2s2w17	Conoco
+full/tamw/train-4/ln94211_29.t.gz	t-ln94211-29-p2s2w19	Shell
+full/tamw/train-4/ln94211_29.t.gz	t-ln94211-29-p2s2w21	Total
+full/tamw/train-4/ln94211_29.t.gz	t-ln94211-29-p3s1w1 t-ln94211-29-p3s1w2	KCF Petrol
+full/tamw/train-4/ln94211_29.t.gz	t-ln94211-29-p3s3w7 t-ln94211-29-p3s3w8	KCF Petrol
+full/tamw/train-4/ln94211_29.t.gz	t-ln94211-29-p3s4w2 t-ln94211-29-p3s4w3	KCF Petrol
+full/tamw/train-4/ln95046_018.t.gz	t-ln95046-018-p2s1Bw18 t-ln95046-018-p2s1Bw19	play off
+full/tamw/train-4/ln95046_018.t.gz	t-ln95046-018-p3s3w14 t-ln95046-018-p3s3w15	play off
+full/tamw/train-4/ln95046_018.t.gz	t-ln95046-018-p3s6w4 t-ln95046-018-p3s6w5	play off
+full/tamw/train-4/ln95046_018.t.gz	t-ln95046-018-p3s7w21 t-ln95046-018-p3s7w22	play off
+full/tamw/train-4/ln95046_018.t.gz	t-ln95046-018-p4s1Aw10 t-ln95046-018-p4s1Aw11	play off
+full/tamw/train-4/ln95046_028.t.gz	t-ln95046-028-p2s4w21 t-ln95046-028-p2s4w22	Thunder Bay
+full/tamw/train-4/ln95047_074.t.gz	t-ln95047-074-p1s1w11 t-ln95047-074-p1s1w12 t-ln95047-074-p1s1w13 t-ln95047-074-p1s1w14 t-ln95047-074-p1s1w15	Port #Dash au #Dash Prince
+full/tamw/train-4/ln95047_094.t.gz	t-ln95047-094-p1s1w2 t-ln95047-094-p1s1w3 t-ln95047-094-p1s1w4 t-ln95047-094-p1s1w5 t-ln95047-094-p1s1w6 t-ln95047-094-p1s1w7	K #Period J #Period D #Period
+full/tamw/train-4/ln95047_094.t.gz	t-ln95047-094-p2s1Bw2 t-ln95047-094-p2s1Bw3 t-ln95047-094-p2s1Bw4 t-ln95047-094-p2s1Bw5 t-ln95047-094-p2s1Bw6 t-ln95047-094-p2s1Bw7	K #Period J #Period D #Period
+full/tamw/train-4/ln95047_094.t.gz	t-ln95047-094-p3s3w6 t-ln95047-094-p3s3w7 t-ln95047-094-p3s3w8 t-ln95047-094-p3s3w9 t-ln95047-094-p3s3w10 t-ln95047-094-p3s3w11	K #Period J #Period D #Period
+full/tamw/train-4/ln95047_094.t.gz	t-ln95047-094-p3s5w13 t-ln95047-094-p3s5w14 t-ln95047-094-p3s5w15 t-ln95047-094-p3s5w16 t-ln95047-094-p3s5w17 t-ln95047-094-p3s5w18	K #Period J #Period D #Period
+full/tamw/train-4/ln95047_094.t.gz	t-ln95047-094-p3s6w15 t-ln95047-094-p3s6w16 t-ln95047-094-p3s6w17 t-ln95047-094-p3s6w18 t-ln95047-094-p3s6w19 t-ln95047-094-p3s6w20	K #Period J #Period D #Period
+full/tamw/train-4/ln95047_094.t.gz	t-ln95047-094-p3s8w41 t-ln95047-094-p3s8w42 t-ln95047-094-p3s8w43 t-ln95047-094-p3s8w44 t-ln95047-094-p3s8w45 t-ln95047-094-p3s8w46	K #Period J #Period D #Period
+full/tamw/train-4/ln95047_094.t.gz	t-ln95047-094-p4s3w9 t-ln95047-094-p4s3w10 t-ln95047-094-p4s3w11 t-ln95047-094-p4s3w12 t-ln95047-094-p4s3w13 t-ln95047-094-p4s3w14	K #Period J #Period D #Period
+full/tamw/train-4/ln95047_124.t.gz	t-ln95047-124-p4s1w10 t-ln95047-124-p4s1w11	Saab Dynamics
+full/tamw/train-4/ln95047_124.t.gz	t-ln95047-124-p4s1w13 t-ln95047-124-p4s1w14 t-ln95047-124-p4s1w15	Saab Training Systems
+full/tamw/train-4/ln95047_124.t.gz	t-ln95047-124-p4s1w17 t-ln95047-124-p4s1w18	Saab Aircraft
+full/tamw/train-4/ln95047_124.t.gz	t-ln95047-124-p4s1w20 t-ln95047-124-p4s1w21	Saab Combitech
+full/tamw/train-4/ln95047_124.t.gz	t-ln95047-124-p4s1w6 t-ln95047-124-p4s1w7 t-ln95047-124-p4s1w8	Saab Military Aircraft
+full/tamw/train-4/ln95047_124.t.gz	t-ln95047-124-p5s2w2 t-ln95047-124-p5s2w3	Saab Automobile
+full/tamw/train-4/ln95047_124.t.gz	t-ln95047-124-p5s2w6 t-ln95047-124-p5s2w7	General Motors
+full/tamw/train-4/ln95048_085.t.gz	t-ln95048-085-p2s3w10 t-ln95048-085-p2s3w11 t-ln95048-085-p2s3w12	Prague International Maratón
+full/tamw/train-4/ln95048_085.t.gz	t-ln95048-085-p2s3w33 t-ln95048-085-p2s3w34 t-ln95048-085-p2s3w35	European Business Solutions
+full/tamw/train-4/ln95048_085.t.gz	t-ln95048-085-p2s4w26 t-ln95048-085-p2s4w27	prize money
+full/tamw/train-4/ln95048_115.t.gz	t-ln95048-115-p5s2w13 t-ln95048-115-p5s2w14 t-ln95048-115-p5s2w15 t-ln95048-115-p5s2w16	Kafr az #Dash Zajját
+full/tamw/train-4/ln95048_115.t.gz	t-ln95048-115-p5s3w6 t-ln95048-115-p5s3w7 t-ln95048-115-p5s3w8	Al #Dash Achbár
+full/tamw/train-4/ln95048_135.t.gz	t-ln95048-135-p2s2w33 t-ln95048-135-p2s2w34	Bell Atlantic
+full/tamw/train-4/ln95048_135.t.gz	t-ln95048-135-p2s2w46 t-ln95048-135-p2s2w47	Swiss Telecom
+full/tamw/train-4/ln95048_135.t.gz	t-ln95048-135-p2s2w56 t-ln95048-135-p2s2w57	Deutsche Telekom
+full/tamw/train-4/ln95049_040.t.gz	t-ln95049-040-p2s5w15 t-ln95049-040-p2s5w16	Detroit Vipers
+full/tamw/train-4/ln95049_140.t.gz	t-ln95049-140-p2s1Bw9 t-ln95049-140-p2s1Bw10	Responsible Care
+full/tamw/train-4/lnd94103_058.t.gz	t-lnd94103-058-p1s4w1 t-lnd94103-058-p1s4w2 t-lnd94103-058-p1s4w3 t-lnd94103-058-p1s4w4 t-lnd94103-058-p1s4w5 t-lnd94103-058-p1s4w6 t-lnd94103-058-p1s4w7	Jang Di Pertuan Agong Sultan Azlan Šáh
+full/tamw/train-4/lnd94103_099.t.gz	t-lnd94103-099-p1s1w3	Roxy
+full/tamw/train-4/mf920922_017.t.gz	t-mf920922-017-p2s13w18 t-mf920922-017-p2s13w19	Financial Times
+full/tamw/train-4/mf920922_017.t.gz	t-mf920922-017-p2s16w8 t-mf920922-017-p2s16w9 t-mf920922-017-p2s16w10 t-mf920922-017-p2s16w11	Swiss Bank Corp #Period
+full/tamw/train-4/mf920922_017.t.gz	t-mf920922-017-p2s5w46 t-mf920922-017-p2s5w47	Financial Times
+full/tamw/train-4/mf920925_019.t.gz	t-mf920925-019-p1s1w5 t-mf920925-019-p1s1w6 t-mf920925-019-p1s1w7	WORLD PRESS PHOTO
+full/tamw/train-4/mf920925_019.t.gz	t-mf920925-019-p2s6w16 t-mf920925-019-p2s6w17 t-mf920925-019-p2s6w18	World Press Photo
+full/tamw/train-4/mf920925_029.t.gz	t-mf920925-029-p1s1w6 t-mf920925-029-p1s1w7 t-mf920925-029-p1s1w8 t-mf920925-029-p1s1w9	Motor Show ' 92
+full/tamw/train-4/mf920925_049.t.gz	t-mf920925-049-p2s3w28 t-mf920925-049-p2s3w29	Stanley Cup
+full/tamw/train-4/mf920925_049.t.gz	t-mf920925-049-p2s4w7 t-mf920925-049-p2s4w8	Kitzbühel EC
+full/tamw/train-4/mf920925_059.t.gz	t-mf920925-059-p2s6w18 t-mf920925-059-p2s6w19	TGT Marketing
+full/tamw/train-4/mf920925_099.t.gz	t-mf920925-099-p2s3w12 t-mf920925-099-p2s3w13	Moskovskaja Pravda
+full/tamw/train-4/mf920925_109.t.gz	t-mf920925-109-p4s5w15 t-mf920925-109-p4s5w16 t-mf920925-109-p4s5w17 t-mf920925-109-p4s5w18 t-mf920925-109-p4s5w19	Le #Dash duc #Dash Anha
+full/tamw/train-4/mf920925_109.t.gz	t-mf920925-109-p6s2w21 t-mf920925-109-p6s2w22 t-mf920925-109-p6s2w23	Ulan #Dash Ude
+full/tamw/train-4/mf930709_057.t.gz	t-mf930709-057-p2s2w13 t-mf930709-057-p2s2w14 t-mf930709-057-p2s2w15	COSI FAN TUTTE
+full/tamw/train-4/mf930709_078.t.gz	t-mf930709-078-p2s1Bw20 t-mf930709-078-p2s1Bw21 t-mf930709-078-p2s1Bw22	Tuzex Centrum Cup
+full/tamw/train-4/mf930713_018.t.gz	t-mf930713-018-p2s1Bw5 t-mf930713-018-p2s1Bw6 t-mf930713-018-p2s1Bw7	Czech Golf Open
+full/tamw/train-4/mf930713_018.t.gz	t-mf930713-018-p2s2w12 t-mf930713-018-p2s2w13	PGT Marketing
+full/tamw/train-4/mf930713_018.t.gz	t-mf930713-018-p2s2w15 t-mf930713-018-p2s2w16	Pro Art
+full/tamw/train-4/mf930713_058.t.gz	t-mf930713-058-p10s3w12 t-mf930713-058-p10s3w13	Pearl Jam
+full/tamw/train-4/mf930713_058.t.gz	t-mf930713-058-p10s3w7 t-mf930713-058-p10s3w8 t-mf930713-058-p10s3w9 t-mf930713-058-p10s3w10	Red Hot Chilli Pepper
+full/tamw/train-4/mf930713_068.t.gz	t-mf930713-068-p1s1w1 t-mf930713-068-p1s1w2	Czech Made
+full/tamw/train-4/mf930713_068.t.gz	t-mf930713-068-p2s1Bw6 t-mf930713-068-p2s1Bw7	Czech Made
+full/tamw/train-4/mf930713_068.t.gz	t-mf930713-068-p3s1w2 t-mf930713-068-p3s1w3	Czech Made
+full/tamw/train-5/cmpr9413_013.t.gz	t-cmpr9413-013-p12s1w24 t-cmpr9413-013-p12s1w25 t-cmpr9413-013-p12s1w26	joint #Dash venture
+full/tamw/train-5/cmpr9413_013.t.gz	t-cmpr9413-013-p14s2w6 t-cmpr9413-013-p14s2w7 t-cmpr9413-013-p14s2w8	Euro #Dash Info
+full/tamw/train-5/cmpr9413_013.t.gz	t-cmpr9413-013-p15s1w20 t-cmpr9413-013-p15s1w21 t-cmpr9413-013-p15s1w22 t-cmpr9413-013-p15s1w23	Trade Facilitation Office Canada
+full/tamw/train-5/cmpr9413_033.t.gz	t-cmpr9413-033-p5s1w3 t-cmpr9413-033-p5s1w4	Chemical Engineering
+full/tamw/train-5/cmpr9415_001.t.gz	t-cmpr9415-001-p6s1w4 t-cmpr9415-001-p6s1w5	Désudry International
+full/tamw/train-5/cmpr9415_001.t.gz	t-cmpr9415-001-p9s1w6 t-cmpr9415-001-p9s1w7 t-cmpr9415-001-p9s1w8	Gottlieb and Pearson
+full/tamw/train-5/cmpr9415_011.t.gz	t-cmpr9415-011-p4s1w5 t-cmpr9415-011-p4s1w6	Bitez Han
+full/tamw/train-5/cmpr9415_021.t.gz	t-cmpr9415-021-p8s2w11 t-cmpr9415-021-p8s2w12 t-cmpr9415-021-p8s2w13	know #Dash how
+full/tamw/train-5/cmpr9415_031.t.gz	t-cmpr9415-031-p10s1w3 t-cmpr9415-031-p10s1w4	Management Press
+full/tamw/train-5/cmpr9415_031.t.gz	t-cmpr9415-031-p6s1w3 t-cmpr9415-031-p6s1w4	Management Press
+full/tamw/train-5/cmpr9415_031.t.gz	t-cmpr9415-031-p8s1w19 t-cmpr9415-031-p8s1w20	Management Press
+full/tamw/train-5/cmpr9415_031.t.gz	t-cmpr9415-031-p8s1w44 t-cmpr9415-031-p8s1w45 t-cmpr9415-031-p8s1w46	Harvard Business Review
+full/tamw/train-5/cmpr9415_031.t.gz	t-cmpr9415-031-p8s1w48 t-cmpr9415-031-p8s1w49 t-cmpr9415-031-p8s1w50	Wall Street Journal
+full/tamw/train-5/ln94200_127.t.gz	t-ln94200-127-p29s3w24 t-ln94200-127-p29s3w25	ad hoc
+full/tamw/train-5/ln94200_136.t.gz	t-ln94200-136-p6s1w16 t-ln94200-136-p6s1w17 t-ln94200-136-p6s1w18 t-ln94200-136-p6s1w19	Pro Arte Antiqua Praha
+full/tamw/train-5/ln94200_136.t.gz	t-ln94200-136-p6s1w21 t-ln94200-136-p6s1w22	Capella Rudolphina
+full/tamw/train-5/ln94200_136.t.gz	t-ln94200-136-p6s1w36 t-ln94200-136-p6s1w37	Musica Florea
+full/tamw/train-5/ln94200_136.t.gz	t-ln94200-136-p6s2w2 t-ln94200-136-p6s2w3	Mandel Quartet
+full/tamw/train-5/ln94200_136.t.gz	t-ln94200-136-p7s1w23 t-ln94200-136-p7s1w24	Niederösterreichisches Tonkünstlerorchester
+full/tamw/train-5/ln94200_154.t.gz	t-ln94200-154-p11s12w1 t-ln94200-154-p11s12w2	Sab Skal
+full/tamw/train-5/ln94200_154.t.gz	t-ln94200-154-p11s19w1 t-ln94200-154-p11s19w2	Pamela Äs
+full/tamw/train-5/ln94200_154.t.gz	t-ln94200-154-p11s20w1 t-ln94200-154-p11s20w2	Sine Aspera
+full/tamw/train-5/ln94200_154.t.gz	t-ln94200-154-p11s23w1 t-ln94200-154-p11s23w2	Epigon Sund
+full/tamw/train-5/ln94200_154.t.gz	t-ln94200-154-p11s27w1 t-ln94200-154-p11s27w2	Ilina Girl
+full/tamw/train-5/ln94200_154.t.gz	t-ln94200-154-p11s4w1 t-ln94200-154-p11s4w2	Lamia Vin
+full/tamw/train-5/ln94200_32.t.gz	t-ln94200-32-p3s1w24 t-ln94200-32-p3s1w25 t-ln94200-32-p3s1w26 t-ln94200-32-p3s1w27 t-ln94200-32-p3s1w28	cold #Dash finished seamless tubes
+full/tamw/train-5/ln94200_32.t.gz	t-ln94200-32-p3s1w34 t-ln94200-32-p3s1w35	hydraulic cylindres
+full/tamw/train-5/ln94200_32.t.gz	t-ln94200-32-p3s1w41 t-ln94200-32-p3s1w42 t-ln94200-32-p3s1w43	turning and honing
+full/tamw/train-5/ln94200_32.t.gz	t-ln94200-32-p3s1w55 t-ln94200-32-p3s1w56 t-ln94200-32-p3s1w57 t-ln94200-32-p3s1w58 t-ln94200-32-p3s1w59 t-ln94200-32-p3s1w60 t-ln94200-32-p3s1w61 t-ln94200-32-p3s1w62	enlargement for installation chrome plating firm for steel
+full/tamw/train-5/ln94200_32.t.gz	t-ln94200-32-p4s1w27 t-ln94200-32-p4s1w28 t-ln94200-32-p4s1w29	Dekostoffen und Gardinen
+full/tamw/train-5/ln94202_15.t.gz	t-ln94202-15-p9s3w5 t-ln94202-15-p9s3w6	Matsushita Electronic
+full/tamw/train-5/ln94202_88.t.gz	t-ln94202-88-p4s2w5 t-ln94202-88-p4s2w6	Duodena Cantitans
+full/tamw/train-5/ln94202_88.t.gz	t-ln94202-88-p4s2w9 t-ln94202-88-p4s2w10	Capella Rudolphina
+full/tamw/train-5/ln94204_109.t.gz	t-ln94204-109-p2s1Bw36 t-ln94204-109-p2s1Bw37	Grand Prix
+full/tamw/train-5/ln94204_136.t.gz	t-ln94204-136-p4s1w3 t-ln94204-136-p4s1w4 t-ln94204-136-p4s1w5 t-ln94204-136-p4s1w6 t-ln94204-136-p4s1w7 t-ln94204-136-p4s1w8	K #Period J #Period D #Period
+full/tamw/train-5/ln94204_145.t.gz	t-ln94204-145-p12s1Bw41 t-ln94204-145-p12s1Bw42	Leo Burnett
+full/tamw/train-5/ln94204_145.t.gz	t-ln94204-145-p13s1w9 t-ln94204-145-p13s1w10	Margaret Astor
+full/tamw/train-5/ln94204_145.t.gz	t-ln94204-145-p2s1Cw1 t-ln94204-145-p2s1Cw2	Gazeta Wyborcza
+full/tamw/train-5/ln94204_145.t.gz	t-ln94204-145-p2s2w9 t-ln94204-145-p2s2w10	Top canal
+full/tamw/train-5/ln94204_145.t.gz	t-ln94204-145-p3s1w12 t-ln94204-145-p3s1w13	Leo Burnett
+full/tamw/train-5/ln94204_145.t.gz	t-ln94204-145-p6s1w16 t-ln94204-145-p6s1w17	Leo Burnett
+full/tamw/train-5/ln94204_145.t.gz	t-ln94204-145-p7s1w9 t-ln94204-145-p7s1w10	Leo Burnett
+full/tamw/train-5/ln94204_36.t.gz	t-ln94204-36-p2s1Bw2 t-ln94204-36-p2s1Bw3	poslednyj parad
+full/tamw/train-5/ln94205_1.t.gz	t-ln94205-1-p2s3w1 t-ln94205-1-p2s3w2 t-ln94205-1-p2s3w3 t-ln94205-1-p2s3w4	Intel Hungary Ltd #Period
+full/tamw/train-5/ln94205_1.t.gz	t-ln94205-1-p4s1w3 t-ln94205-1-p4s1w4	Gamma Production
+full/tamw/train-5/ln94205_1.t.gz	t-ln94205-1-p5s1w10 t-ln94205-1-p5s1w11 t-ln94205-1-p5s1w12	Epson Stylus Color
+full/tamw/train-5/ln94205_1.t.gz	t-ln94205-1-p6s1w6 t-ln94205-1-p6s1w7 t-ln94205-1-p6s1w8	PC DOS 6.3
+full/tamw/train-5/ln94205_144.t.gz	t-ln94205-144-p4s3w15 t-ln94205-144-p4s3w17	pick up
+full/tamw/train-5/ln94205_50.t.gz	t-ln94205-50-p2s1Cw15 t-ln94205-50-p2s1Cw16 t-ln94205-50-p2s1Cw17 t-ln94205-50-p2s1Cw18	European market research center
+full/tamw/train-5/ln94205_50.t.gz	t-ln94205-50-p2s2w2 t-ln94205-50-p2s2w3 t-ln94205-50-p2s2w4	Quality management award
+full/tamw/train-5/ln94205_6.t.gz	t-ln94205-6-p3s6w22 t-ln94205-6-p3s6w23	Cray Research
+full/tamw/train-5/ln94205_6.t.gz	t-ln94205-6-p6s3w11 t-ln94205-6-p6s3w12 t-ln94205-6-p6s3w13	Hewlett #Dash Packard
+full/tamw/train-5/ln94205_96.t.gz	t-ln94205-96-p2s3w20 t-ln94205-96-p2s3w21	Theater Brett
+full/tamw/train-5/ln94206_122.t.gz	t-ln94206-122-p2s1Cw11 t-ln94206-122-p2s1Cw12	US Open
+full/tamw/train-5/ln94206_122.t.gz	t-ln94206-122-p3s10w19 t-ln94206-122-p3s10w20	tie break
+full/tamw/train-5/ln94206_122.t.gz	t-ln94206-122-p4s1w11 t-ln94206-122-p4s1w12	US Open
+full/tamw/train-5/ln94206_122.t.gz	t-ln94206-122-p4s4w17	sorry
+full/tamw/train-5/ln94206_150.t.gz	t-ln94206-150-p4s2w6 t-ln94206-150-p4s2w7	Financial Times
+full/tamw/train-5/ln94206_6.t.gz	t-ln94206-6-p2s2w7 t-ln94206-6-p2s2w8	Management Press
+full/tamw/train-5/ln94206_6.t.gz	t-ln94206-6-p3s2w9 t-ln94206-6-p3s2w10	Management Press
+full/tamw/train-5/ln94206_6.t.gz	t-ln94206-6-p4s2w5 t-ln94206-6-p4s2w6	Management Press
+full/tamw/train-5/ln94206_6.t.gz	t-ln94206-6-p4s5w9 t-ln94206-6-p4s5w10	Club Mediterranée
+full/tamw/train-5/ln94206_87.t.gz	t-ln94206-87-p2s1Bw31 t-ln94206-87-p2s1Bw32	de facto
+full/tamw/train-5/ln94207_113.t.gz	t-ln94207-113-p3s6w5 t-ln94207-113-p3s6w6 t-ln94207-113-p3s6w7	Warner Home Video
+full/tamw/train-5/ln94208_43.t.gz	t-ln94208-43-p2s3w2 t-ln94208-43-p2s3w3	Vivat Slovakia
+full/tamw/train-5/ln94208_43.t.gz	t-ln94208-43-p2s4w29 t-ln94208-43-p2s4w30	Svobodný piatok
+full/tamw/train-5/ln94208_43.t.gz	t-ln94208-43-p2s5w36 t-ln94208-43-p2s5w37	Ice MC
+full/tamw/train-5/ln94209_63.t.gz	t-ln94209-63-p2s1Cw19 t-ln94209-63-p2s1Cw20	Window Gallery
+full/tamw/train-5/ln94209_63.t.gz	t-ln94209-63-p3s11w1 t-ln94209-63-p3s11w2	Window Gallery
+full/tamw/train-5/ln94209_63.t.gz	t-ln94209-63-p3s11w4 t-ln94209-63-p3s11w5 t-ln94209-63-p3s11w6	The British Council
+full/tamw/train-5/ln94209_81.t.gz	t-ln94209-81-p2s1Bw18 t-ln94209-81-p2s1Bw19 t-ln94209-81-p2s1Bw20	Ťing #Dash i
+full/tamw/train-5/ln94209_81.t.gz	t-ln94209-81-p2s5w3 t-ln94209-81-p2s5w4 t-ln94209-81-p2s5w5 t-ln94209-81-p2s5w6	Taj Kuo #Dash chung
+full/tamw/train-5/ln94210_75.t.gz	t-ln94210-75-p5s1w6 t-ln94210-75-p5s1w7	ex ante
+full/tamw/train-5/ln94210_84.t.gz	t-ln94210-84-p2s1Bw38 t-ln94210-84-p2s1Bw39 t-ln94210-84-p2s1Bw40	Frankfurter Allgemeine Zeitung
+full/tamw/train-5/ln94211_101.t.gz	t-ln94211-101-p3s1w6 t-ln94211-101-p3s1w7 t-ln94211-101-p3s1w8	College de France
+full/tamw/train-5/ln94211_129.t.gz	t-ln94211-129-p3s2w14 t-ln94211-129-p3s2w15 t-ln94211-129-p3s2w16 t-ln94211-129-p3s2w17	Jie Süan #Dash pching
+full/tamw/train-5/ln94211_129.t.gz	t-ln94211-129-p5s2w20 t-ln94211-129-p5s2w21 t-ln94211-129-p5s2w22	Tchaj #Dash wan
+full/tamw/train-5/ln94211_129.t.gz	t-ln94211-129-p8s2w14 t-ln94211-129-p8s2w15 t-ln94211-129-p8s2w16	Shen #Dash Tou
+full/tamw/train-5/ln94211_75.t.gz	t-ln94211-75-p2s1w18 t-ln94211-75-p2s1w19	Bild Zeitung
+full/tamw/train-5/ln95045_024.t.gz	t-ln95045-024-p2s1Bw7 t-ln95045-024-p2s1Bw8	Orlando Magic
+full/tamw/train-5/ln95045_034.t.gz	t-ln95045-034-p2s1Bw22 t-ln95045-034-p2s1Bw23	Crystal Palace
+full/tamw/train-5/ln95045_034.t.gz	t-ln95045-034-p2s2w1 t-ln95045-034-p2s2w2	Scotland Yard
+full/tamw/train-5/ln95045_124.t.gz	t-ln95045-124-p2s4w11 t-ln95045-124-p2s4w12 t-ln95045-124-p2s4w13	International Business Center
+full/tamw/train-5/ln95046_049.t.gz	t-ln95046-049-p2s2w2 t-ln95046-049-p2s2w3 t-ln95046-049-p2s2w4	Editions de Minuit
+full/tamw/train-5/ln95046_099.t.gz	t-ln95046-099-p2s2w14 t-ln95046-099-p2s2w15	Trade Center
+full/tamw/train-5/ln95046_099.t.gz	t-ln95046-099-p3s1w8 t-ln95046-099-p3s1w9	Trade Center
+full/tamw/train-5/ln95046_099.t.gz	t-ln95046-099-p3s7w6 t-ln95046-099-p3s7w7	Trade Center
+full/tamw/train-5/ln95047_045.t.gz	t-ln95047-045-p3s1w14 t-ln95047-045-p3s1w15 t-ln95047-045-p3s1w16 t-ln95047-045-p3s1w17	Théatre National de Chaillot
+full/tamw/train-5/ln95047_075.t.gz	t-ln95047-075-p2s4w4 t-ln95047-075-p2s4w5 t-ln95047-075-p2s4w6	La Libre Belgique
+full/tamw/train-5/ln95047_125.t.gz	t-ln95047-125-p2s1Dw18 t-ln95047-125-p2s1Dw19 t-ln95047-125-p2s1Dw20	Digital Equipment Corporation
+full/tamw/train-5/ln95048_008.t.gz	t-ln95048-008-p2s1Bw12 t-ln95048-008-p2s1Bw13	Deutsche Telekom
+full/tamw/train-5/ln95048_008.t.gz	t-ln95048-008-p4s1w1 t-ln95048-008-p4s1w2	Deutsche Telekom
+full/tamw/train-5/ln95048_025.t.gz	t-ln95048-025-p4s7w12 t-ln95048-025-p4s7w13 t-ln95048-025-p4s7w14 t-ln95048-025-p4s7w15 t-ln95048-025-p4s7w16	ja tam ne dostal otveta
+full/tamw/train-5/ln95048_025.t.gz	t-ln95048-025-p4s7w23 t-ln95048-025-p4s7w24 t-ln95048-025-p4s7w25 t-ln95048-025-p4s7w26 t-ln95048-025-p4s7w27	ja tam ne polučil otveta
+full/tamw/train-5/ln95048_046.t.gz	t-ln95048-046-p2s18w11 t-ln95048-046-p2s18w12 t-ln95048-046-p2s18w13	chansons de gest
+full/tamw/train-5/ln95048_156.t.gz	t-ln95048-156-p2s2w4 t-ln95048-156-p2s2w5	Financial Times
+full/tamw/train-5/ln95049_031.t.gz	t-ln95049-031-p3s4w14 t-ln95049-031-p3s4w15	play off
+full/tamw/train-5/ln95049_081.t.gz	t-ln95049-081-p2s1Bw9 t-ln95049-081-p2s1Bw10	Sinn Fein
+full/tamw/train-5/ln95049_081.t.gz	t-ln95049-081-p2s2w6 t-ln95049-081-p2s2w7	Sinn Fein
+full/tamw/train-5/ln95049_131.t.gz	t-ln95049-131-p2s1w13 t-ln95049-131-p2s1w14	RAV 4
+full/tamw/train-5/ln95049_131.t.gz	t-ln95049-131-p2s1w17 t-ln95049-131-p2s1w18	off road
+full/tamw/train-5/ln95049_131.t.gz	t-ln95049-131-p2s1w7 t-ln95049-131-p2s1w8 t-ln95049-131-p2s1w9	Toyota Motor Czech
+full/tamw/train-5/ln95049_131.t.gz	t-ln95049-131-p2s3w4 t-ln95049-131-p2s3w5	RAV 4
+full/tamw/train-5/ln95049_131.t.gz	t-ln95049-131-p2s3w9 t-ln95049-131-p2s3w10 t-ln95049-131-p2s3w11	Recreation Active Vehicle
+full/tamw/train-5/ln95049_131.t.gz	t-ln95049-131-p2s4w3 t-ln95049-131-p2s4w4 t-ln95049-131-p2s4w5	Toyota Motor Czech
+full/tamw/train-5/ln95049_131.t.gz	t-ln95049-131-p2s8w15 t-ln95049-131-p2s8w16	RAV 4
+full/tamw/train-5/ln95049_131.t.gz	t-ln95049-131-p3s1w10 t-ln95049-131-p3s1w11	Carina E
+full/tamw/train-5/ln95049_131.t.gz	t-ln95049-131-p3s2w1 t-ln95049-131-p3s2w2	RAV 4
+full/tamw/train-5/ln95049_131.t.gz	t-ln95049-131-p4s2w1 t-ln95049-131-p4s2w2	RAV 4
+full/tamw/train-5/lnd94103_009.t.gz	t-lnd94103-009-p1s7w12 t-lnd94103-009-p1s7w13 t-lnd94103-009-p1s7w14	Anglo Czech Trading
+full/tamw/train-5/lnd94103_069.t.gz	t-lnd94103-069-p1s3w8 t-lnd94103-069-p1s3w9 t-lnd94103-069-p1s3w10	General Motors Czechoslovakia
+full/tamw/train-5/lnd94103_069.t.gz	t-lnd94103-069-p1s8w1 t-lnd94103-069-p1s8w2	GM Czechoslovakia
+full/tamw/train-5/lnd94103_090.t.gz	t-lnd94103-090-p1s17w7 t-lnd94103-090-p1s17w8 t-lnd94103-090-p1s17w9 t-lnd94103-090-p1s17w10 t-lnd94103-090-p1s17w11	Noel ' s House Party
+full/tamw/train-5/lnd94103_120.t.gz	t-lnd94103-120-p1s2w1 t-lnd94103-120-p1s2w2 t-lnd94103-120-p1s2w3	Val di Fassa
+full/tamw/train-5/lnd94103_141.t.gz	t-lnd94103-141-p1s7Bw8 t-lnd94103-141-p1s7Bw9	a supreme
+full/tamw/train-5/mf920922_028.t.gz	t-mf920922-028-p1s1w1 t-mf920922-028-p1s1w2	Young Gods
+full/tamw/train-5/mf920922_028.t.gz	t-mf920922-028-p2s10w9 t-mf920922-028-p2s10w10	Young Gods
+full/tamw/train-5/mf920922_028.t.gz	t-mf920922-028-p2s12w12 t-mf920922-028-p2s12w13	Summer Eyes
+full/tamw/train-5/mf920922_028.t.gz	t-mf920922-028-p2s12w3 t-mf920922-028-p2s12w4	The Doors
+full/tamw/train-5/mf920922_028.t.gz	t-mf920922-028-p2s15w14 t-mf920922-028-p2s15w15	Pink Floyd
+full/tamw/train-5/mf920922_028.t.gz	t-mf920922-028-p2s16w14 t-mf920922-028-p2s16w15 t-mf920922-028-p2s16w16 t-mf920922-028-p2s16w17	One Of These Days
+full/tamw/train-5/mf920922_028.t.gz	t-mf920922-028-p2s16w8 t-mf920922-028-p2s16w9	Gasoline Man
+full/tamw/train-5/mf920922_028.t.gz	t-mf920922-028-p2s18w9 t-mf920922-028-p2s18w10 t-mf920922-028-p2s18w11 t-mf920922-028-p2s18w12	L ' eau rouge
+full/tamw/train-5/mf920922_028.t.gz	t-mf920922-028-p2s1w4 t-mf920922-028-p2s1w5	YOUNG GODS
+full/tamw/train-5/mf920922_028.t.gz	t-mf920922-028-p2s20w4 t-mf920922-028-p2s20w5	Young Gods
+full/tamw/train-5/mf920922_028.t.gz	t-mf920922-028-p2s2w21 t-mf920922-028-p2s2w22 t-mf920922-028-p2s2w23 t-mf920922-028-p2s2w24	L ' eau rouge
+full/tamw/train-5/mf920922_028.t.gz	t-mf920922-028-p2s3w20 t-mf920922-028-p2s3w21 t-mf920922-028-p2s3w22 t-mf920922-028-p2s3w23 t-mf920922-028-p2s3w24	T #Period V #Period Sky
+full/tamw/train-5/mf920922_028.t.gz	t-mf920922-028-p2s6w16 t-mf920922-028-p2s6w17	Summer Eyes
+full/tamw/train-5/mf920922_028.t.gz	t-mf920922-028-p2s8w8 t-mf920922-028-p2s8w9	La Muerte
+full/tamw/train-5/mf920922_028.t.gz	t-mf920922-028-p2s9w12 t-mf920922-028-p2s9w13	Dame Chace
+full/tamw/train-5/mf920922_028.t.gz	t-mf920922-028-p2s9w15 t-mf920922-028-p2s9w16 t-mf920922-028-p2s9w17	The Night Dance
+full/tamw/train-5/mf920922_028.t.gz	t-mf920922-028-p2s9w6 t-mf920922-028-p2s9w7	Gasoline Man
+full/tamw/train-5/mf920922_098.t.gz	t-mf920922-098-p1s2w36 t-mf920922-098-p1s2w37	Drie Angel
+full/tamw/train-5/mf920922_109.t.gz	t-mf920922-109-p17s1w2 t-mf920922-109-p17s1w3 t-mf920922-109-p17s1w4	Janaray Hard Show
+full/tamw/train-5/mf920922_109.t.gz	t-mf920922-109-p39s1w2 t-mf920922-109-p39s1w3 t-mf920922-109-p39s1w4	Bienvenue en France
+full/tamw/train-5/mf920922_109.t.gz	t-mf920922-109-p40s1w2	WAS
+full/tamw/train-5/mf920922_109.t.gz	t-mf920922-109-p60s1w2 t-mf920922-109-p60s1w3 t-mf920922-109-p60s1w4	BBC Breakfast News
+full/tamw/train-5/mf920922_109.t.gz	t-mf920922-109-p79s1w2 t-mf920922-109-p79s1w3 t-mf920922-109-p79s1w4	Charlie Talk Show
+full/tamw/train-5/mf920922_119.t.gz	t-mf920922-119-p3s7w6 t-mf920922-119-p3s7w7 t-mf920922-119-p3s7w8	Kurgan #Dash Ťube
+full/tamw/train-5/mf920925_010.t.gz	t-mf920925-010-p1s1w9 t-mf920925-010-p1s1w10 t-mf920925-010-p1s1w11	International Herald Tribune
+full/tamw/train-5/mf920925_020.t.gz	t-mf920925-020-p1s1w7 t-mf920925-020-p1s1w8 t-mf920925-020-p1s1w9	SCI #Dash FI
+full/tamw/train-5/mf920925_020.t.gz	t-mf920925-020-p2s5w11 t-mf920925-020-p2s5w12	Blade Runner
+full/tamw/train-5/mf920925_020.t.gz	t-mf920925-020-p3s5w22 t-mf920925-020-p3s5w23	New York
+full/tamw/train-5/mf920925_020.t.gz	t-mf920925-020-p4s1w1 t-mf920925-020-p4s1w2 t-mf920925-020-p4s1w3	Sci #Dash fi
+full/tamw/train-5/mf920925_120.t.gz	t-mf920925-120-p15s3w5 t-mf920925-120-p15s3w6 t-mf920925-120-p15s3w7	Coca #Dash Cola
+full/tamw/train-5/mf920925_120.t.gz	t-mf920925-120-p17s2w5 t-mf920925-120-p17s2w6	FC Santos
+full/tamw/train-5/mf930709_079.t.gz	t-mf930709-079-p2s3w4 t-mf930709-079-p2s3w5	Country Man
+full/tamw/train-5/mf930709_089.t.gz	t-mf930709-089-p5s1w3 t-mf930709-089-p5s1w4 t-mf930709-089-p5s1w5 t-mf930709-089-p5s1w6	NBA New Jersey Nets
+full/tamw/train-5/mf930709_099.t.gz	t-mf930709-099-p2s5w11 t-mf930709-099-p2s5w12	Olympique Marseille
+full/tamw/train-5/mf930709_099.t.gz	t-mf930709-099-p2s7w6 t-mf930709-099-p2s7w7	Newcastle United
+full/tamw/train-5/mf930709_140.t.gz	t-mf930709-140-p9s3w5 t-mf930709-140-p9s3w6 t-mf930709-140-p9s3w7	bed and breakfast
+full/tamw/train-5/mf930713_079.t.gz	t-mf930713-079-p10s1w3 t-mf930713-079-p10s1w4	Czech Made
+full/tamw/train-6/cmpr9413_004.t.gz	t-cmpr9413-004-p7s1w27	Canstar
+full/tamw/train-6/cmpr9413_004.t.gz	t-cmpr9413-004-p8s1w10 t-cmpr9413-004-p8s1w11	rue Ferrier
+full/tamw/train-6/cmpr9413_004.t.gz	t-cmpr9413-004-p8s1w16 t-cmpr9413-004-p8s1w17 t-cmpr9413-004-p8s1w18 t-cmpr9413-004-p8s1w19	Ville Mont #Dash Royal
+full/tamw/train-6/cmpr9413_004.t.gz	t-cmpr9413-004-p8s1w3 t-cmpr9413-004-p8s1w4 t-cmpr9413-004-p8s1w5 t-cmpr9413-004-p8s1w6	Canstar Sport Inc #Period
+full/tamw/train-6/cmpr9413_044.t.gz	t-cmpr9413-044-p14s2w20 t-cmpr9413-044-p14s2w21 t-cmpr9413-044-p14s2w22 t-cmpr9413-044-p14s2w23 t-cmpr9413-044-p14s3w1	P #Period O #Period BOX
+full/tamw/train-6/cmpr9413_044.t.gz	t-cmpr9413-044-p18s1w6 t-cmpr9413-044-p18s1w7	#Dash ART
+full/tamw/train-6/cmpr9413_044.t.gz	t-cmpr9413-044-p19s1w5 t-cmpr9413-044-p19s1w6	FAIR FASHION
+full/tamw/train-6/cmpr9413_044.t.gz	t-cmpr9413-044-p27s1w6 t-cmpr9413-044-p27s1w7 t-cmpr9413-044-p27s1w8 t-cmpr9413-044-p27s1w9	COMMA #Dash TRANSPED 94
+full/tamw/train-6/cmpr9413_044.t.gz	t-cmpr9413-044-p28s1w6 t-cmpr9413-044-p28s1w7 t-cmpr9413-044-p28s1w8	SCAN SHOW 94
+full/tamw/train-6/cmpr9413_044.t.gz	t-cmpr9413-044-p6s1w7 t-cmpr9413-044-p6s1w8 t-cmpr9413-044-p6s1w9	LA BELLA DONNA
+full/tamw/train-6/cmpr9415_002.t.gz	t-cmpr9415-002-p10s1w8 t-cmpr9415-002-p10s1w9 t-cmpr9415-002-p10s1w10	Pratt #Amp Whitney
+full/tamw/train-6/cmpr9415_002.t.gz	t-cmpr9415-002-p12s1w5 t-cmpr9415-002-p12s1w6 t-cmpr9415-002-p12s1w7	Pratt #Amp Whitney
+full/tamw/train-6/cmpr9415_002.t.gz	t-cmpr9415-002-p13s4w6 t-cmpr9415-002-p13s4w7 t-cmpr9415-002-p13s4w8	Pratt #Amp Whitney
+full/tamw/train-6/cmpr9415_002.t.gz	t-cmpr9415-002-p15s1w6 t-cmpr9415-002-p15s1w7 t-cmpr9415-002-p15s1w8	Pratt #Amp Whitney
+full/tamw/train-6/cmpr9415_002.t.gz	t-cmpr9415-002-p15s6w11 t-cmpr9415-002-p15s6w12	General Electric
+full/tamw/train-6/cmpr9415_002.t.gz	t-cmpr9415-002-p16s1w3 t-cmpr9415-002-p16s1w4 t-cmpr9415-002-p16s1w5	Pratt #Amp Whitney
+full/tamw/train-6/cmpr9415_002.t.gz	t-cmpr9415-002-p18s1w1 t-cmpr9415-002-p18s1w2	Joint venture
+full/tamw/train-6/cmpr9415_002.t.gz	t-cmpr9415-002-p18s5w5 t-cmpr9415-002-p18s5w6 t-cmpr9415-002-p18s5w7	Pratt #Amp Whitney
+full/tamw/train-6/cmpr9415_002.t.gz	t-cmpr9415-002-p19s1w1 t-cmpr9415-002-p19s1w2 t-cmpr9415-002-p19s1w3	Pratt #Amp Whitney
+full/tamw/train-6/cmpr9415_002.t.gz	t-cmpr9415-002-p4s1w21 t-cmpr9415-002-p4s1w22 t-cmpr9415-002-p4s1w23	Pratt #Amp Whitney
+full/tamw/train-6/cmpr9415_002.t.gz	t-cmpr9415-002-p8s1w6 t-cmpr9415-002-p8s1w7 t-cmpr9415-002-p8s1w8	Pratt #Amp Whitney
+full/tamw/train-6/cmpr9415_042.t.gz	t-cmpr9415-042-p18s1w21 t-cmpr9415-042-p18s1w22 t-cmpr9415-042-p18s1w23	know #Dash how
+full/tamw/train-6/cmpr9415_042.t.gz	t-cmpr9415-042-p5s2w18 t-cmpr9415-042-p5s2w19 t-cmpr9415-042-p5s2w20	Stac Elektronics Co
+full/tamw/train-6/cmpr9415_042.t.gz	t-cmpr9415-042-p5s2w4 t-cmpr9415-042-p5s2w5	Los Angeles
+full/tamw/train-6/cmpr9415_042.t.gz	t-cmpr9415-042-p7s2w13 t-cmpr9415-042-p7s2w14	Double Space
+full/tamw/train-6/ln94200_100.t.gz	t-ln94200-100-p2s11w16 t-ln94200-100-p2s11w17	cash flow
+full/tamw/train-6/ln94200_119.t.gz	t-ln94200-119-p10s2w8 t-ln94200-119-p10s2w9	Sally Star
+full/tamw/train-6/ln94200_119.t.gz	t-ln94200-119-p3s1w9 t-ln94200-119-p3s1w10	Bnai Brith
+full/tamw/train-6/ln94202_132.t.gz	t-ln94202-132-p2s1Aw4 t-ln94202-132-p2s1Aw5	Wild Duck
+full/tamw/train-6/ln94202_61.t.gz	t-ln94202-61-p1s1Aw20 t-ln94202-61-p1s1Aw21 t-ln94202-61-p1s1Aw22 t-ln94202-61-p1s1Aw23	Martha ' s Vineyard
+full/tamw/train-6/ln94202_70.t.gz	t-ln94202-70-p2s5w12 t-ln94202-70-p2s5w13 t-ln94202-70-p2s5w14 t-ln94202-70-p2s5w15	Gamá al #Dash islamíja
+full/tamw/train-6/ln94202_8.t.gz	t-ln94202-8-p3s1w23 t-ln94202-8-p3s1w24	General Motors
+full/tamw/train-6/ln94202_8.t.gz	t-ln94202-8-p3s1w28 t-ln94202-8-p3s1w29	Mercedes Benz
+full/tamw/train-6/ln94202_89.t.gz	t-ln94202-89-p3s4w10 t-ln94202-89-p3s4w11 t-ln94202-89-p3s4w12 t-ln94202-89-p3s4w13	Editions de la Différence
+full/tamw/train-6/ln94202_89.t.gz	t-ln94202-89-p3s4w5 t-ln94202-89-p3s4w6 t-ln94202-89-p3s4w7	Poemes du silence
+full/tamw/train-6/ln94203_106.t.gz	t-ln94203-106-p2s2w19 t-ln94203-106-p2s2w20	Pittsburgh Penguins
+full/tamw/train-6/ln94203_92.t.gz	t-ln94203-92-p1s1w1 t-ln94203-92-p1s1w2 t-ln94203-92-p1s1w3	Super Dance Party
+full/tamw/train-6/ln94203_92.t.gz	t-ln94203-92-p1s1w5 t-ln94203-92-p1s1w6 t-ln94203-92-p1s1w7	Twenty 4 Seven
+full/tamw/train-6/ln94203_92.t.gz	t-ln94203-92-p2s1w10 t-ln94203-92-p2s1w11 t-ln94203-92-p2s1w12	Twenty 4 Seven
+full/tamw/train-6/ln94203_92.t.gz	t-ln94203-92-p2s1w19 t-ln94203-92-p2s1w20 t-ln94203-92-p2s1w21	Is It Love
+full/tamw/train-6/ln94203_92.t.gz	t-ln94203-92-p2s1w23 t-ln94203-92-p2s1w24 t-ln94203-92-p2s1w25	Take Me Away
+full/tamw/train-6/ln94203_92.t.gz	t-ln94203-92-p2s2w5 t-ln94203-92-p2s2w6 t-ln94203-92-p2s2w7	Super Dance Party
+full/tamw/train-6/ln94203_92.t.gz	t-ln94203-92-p2s2w8 t-ln94203-92-p2s2w9 t-ln94203-92-p2s2w10	Twenty 4 Seven
+full/tamw/train-6/ln94203_92.t.gz	t-ln94203-92-p2s3w12 t-ln94203-92-p2s3w13 t-ln94203-92-p2s3w14	2 nd Nature
+full/tamw/train-6/ln94204_100.t.gz	t-ln94204-100-p2s1Bw12 t-ln94204-100-p2s1Bw13	AG Flek
+full/tamw/train-6/ln94204_100.t.gz	t-ln94204-100-p3s3w2 t-ln94204-100-p3s3w3	AG Flek
+full/tamw/train-6/ln94204_100.t.gz	t-ln94204-100-p3s5w1 t-ln94204-100-p3s5w2	AG Flek
+full/tamw/train-6/ln94204_100.t.gz	t-ln94204-100-p4s2w26 t-ln94204-100-p4s2w27 t-ln94204-100-p4s2w28	Vracaja sa dom
+full/tamw/train-6/ln94204_11.t.gz	t-ln94204-11-p2s1Bw18 t-ln94204-11-p2s1Bw19 t-ln94204-11-p2s1Bw20	Lockheed Corp #Period
+full/tamw/train-6/ln94204_11.t.gz	t-ln94204-11-p2s1Bw22 t-ln94204-11-p2s1Bw23 t-ln94204-11-p2s1Bw24	Martin Marietta Corp
+full/tamw/train-6/ln94204_119.t.gz	t-ln94204-119-p2s1Aw10 t-ln94204-119-p2s1Aw11	US Open
+full/tamw/train-6/ln94204_119.t.gz	t-ln94204-119-p2s1Cw19 t-ln94204-119-p2s1Cw20	US Open
+full/tamw/train-6/ln94204_119.t.gz	t-ln94204-119-p3s2w8 t-ln94204-119-p3s2w9	US Open
+full/tamw/train-6/ln94204_119.t.gz	t-ln94204-119-p3s6w14 t-ln94204-119-p3s6w15	US Open
+full/tamw/train-6/ln94204_146.t.gz	t-ln94204-146-p2s12Bw13 t-ln94204-146-p2s12Bw14 t-ln94204-146-p2s12Bw15	The Washington Times
+full/tamw/train-6/ln94204_28.t.gz	t-ln94204-28-p2s1Aw3 t-ln94204-28-p2s1Aw4	De Beers
+full/tamw/train-6/ln94204_28.t.gz	t-ln94204-28-p2s1Cw17 t-ln94204-28-p2s1Cw18	De Beers
+full/tamw/train-6/ln94204_28.t.gz	t-ln94204-28-p4s1w1 t-ln94204-28-p4s1w2 t-ln94204-28-p4s1w3	De Beers Marine
+full/tamw/train-6/ln94204_28.t.gz	t-ln94204-28-p5s1w5 t-ln94204-28-p5s1w6	De Beers
+full/tamw/train-6/ln94204_28.t.gz	t-ln94204-28-p5s4w1 t-ln94204-28-p5s4w2 t-ln94204-28-p5s4w3	De Beers Marine
+full/tamw/train-6/ln94204_82.t.gz	t-ln94204-82-p4s2w5 t-ln94204-82-p4s2w6	Associated Press
+full/tamw/train-6/ln94205_136.t.gz	t-ln94205-136-p5s5w6 t-ln94205-136-p5s5w7 t-ln94205-136-p5s5w8 t-ln94205-136-p5s5w9 t-ln94205-136-p5s5w10 t-ln94205-136-p5s5w11 t-ln94205-136-p5s5w12 t-ln94205-136-p5s5w13 t-ln94205-136-p5s5w14 t-ln94205-136-p5s5w15 t-ln94205-136-p5s5w16 t-ln94205-136-p5s5w17 t-ln94205-136-p5s5w18	Bah #Comma ce n ' est q ' une monnaie de singe !
+full/tamw/train-6/ln94205_24.t.gz	t-ln94205-24-p2s1Bw4 t-ln94205-24-p2s1Bw5 t-ln94205-24-p2s1Bw6	Canon Inc #Period
+full/tamw/train-6/ln94205_7.t.gz	t-ln94205-7-p2s1Aw1 t-ln94205-7-p2s1Aw2	New York
+full/tamw/train-6/ln94205_7.t.gz	t-ln94205-7-p2s1Bw16 t-ln94205-7-p2s1Bw17 t-ln94205-7-p2s1Bw18 t-ln94205-7-p2s1Bw19 t-ln94205-7-p2s1Bw20 t-ln94205-7-p2s1Bw21	Oppenheimer and Co #Period #Comma Inc
+full/tamw/train-6/ln94205_7.t.gz	t-ln94205-7-p2s2w5 t-ln94205-7-p2s2w6 t-ln94205-7-p2s2w7 t-ln94205-7-p2s2w8 t-ln94205-7-p2s2w9 t-ln94205-7-p2s2w10 t-ln94205-7-p2s2w11	The Czech Republic Fund #Comma Inc #Period
+full/tamw/train-6/ln94205_7.t.gz	t-ln94205-7-p4s1w9 t-ln94205-7-p4s1w10 t-ln94205-7-p4s1w11	CS First Boston
+full/tamw/train-6/ln94205_79.t.gz	t-ln94205-79-p2s3Aw14 t-ln94205-79-p2s3Aw15	Comandos L
+full/tamw/train-6/ln94205_79.t.gz	t-ln94205-79-p3s5w1 t-ln94205-79-p3s5w2	Comandos L
+full/tamw/train-6/ln94205_79.t.gz	t-ln94205-79-p5s2w17 t-ln94205-79-p5s2w18	New York
+full/tamw/train-6/ln94205_88.t.gz	t-ln94205-88-p7s1w10 t-ln94205-88-p7s1w11	Džamíjate islámí
+full/tamw/train-6/ln94205_97.t.gz	t-ln94205-97-p1s1Aw16 t-ln94205-97-p1s1Aw17	femme fatale
+full/tamw/train-6/ln94206_151.t.gz	t-ln94206-151-p3s1w36 t-ln94206-151-p3s1w37 t-ln94206-151-p3s1w38 t-ln94206-151-p3s1w39 t-ln94206-151-p3s1w40	Tchien #Dash an #Dash men
+full/tamw/train-6/ln94206_79.t.gz	t-ln94206-79-p4s1w7 t-ln94206-79-p4s1w8	Sinn Fein
+full/tamw/train-6/ln94206_79.t.gz	t-ln94206-79-p8s1w3 t-ln94206-79-p8s1w4 t-ln94206-79-p8s1w5	The Daily Telegraph
+full/tamw/train-6/ln94207_105.t.gz	t-ln94207-105-p3s12w9 t-ln94207-105-p3s12w10 t-ln94207-105-p3s12w11 t-ln94207-105-p3s12w12	US Army Language School
+full/tamw/train-6/ln94207_114.t.gz	t-ln94207-114-p1s1w1 t-ln94207-114-p1s1w2 t-ln94207-114-p1s1w3	The Cranberries live
+full/tamw/train-6/ln94207_114.t.gz	t-ln94207-114-p2s2w14 t-ln94207-114-p2s2w15 t-ln94207-114-p2s2w16 t-ln94207-114-p2s2w17 t-ln94207-114-p2s2w18 t-ln94207-114-p2s2w19 t-ln94207-114-p2s2w20 t-ln94207-114-p2s2w21 t-ln94207-114-p2s2w22 t-ln94207-114-p2s2w23 t-ln94207-114-p2s2w24 t-ln94207-114-p2s2w25 t-ln94207-114-p2s2w26	Everybody Else Is Doing It #Comma So Why Can ' t We ?
+full/tamw/train-6/ln94207_114.t.gz	t-ln94207-114-p2s2w3 t-ln94207-114-p2s2w4	The Smiths
+full/tamw/train-6/ln94207_114.t.gz	t-ln94207-114-p2s2w9 t-ln94207-114-p2s2w10	The Cranberries
+full/tamw/train-6/ln94207_114.t.gz	t-ln94207-114-p2s4w25 t-ln94207-114-p2s4w26 t-ln94207-114-p2s4w27 t-ln94207-114-p2s4w28	Sineád O ' Connor
+full/tamw/train-6/ln94207_114.t.gz	t-ln94207-114-p2s4w30	Pogues
+full/tamw/train-6/ln94207_114.t.gz	t-ln94207-114-p3s2w23 t-ln94207-114-p3s2w24 t-ln94207-114-p3s2w25 t-ln94207-114-p3s2w26	Not Sorry a Lier
+full/tamw/train-6/ln94207_114.t.gz	t-ln94207-114-p3s3w14	Pretty
+full/tamw/train-6/ln94207_114.t.gz	t-ln94207-114-p3s3w24 t-ln94207-114-p3s3w25 t-ln94207-114-p3s3w26	Everything I Said
+full/tamw/train-6/ln94207_114.t.gz	t-ln94207-114-p3s3w33 t-ln94207-114-p3s3w34	Cocteau Twins
+full/tamw/train-6/ln94207_114.t.gz	t-ln94207-114-p3s3w36 t-ln94207-114-p3s3w37	Waltzing Back
+full/tamw/train-6/ln94207_114.t.gz	t-ln94207-114-p3s5w3 t-ln94207-114-p3s5w4	The Cranberries
+full/tamw/train-6/ln94207_114.t.gz	t-ln94207-114-p3s6w4 t-ln94207-114-p3s6w5 t-ln94207-114-p3s6w6	The Cranberries live
+full/tamw/train-6/ln94207_123.t.gz	t-ln94207-123-p2s2w11 t-ln94207-123-p2s2w12	Sinn Fein
+full/tamw/train-6/ln94207_79.t.gz	t-ln94207-79-p17s2w16 t-ln94207-79-p17s2w17	Die Zeit
+full/tamw/train-6/ln94207_79.t.gz	t-ln94207-79-p32s1w1 t-ln94207-79-p32s1w2 t-ln94207-79-p32s1w3 t-ln94207-79-p32s1w4	Achtung #Comma baby !
+full/tamw/train-6/ln94207_79.t.gz	t-ln94207-79-p32s2Bw10 t-ln94207-79-p32s2Bw11	Der Spiegel
+full/tamw/train-6/ln94207_79.t.gz	t-ln94207-79-p32s6w13 t-ln94207-79-p32s6w14	Der Spiegel
+full/tamw/train-6/ln94207_79.t.gz	t-ln94207-79-p3s1Cw26 t-ln94207-79-p3s1Cw27	Berliner Zeitung
+full/tamw/train-6/ln94207_79.t.gz	t-ln94207-79-p8s3w2 t-ln94207-79-p8s3w3	Berliner Zeitung
+full/tamw/train-6/ln94207_79.t.gz	t-ln94207-79-p9s1w8 t-ln94207-79-p9s1w9 t-ln94207-79-p9s1w10 t-ln94207-79-p9s1w11	Werkstatt der deutschen Einheit
+full/tamw/train-6/ln94207_88.t.gz	t-ln94207-88-p4s5w31	télos
+full/tamw/train-6/ln94207_97.t.gz	t-ln94207-97-p2s2w5 t-ln94207-97-p2s2w6 t-ln94207-97-p2s2w7	The Ecco Press
+full/tamw/train-6/ln94207_97.t.gz	t-ln94207-97-p2s3w12 t-ln94207-97-p2s3w13 t-ln94207-97-p2s3w14	New York Times
+full/tamw/train-6/ln94207_97.t.gz	t-ln94207-97-p3s2w22 t-ln94207-97-p3s2w23 t-ln94207-97-p3s2w24 t-ln94207-97-p3s2w25	The Republic of Whores
+full/tamw/train-6/ln94207_97.t.gz	t-ln94207-97-p3s3w20 t-ln94207-97-p3s3w21 t-ln94207-97-p3s3w22	Parliament of Whores
+full/tamw/train-6/ln94207_97.t.gz	t-ln94207-97-p4s4w21 t-ln94207-97-p4s4w22 t-ln94207-97-p4s4w23	The Tank Commander
+full/tamw/train-6/ln94208_105.t.gz	t-ln94208-105-p2s1Cw4 t-ln94208-105-p2s1Cw5	US Open
+full/tamw/train-6/ln94208_105.t.gz	t-ln94208-105-p3s1w29 t-ln94208-105-p3s1w30 t-ln94208-105-p3s1w31	National Tennis Center
+full/tamw/train-6/ln94208_105.t.gz	t-ln94208-105-p3s1w41 t-ln94208-105-p3s1w42 t-ln94208-105-p3s1w43	New York Mets
+full/tamw/train-6/ln94208_105.t.gz	t-ln94208-105-p5s4w6 t-ln94208-105-p5s4w7	Air Jordan
+full/tamw/train-6/ln94208_105.t.gz	t-ln94208-105-p7s6w31 t-ln94208-105-p7s6w32	Street Life
+full/tamw/train-6/ln94208_105.t.gz	t-ln94208-105-p7s6w34 t-ln94208-105-p7s6w35	The Crusaders
+full/tamw/train-6/ln94208_105.t.gz	t-ln94208-105-p7s7w13 t-ln94208-105-p7s7w14 t-ln94208-105-p7s7w15 t-ln94208-105-p7s7w16	We Are The Champions
+full/tamw/train-6/ln94208_17.t.gz	t-ln94208-17-p9s3w7 t-ln94208-17-p9s3w8 t-ln94208-17-p9s3w9	Tchaj #Dash wan
+full/tamw/train-6/ln94209_55.t.gz	t-ln94209-55-p3s2w8 t-ln94209-55-p3s2w9	ad hoc
+full/tamw/train-6/ln94209_73.t.gz	t-ln94209-73-p1s1w2 t-ln94209-73-p1s1w3	Pink Floyd
+full/tamw/train-6/ln94209_73.t.gz	t-ln94209-73-p2s1w16 t-ln94209-73-p2s1w17	Pink Floyd
+full/tamw/train-6/ln94209_73.t.gz	t-ln94209-73-p2s2w7 t-ln94209-73-p2s2w8	Media World
+full/tamw/train-6/ln94209_73.t.gz	t-ln94209-73-p3s7Bw6 t-ln94209-73-p3s7Bw7	Pink Floyd
+full/tamw/train-6/ln94209_91.t.gz	t-ln94209-91-p2s1Aw3 t-ln94209-91-p2s1Aw4	US Open
+full/tamw/train-6/ln94209_91.t.gz	t-ln94209-91-p2s1Cw18 t-ln94209-91-p2s1Cw19	US Open
+full/tamw/train-6/ln94209_91.t.gz	t-ln94209-91-p2s3w25 t-ln94209-91-p2s3w26	Flushing Meadows
+full/tamw/train-6/ln94209_91.t.gz	t-ln94209-91-p4s13w12 t-ln94209-91-p4s13w13 t-ln94209-91-p4s13w14	BVV Prague Open
+full/tamw/train-6/ln94209_91.t.gz	t-ln94209-91-p5s3w13 t-ln94209-91-p5s3w14	US Open
+full/tamw/train-6/ln94210_127.t.gz	t-ln94210-127-p2s1Bw10 t-ln94210-127-p2s1Bw11	Flushing Meadows
+full/tamw/train-6/ln94210_127.t.gz	t-ln94210-127-p3s4w4 t-ln94210-127-p3s4w5	Flushing Meadows
+full/tamw/train-6/ln94210_21.t.gz	t-ln94210-21-p4s1w13 t-ln94210-21-p4s1w14	KGHM Metraco
+full/tamw/train-6/ln94210_76.t.gz	t-ln94210-76-p5s1w10 t-ln94210-76-p5s1w11	AlliedSignal Aerospace
+full/tamw/train-6/ln94210_76.t.gz	t-ln94210-76-p5s1w6 t-ln94210-76-p5s1w7 t-ln94210-76-p5s1w8	North American Rockwell
+full/tamw/train-6/ln94211_13.t.gz	t-ln94211-13-p2s1Bw36 t-ln94211-13-p2s1Bw37 t-ln94211-13-p2s1Bw38	Braas Flachdachsysteme GmbH
+full/tamw/train-6/ln95045_005.t.gz	t-ln95045-005-p2s1w12 t-ln95045-005-p2s1w13 t-ln95045-005-p2s1w14 t-ln95045-005-p2s1w15	John Govett #Amp Co
+full/tamw/train-6/ln95045_005.t.gz	t-ln95045-005-p2s2w32 t-ln95045-005-p2s2w33 t-ln95045-005-p2s2w34 t-ln95045-005-p2s2w35 t-ln95045-005-p2s2w36	John Govett #Amp Co #Period
+full/tamw/train-6/ln95045_005.t.gz	t-ln95045-005-p2s3w13 t-ln95045-005-p2s3w14	emerging markets
+full/tamw/train-6/ln95045_005.t.gz	t-ln95045-005-p4s1w8 t-ln95045-005-p4s1w9 t-ln95045-005-p4s1w10 t-ln95045-005-p4s1w11	IB Austria Securities Prague
+full/tamw/train-6/ln95045_025.t.gz	t-ln95045-025-p3s3w1 t-ln95045-025-p3s3w2	Fed Cup
+full/tamw/train-6/ln95045_045.t.gz	t-ln95045-045-p3s1w1 t-ln95045-045-p3s1w2 t-ln95045-045-p3s1w3 t-ln95045-045-p3s1w4	Patricia London ante Paris
+full/tamw/train-6/ln95045_055.t.gz	t-ln95045-055-p2s3w26 t-ln95045-055-p2s3w27	Die Welt
+full/tamw/train-6/ln95045_055.t.gz	t-ln95045-055-p4s1w2 t-ln95045-055-p4s1w3	Die Welt
+full/tamw/train-6/ln95045_055.t.gz	t-ln95045-055-p4s5w20 t-ln95045-055-p4s5w21	Die Welt
+full/tamw/train-6/ln95046_020.t.gz	t-ln95046-020-p2s1w28 t-ln95046-020-p2s1w29 t-ln95046-020-p2s1w30	New York Islanders
+full/tamw/train-6/ln95046_050.t.gz	t-ln95046-050-p3s1w4 t-ln95046-050-p3s1w5	Angelus novus
+full/tamw/train-6/ln95048_026.t.gz	t-ln95048-026-p3s6w7 t-ln95048-026-p3s6w8	Pirkej avot
+full/tamw/train-6/ln95048_057.t.gz	t-ln95048-057-p2s21w1 t-ln95048-057-p2s21w2 t-ln95048-057-p2s21w3 t-ln95048-057-p2s21w4	Sic transit gloria mundi
+full/tamw/train-6/ln95048_087.t.gz	t-ln95048-087-p2s2w9 t-ln95048-087-p2s2w10	Grand Prix
+full/tamw/train-6/ln95049_032.t.gz	t-ln95049-032-p1s1w14 t-ln95049-032-p1s1w15 t-ln95049-032-p1s1w16	New York Islanders
+full/tamw/train-6/ln95049_082.t.gz	t-ln95049-082-p3s3w12 t-ln95049-082-p3s3w13	Die Presse
+full/tamw/train-6/ln95049_142.t.gz	t-ln95049-142-p2s2w7 t-ln95049-142-p2s2w8	Management Press
+full/tamw/train-6/ln95049_142.t.gz	t-ln95049-142-p2s7w7 t-ln95049-142-p2s7w8	Victoria Publishing
+full/tamw/train-6/lnd94103_071.t.gz	t-lnd94103-071-p1s19w5 t-lnd94103-071-p1s19w6 t-lnd94103-071-p1s19w7	Coopers and Lybrand
+full/tamw/train-6/lnd94103_091.t.gz	t-lnd94103-091-p1s7w6 t-lnd94103-091-p1s7w7	ex libris
+full/tamw/train-6/lnd94103_101.t.gz	t-lnd94103-101-p1s17Aw11 t-lnd94103-101-p1s17Aw12 t-lnd94103-101-p1s17Aw13	Tema con variacioni
+full/tamw/train-6/lnd94103_122.t.gz	t-lnd94103-122-p1s1Cw18 t-lnd94103-122-p1s1Cw19 t-lnd94103-122-p1s1Cw20	Val di Fassa
+full/tamw/train-6/lnd94103_122.t.gz	t-lnd94103-122-p1s4w5 t-lnd94103-122-p1s4w6 t-lnd94103-122-p1s4w7	Val di Fassa
+full/tamw/train-6/mf920922_130.t.gz	t-mf920922-130-p2s2w13 t-mf920922-130-p2s2w14	Philippine Star
+full/tamw/train-6/mf920922_130.t.gz	t-mf920922-130-p2s3w17 t-mf920922-130-p2s3w18	Mount Kitanland
+full/tamw/train-6/mf920925_101.t.gz	t-mf920925-101-p5s1w4 t-mf920925-101-p5s1w5	Camp David
+full/tamw/train-6/mf920925_101.t.gz	t-mf920925-101-p7s1w6 t-mf920925-101-p7s1w7	Tel Aviv
+full/tamw/train-6/mf920925_111.t.gz	t-mf920925-111-p3s1w10 t-mf920925-111-p3s1w11	Die Welt
+full/tamw/train-6/mf920925_111.t.gz	t-mf920925-111-p4s1w1 t-mf920925-111-p4s1w2	Die Welt
+full/tamw/train-6/mf930709_090.t.gz	t-mf930709-090-p2s1w1 t-mf930709-090-p2s1w2	Boca Juniors
+full/tamw/train-6/mf930709_090.t.gz	t-mf930709-090-p2s1w4 t-mf930709-090-p2s1w5	Sao Paulo
+full/tamw/train-6/mf930709_090.t.gz	t-mf930709-090-p2s5w16	Masters
+full/tamw/train-6/mf930713_020.t.gz	t-mf930713-020-p3s14w14 t-mf930713-020-p3s14w15 t-mf930713-020-p3s14w16	VW LT 55
+full/tamw/train-6/mf930713_040.t.gz	t-mf930713-040-p63s1w2 t-mf930713-040-p63s1w3	Worldwide Update
+full/tamw/train-6/mf930713_040.t.gz	t-mf930713-040-p64s1w2 t-mf930713-040-p64s1w3 t-mf930713-040-p64s1w4	Headline News Update
+full/tamw/train-6/mf930713_040.t.gz	t-mf930713-040-p65s1w2 t-mf930713-040-p65s1w3	CNN Newsroom
+full/tamw/train-6/mf930713_040.t.gz	t-mf930713-040-p67s1w2 t-mf930713-040-p67s1w3 t-mf930713-040-p67s1w4	Headline News Update
+full/tamw/train-6/mf930713_040.t.gz	t-mf930713-040-p68s1w2 t-mf930713-040-p68s1w3	World News
+full/tamw/train-6/mf930713_040.t.gz	t-mf930713-040-p69s1w2 t-mf930713-040-p69s1w3 t-mf930713-040-p69s1w4	Headline News Update
+full/tamw/train-6/mf930713_040.t.gz	t-mf930713-040-p70s1w2 t-mf930713-040-p70s1w3	World News
+full/tamw/train-6/mf930713_040.t.gz	t-mf930713-040-p71s1w2 t-mf930713-040-p71s1w3	Business Morning
+full/tamw/train-6/mf930713_040.t.gz	t-mf930713-040-p72s1w2 t-mf930713-040-p72s1w3	World News
+full/tamw/train-6/mf930713_040.t.gz	t-mf930713-040-p73s1w2 t-mf930713-040-p73s1w3	Business Day
+full/tamw/train-6/mf930713_040.t.gz	t-mf930713-040-p74s1w2 t-mf930713-040-p74s1w3	World News
+full/tamw/train-6/mf930713_040.t.gz	t-mf930713-040-p75s1w2 t-mf930713-040-p75s1w3	Business Asia
+full/tamw/train-6/mf930713_040.t.gz	t-mf930713-040-p80s1w2 t-mf930713-040-p80s1w3	Lady Today
+full/tamw/train-6/mf930713_040.t.gz	t-mf930713-040-p97s1w2 t-mf930713-040-p97s1w3	Showbiz Today
+full/tamw/train-6/mf930713_040.t.gz	t-mf930713-040-p99s1w19 t-mf930713-040-p99s1w20 t-mf930713-040-p99s1w21	Power hits USA
+full/tamw/train-6/mf930713_161.t.gz	t-mf930713-161-p2s2w33 t-mf930713-161-p2s2w34	Music Forum
+full/tamw/train-7/cmpr9413_025.t.gz	t-cmpr9413-025-p13s2w10 t-cmpr9413-025-p13s2w11	Time Manager
+full/tamw/train-7/cmpr9413_025.t.gz	t-cmpr9413-025-p13s3w7 t-cmpr9413-025-p13s3w8	Team Agenda
+full/tamw/train-7/cmpr9413_025.t.gz	t-cmpr9413-025-p8s2w7 t-cmpr9413-025-p8s2w8	Apple Macintosh
+full/tamw/train-7/cmpr9413_045.t.gz	t-cmpr9413-045-p10s1w19 t-cmpr9413-045-p10s1w20 t-cmpr9413-045-p10s1w21 t-cmpr9413-045-p10s1w22 t-cmpr9413-045-p10s1w23	P #Period O #Period Box
+full/tamw/train-7/cmpr9413_045.t.gz	t-cmpr9413-045-p10s1w9 t-cmpr9413-045-p10s1w10	Bertelsmann media
+full/tamw/train-7/ln94200_147.t.gz	t-ln94200-147-p2s1Bw18 t-ln94200-147-p2s1Bw19 t-ln94200-147-p2s1Bw20	Hibernians La Valleta
+full/tamw/train-7/ln94200_156.t.gz	t-ln94200-156-p2s1Bw2 t-ln94200-156-p2s1Bw3	Flushing Meadows
+full/tamw/train-7/ln94200_165.t.gz	t-ln94200-165-p2s1Aw7 t-ln94200-165-p2s1Aw8	Wild Duck
+full/tamw/train-7/ln94200_174.t.gz	t-ln94200-174-p1s1w1 t-ln94200-174-p1s1w2 t-ln94200-174-p1s1w3 t-ln94200-174-p1s1w4	Dream Band All Stars
+full/tamw/train-7/ln94200_174.t.gz	t-ln94200-174-p2s2w18 t-ln94200-174-p2s2w19 t-ln94200-174-p2s2w20 t-ln94200-174-p2s2w21	Mr #Period Hi Hat
+full/tamw/train-7/ln94200_174.t.gz	t-ln94200-174-p2s4w23 t-ln94200-174-p2s4w24	Hot House
+full/tamw/train-7/ln94200_174.t.gz	t-ln94200-174-p2s5w8 t-ln94200-174-p2s5w9	Hot House
+full/tamw/train-7/ln94200_174.t.gz	t-ln94200-174-p2s6w5 t-ln94200-174-p2s6w6 t-ln94200-174-p2s6w7	Tin Tin Deo
+full/tamw/train-7/ln94200_174.t.gz	t-ln94200-174-p2s6w9 t-ln94200-174-p2s6w10	Salt Peanuts
+full/tamw/train-7/ln94200_52.t.gz	t-ln94200-52-p2s1Bw3 t-ln94200-52-p2s1Bw4 t-ln94200-52-p2s1Bw5 t-ln94200-52-p2s1Bw6 t-ln94200-52-p2s1Bw7	Falcon Products #Comma Inc #Period
+full/tamw/train-7/ln94200_52.t.gz	t-ln94200-52-p5s2w14 t-ln94200-52-p5s2w15 t-ln94200-52-p5s2w16 t-ln94200-52-p5s2w17 t-ln94200-52-p5s2w18 t-ln94200-52-p5s2w19 t-ln94200-52-p5s2w20 t-ln94200-52-p5s2w21 t-ln94200-52-p5s2w22 t-ln94200-52-p5s2w23	Falcon International E #Period U #Period R #Period L #Period
+full/tamw/train-7/ln94200_52.t.gz	t-ln94200-52-p6s1w1 t-ln94200-52-p6s1w2 t-ln94200-52-p6s1w3 t-ln94200-52-p6s1w4 t-ln94200-52-p6s1w5	Falcon Products #Comma Inc #Period
+full/tamw/train-7/ln94202_106.t.gz	t-ln94202-106-p15s6w9 t-ln94202-106-p15s6w10	Aston Villa
+full/tamw/train-7/ln94202_106.t.gz	t-ln94202-106-p8s2w5 t-ln94202-106-p8s2w6	Oesters Vaxjö
+full/tamw/train-7/ln94202_35.t.gz	t-ln94202-35-p2s2w5 t-ln94202-35-p2s2w6 t-ln94202-35-p2s2w7	PRO #Dash BIO
+full/tamw/train-7/ln94202_62.t.gz	t-ln94202-62-p3s2w6 t-ln94202-62-p3s2w7	Juventud Rebelde
+full/tamw/train-7/ln94202_80.t.gz	t-ln94202-80-p7s2w22 t-ln94202-80-p7s2w23	Te Deum
+full/tamw/train-7/ln94202_9.t.gz	t-ln94202-9-p4s1w8 t-ln94202-9-p4s1w9 t-ln94202-9-p4s1w10	Ho Či Minův
+full/tamw/train-7/ln94202_99.t.gz	t-ln94202-99-p2s1Bw3 t-ln94202-99-p2s1Bw4 t-ln94202-99-p2s1Bw5	Tour de France
+full/tamw/train-7/ln94202_99.t.gz	t-ln94202-99-p2s2w12 t-ln94202-99-p2s2w13 t-ln94202-99-p2s2w14 t-ln94202-99-p2s2w15 t-ln94202-99-p2s2w16	Tour de L ' Oise
+full/tamw/train-7/ln94203_116.t.gz	t-ln94203-116-p3s13w18 t-ln94203-116-p3s13w19	Lukko Rauma
+full/tamw/train-7/ln94203_116.t.gz	t-ln94203-116-p4s2w8 t-ln94203-116-p4s2w9	Pragobanka Cup
+full/tamw/train-7/ln94203_84.t.gz	t-ln94203-84-p3s3w1 t-ln94203-84-p3s3w2 t-ln94203-84-p3s3w3 t-ln94203-84-p3s3w4 t-ln94203-84-p3s3w5 t-ln94203-84-p3s3w6	Das rote Kreuz kam zu spät
+full/tamw/train-7/ln94203_93.t.gz	t-ln94203-93-p4s6w24 t-ln94203-93-p4s6w25	Pony Canyon
+full/tamw/train-7/ln94204_12.t.gz	t-ln94204-12-p4s1w37 t-ln94204-12-p4s1w38	NH Car
+full/tamw/train-7/ln94204_129.t.gz	t-ln94204-129-p2s1Cw24 t-ln94204-129-p2s1Cw25	Flushing Meadows
+full/tamw/train-7/ln94204_129.t.gz	t-ln94204-129-p2s2w10 t-ln94204-129-p2s2w11	US Open
+full/tamw/train-7/ln94204_129.t.gz	t-ln94204-129-p3s4w24 t-ln94204-129-p3s4w25	US Open
+full/tamw/train-7/ln94204_129.t.gz	t-ln94204-129-p3s6w14 t-ln94204-129-p3s6w15	Flushing Meadows
+full/tamw/train-7/ln94204_138.t.gz	t-ln94204-138-p2s1Bw4 t-ln94204-138-p2s1Bw5	Gazeta Wyborcza
+full/tamw/train-7/ln94204_147.t.gz	t-ln94204-147-p2s1Bw26 t-ln94204-147-p2s1Bw27	Earl Grey
+full/tamw/train-7/ln94204_2.t.gz	t-ln94204-2-p13s1Aw1 t-ln94204-2-p13s1Aw2	NEMO consult
+full/tamw/train-7/ln94204_83.t.gz	t-ln94204-83-p7s2w17 t-ln94204-83-p7s2w18 t-ln94204-83-p7s2w19 t-ln94204-83-p7s2w20	Ťiang Ce #Dash minem
+full/tamw/train-7/ln94204_92.t.gz	t-ln94204-92-p1s1w7 t-ln94204-92-p1s1w8	AG Flek
+full/tamw/train-7/ln94205_100.t.gz	t-ln94205-100-p3s1w1 t-ln94205-100-p3s1w2	Musica Florea
+full/tamw/train-7/ln94205_119.t.gz	t-ln94205-119-p2s1Aw1 t-ln94205-119-p2s1Aw2 t-ln94205-119-p2s1Aw3 t-ln94205-119-p2s1Aw4 t-ln94205-119-p2s1Aw5	tae #Dash kwon #Dash do
+full/tamw/train-7/ln94205_119.t.gz	t-ln94205-119-p4s2w21 t-ln94205-119-p4s2w22 t-ln94205-119-p4s2w23 t-ln94205-119-p4s2w24 t-ln94205-119-p4s2w25	tae #Dash kwon #Dash do
+full/tamw/train-7/ln94205_8.t.gz	t-ln94205-8-p6s3w2 t-ln94205-8-p6s3w3 t-ln94205-8-p6s3w4	Glass TV Components
+full/tamw/train-7/ln94205_8.t.gz	t-ln94205-8-p6s3w6 t-ln94205-8-p6s3w7 t-ln94205-8-p6s3w8 t-ln94205-8-p6s3w9	IF AlFA #Dash Invest
+full/tamw/train-7/ln94205_89.t.gz	t-ln94205-89-p1s1w9 t-ln94205-89-p1s1w10 t-ln94205-89-p1s1w11	Schleswig #Dash Holstein
+full/tamw/train-7/ln94205_98.t.gz	t-ln94205-98-p2s1Bw24 t-ln94205-98-p2s1Bw25 t-ln94205-98-p2s1Bw26	Saturday Night Live
+full/tamw/train-7/ln94205_98.t.gz	t-ln94205-98-p3s2w5 t-ln94205-98-p3s2w6 t-ln94205-98-p3s2w7 t-ln94205-98-p3s2w8	Wayne ' s World
+full/tamw/train-7/ln94205_98.t.gz	t-ln94205-98-p3s6w31 t-ln94205-98-p3s6w32	The Doors
+full/tamw/train-7/ln94205_98.t.gz	t-ln94205-98-p3s6w34 t-ln94205-98-p3s6w35 t-ln94205-98-p3s6w36	Thelma #Amp Louise
+full/tamw/train-7/ln94205_98.t.gz	t-ln94205-98-p3s6w43 t-ln94205-98-p3s6w44 t-ln94205-98-p3s6w45	kung #Dash fu
+full/tamw/train-7/ln94205_98.t.gz	t-ln94205-98-p3s7w16 t-ln94205-98-p3s7w17 t-ln94205-98-p3s7w18	4 Non Blondes
+full/tamw/train-7/ln94206_143.t.gz	t-ln94206-143-p7s1w9 t-ln94206-143-p7s1w10 t-ln94206-143-p7s1w11	cash and carry
+full/tamw/train-7/ln94206_16.t.gz	t-ln94206-16-p2s3w17 t-ln94206-16-p2s3w18	Strabag Bohemia
+full/tamw/train-7/ln94206_43.t.gz	t-ln94206-43-p2s2w21 t-ln94206-43-p2s2w22 t-ln94206-43-p2s2w23 t-ln94206-43-p2s2w24 t-ln94206-43-p2s2w25	REO #Dash RWE Entsorgung Praha
+full/tamw/train-7/ln94206_98.t.gz	t-ln94206-98-p4s3Bw6 t-ln94206-98-p4s3Bw7 t-ln94206-98-p4s3Bw8 t-ln94206-98-p4s3Bw9 t-ln94206-98-p4s3Bw10 t-ln94206-98-p4s3Bw11 t-ln94206-98-p4s3Bw12 t-ln94206-98-p4s3Bw13	P #Period U #Period S #Period A #Period
+full/tamw/train-7/ln94207_34.t.gz	t-ln94207-34-p6s1w3 t-ln94207-34-p6s1w4 t-ln94207-34-p6s1w5 t-ln94207-34-p6s1w6	Ťiang Ce #Dash min
+full/tamw/train-7/ln94207_43.t.gz	t-ln94207-43-p2s1Aw1 t-ln94207-43-p2s1Aw2	New York
+full/tamw/train-7/ln94208_134.t.gz	t-ln94208-134-p2s1Aw4 t-ln94208-134-p2s1Aw5	Wild Duck
+full/tamw/train-7/ln94208_143.t.gz	t-ln94208-143-p2s1w6 t-ln94208-143-p2s1w7 t-ln94208-143-p2s1w8 t-ln94208-143-p2s1w9 t-ln94208-143-p2s1w10 t-ln94208-143-p2s1w11 t-ln94208-143-p2s1w12 t-ln94208-143-p2s1w13	E #Period D #Period and F #Period Man
+full/tamw/train-7/ln94208_36.t.gz	t-ln94208-36-p2s4w5 t-ln94208-36-p2s4w6	Nationale Nederlanden
+full/tamw/train-7/ln94208_81.t.gz	t-ln94208-81-p6s2w13 t-ln94208-81-p6s2w14 t-ln94208-81-p6s2w15 t-ln94208-81-p6s2w16 t-ln94208-81-p6s2w17	Port #Dash au #Dash Prince
+full/tamw/train-7/ln94209_38.t.gz	t-ln94209-38-p1s1w4 t-ln94209-38-p1s1w5	Pink Floyd
+full/tamw/train-7/ln94209_38.t.gz	t-ln94209-38-p2s1Cw13 t-ln94209-38-p2s1Cw14	Pink Floyd
+full/tamw/train-7/ln94209_47.t.gz	t-ln94209-47-p4s14w30 t-ln94209-47-p4s14w31	Wild Duck
+full/tamw/train-7/ln94210_137.t.gz	t-ln94210-137-p2s1Aw6 t-ln94210-137-p2s1Aw7	Wild Duck
+full/tamw/train-7/ln94210_68.t.gz	t-ln94210-68-p3s4w37 t-ln94210-68-p3s4w38 t-ln94210-68-p3s4w39	kung #Dash fu
+full/tamw/train-7/ln94211_22.t.gz	t-ln94211-22-p2s1Aw7 t-ln94211-22-p2s1Aw8	Pink Floyd
+full/tamw/train-7/ln94211_22.t.gz	t-ln94211-22-p2s1Cw27 t-ln94211-22-p2s1Cw28	Pink Floyd
+full/tamw/train-7/ln94211_22.t.gz	t-ln94211-22-p3s1w14 t-ln94211-22-p3s1w15 t-ln94211-22-p3s1w16 t-ln94211-22-p3s1w17 t-ln94211-22-p3s1w18	Shine On You Crazy Diamond
+full/tamw/train-7/ln94211_22.t.gz	t-ln94211-22-p3s1w21 t-ln94211-22-p3s1w22 t-ln94211-22-p3s1w23 t-ln94211-22-p3s1w24	Wish You Were Here
+full/tamw/train-7/ln94211_22.t.gz	t-ln94211-22-p3s2w1 t-ln94211-22-p3s2w2	Pink Floyd
+full/tamw/train-7/ln94211_22.t.gz	t-ln94211-22-p4s5w8 t-ln94211-22-p4s5w9	Pink Floyd
+full/tamw/train-7/ln94211_22.t.gz	t-ln94211-22-p5s1w1 t-ln94211-22-p5s1w2	Pink Floyd
+full/tamw/train-7/ln94211_5.t.gz	t-ln94211-5-p10s1w11 t-ln94211-5-p10s1w12	Apple Computer
+full/tamw/train-7/ln94211_5.t.gz	t-ln94211-5-p10s3w12 t-ln94211-5-p10s3w13	Apple Macintosh
+full/tamw/train-7/ln94211_5.t.gz	t-ln94211-5-p1s1w7 t-ln94211-5-p1s1w8	Wall Street
+full/tamw/train-7/ln94211_5.t.gz	t-ln94211-5-p5s5w2 t-ln94211-5-p5s5w3	Apple Computer
+full/tamw/train-7/ln94211_5.t.gz	t-ln94211-5-p6s4w12 t-ln94211-5-p6s4w13	IBM PC
+full/tamw/train-7/ln94211_5.t.gz	t-ln94211-5-p6s4w15 t-ln94211-5-p6s4w16	Personal Computer
+full/tamw/train-7/ln94211_5.t.gz	t-ln94211-5-p7s1w15 t-ln94211-5-p7s1w16	IBM PC
+full/tamw/train-7/ln94211_5.t.gz	t-ln94211-5-p7s3w1 t-ln94211-5-p7s3w2	IBM PC
+full/tamw/train-7/ln94211_5.t.gz	t-ln94211-5-p7s3w14 t-ln94211-5-p7s3w15 t-ln94211-5-p7s3w16	PC #Slash XT
+full/tamw/train-7/ln94211_5.t.gz	t-ln94211-5-p7s3w21 t-ln94211-5-p7s3w22 t-ln94211-5-p7s3w23	PC #Slash AT
+full/tamw/train-7/ln94211_5.t.gz	t-ln94211-5-p7s4w1 t-ln94211-5-p7s4w2 t-ln94211-5-p7s4w3 t-ln94211-5-p7s4w4	IBM PC #Slash AT
+full/tamw/train-7/ln94211_95.t.gz	t-ln94211-95-p12s1Bw9 t-ln94211-95-p12s1Bw10 t-ln94211-95-p12s1Bw11 t-ln94211-95-p12s1Bw12	Society of United Irishmen
+full/tamw/train-7/ln94211_95.t.gz	t-ln94211-95-p12s5w11 t-ln94211-95-p12s5w12	Catholic Committee
+full/tamw/train-7/ln94211_95.t.gz	t-ln94211-95-p13s2w1 t-ln94211-95-p13s2w2 t-ln94211-95-p13s2w3	Home Rule Party
+full/tamw/train-7/ln94211_95.t.gz	t-ln94211-95-p13s4w10 t-ln94211-95-p13s4w11	Gaelic League
+full/tamw/train-7/ln94211_95.t.gz	t-ln94211-95-p13s4w25 t-ln94211-95-p13s4w26	Sinn Féin
+full/tamw/train-7/ln94211_95.t.gz	t-ln94211-95-p15s1w5 t-ln94211-95-p15s1w6	Sinn Féin
+full/tamw/train-7/ln94211_95.t.gz	t-ln94211-95-p19s4w9 t-ln94211-95-p19s4w10 t-ln94211-95-p19s4w11	Baile Átha Cliath
+full/tamw/train-7/ln94211_95.t.gz	t-ln94211-95-p21s7w3 t-ln94211-95-p21s7w4	Trinity College
+full/tamw/train-7/ln94211_95.t.gz	t-ln94211-95-p4s3w15 t-ln94211-95-p4s3w16 t-ln94211-95-p4s3w17 t-ln94211-95-p4s3w18 t-ln94211-95-p4s3w19 t-ln94211-95-p4s3w20 t-ln94211-95-p4s3w21	Not too bad and not too good
+full/tamw/train-7/ln94211_95.t.gz	t-ln94211-95-p9s3w11 t-ln94211-95-p9s3w12 t-ln94211-95-p9s3w13 t-ln94211-95-p9s3w14	insula sanctorum et doctorum
+full/tamw/train-7/ln95046_001.t.gz	t-ln95046-001-p6s2w10 t-ln95046-001-p6s2w11 t-ln95046-001-p6s2w12	stand #Dash by
+full/tamw/train-7/ln95046_101.t.gz	t-ln95046-101-p2s2w1 t-ln95046-101-p2s2w2	Paramount Pictures
+full/tamw/train-7/ln95046_101.t.gz	t-ln95046-101-p2s2w21 t-ln95046-101-p2s2w22 t-ln95046-101-p2s2w23	Mission #Colon Impossible
+full/tamw/train-7/ln95046_101.t.gz	t-ln95046-101-p3s1w5 t-ln95046-101-p3s1w6	Prag International
+full/tamw/train-7/ln95046_101.t.gz	t-ln95046-101-p5s2w4 t-ln95046-101-p5s2w5 t-ln95046-101-p5s2w6	Mission #Colon Impossible
+full/tamw/train-7/ln95047_057.t.gz	t-ln95047-057-p1s1w12 t-ln95047-057-p1s1w13 t-ln95047-057-p1s1w14 t-ln95047-057-p1s1w15	Siouxsie And The Banshees
+full/tamw/train-7/ln95047_127.t.gz	t-ln95047-127-p2s2w5 t-ln95047-127-p2s2w6	Financial Times
+full/tamw/train-7/ln95047_137.t.gz	t-ln95047-137-p2s1Cw14 t-ln95047-137-p2s1Cw15	Garden Merchant
+full/tamw/train-7/ln95048_068.t.gz	t-ln95048-068-p2s2w9 t-ln95048-068-p2s2w10 t-ln95048-068-p2s2w11	Frontiers of ignorance
+full/tamw/train-7/ln95048_068.t.gz	t-ln95048-068-p4s22w11 t-ln95048-068-p4s22w12 t-ln95048-068-p4s22w13	sci #Dash fi
+full/tamw/train-7/ln95049_033.t.gz	t-ln95049-033-p2s1Aw4 t-ln95049-033-p2s1Aw5 t-ln95049-033-p2s1Aw6	New York Islanders
+full/tamw/train-7/ln95049_033.t.gz	t-ln95049-033-p2s1Cw16 t-ln95049-033-p2s1Cw17 t-ln95049-033-p2s1Cw18	New York Rangers
+full/tamw/train-7/ln95049_033.t.gz	t-ln95049-033-p2s2w4 t-ln95049-033-p2s2w5	Tampa Bay
+full/tamw/train-7/ln95049_033.t.gz	t-ln95049-033-p3s1w4 t-ln95049-033-p3s1w5	Tampa Bay
+full/tamw/train-7/ln95049_033.t.gz	t-ln95049-033-p3s5w2 t-ln95049-033-p3s5w3	San Jose
+full/tamw/train-7/ln95049_033.t.gz	t-ln95049-033-p4s3w6 t-ln95049-033-p4s3w7	Los Angeles
+full/tamw/train-7/ln95049_033.t.gz	t-ln95049-033-p5s1w4 t-ln95049-033-p5s1w5 t-ln95049-033-p5s1w6	New York Islanders
+full/tamw/train-7/ln95049_043.t.gz	t-ln95049-043-p2s1Bw1 t-ln95049-043-p2s1Bw2	Whistler Mountain
+full/tamw/train-7/ln95049_043.t.gz	t-ln95049-043-p2s1Cw5 t-ln95049-043-p2s1Cw6	Whistler Mountain
+full/tamw/train-7/ln95049_063.t.gz	t-ln95049-063-p2s1w10 t-ln95049-063-p2s1w11	Ex libris
+full/tamw/train-7/ln95049_063.t.gz	t-ln95049-063-p3s1w12 t-ln95049-063-p3s1w13 t-ln95049-063-p3s1w14 t-ln95049-063-p3s1w15	poémes physiques #Comma visuels
+full/tamw/train-7/ln95049_103.t.gz	t-ln95049-103-p2s3w8 t-ln95049-103-p2s3w9 t-ln95049-103-p2s3w10	Trade Centre Praha
+full/tamw/train-7/ln95049_103.t.gz	t-ln95049-103-p4s3w12 t-ln95049-103-p4s3w13	Art Forum
+full/tamw/train-7/ln95049_113.t.gz	t-ln95049-113-p4s4w14 t-ln95049-113-p4s4w15	Four Seasons
+full/tamw/train-7/lnd94103_051.t.gz	t-lnd94103-051-p1s5w12 t-lnd94103-051-p1s5w13	Sainte Famille
+full/tamw/train-7/lnd94103_112.t.gz	t-lnd94103-112-p1s3w6 t-lnd94103-112-p1s3w7	play off
+full/tamw/train-7/lnd94103_112.t.gz	t-lnd94103-112-p1s3w9 t-lnd94103-112-p1s3w10	New Jersey
+full/tamw/train-7/mf920922_020.t.gz	t-mf920922-020-p1s1w14 t-mf920922-020-p1s1w15	standby arrangement
+full/tamw/train-7/mf920922_030.t.gz	t-mf920922-030-p1s2w1 t-mf920922-030-p1s2w2 t-mf920922-030-p1s2w3 t-mf920922-030-p1s2w4 t-mf920922-030-p1s2w5 t-mf920922-030-p1s2w6 t-mf920922-030-p1s2w7 t-mf920922-030-p1s2w8 t-mf920922-030-p1s2w9	Les Grandes Orgues de Notre #Dash Dame de Chartres
+full/tamw/train-7/mf920922_030.t.gz	t-mf920922-030-p1s3w26 t-mf920922-030-p1s3w27 t-mf920922-030-p1s3w28	Notre #Dash Dame
+full/tamw/train-7/mf920922_050.t.gz	t-mf920922-050-p2s13w2 t-mf920922-050-p2s13w3	TGT Marketing
+full/tamw/train-7/mf920922_050.t.gz	t-mf920922-050-p2s17w17 t-mf920922-050-p2s17w18	Advantage International
+full/tamw/train-7/mf920922_050.t.gz	t-mf920922-050-p2s4w33 t-mf920922-050-p2s4w34	TGT Marketing
+full/tamw/train-7/mf920922_090.t.gz	t-mf920922-090-p1s1Bw33 t-mf920922-090-p1s1Bw34 t-mf920922-090-p1s1Bw35	au #Dash pair
+full/tamw/train-7/mf920922_090.t.gz	t-mf920922-090-p1s1Bw44 t-mf920922-090-p1s1Bw45	Czechoslowak Models
+full/tamw/train-7/mf920922_090.t.gz	t-mf920922-090-p1s1Bw47 t-mf920922-090-p1s1Bw48	Marine Travel
+full/tamw/train-7/mf920922_090.t.gz	t-mf920922-090-p1s4w9 t-mf920922-090-p1s4w10 t-mf920922-090-p1s4w11	au #Dash pair
+full/tamw/train-7/mf920925_052.t.gz	t-mf920925-052-p2s1w10 t-mf920925-052-p2s1w11	FC Sevilla
+full/tamw/train-7/mf920925_072.t.gz	t-mf920925-072-p2s2w5 t-mf920925-072-p2s2w6	Národná obroda
+full/tamw/train-7/mf930709_040.t.gz	t-mf930709-040-p21s1w1 t-mf930709-040-p21s1w2	IH Golf
+full/tamw/train-7/mf930709_040.t.gz	t-mf930709-040-p29s1w1 t-mf930709-040-p29s1w2 t-mf930709-040-p29s1w3	VPÚ #Dash DECO
+full/tamw/train-7/mf930709_040.t.gz	t-mf930709-040-p7s1w2 t-mf930709-040-p7s1w3	Vacuum Components
+full/tamw/train-7/mf930709_040.t.gz	t-mf930709-040-p8s1w1 t-mf930709-040-p8s1w2 t-mf930709-040-p8s1w3	Glass TV Components
+full/tamw/train-7/mf930709_060.t.gz	t-mf930709-060-p5s1w3 t-mf930709-060-p5s1w4	AIR Vítkovice
+full/tamw/train-7/mf930709_101.t.gz	t-mf930709-101-p2s32w9 t-mf930709-101-p2s32w10	Bohemia Ringo
+full/tamw/train-7/mf930709_142.t.gz	t-mf930709-142-p9s3w1 t-mf930709-142-p9s3w2	MESFIN GEDLU
+full/tamw/train-7/mf930713_011.t.gz	t-mf930713-011-p2s10w16 t-mf930713-011-p2s10w17 t-mf930713-011-p2s10w18	Blood Of Eden
+full/tamw/train-7/mf930713_011.t.gz	t-mf930713-011-p2s10w20 t-mf930713-011-p2s10w21 t-mf930713-011-p2s10w22 t-mf930713-011-p2s10w23 t-mf930713-011-p2s10w24	Don ' t Give Up
+full/tamw/train-7/mf930713_011.t.gz	t-mf930713-011-p2s10w6 t-mf930713-011-p2s10w7	Mercy Street
+full/tamw/train-7/mf930713_011.t.gz	t-mf930713-011-p2s11w18 t-mf930713-011-p2s11w19	Only Us
+full/tamw/train-7/mf930713_011.t.gz	t-mf930713-011-p2s11w35 t-mf930713-011-p2s11w36 t-mf930713-011-p2s11w37 t-mf930713-011-p2s11w38	Washing Of The Water
+full/tamw/train-7/mf930713_011.t.gz	t-mf930713-011-p2s12w11 t-mf930713-011-p2s12w12 t-mf930713-011-p2s12w13	Kiss That Frog
+full/tamw/train-7/mf930713_011.t.gz	t-mf930713-011-p2s12w16 t-mf930713-011-p2s12w17 t-mf930713-011-p2s12w18	Shot The Monkey
+full/tamw/train-7/mf930713_011.t.gz	t-mf930713-011-p2s12w20 t-mf930713-011-p2s12w21 t-mf930713-011-p2s12w22 t-mf930713-011-p2s12w23	Digging In The Dirt
+full/tamw/train-7/mf930713_011.t.gz	t-mf930713-011-p2s14w4	Us
+full/tamw/train-7/mf930713_011.t.gz	t-mf930713-011-p2s6w14 t-mf930713-011-p2s6w15 t-mf930713-011-p2s6w16 t-mf930713-011-p2s6w17	Love To Be Loved
+full/tamw/train-7/mf930713_011.t.gz	t-mf930713-011-p2s6w21 t-mf930713-011-p2s6w22	Secret Word
+full/tamw/train-7/mf930713_011.t.gz	t-mf930713-011-p2s6w9 t-mf930713-011-p2s6w10 t-mf930713-011-p2s6w11 t-mf930713-011-p2s6w12	Come Talk To Me
+full/tamw/train-7/mf930713_011.t.gz	t-mf930713-011-p2s7w13 t-mf930713-011-p2s7w14 t-mf930713-011-p2s7w15 t-mf930713-011-p2s7w16	Come To Talk Me
+full/tamw/train-7/mf930713_011.t.gz	t-mf930713-011-p2s7w22 t-mf930713-011-p2s7w23 t-mf930713-011-p2s7w24 t-mf930713-011-p2s7w25	Digging In The Dirt
+full/tamw/train-7/mf930713_011.t.gz	t-mf930713-011-p2s7w27 t-mf930713-011-p2s7w28	Only Us
+full/tamw/train-7/mf930713_021.t.gz	t-mf930713-021-p2s2w6 t-mf930713-021-p2s2w7 t-mf930713-021-p2s2w8	Tchaj #Dash wan
+full/tamw/train-7/mf930713_031.t.gz	t-mf930713-031-p2s1Aw1 t-mf930713-031-p2s1Aw2 t-mf930713-031-p2s1Aw3	Lac de Madine
+full/tamw/train-7/mf930713_031.t.gz	t-mf930713-031-p2s1Bw11 t-mf930713-031-p2s1Bw12 t-mf930713-031-p2s1Bw13	Tour de France
+full/tamw/train-7/mf930713_061.t.gz	t-mf930713-061-p2s1w12 t-mf930713-061-p2s1w13	Music Dunaj
+full/tamw/train-7/mf930713_061.t.gz	t-mf930713-061-p3s1w19 t-mf930713-061-p3s1w20 t-mf930713-061-p3s1w21	Tramp Evergreen Band
+full/tamw/train-7/mf930713_142.t.gz	t-mf930713-142-p8s1w3 t-mf930713-142-p8s1w4	Evenimentul zilei
+full/tamw/train-8/cmpr9410_008.t.gz	t-cmpr9410-008-p15s1w3 t-cmpr9410-008-p15s1w4	direct marketing
+full/tamw/train-8/cmpr9410_008.t.gz	t-cmpr9410-008-p17s1w8 t-cmpr9410-008-p17s1w9	Home shopping
+full/tamw/train-8/cmpr9413_016.t.gz	t-cmpr9413-016-p20s1w28 t-cmpr9413-016-p20s1w29 t-cmpr9413-016-p20s1w30 t-cmpr9413-016-p21s1w1	targ pl #Period Katowice
+full/tamw/train-8/cmpr9413_016.t.gz	t-cmpr9413-016-p20s1w5 t-cmpr9413-016-p20s1w6 t-cmpr9413-016-p20s1w7	Miedzynarodowe targi Poznanskie
+full/tamw/train-8/cmpr9413_016.t.gz	t-cmpr9413-016-p5s1w1 t-cmpr9413-016-p5s1w2 t-cmpr9413-016-p5s1w3 t-cmpr9413-016-p5s1w4 t-cmpr9413-016-p5s1w5	APLI #Dash COMP [ 94
+full/tamw/train-8/cmpr9413_016.t.gz	t-cmpr9413-016-p5s2w11	Vysokoškolákov
+full/tamw/train-8/cmpr9413_016.t.gz	t-cmpr9413-016-p6s2w9	Výstavná
+full/tamw/train-8/cmpr9413_016.t.gz	t-cmpr9413-016-p9s2w13 t-cmpr9413-016-p9s2w14	Terézie Vansovej
+full/tamw/train-8/cmpr9413_026.t.gz	t-cmpr9413-026-p4s1w11 t-cmpr9413-026-p4s1w12	DANZAS AG
+full/tamw/train-8/cmpr9415_014.t.gz	t-cmpr9415-014-p2s1w3 t-cmpr9415-014-p2s1w4	Incentive Travel
+full/tamw/train-8/cmpr9415_014.t.gz	t-cmpr9415-014-p3s1w5 t-cmpr9415-014-p3s1w6 t-cmpr9415-014-p3s1w7	Lido di Jesolo
+full/tamw/train-8/cmpr9415_014.t.gz	t-cmpr9415-014-p4s1w5 t-cmpr9415-014-p4s1w6	Sant Ambrogio
+full/tamw/train-8/cmpr9415_014.t.gz	t-cmpr9415-014-p9s1w8 t-cmpr9415-014-p9s1w9 t-cmpr9415-014-p9s1w10	Lido di Jesolo
+full/tamw/train-8/ln94200_53.t.gz	t-ln94200-53-p2s2Bw2 t-ln94200-53-p2s2Bw3	Czech Made
+full/tamw/train-8/ln94202_107.t.gz	t-ln94202-107-p3s2w21 t-ln94202-107-p3s2w22 t-ln94202-107-p3s2w23	Cruzeiro Belo Horizonte
+full/tamw/train-8/ln94202_107.t.gz	t-ln94202-107-p5s2w7 t-ln94202-107-p5s2w8 t-ln94202-107-p5s2w9 t-ln94202-107-p5s2w10	Paris St #Period Germain
+full/tamw/train-8/ln94202_134.t.gz	t-ln94202-134-p4s1w2 t-ln94202-134-p4s1w3 t-ln94202-134-p4s1w4 t-ln94202-134-p4s1w5	Digital Equipment Corp #Period
+full/tamw/train-8/ln94202_90.t.gz	t-ln94202-90-p3s5w36 t-ln94202-90-p3s5w37 t-ln94202-90-p3s5w38	musette de cour
+full/tamw/train-8/ln94202_90.t.gz	t-ln94202-90-p3s5w9 t-ln94202-90-p3s5w10 t-ln94202-90-p3s5w11 t-ln94202-90-p3s5w12 t-ln94202-90-p3s5w13	Le Salon de Madame Victoire
+full/tamw/train-8/ln94202_90.t.gz	t-ln94202-90-p4s5w4	Spilwut
+full/tamw/train-8/ln94203_1.t.gz	t-ln94203-1-p8s2w12 t-ln94203-1-p8s2w13	Novaja Zemlja
+full/tamw/train-8/ln94203_144.t.gz	t-ln94203-144-p2s2w2 t-ln94203-144-p2s2w3	Prime rate
+full/tamw/train-8/ln94203_144.t.gz	t-ln94203-144-p3s2w1 t-ln94203-144-p3s2w2	Prime rate
+full/tamw/train-8/ln94203_4.t.gz	t-ln94203-4-p14s1w19 t-ln94203-4-p14s1w20 t-ln94203-4-p14s1w21	Alta Velocida Espaňol
+full/tamw/train-8/ln94203_4.t.gz	t-ln94203-4-p2s1Cw31 t-ln94203-4-p2s1Cw32	TGV Atlantique
+full/tamw/train-8/ln94203_76.t.gz	t-ln94203-76-p6s5w10 t-ln94203-76-p6s5w11	marine corps
+full/tamw/train-8/ln94203_76.t.gz	t-ln94203-76-p7s7w14 t-ln94203-76-p7s7w15 t-ln94203-76-p7s7w16 t-ln94203-76-p7s7w17	Congressional Medal of Honor
+full/tamw/train-8/ln94203_85.t.gz	t-ln94203-85-p2s2w5	all
+full/tamw/train-8/ln94203_85.t.gz	t-ln94203-85-p2s2w9	ergein
+full/tamw/train-8/ln94203_94.t.gz	t-ln94203-94-p1s1w6 t-ln94203-94-p1s1w7 t-ln94203-94-p1s1w8	The Jungle Book
+full/tamw/train-8/ln94204_102.t.gz	t-ln94204-102-p2s2w5 t-ln94204-102-p2s2w6 t-ln94204-102-p2s2w7 t-ln94204-102-p2s2w8	King ' s Library
+full/tamw/train-8/ln94204_102.t.gz	t-ln94204-102-p3s1w2 t-ln94204-102-p3s1w3	British Library
+full/tamw/train-8/ln94204_102.t.gz	t-ln94204-102-p5s4w21 t-ln94204-102-p5s4w22	Sovremennaja architektura
+full/tamw/train-8/ln94204_102.t.gz	t-ln94204-102-p6s4w1 t-ln94204-102-p6s4w2	British Library
+full/tamw/train-8/ln94204_102.t.gz	t-ln94204-102-p7s3w5 t-ln94204-102-p7s3w6	British Library
+full/tamw/train-8/ln94204_102.t.gz	t-ln94204-102-p8s1w1 t-ln94204-102-p8s1w2	All Change
+full/tamw/train-8/ln94204_102.t.gz	t-ln94204-102-p8s3w1 t-ln94204-102-p8s3w2	British Library
+full/tamw/train-8/ln94204_13.t.gz	t-ln94204-13-p2s1w19 t-ln94204-13-p2s1w20	Viacom Inc
+full/tamw/train-8/ln94204_13.t.gz	t-ln94204-13-p2s1w23 t-ln94204-13-p2s1w24 t-ln94204-13-p2s1w25	Madison Square Garden
+full/tamw/train-8/ln94204_13.t.gz	t-ln94204-13-p2s1w8 t-ln94204-13-p2s1w9	Cablevision Systems
+full/tamw/train-8/ln94204_139.t.gz	t-ln94204-139-p7s7w10 t-ln94204-139-p7s7w11	RDP Group
+full/tamw/train-8/ln94204_148.t.gz	t-ln94204-148-p2s3w9 t-ln94204-148-p2s3w10	Jethro Tull
+full/tamw/train-8/ln94204_39.t.gz	t-ln94204-39-p3s2w9 t-ln94204-39-p3s2w10	Child line
+full/tamw/train-8/ln94204_39.t.gz	t-ln94204-39-p4s1w17 t-ln94204-39-p4s1w18	Child line
+full/tamw/train-8/ln94204_84.t.gz	t-ln94204-84-p5s3w6 t-ln94204-84-p5s3w7	Rossijskaja gazeta
+full/tamw/train-8/ln94204_93.t.gz	t-ln94204-93-p3s4w14 t-ln94204-93-p3s4w15	Universal Pictures
+full/tamw/train-8/ln94205_101.t.gz	t-ln94205-101-p1s1w4 t-ln94205-101-p1s1w5	Pro Thalia
+full/tamw/train-8/ln94205_101.t.gz	t-ln94205-101-p2s1w2 t-ln94205-101-p2s1w3	Pro Thalia
+full/tamw/train-8/ln94205_101.t.gz	t-ln94205-101-p2s2w31 t-ln94205-101-p2s2w32	Mach Holding
+full/tamw/train-8/ln94205_101.t.gz	t-ln94205-101-p2s3w2 t-ln94205-101-p2s3w3	Pro Thalia
+full/tamw/train-8/ln94205_101.t.gz	t-ln94205-101-p2s5w4 t-ln94205-101-p2s5w5	Pro Thalia
+full/tamw/train-8/ln94205_129.t.gz	t-ln94205-129-p2s1Cw14 t-ln94205-129-p2s1Cw15	Foro Italico
+full/tamw/train-8/ln94205_138.t.gz	t-ln94205-138-p3s3w8 t-ln94205-138-p3s3w9	Deutche Bank
+full/tamw/train-8/ln94205_35.t.gz	t-ln94205-35-p3s2w25 t-ln94205-35-p3s2w26 t-ln94205-35-p3s2w27 t-ln94205-35-p3s2w28 t-ln94205-35-p3s2w29 t-ln94205-35-p3s2w30	Eagle Group V #Period A #Period
+full/tamw/train-8/ln94205_35.t.gz	t-ln94205-35-p3s3w12 t-ln94205-35-p3s3w13	Allied Signal
+full/tamw/train-8/ln94205_9.t.gz	t-ln94205-9-p11s1w6 t-ln94205-9-p11s1w7	Levi Strauss
+full/tamw/train-8/ln94206_125.t.gz	t-ln94206-125-p2s1Bw9 t-ln94206-125-p2s1Bw10	US Open
+full/tamw/train-8/ln94206_135.t.gz	t-ln94206-135-p2s1Aw6 t-ln94206-135-p2s1Aw7	Wild Duck
+full/tamw/train-8/ln94206_26.t.gz	t-ln94206-26-p2s1Bw21 t-ln94206-26-p2s1Bw22	Elite Varnsdorf
+full/tamw/train-8/ln94206_26.t.gz	t-ln94206-26-p2s1Bw3 t-ln94206-26-p2s1Bw4 t-ln94206-26-p2s1Bw5 t-ln94206-26-p2s1Bw6 t-ln94206-26-p2s1Bw7 t-ln94206-26-p2s1Bw8 t-ln94206-26-p2s1Bw9 t-ln94206-26-p2s1Bw10	I #Period I #Period T #Period E #Period
+full/tamw/train-8/ln94206_26.t.gz	t-ln94206-26-p2s2Aw22 t-ln94206-26-p2s2Aw23 t-ln94206-26-p2s2Aw24 t-ln94206-26-p2s2Aw25 t-ln94206-26-p2s2Aw26 t-ln94206-26-p2s2Aw27 t-ln94206-26-p2s2Aw28	I #Period I #Period T #Period E
+full/tamw/train-8/ln94206_26.t.gz	t-ln94206-26-p2s2Aw3 t-ln94206-26-p2s2Aw4	Elite Varnsdorf
+full/tamw/train-8/ln94206_26.t.gz	t-ln94206-26-p3s1w1 t-ln94206-26-p3s1w2	Elite Varnsdorf
+full/tamw/train-8/ln94206_35.t.gz	t-ln94206-35-p4s1w16 t-ln94206-35-p4s1w17 t-ln94206-35-p4s1w18 t-ln94206-35-p4s1w19 t-ln94206-35-p4s1w20 t-ln94206-35-p4s1w21	K #Period J #Period D #Period
+full/tamw/train-8/ln94206_35.t.gz	t-ln94206-35-p5s1w2 t-ln94206-35-p5s1w3 t-ln94206-35-p5s1w4 t-ln94206-35-p5s1w5 t-ln94206-35-p5s1w6 t-ln94206-35-p5s1w7	K #Period J #Period D #Period
+full/tamw/train-8/ln94206_35.t.gz	t-ln94206-35-p5s2Aw7 t-ln94206-35-p5s2Aw8 t-ln94206-35-p5s2Aw9 t-ln94206-35-p5s2Aw10 t-ln94206-35-p5s2Aw11	K #Period J #Period D
+full/tamw/train-8/ln94206_9.t.gz	t-ln94206-9-p9s3Aw10 t-ln94206-9-p9s3Aw11 t-ln94206-9-p9s3Aw12	Stock #Dash list
+full/tamw/train-8/ln94206_99.t.gz	t-ln94206-99-p3s2w21 t-ln94206-99-p3s2w22 t-ln94206-99-p3s2w23 t-ln94206-99-p3s2w24 t-ln94206-99-p3s2w25	L ' envers des choses
+full/tamw/train-8/ln94206_99.t.gz	t-ln94206-99-p3s5w13 t-ln94206-99-p3s5w14 t-ln94206-99-p3s5w15 t-ln94206-99-p3s5w16 t-ln94206-99-p3s5w17	Villard #Dash de #Dash Lans
+full/tamw/train-8/ln94207_116.t.gz	t-ln94207-116-p2s1w16 t-ln94207-116-p2s1w17	Mach Holding
+full/tamw/train-8/ln94207_116.t.gz	t-ln94207-116-p2s2w19 t-ln94207-116-p2s2w20	Pro Thalia
+full/tamw/train-8/ln94207_116.t.gz	t-ln94207-116-p2s4w15 t-ln94207-116-p2s4w16	Pro Thalia
+full/tamw/train-8/ln94207_116.t.gz	t-ln94207-116-p2s6w5 t-ln94207-116-p2s6w6	Pro Thalia
+full/tamw/train-8/ln94207_26.t.gz	t-ln94207-26-p2s5w15 t-ln94207-26-p2s5w16	Moskovskije novosti
+full/tamw/train-8/ln94207_53.t.gz	t-ln94207-53-p2s1Bw21 t-ln94207-53-p2s1Bw22	Teleaxis Holding
+full/tamw/train-8/ln94207_53.t.gz	t-ln94207-53-p2s4w10 t-ln94207-53-p2s4w11	Czech Open
+full/tamw/train-8/ln94207_9.t.gz	t-ln94207-9-p3s1w16 t-ln94207-9-p3s1w17	Christiana Servis
+full/tamw/train-8/ln94207_99.t.gz	t-ln94207-99-p4s5w18 t-ln94207-99-p4s5w19 t-ln94207-99-p4s5w20	College de Sociologie
+full/tamw/train-8/ln94208_107.t.gz	t-ln94208-107-p3s4w13 t-ln94208-107-p3s4w14	de facto
+full/tamw/train-8/ln94208_19.t.gz	t-ln94208-19-p5s1w1 t-ln94208-19-p5s1w2	Financial Times
+full/tamw/train-8/ln94208_64.t.gz	t-ln94208-64-p4s2w5 t-ln94208-64-p4s2w6 t-ln94208-64-p4s2w7	New York Times
+full/tamw/train-8/ln94208_73.t.gz	t-ln94208-73-p4s2w5 t-ln94208-73-p4s2w6 t-ln94208-73-p4s2w7 t-ln94208-73-p4s2w8	The New York Times
+full/tamw/train-8/ln94208_82.t.gz	t-ln94208-82-p3s1w8 t-ln94208-82-p3s1w9	Der Spiegel
+full/tamw/train-8/ln94208_82.t.gz	t-ln94208-82-p5s1w7 t-ln94208-82-p5s1w8	Le Figaro
+full/tamw/train-8/ln94208_82.t.gz	t-ln94208-82-p7s1Aw14 t-ln94208-82-p7s1Aw15 t-ln94208-82-p7s1Aw16	International Herald Tribune
+full/tamw/train-8/ln94208_82.t.gz	t-ln94208-82-p8s1w9 t-ln94208-82-p8s1w10 t-ln94208-82-p8s1w11	L ` Express
+full/tamw/train-8/ln94209_66.t.gz	t-ln94209-66-p2s1Cw5 t-ln94209-66-p2s1Cw6	Intractable Stories
+full/tamw/train-8/ln94209_66.t.gz	t-ln94209-66-p2s2w7 t-ln94209-66-p2s2w8 t-ln94209-66-p2s2w9	Rambert Dance Company
+full/tamw/train-8/ln94209_66.t.gz	t-ln94209-66-p3s1w27 t-ln94209-66-p3s1w28 t-ln94209-66-p3s1w29	bossa #Dash nova
+full/tamw/train-8/ln94209_66.t.gz	t-ln94209-66-p3s2w6 t-ln94209-66-p3s2w7	Remembered Affinities
+full/tamw/train-8/ln94209_75.t.gz	t-ln94209-75-p2s2w9 t-ln94209-75-p2s2w10	Niederösterreichisches Tonkünstlerorchester
+full/tamw/train-8/ln94209_75.t.gz	t-ln94209-75-p3s11Bw4 t-ln94209-75-p3s11Bw5	Niederösterreichisches Tonkünstlerorchester
+full/tamw/train-8/ln94209_75.t.gz	t-ln94209-75-p3s1w8 t-ln94209-75-p3s1w9	Don Giovanni
+full/tamw/train-8/ln94210_101.t.gz	t-ln94210-101-p13s1w11 t-ln94210-101-p13s1w12 t-ln94210-101-p13s1w13 t-ln94210-101-p13s1w14	A Saucerful of Secrets
+full/tamw/train-8/ln94210_101.t.gz	t-ln94210-101-p14s2w9 t-ln94210-101-p14s2w10 t-ln94210-101-p14s2w11	Atom Heart Mother
+full/tamw/train-8/ln94210_101.t.gz	t-ln94210-101-p15s4w14 t-ln94210-101-p15s4w15	Zabriskie Point
+full/tamw/train-8/ln94210_101.t.gz	t-ln94210-101-p16s3w13 t-ln94210-101-p16s3w14	Melody Maker
+full/tamw/train-8/ln94210_101.t.gz	t-ln94210-101-p17s1w17 t-ln94210-101-p17s1w18	Zabriskie Point
+full/tamw/train-8/ln94210_101.t.gz	t-ln94210-101-p18s1Aw6 t-ln94210-101-p18s1Aw7 t-ln94210-101-p18s1Aw8	Atom Heart Mother
+full/tamw/train-8/ln94210_101.t.gz	t-ln94210-101-p18s1Bw11 t-ln94210-101-p18s1Bw12 t-ln94210-101-p18s1Bw13	The Madcap Laughs
+full/tamw/train-8/ln94210_101.t.gz	t-ln94210-101-p20s1w8 t-ln94210-101-p20s1w9 t-ln94210-101-p20s1w10	Atom Heart Mother
+full/tamw/train-8/ln94210_101.t.gz	t-ln94210-101-p24s1w8 t-ln94210-101-p24s1w9 t-ln94210-101-p24s1w10	Obscured By Clouds
+full/tamw/train-8/ln94210_101.t.gz	t-ln94210-101-p25s1w14 t-ln94210-101-p25s1w15 t-ln94210-101-p25s1w16 t-ln94210-101-p25s1w17 t-ln94210-101-p25s1w18	Pink Floyd Live at Pompei
+full/tamw/train-8/ln94210_101.t.gz	t-ln94210-101-p26s1w8 t-ln94210-101-p26s1w9 t-ln94210-101-p26s1w10 t-ln94210-101-p26s1w11 t-ln94210-101-p26s1w12 t-ln94210-101-p26s1w13	the Dark Side of the Moon
+full/tamw/train-8/ln94210_101.t.gz	t-ln94210-101-p27s1w18 t-ln94210-101-p27s1w19 t-ln94210-101-p27s1w20 t-ln94210-101-p27s1w21 t-ln94210-101-p27s1w22 t-ln94210-101-p27s1w23 t-ln94210-101-p27s1w24	The Piper at the Gates of Dawn
+full/tamw/train-8/ln94210_101.t.gz	t-ln94210-101-p27s1w26 t-ln94210-101-p27s1w27 t-ln94210-101-p27s1w28 t-ln94210-101-p27s1w29	A Saucerful of Secrets
+full/tamw/train-8/ln94210_101.t.gz	t-ln94210-101-p27s1w8 t-ln94210-101-p27s1w9 t-ln94210-101-p27s1w10	A Nice Pair
+full/tamw/train-8/ln94210_101.t.gz	t-ln94210-101-p28s1w17 t-ln94210-101-p28s1w18 t-ln94210-101-p28s1w19 t-ln94210-101-p28s1w20 t-ln94210-101-p28s1w21	Dark Side of the Moon
+full/tamw/train-8/ln94210_101.t.gz	t-ln94210-101-p28s1w9 t-ln94210-101-p28s1w10 t-ln94210-101-p28s1w11 t-ln94210-101-p28s1w12	Wish You Were Here
+full/tamw/train-8/ln94210_101.t.gz	t-ln94210-101-p29s1w8 t-ln94210-101-p29s1w9 t-ln94210-101-p29s1w10 t-ln94210-101-p29s1w11 t-ln94210-101-p29s1w12	Dark Side of the Moon
+full/tamw/train-8/ln94210_101.t.gz	t-ln94210-101-p2s1Bw27 t-ln94210-101-p2s1Bw28 t-ln94210-101-p2s1Bw29	Paint in Black
+full/tamw/train-8/ln94210_101.t.gz	t-ln94210-101-p2s1Bw9 t-ln94210-101-p2s1Bw10 t-ln94210-101-p2s1Bw11 t-ln94210-101-p2s1Bw12	Strangers in the Night
+full/tamw/train-8/ln94210_101.t.gz	t-ln94210-101-p31s1w5 t-ln94210-101-p31s1w6 t-ln94210-101-p31s1w7 t-ln94210-101-p31s1w8 t-ln94210-101-p31s1w9	Another Brick in the Wall
+full/tamw/train-8/ln94210_101.t.gz	t-ln94210-101-p33s2w4 t-ln94210-101-p33s2w5	The Wall
+full/tamw/train-8/ln94210_101.t.gz	t-ln94210-101-p33s6w10 t-ln94210-101-p33s6w11 t-ln94210-101-p33s6w12 t-ln94210-101-p33s6w13 t-ln94210-101-p33s6w14 t-ln94210-101-p33s6w15	A Collection of Great Dance Songs
+full/tamw/train-8/ln94210_101.t.gz	t-ln94210-101-p35s1w13 t-ln94210-101-p35s1w14 t-ln94210-101-p35s1w15	The Final Cut
+full/tamw/train-8/ln94210_101.t.gz	t-ln94210-101-p39s1w14 t-ln94210-101-p39s1w15 t-ln94210-101-p39s1w16 t-ln94210-101-p39s1w17 t-ln94210-101-p39s1w18	A Momentary Lapse of Reason
+full/tamw/train-8/ln94210_101.t.gz	t-ln94210-101-p3s2w23 t-ln94210-101-p3s2w24	Sigma Six
+full/tamw/train-8/ln94210_101.t.gz	t-ln94210-101-p3s3w11 t-ln94210-101-p3s3w12	Architectural Abbas
+full/tamw/train-8/ln94210_101.t.gz	t-ln94210-101-p3s3w14 t-ln94210-101-p3s3w15	The Abbas
+full/tamw/train-8/ln94210_101.t.gz	t-ln94210-101-p3s3w17 t-ln94210-101-p3s3w18	Tea Set
+full/tamw/train-8/ln94210_101.t.gz	t-ln94210-101-p3s3w20 t-ln94210-101-p3s3w21 t-ln94210-101-p3s3w22	T #Dash Set
+full/tamw/train-8/ln94210_101.t.gz	t-ln94210-101-p3s3w8 t-ln94210-101-p3s3w9	The Meggadeaths
+full/tamw/train-8/ln94210_101.t.gz	t-ln94210-101-p40s2w16 t-ln94210-101-p40s2w17 t-ln94210-101-p40s2w18 t-ln94210-101-p40s2w19 t-ln94210-101-p40s2w20	The Delicate Sound of Thunder
+full/tamw/train-8/ln94210_101.t.gz	t-ln94210-101-p40s2w4 t-ln94210-101-p40s2w5 t-ln94210-101-p40s2w6 t-ln94210-101-p40s2w7 t-ln94210-101-p40s2w8	A Momentary Lapse of Reason
+full/tamw/train-8/ln94210_101.t.gz	t-ln94210-101-p41s1w17 t-ln94210-101-p41s1w18	Canal Grande
+full/tamw/train-8/ln94210_101.t.gz	t-ln94210-101-p45s1w14 t-ln94210-101-p45s1w15 t-ln94210-101-p45s1w16	The Division Bell
+full/tamw/train-8/ln94210_101.t.gz	t-ln94210-101-p4s2w7 t-ln94210-101-p4s2w8 t-ln94210-101-p4s2w9 t-ln94210-101-p4s2w10	The Pink Floyd Sound
+full/tamw/train-8/ln94210_101.t.gz	t-ln94210-101-p5s1w16 t-ln94210-101-p5s1w17	Spontaneous Underground
+full/tamw/train-8/ln94210_101.t.gz	t-ln94210-101-p6s1w12 t-ln94210-101-p6s1w13	Arnold Layne
+full/tamw/train-8/ln94210_101.t.gz	t-ln94210-101-p6s1w15 t-ln94210-101-p6s1w16 t-ln94210-101-p6s1w17 t-ln94210-101-p6s1w18 t-ln94210-101-p6s1w19	Candy and a Current Bun
+full/tamw/train-8/ln94210_101.t.gz	t-ln94210-101-p9s1w11 t-ln94210-101-p9s1w12 t-ln94210-101-p9s1w13 t-ln94210-101-p9s1w14 t-ln94210-101-p9s1w15 t-ln94210-101-p9s1w16 t-ln94210-101-p9s1w17	The Piper at the Gates of Dawn
+full/tamw/train-8/ln94210_147.t.gz	t-ln94210-147-p3s3w4 t-ln94210-147-p3s3w5	world competitiveness
+full/tamw/train-8/ln94210_87.t.gz	t-ln94210-87-p2s1Bw14 t-ln94210-87-p2s1Bw15	Jediot Achronot
+full/tamw/train-8/ln94211_6.t.gz	t-ln94211-6-p2s1Bw6 t-ln94211-6-p2s1Bw7 t-ln94211-6-p2s1Bw8	OK #Dash Tours
+full/tamw/train-8/ln94211_6.t.gz	t-ln94211-6-p3s1w13 t-ln94211-6-p3s1w15	OK Matkat
+full/tamw/train-8/ln94211_6.t.gz	t-ln94211-6-p3s4w1 t-ln94211-6-p3s4w2 t-ln94211-6-p3s4w3	OK #Dash Tours
+full/tamw/train-8/ln94211_6.t.gz	t-ln94211-6-p3s4w13 t-ln94211-6-p3s4w14 t-ln94211-6-p3s4w16	Tchaj #Dash wan
+full/tamw/train-8/ln94211_78.t.gz	t-ln94211-78-p2s3w14 t-ln94211-78-p2s3w15 t-ln94211-78-p2s3w16 t-ln94211-78-p2s3w17 t-ln94211-78-p2s3w18	Port #Dash au #Dash Prince
+full/tamw/train-8/ln94211_87.t.gz	t-ln94211-87-p10s6w13	UNPROFOR
+full/tamw/train-8/ln94211_87.t.gz	t-ln94211-87-p11s1w7 t-ln94211-87-p11s1w8	Holiday Inn
+full/tamw/train-8/ln94211_87.t.gz	t-ln94211-87-p9s1w23	UNPROFOR
+full/tamw/train-8/ln95045_027.t.gz	t-ln95045-027-p2s13w5 t-ln95045-027-p2s13w6	fair play
+full/tamw/train-8/ln95045_047.t.gz	t-ln95045-047-p6s1w9 t-ln95045-047-p6s1w10 t-ln95045-047-p6s1w11	English National Opera
+full/tamw/train-8/ln95046_022.t.gz	t-ln95046-022-p2s1w25 t-ln95046-022-p2s1w26	play off
+full/tamw/train-8/ln95046_022.t.gz	t-ln95046-022-p2s3w24 t-ln95046-022-p2s3w25	play off
+full/tamw/train-8/ln95046_062.t.gz	t-ln95046-062-p2s1Bw22 t-ln95046-062-p2s1Bw23 t-ln95046-062-p2s1Bw24 t-ln95046-062-p2s1Bw25 t-ln95046-062-p2s1Bw26	San Cristóbal de Las Casas
+full/tamw/train-8/ln95046_062.t.gz	t-ln95046-062-p2s1Bw8 t-ln95046-062-p2s1Bw9 t-ln95046-062-p2s1Bw11 t-ln95046-062-p2s1Bw10	L ' Romano Osservatore
+full/tamw/train-8/ln95047_048.t.gz	t-ln95047-048-p3s2w21 t-ln95047-048-p3s2w22	Archi Boemi
+full/tamw/train-8/ln95047_048.t.gz	t-ln95047-048-p3s2w24 t-ln95047-048-p3s2w25 t-ln95047-048-p3s2w26	Virtuosi di Praga
+full/tamw/train-8/ln95047_048.t.gz	t-ln95047-048-p3s4w12 t-ln95047-048-p3s4w13 t-ln95047-048-p3s4w14	City of David
+full/tamw/train-8/ln95047_068.t.gz	t-ln95047-068-p2s1Bw73 t-ln95047-068-p2s1Bw74	Die Welt
+full/tamw/train-8/ln95047_068.t.gz	t-ln95047-068-p3s6w21 t-ln95047-068-p3s6w22	Die Welt
+full/tamw/train-8/ln95047_128.t.gz	t-ln95047-128-p2s1Cw2 t-ln95047-128-p2s1Cw3	Dresdner Bank
+full/tamw/train-8/ln95047_128.t.gz	t-ln95047-128-p2s1Cw6 t-ln95047-128-p2s1Cw7 t-ln95047-128-p2s1Cw8 t-ln95047-128-p2s1Cw9	Banque Nationale de Paris
+full/tamw/train-8/ln95047_128.t.gz	t-ln95047-128-p2s2w4 t-ln95047-128-p2s2w5 t-ln95047-128-p2s2w6 t-ln95047-128-p2s2w7 t-ln95047-128-p2s2w8 t-ln95047-128-p2s2w9 t-ln95047-128-p2s2w10 t-ln95047-128-p2s2w11 t-ln95047-128-p2s2w12	Dresdner Bank #Bracket Polska #Bracket S #Period A #Period
+full/tamw/train-8/ln95047_128.t.gz	t-ln95047-128-p4s1w3 t-ln95047-128-p4s1w4	Dresdner Bank
+full/tamw/train-8/ln95049_054.t.gz	t-ln95049-054-p2s1Bw25 t-ln95049-054-p2s1Bw26	tie breaku
+full/tamw/train-8/ln95049_134.t.gz	t-ln95049-134-p3s2w8 t-ln95049-134-p3s2w9	General Motors
+full/tamw/train-8/lnd94103_073.t.gz	t-lnd94103-073-p1s5w14 t-lnd94103-073-p1s5w15	Deutsche Bundesbank
+full/tamw/train-8/lnd94103_093.t.gz	t-lnd94103-093-p1s15w24 t-lnd94103-093-p1s15w25	a priori
+full/tamw/train-8/lnd94103_093.t.gz	t-lnd94103-093-p1s15w41 t-lnd94103-093-p1s15w42	Virgin Classics
+full/tamw/train-8/lnd94103_093.t.gz	t-lnd94103-093-p1s17w28 t-lnd94103-093-p1s17w29	Musica Antiqua
+full/tamw/train-8/lnd94103_093.t.gz	t-lnd94103-093-p1s5w5 t-lnd94103-093-p1s5w6	pop music
+full/tamw/train-8/lnd94103_093.t.gz	t-lnd94103-093-p1s6w7 t-lnd94103-093-p1s6w8	Gramy Classics
+full/tamw/train-8/lnd94103_113.t.gz	t-lnd94103-113-p1s3w14 t-lnd94103-113-p1s3w15	play off
+full/tamw/train-8/lnd94103_113.t.gz	t-lnd94103-113-p1s3w20	Islanders
+full/tamw/train-8/lnd94103_113.t.gz	t-lnd94103-113-p1s3w34 t-lnd94103-113-p1s3w35	Washington Capitals
+full/tamw/train-8/lnd94103_113.t.gz	t-lnd94103-113-p1s3w4 t-lnd94103-113-p1s3w5 t-lnd94103-113-p1s3w6	New York Rangers
+full/tamw/train-8/lnd94103_113.t.gz	t-lnd94103-113-p1s5w2 t-lnd94103-113-p1s5w3	New Jersey
+full/tamw/train-8/lnd94103_113.t.gz	t-lnd94103-113-p1s5w5 t-lnd94103-113-p1s5w6	Boston Bruins
+full/tamw/train-8/lnd94103_113.t.gz	t-lnd94103-113-p1s8w20 t-lnd94103-113-p1s8w21	New Jersey
+full/tamw/train-8/mf920922_011.t.gz	t-mf920922-011-p1s13w3 t-mf920922-011-p1s13w4 t-mf920922-011-p1s13w5	Giesecke #Amp Devrient
+full/tamw/train-8/mf920922_011.t.gz	t-mf920922-011-p1s17w7 t-mf920922-011-p1s17w8 t-mf920922-011-p1s17w9	De La Rue
+full/tamw/train-8/mf920922_011.t.gz	t-mf920922-011-p1s19w13 t-mf920922-011-p1s19w14 t-mf920922-011-p1s19w15	Bank of England
+full/tamw/train-8/mf920922_011.t.gz	t-mf920922-011-p1s20w1 t-mf920922-011-p1s20w2 t-mf920922-011-p1s20w3	De La Rue
+full/tamw/train-8/mf920922_112.t.gz	t-mf920922-112-p2s3w6 t-mf920922-112-p2s3w7 t-mf920922-112-p2s3w8	Al #Dash Haját
+full/tamw/train-8/mf920922_112.t.gz	t-mf920922-112-p2s6w11 t-mf920922-112-p2s6w12 t-mf920922-112-p2s6w13	Al #Dash Haját
+full/tamw/train-8/mf920925_033.t.gz	t-mf920925-033-p2s1w8 t-mf920925-033-p2s1w9	Motor Show
+full/tamw/train-8/mf920925_063.t.gz	t-mf920925-063-p1s3w12 t-mf920925-063-p1s3w13 t-mf920925-063-p1s3w14 t-mf920925-063-p1s3w15	St #Period Louis Blues
+full/tamw/train-8/mf920925_063.t.gz	t-mf920925-063-p1s3w8 t-mf920925-063-p1s3w9 t-mf920925-063-p1s3w10	Tampa Bay Lightning
+full/tamw/train-8/mf920925_063.t.gz	t-mf920925-063-p2s1Bw12 t-mf920925-063-p2s1Bw13	Hartford Whalers
+full/tamw/train-8/mf930709_030.t.gz	t-mf930709-030-p5s1w13	Unleaded
+full/tamw/train-8/mf930709_030.t.gz	t-mf930709-030-p5s1w15 t-mf930709-030-p5s1w16	Sans plomb
+full/tamw/train-8/mf930709_030.t.gz	t-mf930709-030-p5s1w18	Bleifrei
+full/tamw/train-8/mf930709_092.t.gz	t-mf930709-092-p1s1Cw16 t-mf930709-092-p1s1Cw17 t-mf930709-092-p1s1Cw18	Tour de France
+full/tamw/train-8/mf930709_102.t.gz	t-mf930709-102-p2s1Aw1 t-mf930709-102-p2s1Aw2	fair play
+full/tamw/train-8/mf930713_002.t.gz	t-mf930713-002-p10s1Bw14 t-mf930713-002-p10s1Bw15	Klan Ica
+full/tamw/train-8/mf930713_072.t.gz	t-mf930713-072-p2s3w14 t-mf930713-072-p2s3w15 t-mf930713-072-p2s3w16	Peugeot #Dash Citroen
+full/tamw/train-8/mf930713_072.t.gz	t-mf930713-072-p2s3w2 t-mf930713-072-p2s3w3	GM Europe
