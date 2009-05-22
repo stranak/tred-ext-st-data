@@ -1,0 +1,31 @@
+\newcommand{\nic}[1]{}\frenchspacing\newcommand{\urls}[1]{{\small #1}}
+\begin{thebibliography}{}
+
+\bibitem[Comrie(1974)]{Comrie:74}
+Comrie, B. (1974).
+\newblock {The Second Dative: A Transformational Approach}.
+\newblock In R.~Brecht and C.~Chvany, editors, {\em Slavic Transformational
+  Syntax}, volume~10 of {\em Michigan Slavic Materials}, pages 123--150.
+  Michigan University Press, Ann Arbor.
+
+\bibitem[Hudson(2003)]{huds:03}
+Hudson, R. (2003).
+\newblock Case agreement, {PRO} and structure sharing.
+\newblock {\em Research in Language}, {\bf 1}.
+
+\bibitem[Lacarme(1978)]{laca:78}
+Lacarme, J. (1978).
+\newblock {\em Aspects syntaxiques des complétives du {G}rec}.
+\newblock Ph.D. thesis, University of Montreal, Montreal.
+
+\bibitem[Landau(2008)]{Landau:07}
+Landau, I. (2008).
+\newblock {Two routes of control: evidence from case transmission in Russian}.
+\newblock {\em Natural Language and Linguistic Theory}, {\bf 26}, 877--924.
+
+\bibitem[Quicoli(1982)]{Quicoli:82}
+Quicoli, A.~C. (1982).
+\newblock {\em The structure of complementation}.
+\newblock E. Story-Scientia, Brussels.
+
+\end{thebibliography}
