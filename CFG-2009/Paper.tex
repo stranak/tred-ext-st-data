@@ -1,0 +1,85 @@
+%!TEX TS-program = pdfcslatex
+%!TEX encoding = UTF-8 Unicode
+\documentclass[12pt]{article}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a4paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{amsfonts}
+\frenchspacing
+%\sloppy
+\usepackage{czech}
+\usepackage[utf8x]{inputenc} % pre-august 2004 use is \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{euler} % math font
+\usepackage{paralist} % for better itemize and enumerate
+% asparaenum, inparaenum, \begin{compactenum}[{Example} a)] etc.
+% Also, items can be referenced via \label{} and \ref{}
+%
+\usepackage{array}
+%\usepackage{longtable}
+\usepackage{float}
+\usepackage{natbib}
+%\usepackage[
+%	bookmarks,
+%	bookmarksopen,
+%	pdftitle=Representace\ víceslovných\ výrazů\ v\ Pražském\ závislostním\ korpusu,
+%	pdfdisplaydoctitle,
+%	pdfauthor=Eduard\ Bejcek\ and\ Pavel\ Stranak,
+%	pdfcreator=PdfLaTeX\ with\ Hyperref\ package,
+%	colorlinks,
+%	unicode,
+%]{hyperref}
+\pagestyle{empty} % Remove a header, line number etc.
+
+
+\title{Representace víceslovných výrazů\\ v Pražském závislostním korpusu}
+%\author{Pavel Straňák}
+\date{}                                           % Activate to display a given date or no date
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+
+\maketitle
+\thispagestyle{empty} % Remove a header, line number etc. on this page.
+
+\section*{Abstrakt}
+Víceslovné výrazy (idiomy, frazémy, víceslovná vlastní jména ad., VV) stojí často na okraji zájmu při utváření syntaktických teorií. V důsledku toho jsou pak v~syntaktických stromech representovány sporným až arbitrárním způsobem.
+
+V tomto článku nejprve popíšeme stav anotace víceslovných výrazů v tektogramatickém popisu v Pražském závislostním korpusu verse 2.0 (Prague Dependency Treebank 2.0, PDT), ~\citep{hajic:2005}). Rozebereme každý funktor identifikující některý druh víceslovných výrazů i případy, ve kterých víceslovné výrazy nejsou explicitně identifikovány~\citep{mikulova:2006}. Zmíníme se také o shodách a rozdílech teoretického funkčního generativního popisu~\citep{sgall-etal:1986} a pozdější praktické implementace v PDT.
+\begin{table}[htdp]
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+t-node & 528504 \\
+CPHR & 2221\\
+DPHR & 978 \\
+FPHR & 3620 \\
+t-lemma = \#Forn & 1310 \\
+t-lemma = \#Idph & 702 \\
+ID & 5250 \\
+ID (parent = Idph) & 654 \\
+\hline
+\end{tabular}
+\caption{Frekvence v PDT 2.0}
+\end{center}
+\label{default}
+\end{table}%
+
+DPHR - spojené: ``V případě, že má frazém více závislých částí, vystupují v t-lematu uzlu s funktorem DPHR všechny tyto formy spojené podtržítkem v pořadí, v jakém se vyskytovaly v povrchové podobě věty'' \citep{mikulova:2006}. Naproti tomu analyzované názvy firem v ID, dokonce příklady stromů ve Fonr, to je ale proti instrukci v manuálu. Nekonzistence cizích jmen firem jako FPHR  s víceslovným cizím jménem města (příklad v Libanonu) jako ID.
+
+Najít některé zajímavé jevy je kvůli podspecifikovanosti funktoru ID nemožné. Např název knihy ``Nezaměstnanost jako sociální problém''. <obr.>
+
+Dále popíšeme projekt, který si klade za cíl zlepšit identifikaci VV v PDT. Probereme anotační pravidla i metodu anotace, jež spojuje ruční práci s pokročilými automatickými metodami vyhledávání VV bez ohledu na jejich tvar. Popíšeme použitou representaci VV ve slovníku i v anotovaných datech a vztah nové anotace k současným rovinám PDT.
+
+Stručně probereme problematiku shody anotátorů na identifikaci a potažmo na bližším určení VV. S tím souvisí %velmi zajímavá 
+problematika měření mezianotátorské shody (viz např. ~\citet{artstein:2007}). Vysvětlíme, proč jsme pro tento úkol vyvinuli vlastní metriku měření a naznačíme její vlastnosti.
+
+V návaznosti na výše uvedený projekt probereme změny v representaci VV navrhované pro příští versi PDT. Na závěr porovnáme stávající i námi navrhovaný upravený přístup PDT k víceslovným výrazům s representací použitou v jiných syntakticky anotovaných korpusech.
+
+\bibliographystyle{plainnat}
+\newcommand{\bibfont}{\small}
+\bibliography{Bibliografie}
+\end{document}   
