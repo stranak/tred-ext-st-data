@@ -1,6 +1,16 @@
 %!TEX TS-program = pdfcslatex
 %!TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article}
+\usepackage[
+	pdftitle=Representace\ víceslovných\ výrazů\ v\ Pražském\ závislostním\ korpusu,
+	pdfauthor=Pavel\ Stranak,
+	pdfcreator=PdfLaTeX\ with\ Hyperref\ package,
+	bookmarks,
+	pdfdisplaydoctitle,
+	breaklinks, colorlinks, linkcolor=black, citecolor=black, filecolor=black, urlcolor=blue,backref, 
+	hyperfootnotes,
+	draft
+]{hyperref}
 \usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
 \geometry{a4paper}                   % ... or a4paper or a5paper or ... 
 %\geometry{landscape}                % Activate for for rotated page geometry
@@ -8,7 +18,6 @@
 \usepackage{amsfonts}
 \frenchspacing
 %\sloppy
-\usepackage{czech}
 \usepackage[utf8x]{inputenc} % pre-august 2004 use is \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
@@ -21,17 +30,10 @@
 %\usepackage{longtable}
 \usepackage{float}
 \usepackage{natbib}
-%\usepackage[
-%	bookmarks,
-%	bookmarksopen,
-%	pdftitle=Representace\ víceslovných\ výrazů\ v\ Pražském\ závislostním\ korpusu,
-%	pdfdisplaydoctitle,
-%	pdfauthor=Eduard\ Bejcek\ and\ Pavel\ Stranak,
-%	pdfcreator=PdfLaTeX\ with\ Hyperref\ package,
-%	colorlinks,
-%	unicode,
-%]{hyperref}
+\usepackage{linguex}
+\usepackage{gloss}
 \pagestyle{empty} % Remove a header, line number etc.
+\usepackage{czech}
 
 
 \title{Representace víceslovných výrazů\\ v Pražském závislostním korpusu}
@@ -45,10 +47,11 @@
 \maketitle
 \thispagestyle{empty} % Remove a header, line number etc. on this page.
 
+\csprimeson % pdfcslatex only
 \section*{Abstrakt}
 Víceslovné výrazy (idiomy, frazémy, víceslovná vlastní jména ad., VV) stojí často na okraji zájmu při utváření syntaktických teorií. V důsledku toho jsou pak v~syntaktických stromech representovány sporným až arbitrárním způsobem.
 
-V tomto článku nejprve popíšeme stav anotace víceslovných výrazů v tektogramatickém popisu v Pražském závislostním korpusu verse 2.0 (Prague Dependency Treebank 2.0, PDT), ~\citep{hajic:2005}). Rozebereme každý funktor identifikující některý druh víceslovných výrazů i případy, ve kterých víceslovné výrazy nejsou explicitně identifikovány~\citep{mikulova:2006}. Zmíníme se také o shodách a rozdílech teoretického funkčního generativního popisu~\citep{sgall-etal:1986} a pozdější praktické implementace v PDT.
+V tomto článku nejprve popíšeme stav anotace ``víceslovných'' výrazů v tektogramatickém popisu v Pražském závislostním korpusu verse 2.0 (Prague Dependency Treebank 2.0, PDT), ~\citep{hajic:2005}). Rozebereme každý funktor identifikující některý druh víceslovných výrazů i případy, ve kterých víceslovné výrazy nejsou explicitně identifikovány~\citep{mikulova:2006}. Zmíníme se také o shodách a rozdílech teoretického funkčního generativního popisu~\citep{sgall-etal:1986} a pozdější praktické implementace v PDT.
 \begin{table}[htdp]
 \begin{center}
 \begin{tabular}{|l|l|}
@@ -80,6 +83,6 @@ problematika měření mezianotátorské shody (viz např. ~\citet{artstein:2007
 V návaznosti na výše uvedený projekt probereme změny v representaci VV navrhované pro příští versi PDT. Na závěr porovnáme stávající i námi navrhovaný upravený přístup PDT k víceslovným výrazům s representací použitou v jiných syntakticky anotovaných korpusech.
 
 \bibliographystyle{plainnat}
-\newcommand{\bibfont}{\small}
+%\renewcommand{\bibfont}{\small}
 \bibliography{Bibliografie}
 \end{document}   
