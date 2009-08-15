@@ -1,0 +1,13 @@
+﻿Thesis Notes	
+
+* Víceslovné předložky - součást t-uzlu. Nutno vyhledat samostatně: PML-TQ.
+* PDT: FPHR, DPHR, CPHR, víceslovné předložky “v uzlech”, další seznamové struktury (jeké?!). A co ještě? Je to vše?
+  * Kolik je v každé skupině těch, kde “parent ‘ne’ eparent”
+  * jak je na tom každá skupina z hlediska možnosti “shluknutí” do jednoho uzlu
+  * Zmínit podivné podrobné analýzy FPHR – konzultovat nejprve s Maruškou!
+* Nekonzistence v PDT 2.0. I případy, které vyžadují netriviální znalost světa (důvod nekonzistencí!):
+  * osobní jména čínská a jiná.
+    * Druhé jméno (mezi jménem a příjmením) vs. čínská trojznaková jména typů 1+2 a 2+1.
+  * Analýzy FPHR, viz příklad
+  * Jména firem lišící se funktorem podle původu, ne českosti/cizosti (viz příklad)
+    * liší se i strukturní (ne)anotace u složitých názvů firem, produktů apod? vyhledávku v PML-TQ.
