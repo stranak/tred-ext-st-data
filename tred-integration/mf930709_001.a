@@ -1,0 +1,1521 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<adata xmlns="http://ufal.mff.cuni.cz/pdt/pml/">
+ <head>
+  <schema href="adata_schema.xml" />
+  <references>
+   <reffile id="m" name="mdata" href="mf930709_001.m.gz" />
+   <reffile id="w" name="wdata" href="mf930709_001.w.gz" />
+  </references>
+ </head>
+ <meta>
+  <annotation_info>
+   <desc>Manual annotation</desc>
+  </annotation_info>
+ </meta>
+ <trees>
+  <LM id="a-mf930709-001-p1s1">
+   <s.rf>m#m-mf930709-001-p1s1</s.rf>
+   <ord>0</ord>
+   <children>
+    <LM id="a-mf930709-001-p1s1w2">
+     <m.rf>m#m-mf930709-001-p1s1w2</m.rf>
+     <afun>Pred</afun>
+     <ord>2</ord>
+     <children>
+      <LM id="a-mf930709-001-p1s1w1">
+       <m.rf>m#m-mf930709-001-p1s1w1</m.rf>
+       <afun>Sb</afun>
+       <ord>1</ord>
+      </LM>
+      <LM id="a-mf930709-001-p1s1w3">
+       <m.rf>m#m-mf930709-001-p1s1w3</m.rf>
+       <afun>AuxP</afun>
+       <ord>3</ord>
+       <children>
+        <LM id="a-mf930709-001-p1s1w4">
+         <m.rf>m#m-mf930709-001-p1s1w4</m.rf>
+         <afun>Adv</afun>
+         <ord>4</ord>
+        </LM>
+       </children>
+      </LM>
+      <LM id="a-mf930709-001-p1s1w5">
+       <m.rf>m#m-mf930709-001-p1s1w5</m.rf>
+       <afun>Obj</afun>
+       <ord>5</ord>
+       <children>
+        <LM id="a-mf930709-001-p1s1w7">
+         <m.rf>m#m-mf930709-001-p1s1w7</m.rf>
+         <afun>Obj</afun>
+         <ord>7</ord>
+         <children>
+          <LM id="a-mf930709-001-p1s1w6">
+           <m.rf>m#m-mf930709-001-p1s1w6</m.rf>
+           <afun>Atr</afun>
+           <ord>6</ord>
+          </LM>
+         </children>
+        </LM>
+       </children>
+      </LM>
+     </children>
+    </LM>
+   </children>
+  </LM>
+  <LM id="a-mf930709-001-p2s1">
+   <s.rf>m#m-mf930709-001-p2s1</s.rf>
+   <ord>0</ord>
+   <children>
+    <LM id="a-mf930709-001-p2s1w2">
+     <m.rf>m#m-mf930709-001-p2s1w2</m.rf>
+     <afun>Pred</afun>
+     <ord>2</ord>
+     <children>
+      <LM id="a-mf930709-001-p2s1w1">
+       <m.rf>m#m-mf930709-001-p2s1w1</m.rf>
+       <afun>Sb</afun>
+       <ord>1</ord>
+      </LM>
+      <LM id="a-mf930709-001-p2s1w3">
+       <m.rf>m#m-mf930709-001-p2s1w3</m.rf>
+       <afun>Obj</afun>
+       <ord>3</ord>
+       <children>
+        <LM id="a-mf930709-001-p2s1w4">
+         <m.rf>m#m-mf930709-001-p2s1w4</m.rf>
+         <afun>Atr</afun>
+         <ord>4</ord>
+        </LM>
+       </children>
+      </LM>
+     </children>
+    </LM>
+   </children>
+  </LM>
+  <LM id="a-mf930709-001-p3s1A">
+   <s.rf>m#m-mf930709-001-p3s1A</s.rf>
+   <ord>0</ord>
+   <children>
+    <LM id="a-mf930709-001-p3s1Aw1">
+     <m.rf>m#m-mf930709-001-p3s1Aw1</m.rf>
+     <afun>ExD</afun>
+     <ord>1</ord>
+    </LM>
+    <LM id="a-mf930709-001-p3s1Aw4">
+     <m.rf>m#m-mf930709-001-p3s1Aw4</m.rf>
+     <afun>Coord</afun>
+     <is_parenthesis_root>1</is_parenthesis_root>
+     <ord>4</ord>
+     <children>
+      <LM id="a-mf930709-001-p3s1Aw2">
+       <m.rf>m#m-mf930709-001-p3s1Aw2</m.rf>
+       <afun>AuxG</afun>
+       <ord>2</ord>
+      </LM>
+      <LM id="a-mf930709-001-p3s1Aw3">
+       <m.rf>m#m-mf930709-001-p3s1Aw3</m.rf>
+       <afun>ExD</afun>
+       <is_member>1</is_member>
+       <ord>3</ord>
+      </LM>
+      <LM id="a-mf930709-001-p3s1Aw5">
+       <m.rf>m#m-mf930709-001-p3s1Aw5</m.rf>
+       <afun>ExD</afun>
+       <is_member>1</is_member>
+       <ord>5</ord>
+      </LM>
+      <LM id="a-mf930709-001-p3s1Aw6">
+       <m.rf>m#m-mf930709-001-p3s1Aw6</m.rf>
+       <afun>AuxG</afun>
+       <ord>6</ord>
+      </LM>
+     </children>
+    </LM>
+    <LM id="a-mf930709-001-p3s1Aw7">
+     <m.rf>m#m-mf930709-001-p3s1Aw7</m.rf>
+     <afun>AuxK</afun>
+     <ord>7</ord>
+    </LM>
+   </children>
+  </LM>
+  <LM id="a-mf930709-001-p3s1B">
+   <s.rf>m#m-mf930709-001-p3s1B</s.rf>
+   <ord>0</ord>
+   <children>
+    <LM id="a-mf930709-001-p3s1Bw4">
+     <m.rf>m#m-mf930709-001-p3s1Bw4</m.rf>
+     <afun>Pred</afun>
+     <ord>4</ord>
+     <children>
+      <LM id="a-mf930709-001-p3s1Bw2">
+       <m.rf>m#m-mf930709-001-p3s1Bw2</m.rf>
+       <afun>Sb</afun>
+       <ord>2</ord>
+       <children>
+        <LM id="a-mf930709-001-p3s1Bw1">
+         <m.rf>m#m-mf930709-001-p3s1Bw1</m.rf>
+         <afun>Atr</afun>
+         <ord>1</ord>
+        </LM>
+       </children>
+      </LM>
+      <LM id="a-mf930709-001-p3s1Bw3">
+       <m.rf>m#m-mf930709-001-p3s1Bw3</m.rf>
+       <afun>AuxV</afun>
+       <ord>3</ord>
+      </LM>
+      <LM id="a-mf930709-001-p3s1Bw7">
+       <m.rf>m#m-mf930709-001-p3s1Bw7</m.rf>
+       <afun>Adv</afun>
+       <ord>7</ord>
+       <children>
+        <LM id="a-mf930709-001-p3s1Bw5">
+         <m.rf>m#m-mf930709-001-p3s1Bw5</m.rf>
+         <afun>Atr</afun>
+         <ord>5</ord>
+         <children>
+          <LM id="a-mf930709-001-p3s1Bw6">
+           <m.rf>m#m-mf930709-001-p3s1Bw6</m.rf>
+           <afun>AuxG</afun>
+           <ord>6</ord>
+          </LM>
+         </children>
+        </LM>
+       </children>
+      </LM>
+      <LM id="a-mf930709-001-p3s1Bw8">
+       <m.rf>m#m-mf930709-001-p3s1Bw8</m.rf>
+       <afun>AuxP</afun>
+       <ord>8</ord>
+       <children>
+        <LM id="a-mf930709-001-p3s1Bw10">
+         <m.rf>m#m-mf930709-001-p3s1Bw10</m.rf>
+         <afun>Adv</afun>
+         <ord>10</ord>
+         <children>
+          <LM id="a-mf930709-001-p3s1Bw9">
+           <m.rf>m#m-mf930709-001-p3s1Bw9</m.rf>
+           <afun>Atr</afun>
+           <ord>9</ord>
+          </LM>
+         </children>
+        </LM>
+       </children>
+      </LM>
+      <LM id="a-mf930709-001-p3s1Bw11">
+       <m.rf>m#m-mf930709-001-p3s1Bw11</m.rf>
+       <afun>Obj</afun>
+       <ord>11</ord>
+       <children>
+        <LM id="a-mf930709-001-p3s1Bw12">
+         <m.rf>m#m-mf930709-001-p3s1Bw12</m.rf>
+         <afun>Obj</afun>
+         <ord>12</ord>
+         <children>
+          <LM id="a-mf930709-001-p3s1Bw13">
+           <m.rf>m#m-mf930709-001-p3s1Bw13</m.rf>
+           <afun>Atr</afun>
+           <ord>13</ord>
+           <children>
+            <LM id="a-mf930709-001-p3s1Bw15">
+             <m.rf>m#m-mf930709-001-p3s1Bw15</m.rf>
+             <afun>Atr</afun>
+             <ord>15</ord>
+             <children>
+              <LM id="a-mf930709-001-p3s1Bw14">
+               <m.rf>m#m-mf930709-001-p3s1Bw14</m.rf>
+               <afun>Atr</afun>
+               <ord>14</ord>
+              </LM>
+             </children>
+            </LM>
+           </children>
+          </LM>
+         </children>
+        </LM>
+       </children>
+      </LM>
+     </children>
+    </LM>
+    <LM id="a-mf930709-001-p3s1Bw16">
+     <m.rf>m#m-mf930709-001-p3s1Bw16</m.rf>
+     <afun>AuxK</afun>
+     <ord>16</ord>
+    </LM>
+   </children>
+  </LM>
+  <LM id="a-mf930709-001-p3s2">
+   <s.rf>m#m-mf930709-001-p3s2</s.rf>
+   <ord>0</ord>
+   <children>
+    <LM id="a-mf930709-001-p3s2w1">
+     <m.rf>m#m-mf930709-001-p3s2w1</m.rf>
+     <afun>Pred</afun>
+     <ord>1</ord>
+     <children>
+      <LM id="a-mf930709-001-p3s2w2">
+       <m.rf>m#m-mf930709-001-p3s2w2</m.rf>
+       <afun>Obj</afun>
+       <ord>2</ord>
+      </LM>
+      <LM id="a-mf930709-001-p3s2w3">
+       <m.rf>m#m-mf930709-001-p3s2w3</m.rf>
+       <afun>Obj</afun>
+       <ord>3</ord>
+      </LM>
+      <LM id="a-mf930709-001-p3s2w4">
+       <m.rf>m#m-mf930709-001-p3s2w4</m.rf>
+       <afun>Adv</afun>
+       <ord>4</ord>
+      </LM>
+      <LM id="a-mf930709-001-p3s2w6">
+       <m.rf>m#m-mf930709-001-p3s2w6</m.rf>
+       <afun>Sb</afun>
+       <ord>6</ord>
+       <children>
+        <LM id="a-mf930709-001-p3s2w5">
+         <m.rf>m#m-mf930709-001-p3s2w5</m.rf>
+         <afun>Atr</afun>
+         <ord>5</ord>
+        </LM>
+       </children>
+      </LM>
+      <LM id="a-mf930709-001-p3s2w8">
+       <m.rf>m#m-mf930709-001-p3s2w8</m.rf>
+       <afun>Adv</afun>
+       <ord>8</ord>
+       <children>
+        <LM id="a-mf930709-001-p3s2w7">
+         <m.rf>m#m-mf930709-001-p3s2w7</m.rf>
+         <afun>Adv</afun>
+         <ord>7</ord>
+        </LM>
+       </children>
+      </LM>
+      <LM id="a-mf930709-001-p3s2w10">
+       <m.rf>m#m-mf930709-001-p3s2w10</m.rf>
+       <afun>AuxC</afun>
+       <ord>10</ord>
+       <children>
+        <LM id="a-mf930709-001-p3s2w9">
+         <m.rf>m#m-mf930709-001-p3s2w9</m.rf>
+         <afun>AuxX</afun>
+         <ord>9</ord>
+        </LM>
+        <LM id="a-mf930709-001-p3s2w12">
+         <m.rf>m#m-mf930709-001-p3s2w12</m.rf>
+         <afun>Adv</afun>
+         <ord>12</ord>
+         <children>
+          <LM id="a-mf930709-001-p3s2w11">
+           <m.rf>m#m-mf930709-001-p3s2w11</m.rf>
+           <afun>Sb</afun>
+           <ord>11</ord>
+          </LM>
+          <LM id="a-mf930709-001-p3s2w13">
+           <m.rf>m#m-mf930709-001-p3s2w13</m.rf>
+           <afun>Obj</afun>
+           <ord>13</ord>
+           <children>
+            <LM id="a-mf930709-001-p3s2w14">
+             <m.rf>m#m-mf930709-001-p3s2w14</m.rf>
+             <afun>AuxP</afun>
+             <ord>14</ord>
+             <children>
+              <LM id="a-mf930709-001-p3s2w15">
+               <m.rf>m#m-mf930709-001-p3s2w15</m.rf>
+               <afun>Atr</afun>
+               <ord>15</ord>
+               <children>
+                <LM id="a-mf930709-001-p3s2w16">
+                 <m.rf>m#m-mf930709-001-p3s2w16</m.rf>
+                 <afun>AuxP</afun>
+                 <ord>16</ord>
+                 <children>
+                  <LM id="a-mf930709-001-p3s2w18">
+                   <m.rf>m#m-mf930709-001-p3s2w18</m.rf>
+                   <afun>Atr</afun>
+                   <ord>18</ord>
+                   <children>
+                    <LM id="a-mf930709-001-p3s2w17">
+                     <m.rf>m#m-mf930709-001-p3s2w17</m.rf>
+                     <afun>Atr</afun>
+                     <ord>17</ord>
+                    </LM>
+                    <LM id="a-mf930709-001-p3s2w19">
+                     <m.rf>m#m-mf930709-001-p3s2w19</m.rf>
+                     <afun>AuxP</afun>
+                     <ord>19</ord>
+                     <children>
+                      <LM id="a-mf930709-001-p3s2w20">
+                       <m.rf>m#m-mf930709-001-p3s2w20</m.rf>
+                       <afun>Atr</afun>
+                       <ord>20</ord>
+                      </LM>
+                     </children>
+                    </LM>
+                    <LM id="a-mf930709-001-p3s2w24">
+                     <m.rf>m#m-mf930709-001-p3s2w24</m.rf>
+                     <afun>Atr</afun>
+                     <ord>24</ord>
+                     <children>
+                      <LM id="a-mf930709-001-p3s2w21">
+                       <m.rf>m#m-mf930709-001-p3s2w21</m.rf>
+                       <afun>AuxX</afun>
+                       <ord>21</ord>
+                      </LM>
+                      <LM id="a-mf930709-001-p3s2w22">
+                       <m.rf>m#m-mf930709-001-p3s2w22</m.rf>
+                       <afun>Obj</afun>
+                       <ord>22</ord>
+                      </LM>
+                      <LM id="a-mf930709-001-p3s2w23">
+                       <m.rf>m#m-mf930709-001-p3s2w23</m.rf>
+                       <afun>Sb</afun>
+                       <ord>23</ord>
+                      </LM>
+                     </children>
+                    </LM>
+                   </children>
+                  </LM>
+                 </children>
+                </LM>
+               </children>
+              </LM>
+             </children>
+            </LM>
+           </children>
+          </LM>
+         </children>
+        </LM>
+       </children>
+      </LM>
+     </children>
+    </LM>
+    <LM id="a-mf930709-001-p3s2w25">
+     <m.rf>m#m-mf930709-001-p3s2w25</m.rf>
+     <afun>AuxK</afun>
+     <ord>25</ord>
+    </LM>
+   </children>
+  </LM>
+  <LM id="a-mf930709-001-p3s3">
+   <s.rf>m#m-mf930709-001-p3s3</s.rf>
+   <ord>0</ord>
+   <children>
+    <LM id="a-mf930709-001-p3s3w11">
+     <m.rf>m#m-mf930709-001-p3s3w11</m.rf>
+     <afun>Pred</afun>
+     <ord>11</ord>
+     <children>
+      <LM id="a-mf930709-001-p3s3w2">
+       <m.rf>m#m-mf930709-001-p3s3w2</m.rf>
+       <afun>Sb</afun>
+       <ord>2</ord>
+       <children>
+        <LM id="a-mf930709-001-p3s3w1">
+         <m.rf>m#m-mf930709-001-p3s3w1</m.rf>
+         <afun>Atr</afun>
+         <ord>1</ord>
+        </LM>
+        <LM id="a-mf930709-001-p3s3w5">
+         <m.rf>m#m-mf930709-001-p3s3w5</m.rf>
+         <afun>Atr</afun>
+         <ord>5</ord>
+         <children>
+          <LM id="a-mf930709-001-p3s3w3">
+           <m.rf>m#m-mf930709-001-p3s3w3</m.rf>
+           <afun>AuxX</afun>
+           <ord>3</ord>
+          </LM>
+          <LM id="a-mf930709-001-p3s3w4">
+           <m.rf>m#m-mf930709-001-p3s3w4</m.rf>
+           <afun>Sb</afun>
+           <ord>4</ord>
+          </LM>
+          <LM id="a-mf930709-001-p3s3w7">
+           <m.rf>m#m-mf930709-001-p3s3w7</m.rf>
+           <afun>Pnom</afun>
+           <ord>7</ord>
+           <children>
+            <LM id="a-mf930709-001-p3s3w6">
+             <m.rf>m#m-mf930709-001-p3s3w6</m.rf>
+             <afun>Atr</afun>
+             <ord>6</ord>
+            </LM>
+            <LM id="a-mf930709-001-p3s3w8">
+             <m.rf>m#m-mf930709-001-p3s3w8</m.rf>
+             <afun>Atr</afun>
+             <ord>8</ord>
+             <children>
+              <LM id="a-mf930709-001-p3s3w9">
+               <m.rf>m#m-mf930709-001-p3s3w9</m.rf>
+               <afun>Atr</afun>
+               <ord>9</ord>
+              </LM>
+             </children>
+            </LM>
+           </children>
+          </LM>
+          <LM id="a-mf930709-001-p3s3w10">
+           <m.rf>m#m-mf930709-001-p3s3w10</m.rf>
+           <afun>AuxX</afun>
+           <ord>10</ord>
+          </LM>
+         </children>
+        </LM>
+       </children>
+      </LM>
+      <LM id="a-mf930709-001-p3s3w12">
+       <m.rf>m#m-mf930709-001-p3s3w12</m.rf>
+       <afun>Obj</afun>
+       <ord>12</ord>
+       <children>
+        <LM id="a-mf930709-001-p3s3w13">
+         <m.rf>m#m-mf930709-001-p3s3w13</m.rf>
+         <afun>Obj</afun>
+         <ord>13</ord>
+        </LM>
+       </children>
+      </LM>
+      <LM id="a-mf930709-001-p3s3w14">
+       <m.rf>m#m-mf930709-001-p3s3w14</m.rf>
+       <afun>AuxP</afun>
+       <ord>14</ord>
+       <children>
+        <LM id="a-mf930709-001-p3s3w15">
+         <m.rf>m#m-mf930709-001-p3s3w15</m.rf>
+         <afun>Adv</afun>
+         <ord>15</ord>
+        </LM>
+       </children>
+      </LM>
+      <LM id="a-mf930709-001-p3s3w17">
+       <m.rf>m#m-mf930709-001-p3s3w17</m.rf>
+       <afun>AuxP</afun>
+       <ord>17</ord>
+       <children>
+        <LM id="a-mf930709-001-p3s3w18">
+         <m.rf>m#m-mf930709-001-p3s3w18</m.rf>
+         <afun>Adv</afun>
+         <ord>18</ord>
+         <children>
+          <LM id="a-mf930709-001-p3s3w16">
+           <m.rf>m#m-mf930709-001-p3s3w16</m.rf>
+           <afun>AuxZ</afun>
+           <ord>16</ord>
+          </LM>
+         </children>
+        </LM>
+       </children>
+      </LM>
+     </children>
+    </LM>
+    <LM id="a-mf930709-001-p3s3w19">
+     <m.rf>m#m-mf930709-001-p3s3w19</m.rf>
+     <afun>AuxK</afun>
+     <ord>19</ord>
+    </LM>
+   </children>
+  </LM>
+  <LM id="a-mf930709-001-p3s4">
+   <s.rf>m#m-mf930709-001-p3s4</s.rf>
+   <ord>0</ord>
+   <children>
+    <LM id="a-mf930709-001-p3s4w4">
+     <m.rf>m#m-mf930709-001-p3s4w4</m.rf>
+     <afun>Pred</afun>
+     <ord>4</ord>
+     <children>
+      <LM id="a-mf930709-001-p3s4w1">
+       <m.rf>m#m-mf930709-001-p3s4w1</m.rf>
+       <afun>AuxP</afun>
+       <ord>1</ord>
+       <children>
+        <LM id="a-mf930709-001-p3s4w2">
+         <m.rf>m#m-mf930709-001-p3s4w2</m.rf>
+         <afun>Adv</afun>
+         <ord>2</ord>
+        </LM>
+       </children>
+      </LM>
+      <LM id="a-mf930709-001-p3s4w3">
+       <m.rf>m#m-mf930709-001-p3s4w3</m.rf>
+       <afun>AuxT</afun>
+       <ord>3</ord>
+      </LM>
+      <LM id="a-mf930709-001-p3s4w5">
+       <m.rf>m#m-mf930709-001-p3s4w5</m.rf>
+       <afun>AuxP</afun>
+       <ord>5</ord>
+       <children>
+        <LM id="a-mf930709-001-p3s4w7">
+         <m.rf>m#m-mf930709-001-p3s4w7</m.rf>
+         <afun>Obj</afun>
+         <ord>7</ord>
+         <children>
+          <LM id="a-mf930709-001-p3s4w6">
+           <m.rf>m#m-mf930709-001-p3s4w6</m.rf>
+           <afun>Atr</afun>
+           <ord>6</ord>
+          </LM>
+          <LM id="a-mf930709-001-p3s4w9">
+           <m.rf>m#m-mf930709-001-p3s4w9</m.rf>
+           <afun>Atr</afun>
+           <ord>9</ord>
+           <children>
+            <LM id="a-mf930709-001-p3s4w8">
+             <m.rf>m#m-mf930709-001-p3s4w8</m.rf>
+             <afun>AuxX</afun>
+             <ord>8</ord>
+            </LM>
+            <LM id="a-mf930709-001-p3s4w10">
+             <m.rf>m#m-mf930709-001-p3s4w10</m.rf>
+             <afun>AuxP</afun>
+             <ord>10</ord>
+             <children>
+              <LM id="a-mf930709-001-p3s4w11">
+               <m.rf>m#m-mf930709-001-p3s4w11</m.rf>
+               <afun>Adv</afun>
+               <ord>11</ord>
+               <children>
+                <LM id="a-mf930709-001-p3s4w12">
+                 <m.rf>m#m-mf930709-001-p3s4w12</m.rf>
+                 <afun>Atr</afun>
+                 <ord>12</ord>
+                </LM>
+               </children>
+              </LM>
+             </children>
+            </LM>
+           </children>
+          </LM>
+         </children>
+        </LM>
+       </children>
+      </LM>
+     </children>
+    </LM>
+    <LM id="a-mf930709-001-p3s4w13">
+     <m.rf>m#m-mf930709-001-p3s4w13</m.rf>
+     <afun>AuxK</afun>
+     <ord>13</ord>
+    </LM>
+   </children>
+  </LM>
+  <LM id="a-mf930709-001-p3s5">
+   <s.rf>m#m-mf930709-001-p3s5</s.rf>
+   <ord>0</ord>
+   <children>
+    <LM id="a-mf930709-001-p3s5w3">
+     <m.rf>m#m-mf930709-001-p3s5w3</m.rf>
+     <afun>Pred</afun>
+     <ord>3</ord>
+     <children>
+      <LM id="a-mf930709-001-p3s5w1">
+       <m.rf>m#m-mf930709-001-p3s5w1</m.rf>
+       <afun>Sb</afun>
+       <ord>1</ord>
+      </LM>
+      <LM id="a-mf930709-001-p3s5w4">
+       <m.rf>m#m-mf930709-001-p3s5w4</m.rf>
+       <afun>Obj</afun>
+       <ord>4</ord>
+       <children>
+        <LM id="a-mf930709-001-p3s5w2">
+         <m.rf>m#m-mf930709-001-p3s5w2</m.rf>
+         <afun>AuxT</afun>
+         <ord>2</ord>
+        </LM>
+        <LM id="a-mf930709-001-p3s5w5">
+         <m.rf>m#m-mf930709-001-p3s5w5</m.rf>
+         <afun>Obj</afun>
+         <ord>5</ord>
+        </LM>
+        <LM id="a-mf930709-001-p3s5w6">
+         <m.rf>m#m-mf930709-001-p3s5w6</m.rf>
+         <afun>Adv</afun>
+         <ord>6</ord>
+         <children>
+          <LM id="a-mf930709-001-p3s5w7">
+           <m.rf>m#m-mf930709-001-p3s5w7</m.rf>
+           <afun>Atr</afun>
+           <ord>7</ord>
+           <children>
+            <LM id="a-mf930709-001-p3s5w9">
+             <m.rf>m#m-mf930709-001-p3s5w9</m.rf>
+             <afun>Atr</afun>
+             <ord>9</ord>
+             <children>
+              <LM id="a-mf930709-001-p3s5w8">
+               <m.rf>m#m-mf930709-001-p3s5w8</m.rf>
+               <afun>Atr</afun>
+               <ord>8</ord>
+              </LM>
+             </children>
+            </LM>
+           </children>
+          </LM>
+         </children>
+        </LM>
+       </children>
+      </LM>
+     </children>
+    </LM>
+    <LM id="a-mf930709-001-p3s5w10">
+     <m.rf>m#m-mf930709-001-p3s5w10</m.rf>
+     <afun>AuxK</afun>
+     <ord>10</ord>
+    </LM>
+   </children>
+  </LM>
+  <LM id="a-mf930709-001-p3s6">
+   <s.rf>m#m-mf930709-001-p3s6</s.rf>
+   <ord>0</ord>
+   <children>
+    <LM id="a-mf930709-001-p3s6w4">
+     <m.rf>m#m-mf930709-001-p3s6w4</m.rf>
+     <afun>Pred</afun>
+     <ord>4</ord>
+     <children>
+      <LM id="a-mf930709-001-p3s6w1">
+       <m.rf>m#m-mf930709-001-p3s6w1</m.rf>
+       <afun>Sb</afun>
+       <ord>1</ord>
+       <children>
+        <LM id="a-mf930709-001-p3s6w3">
+         <m.rf>m#m-mf930709-001-p3s6w3</m.rf>
+         <afun>Atr</afun>
+         <ord>3</ord>
+         <children>
+          <LM id="a-mf930709-001-p3s6w2">
+           <m.rf>m#m-mf930709-001-p3s6w2</m.rf>
+           <afun>Atr</afun>
+           <ord>2</ord>
+          </LM>
+         </children>
+        </LM>
+       </children>
+      </LM>
+      <LM id="a-mf930709-001-p3s6w5">
+       <m.rf>m#m-mf930709-001-p3s6w5</m.rf>
+       <afun>Pnom</afun>
+       <ord>5</ord>
+       <children>
+        <LM id="a-mf930709-001-p3s6w6">
+         <m.rf>m#m-mf930709-001-p3s6w6</m.rf>
+         <afun>AuxP</afun>
+         <ord>6</ord>
+         <children>
+          <LM id="a-mf930709-001-p3s6w7">
+           <m.rf>m#m-mf930709-001-p3s6w7</m.rf>
+           <afun>Obj</afun>
+           <ord>7</ord>
+           <children>
+            <LM id="a-mf930709-001-p3s6w8">
+             <m.rf>m#m-mf930709-001-p3s6w8</m.rf>
+             <afun>AuxP</afun>
+             <ord>8</ord>
+             <children>
+              <LM id="a-mf930709-001-p3s6w10">
+               <m.rf>m#m-mf930709-001-p3s6w10</m.rf>
+               <afun>Atr</afun>
+               <ord>10</ord>
+               <children>
+                <LM id="a-mf930709-001-p3s6w9">
+                 <m.rf>m#m-mf930709-001-p3s6w9</m.rf>
+                 <afun>Atr</afun>
+                 <ord>9</ord>
+                </LM>
+               </children>
+              </LM>
+             </children>
+            </LM>
+           </children>
+          </LM>
+         </children>
+        </LM>
+       </children>
+      </LM>
+     </children>
+    </LM>
+    <LM id="a-mf930709-001-p3s6w11">
+     <m.rf>m#m-mf930709-001-p3s6w11</m.rf>
+     <afun>AuxK</afun>
+     <ord>11</ord>
+    </LM>
+   </children>
+  </LM>
+  <LM id="a-mf930709-001-p3s7">
+   <s.rf>m#m-mf930709-001-p3s7</s.rf>
+   <ord>0</ord>
+   <children>
+    <LM id="a-mf930709-001-p3s7w4">
+     <m.rf>m#m-mf930709-001-p3s7w4</m.rf>
+     <afun>Pred</afun>
+     <ord>4</ord>
+     <children>
+      <LM id="a-mf930709-001-p3s7w2">
+       <m.rf>m#m-mf930709-001-p3s7w2</m.rf>
+       <afun>Pnom</afun>
+       <ord>2</ord>
+       <children>
+        <LM id="a-mf930709-001-p3s7w1">
+         <m.rf>m#m-mf930709-001-p3s7w1</m.rf>
+         <afun>Atr</afun>
+         <ord>1</ord>
+        </LM>
+        <LM id="a-mf930709-001-p3s7w3">
+         <m.rf>m#m-mf930709-001-p3s7w3</m.rf>
+         <afun>Atr</afun>
+         <ord>3</ord>
+        </LM>
+       </children>
+      </LM>
+      <LM id="a-mf930709-001-p3s7w5">
+       <m.rf>m#m-mf930709-001-p3s7w5</m.rf>
+       <afun>Sb</afun>
+       <ord>5</ord>
+       <children>
+        <LM id="a-mf930709-001-p3s7w6">
+         <m.rf>m#m-mf930709-001-p3s7w6</m.rf>
+         <afun>Atr</afun>
+         <ord>6</ord>
+         <children>
+          <LM id="a-mf930709-001-p3s7w7">
+           <m.rf>m#m-mf930709-001-p3s7w7</m.rf>
+           <afun>Atr</afun>
+           <ord>7</ord>
+          </LM>
+         </children>
+        </LM>
+       </children>
+      </LM>
+     </children>
+    </LM>
+    <LM id="a-mf930709-001-p3s7w8">
+     <m.rf>m#m-mf930709-001-p3s7w8</m.rf>
+     <afun>AuxK</afun>
+     <ord>8</ord>
+    </LM>
+   </children>
+  </LM>
+  <LM id="a-mf930709-001-p4s1">
+   <s.rf>m#m-mf930709-001-p4s1</s.rf>
+   <ord>0</ord>
+   <children>
+    <LM id="a-mf930709-001-p4s1w4">
+     <m.rf>m#m-mf930709-001-p4s1w4</m.rf>
+     <afun>Pred</afun>
+     <ord>4</ord>
+     <children>
+      <LM id="a-mf930709-001-p4s1w2">
+       <m.rf>m#m-mf930709-001-p4s1w2</m.rf>
+       <afun>AuxV</afun>
+       <ord>2</ord>
+      </LM>
+      <LM id="a-mf930709-001-p4s1w5">
+       <m.rf>m#m-mf930709-001-p4s1w5</m.rf>
+       <afun>Obj</afun>
+       <ord>5</ord>
+       <children>
+        <LM id="a-mf930709-001-p4s1w1">
+         <m.rf>m#m-mf930709-001-p4s1w1</m.rf>
+         <afun>Obj</afun>
+         <ord>1</ord>
+        </LM>
+        <LM id="a-mf930709-001-p4s1w3">
+         <m.rf>m#m-mf930709-001-p4s1w3</m.rf>
+         <afun>AuxT</afun>
+         <ord>3</ord>
+        </LM>
+       </children>
+      </LM>
+      <LM id="a-mf930709-001-p4s1w47">
+       <m.rf>m#m-mf930709-001-p4s1w47</m.rf>
+       <afun>Coord</afun>
+       <ord>47</ord>
+       <children>
+        <LM id="a-mf930709-001-p4s1w6">
+         <m.rf>m#m-mf930709-001-p4s1w6</m.rf>
+         <afun>Sb</afun>
+         <is_member>1</is_member>
+         <ord>6</ord>
+         <children>
+          <LM id="a-mf930709-001-p4s1w8">
+           <m.rf>m#m-mf930709-001-p4s1w8</m.rf>
+           <afun>Atr</afun>
+           <ord>8</ord>
+           <children>
+            <LM id="a-mf930709-001-p4s1w7">
+             <m.rf>m#m-mf930709-001-p4s1w7</m.rf>
+             <afun>Atr</afun>
+             <ord>7</ord>
+            </LM>
+            <LM id="a-mf930709-001-p4s1w10">
+             <m.rf>m#m-mf930709-001-p4s1w10</m.rf>
+             <afun>Atr</afun>
+             <ord>10</ord>
+             <children>
+              <LM id="a-mf930709-001-p4s1w9">
+               <m.rf>m#m-mf930709-001-p4s1w9</m.rf>
+               <afun>Atr</afun>
+               <ord>9</ord>
+              </LM>
+              <LM id="a-mf930709-001-p4s1w11">
+               <m.rf>m#m-mf930709-001-p4s1w11</m.rf>
+               <afun>Atr</afun>
+               <ord>11</ord>
+              </LM>
+             </children>
+            </LM>
+           </children>
+          </LM>
+          <LM id="a-mf930709-001-p4s1w44">
+           <m.rf>m#m-mf930709-001-p4s1w44</m.rf>
+           <afun>Coord</afun>
+           <ord>44</ord>
+           <children>
+            <LM id="a-mf930709-001-p4s1w14">
+             <m.rf>m#m-mf930709-001-p4s1w14</m.rf>
+             <afun>Apos</afun>
+             <is_member>1</is_member>
+             <ord>14</ord>
+             <children>
+              <LM id="a-mf930709-001-p4s1w13">
+               <m.rf>m#m-mf930709-001-p4s1w13</m.rf>
+               <afun>Atr</afun>
+               <is_member>1</is_member>
+               <ord>13</ord>
+               <children>
+                <LM id="a-mf930709-001-p4s1w12">
+                 <m.rf>m#m-mf930709-001-p4s1w12</m.rf>
+                 <afun>Atr</afun>
+                 <ord>12</ord>
+                </LM>
+               </children>
+              </LM>
+              <LM id="a-mf930709-001-p4s1w16">
+               <m.rf>m#m-mf930709-001-p4s1w16</m.rf>
+               <afun>Atr</afun>
+               <is_member>1</is_member>
+               <ord>16</ord>
+               <children>
+                <LM id="a-mf930709-001-p4s1w15">
+                 <m.rf>m#m-mf930709-001-p4s1w15</m.rf>
+                 <afun>AuxZ</afun>
+                 <ord>15</ord>
+                </LM>
+                <LM id="a-mf930709-001-p4s1w17">
+                 <m.rf>m#m-mf930709-001-p4s1w17</m.rf>
+                 <afun>Atr</afun>
+                 <ord>17</ord>
+                </LM>
+                <LM id="a-mf930709-001-p4s1w18">
+                 <m.rf>m#m-mf930709-001-p4s1w18</m.rf>
+                 <afun>AuxP</afun>
+                 <ord>18</ord>
+                 <children>
+                  <LM id="a-mf930709-001-p4s1w19">
+                   <m.rf>m#m-mf930709-001-p4s1w19</m.rf>
+                   <afun>Atr</afun>
+                   <ord>19</ord>
+                  </LM>
+                 </children>
+                </LM>
+               </children>
+              </LM>
+              <LM id="a-mf930709-001-p4s1w20">
+               <m.rf>m#m-mf930709-001-p4s1w20</m.rf>
+               <afun>AuxG</afun>
+               <ord>20</ord>
+              </LM>
+             </children>
+            </LM>
+            <LM id="a-mf930709-001-p4s1w21">
+             <m.rf>m#m-mf930709-001-p4s1w21</m.rf>
+             <afun>AuxX</afun>
+             <ord>21</ord>
+            </LM>
+            <LM id="a-mf930709-001-p4s1w24">
+             <m.rf>m#m-mf930709-001-p4s1w24</m.rf>
+             <afun>Apos</afun>
+             <is_member>1</is_member>
+             <ord>24</ord>
+             <children>
+              <LM id="a-mf930709-001-p4s1w23">
+               <m.rf>m#m-mf930709-001-p4s1w23</m.rf>
+               <afun>Atr</afun>
+               <is_member>1</is_member>
+               <ord>23</ord>
+               <children>
+                <LM id="a-mf930709-001-p4s1w22">
+                 <m.rf>m#m-mf930709-001-p4s1w22</m.rf>
+                 <afun>Atr</afun>
+                 <ord>22</ord>
+                </LM>
+               </children>
+              </LM>
+              <LM id="a-mf930709-001-p4s1w26">
+               <m.rf>m#m-mf930709-001-p4s1w26</m.rf>
+               <afun>Atr</afun>
+               <is_member>1</is_member>
+               <ord>26</ord>
+               <children>
+                <LM id="a-mf930709-001-p4s1w25">
+                 <m.rf>m#m-mf930709-001-p4s1w25</m.rf>
+                 <afun>AuxZ</afun>
+                 <ord>25</ord>
+                </LM>
+                <LM id="a-mf930709-001-p4s1w27">
+                 <m.rf>m#m-mf930709-001-p4s1w27</m.rf>
+                 <afun>Atr</afun>
+                 <ord>27</ord>
+                </LM>
+                <LM id="a-mf930709-001-p4s1w28">
+                 <m.rf>m#m-mf930709-001-p4s1w28</m.rf>
+                 <afun>AuxP</afun>
+                 <ord>28</ord>
+                 <children>
+                  <LM id="a-mf930709-001-p4s1w29">
+                   <m.rf>m#m-mf930709-001-p4s1w29</m.rf>
+                   <afun>Atr</afun>
+                   <ord>29</ord>
+                  </LM>
+                 </children>
+                </LM>
+               </children>
+              </LM>
+              <LM id="a-mf930709-001-p4s1w30">
+               <m.rf>m#m-mf930709-001-p4s1w30</m.rf>
+               <afun>AuxG</afun>
+               <ord>30</ord>
+              </LM>
+             </children>
+            </LM>
+            <LM id="a-mf930709-001-p4s1w31">
+             <m.rf>m#m-mf930709-001-p4s1w31</m.rf>
+             <afun>AuxX</afun>
+             <ord>31</ord>
+            </LM>
+            <LM id="a-mf930709-001-p4s1w34">
+             <m.rf>m#m-mf930709-001-p4s1w34</m.rf>
+             <afun>Apos</afun>
+             <is_member>1</is_member>
+             <ord>34</ord>
+             <children>
+              <LM id="a-mf930709-001-p4s1w33">
+               <m.rf>m#m-mf930709-001-p4s1w33</m.rf>
+               <afun>Atr</afun>
+               <is_member>1</is_member>
+               <ord>33</ord>
+               <children>
+                <LM id="a-mf930709-001-p4s1w32">
+                 <m.rf>m#m-mf930709-001-p4s1w32</m.rf>
+                 <afun>Atr</afun>
+                 <ord>32</ord>
+                </LM>
+               </children>
+              </LM>
+              <LM id="a-mf930709-001-p4s1w36">
+               <m.rf>m#m-mf930709-001-p4s1w36</m.rf>
+               <afun>Atr</afun>
+               <is_member>1</is_member>
+               <ord>36</ord>
+               <children>
+                <LM id="a-mf930709-001-p4s1w35">
+                 <m.rf>m#m-mf930709-001-p4s1w35</m.rf>
+                 <afun>AuxZ</afun>
+                 <ord>35</ord>
+                </LM>
+                <LM id="a-mf930709-001-p4s1w37">
+                 <m.rf>m#m-mf930709-001-p4s1w37</m.rf>
+                 <afun>Atr</afun>
+                 <ord>37</ord>
+                </LM>
+                <LM id="a-mf930709-001-p4s1w38">
+                 <m.rf>m#m-mf930709-001-p4s1w38</m.rf>
+                 <afun>AuxP</afun>
+                 <ord>38</ord>
+                 <children>
+                  <LM id="a-mf930709-001-p4s1w39">
+                   <m.rf>m#m-mf930709-001-p4s1w39</m.rf>
+                   <afun>Atr</afun>
+                   <ord>39</ord>
+                  </LM>
+                 </children>
+                </LM>
+               </children>
+              </LM>
+              <LM id="a-mf930709-001-p4s1w40">
+               <m.rf>m#m-mf930709-001-p4s1w40</m.rf>
+               <afun>AuxG</afun>
+               <ord>40</ord>
+              </LM>
+             </children>
+            </LM>
+            <LM id="a-mf930709-001-p4s1w41">
+             <m.rf>m#m-mf930709-001-p4s1w41</m.rf>
+             <afun>AuxX</afun>
+             <ord>41</ord>
+            </LM>
+            <LM id="a-mf930709-001-p4s1w42">
+             <m.rf>m#m-mf930709-001-p4s1w42</m.rf>
+             <afun>Atr</afun>
+             <is_member>1</is_member>
+             <ord>42</ord>
+             <children>
+              <LM id="a-mf930709-001-p4s1w43">
+               <m.rf>m#m-mf930709-001-p4s1w43</m.rf>
+               <afun>Atr</afun>
+               <ord>43</ord>
+              </LM>
+             </children>
+            </LM>
+            <LM id="a-mf930709-001-p4s1w46">
+             <m.rf>m#m-mf930709-001-p4s1w46</m.rf>
+             <afun>Atr</afun>
+             <is_member>1</is_member>
+             <ord>46</ord>
+             <children>
+              <LM id="a-mf930709-001-p4s1w45">
+               <m.rf>m#m-mf930709-001-p4s1w45</m.rf>
+               <afun>Atr</afun>
+               <ord>45</ord>
+              </LM>
+             </children>
+            </LM>
+           </children>
+          </LM>
+         </children>
+        </LM>
+        <LM id="a-mf930709-001-p4s1w52">
+         <m.rf>m#m-mf930709-001-p4s1w52</m.rf>
+         <afun>Apos</afun>
+         <is_member>1</is_member>
+         <ord>52</ord>
+         <children>
+          <LM id="a-mf930709-001-p4s1w50">
+           <m.rf>m#m-mf930709-001-p4s1w50</m.rf>
+           <afun>Sb</afun>
+           <is_member>1</is_member>
+           <ord>50</ord>
+           <children>
+            <LM id="a-mf930709-001-p4s1w48">
+             <m.rf>m#m-mf930709-001-p4s1w48</m.rf>
+             <afun>Atr</afun>
+             <ord>48</ord>
+            </LM>
+            <LM id="a-mf930709-001-p4s1w49">
+             <m.rf>m#m-mf930709-001-p4s1w49</m.rf>
+             <afun>Atr</afun>
+             <ord>49</ord>
+            </LM>
+            <LM id="a-mf930709-001-p4s1w51">
+             <m.rf>m#m-mf930709-001-p4s1w51</m.rf>
+             <afun>Atr</afun>
+             <ord>51</ord>
+            </LM>
+           </children>
+          </LM>
+          <LM id="a-mf930709-001-p4s1w61">
+           <m.rf>m#m-mf930709-001-p4s1w61</m.rf>
+           <afun>Coord</afun>
+           <is_member>1</is_member>
+           <ord>61</ord>
+           <children>
+            <LM id="a-mf930709-001-p4s1w54">
+             <m.rf>m#m-mf930709-001-p4s1w54</m.rf>
+             <afun>Sb</afun>
+             <is_member>1</is_member>
+             <ord>54</ord>
+             <children>
+              <LM id="a-mf930709-001-p4s1w53">
+               <m.rf>m#m-mf930709-001-p4s1w53</m.rf>
+               <afun>Atr</afun>
+               <ord>53</ord>
+              </LM>
+             </children>
+            </LM>
+            <LM id="a-mf930709-001-p4s1w55">
+             <m.rf>m#m-mf930709-001-p4s1w55</m.rf>
+             <afun>AuxX</afun>
+             <ord>55</ord>
+            </LM>
+            <LM id="a-mf930709-001-p4s1w57">
+             <m.rf>m#m-mf930709-001-p4s1w57</m.rf>
+             <afun>Sb</afun>
+             <is_member>1</is_member>
+             <ord>57</ord>
+             <children>
+              <LM id="a-mf930709-001-p4s1w56">
+               <m.rf>m#m-mf930709-001-p4s1w56</m.rf>
+               <afun>Atr</afun>
+               <ord>56</ord>
+              </LM>
+             </children>
+            </LM>
+            <LM id="a-mf930709-001-p4s1w58">
+             <m.rf>m#m-mf930709-001-p4s1w58</m.rf>
+             <afun>AuxX</afun>
+             <ord>58</ord>
+            </LM>
+            <LM id="a-mf930709-001-p4s1w60">
+             <m.rf>m#m-mf930709-001-p4s1w60</m.rf>
+             <afun>Sb</afun>
+             <is_member>1</is_member>
+             <ord>60</ord>
+             <children>
+              <LM id="a-mf930709-001-p4s1w59">
+               <m.rf>m#m-mf930709-001-p4s1w59</m.rf>
+               <afun>Atr</afun>
+               <ord>59</ord>
+              </LM>
+             </children>
+            </LM>
+            <LM id="a-mf930709-001-p4s1w64">
+             <m.rf>m#m-mf930709-001-p4s1w64</m.rf>
+             <afun>Sb</afun>
+             <is_member>1</is_member>
+             <ord>64</ord>
+             <children>
+              <LM id="a-mf930709-001-p4s1w62">
+               <m.rf>m#m-mf930709-001-p4s1w62</m.rf>
+               <afun>Atr</afun>
+               <ord>62</ord>
+              </LM>
+              <LM id="a-mf930709-001-p4s1w63">
+               <m.rf>m#m-mf930709-001-p4s1w63</m.rf>
+               <afun>Atr</afun>
+               <ord>63</ord>
+              </LM>
+             </children>
+            </LM>
+           </children>
+          </LM>
+         </children>
+        </LM>
+       </children>
+      </LM>
+     </children>
+    </LM>
+    <LM id="a-mf930709-001-p4s1w65">
+     <m.rf>m#m-mf930709-001-p4s1w65</m.rf>
+     <afun>AuxK</afun>
+     <ord>65</ord>
+    </LM>
+   </children>
+  </LM>
+  <LM id="a-mf930709-001-p4s2">
+   <s.rf>m#m-mf930709-001-p4s2</s.rf>
+   <ord>0</ord>
+   <children>
+    <LM id="a-mf930709-001-p4s2w14">
+     <m.rf>m#m-mf930709-001-p4s2w14</m.rf>
+     <afun>Pred</afun>
+     <ord>14</ord>
+     <children>
+      <LM id="a-mf930709-001-p4s2w4">
+       <m.rf>m#m-mf930709-001-p4s2w4</m.rf>
+       <afun>Apos</afun>
+       <ord>4</ord>
+       <children>
+        <LM id="a-mf930709-001-p4s2w3">
+         <m.rf>m#m-mf930709-001-p4s2w3</m.rf>
+         <afun>Sb</afun>
+         <is_member>1</is_member>
+         <ord>3</ord>
+         <children>
+          <LM id="a-mf930709-001-p4s2w1">
+           <m.rf>m#m-mf930709-001-p4s2w1</m.rf>
+           <afun>Atr</afun>
+           <ord>1</ord>
+          </LM>
+          <LM id="a-mf930709-001-p4s2w2">
+           <m.rf>m#m-mf930709-001-p4s2w2</m.rf>
+           <afun>Atr</afun>
+           <ord>2</ord>
+          </LM>
+         </children>
+        </LM>
+        <LM id="a-mf930709-001-p4s2w10">
+         <m.rf>m#m-mf930709-001-p4s2w10</m.rf>
+         <afun>Coord</afun>
+         <is_member>1</is_member>
+         <ord>10</ord>
+         <children>
+          <LM id="a-mf930709-001-p4s2w6">
+           <m.rf>m#m-mf930709-001-p4s2w6</m.rf>
+           <afun>Sb</afun>
+           <is_member>1</is_member>
+           <ord>6</ord>
+           <children>
+            <LM id="a-mf930709-001-p4s2w5">
+             <m.rf>m#m-mf930709-001-p4s2w5</m.rf>
+             <afun>Atr</afun>
+             <ord>5</ord>
+            </LM>
+           </children>
+          </LM>
+          <LM id="a-mf930709-001-p4s2w7">
+           <m.rf>m#m-mf930709-001-p4s2w7</m.rf>
+           <afun>AuxX</afun>
+           <ord>7</ord>
+          </LM>
+          <LM id="a-mf930709-001-p4s2w9">
+           <m.rf>m#m-mf930709-001-p4s2w9</m.rf>
+           <afun>Sb</afun>
+           <is_member>1</is_member>
+           <ord>9</ord>
+           <children>
+            <LM id="a-mf930709-001-p4s2w8">
+             <m.rf>m#m-mf930709-001-p4s2w8</m.rf>
+             <afun>Atr</afun>
+             <ord>8</ord>
+            </LM>
+           </children>
+          </LM>
+          <LM id="a-mf930709-001-p4s2w12">
+           <m.rf>m#m-mf930709-001-p4s2w12</m.rf>
+           <afun>Sb</afun>
+           <is_member>1</is_member>
+           <ord>12</ord>
+           <children>
+            <LM id="a-mf930709-001-p4s2w11">
+             <m.rf>m#m-mf930709-001-p4s2w11</m.rf>
+             <afun>Atr</afun>
+             <ord>11</ord>
+            </LM>
+           </children>
+          </LM>
+         </children>
+        </LM>
+        <LM id="a-mf930709-001-p4s2w13">
+         <m.rf>m#m-mf930709-001-p4s2w13</m.rf>
+         <afun>AuxX</afun>
+         <ord>13</ord>
+        </LM>
+       </children>
+      </LM>
+      <LM id="a-mf930709-001-p4s2w15">
+       <m.rf>m#m-mf930709-001-p4s2w15</m.rf>
+       <afun>Pnom</afun>
+       <ord>15</ord>
+       <children>
+        <LM id="a-mf930709-001-p4s2w19">
+         <m.rf>m#m-mf930709-001-p4s2w19</m.rf>
+         <afun>Atr</afun>
+         <ord>19</ord>
+         <children>
+          <LM id="a-mf930709-001-p4s2w17">
+           <m.rf>m#m-mf930709-001-p4s2w17</m.rf>
+           <afun>Coord</afun>
+           <ord>17</ord>
+           <children>
+            <LM id="a-mf930709-001-p4s2w16">
+             <m.rf>m#m-mf930709-001-p4s2w16</m.rf>
+             <afun>Atr</afun>
+             <is_member>1</is_member>
+             <ord>16</ord>
+            </LM>
+            <LM id="a-mf930709-001-p4s2w18">
+             <m.rf>m#m-mf930709-001-p4s2w18</m.rf>
+             <afun>Atr</afun>
+             <is_member>1</is_member>
+             <ord>18</ord>
+            </LM>
+           </children>
+          </LM>
+         </children>
+        </LM>
+       </children>
+      </LM>
+     </children>
+    </LM>
+    <LM id="a-mf930709-001-p4s2w20">
+     <m.rf>m#m-mf930709-001-p4s2w20</m.rf>
+     <afun>AuxK</afun>
+     <ord>20</ord>
+    </LM>
+   </children>
+  </LM>
+  <LM id="a-mf930709-001-p4s3">
+   <s.rf>m#m-mf930709-001-p4s3</s.rf>
+   <ord>0</ord>
+   <children>
+    <LM id="a-mf930709-001-p4s3w3">
+     <m.rf>m#m-mf930709-001-p4s3w3</m.rf>
+     <afun>Pred</afun>
+     <ord>3</ord>
+     <children>
+      <LM id="a-mf930709-001-p4s3w2">
+       <m.rf>m#m-mf930709-001-p4s3w2</m.rf>
+       <afun>Pnom</afun>
+       <ord>2</ord>
+       <children>
+        <LM id="a-mf930709-001-p4s3w1">
+         <m.rf>m#m-mf930709-001-p4s3w1</m.rf>
+         <afun>Atr</afun>
+         <ord>1</ord>
+        </LM>
+       </children>
+      </LM>
+      <LM id="a-mf930709-001-p4s3w7">
+       <m.rf>m#m-mf930709-001-p4s3w7</m.rf>
+       <afun>Sb</afun>
+       <ord>7</ord>
+       <children>
+        <LM id="a-mf930709-001-p4s3w5">
+         <m.rf>m#m-mf930709-001-p4s3w5</m.rf>
+         <afun>Atr</afun>
+         <ord>5</ord>
+         <children>
+          <LM id="a-mf930709-001-p4s3w4">
+           <m.rf>m#m-mf930709-001-p4s3w4</m.rf>
+           <afun>Atr</afun>
+           <ord>4</ord>
+          </LM>
+         </children>
+        </LM>
+        <LM id="a-mf930709-001-p4s3w6">
+         <m.rf>m#m-mf930709-001-p4s3w6</m.rf>
+         <afun>Atr</afun>
+         <ord>6</ord>
+        </LM>
+       </children>
+      </LM>
+     </children>
+    </LM>
+    <LM id="a-mf930709-001-p4s3w8">
+     <m.rf>m#m-mf930709-001-p4s3w8</m.rf>
+     <afun>AuxK</afun>
+     <ord>8</ord>
+    </LM>
+   </children>
+  </LM>
+  <LM id="a-mf930709-001-p4s4">
+   <s.rf>m#m-mf930709-001-p4s4</s.rf>
+   <ord>0</ord>
+   <children>
+    <LM id="a-mf930709-001-p4s4w2">
+     <m.rf>m#m-mf930709-001-p4s4w2</m.rf>
+     <afun>Pred</afun>
+     <ord>2</ord>
+     <children>
+      <LM id="a-mf930709-001-p4s4w1">
+       <m.rf>m#m-mf930709-001-p4s4w1</m.rf>
+       <afun>Sb</afun>
+       <ord>1</ord>
+      </LM>
+      <LM id="a-mf930709-001-p4s4w3">
+       <m.rf>m#m-mf930709-001-p4s4w3</m.rf>
+       <afun>Obj</afun>
+       <ord>3</ord>
+       <children>
+        <LM id="a-mf930709-001-p4s4w7">
+         <m.rf>m#m-mf930709-001-p4s4w7</m.rf>
+         <afun>Apos</afun>
+         <ord>7</ord>
+         <children>
+          <LM id="a-mf930709-001-p4s4w6">
+           <m.rf>m#m-mf930709-001-p4s4w6</m.rf>
+           <afun>Atr</afun>
+           <is_member>1</is_member>
+           <ord>6</ord>
+           <children>
+            <LM id="a-mf930709-001-p4s4w4">
+             <m.rf>m#m-mf930709-001-p4s4w4</m.rf>
+             <afun>Atr</afun>
+             <ord>4</ord>
+            </LM>
+            <LM id="a-mf930709-001-p4s4w5">
+             <m.rf>m#m-mf930709-001-p4s4w5</m.rf>
+             <afun>Atr</afun>
+             <ord>5</ord>
+            </LM>
+           </children>
+          </LM>
+          <LM id="a-mf930709-001-p4s4w8">
+           <m.rf>m#m-mf930709-001-p4s4w8</m.rf>
+           <afun>Atr</afun>
+           <is_member>1</is_member>
+           <ord>8</ord>
+           <children>
+            <LM id="a-mf930709-001-p4s4w9">
+             <m.rf>m#m-mf930709-001-p4s4w9</m.rf>
+             <afun>Atr</afun>
+             <ord>9</ord>
+            </LM>
+           </children>
+          </LM>
+          <LM id="a-mf930709-001-p4s4w13">
+           <m.rf>m#m-mf930709-001-p4s4w13</m.rf>
+           <afun>Atr</afun>
+           <ord>13</ord>
+           <children>
+            <LM id="a-mf930709-001-p4s4w10">
+             <m.rf>m#m-mf930709-001-p4s4w10</m.rf>
+             <afun>AuxX</afun>
+             <ord>10</ord>
+            </LM>
+            <LM id="a-mf930709-001-p4s4w11">
+             <m.rf>m#m-mf930709-001-p4s4w11</m.rf>
+             <afun>AuxP</afun>
+             <ord>11</ord>
+             <children>
+              <LM id="a-mf930709-001-p4s4w12">
+               <m.rf>m#m-mf930709-001-p4s4w12</m.rf>
+               <afun>Obj</afun>
+               <ord>12</ord>
+              </LM>
+             </children>
+            </LM>
+            <LM id="a-mf930709-001-p4s4w15">
+             <m.rf>m#m-mf930709-001-p4s4w15</m.rf>
+             <afun>Sb</afun>
+             <ord>15</ord>
+             <children>
+              <LM id="a-mf930709-001-p4s4w14">
+               <m.rf>m#m-mf930709-001-p4s4w14</m.rf>
+               <afun>AuxZ</afun>
+               <ord>14</ord>
+              </LM>
+              <LM id="a-mf930709-001-p4s4w16">
+               <m.rf>m#m-mf930709-001-p4s4w16</m.rf>
+               <afun>Atr</afun>
+               <ord>16</ord>
+               <children>
+                <LM id="a-mf930709-001-p4s4w18">
+                 <m.rf>m#m-mf930709-001-p4s4w18</m.rf>
+                 <afun>Atr</afun>
+                 <ord>18</ord>
+                 <children>
+                  <LM id="a-mf930709-001-p4s4w17">
+                   <m.rf>m#m-mf930709-001-p4s4w17</m.rf>
+                   <afun>Atr</afun>
+                   <ord>17</ord>
+                  </LM>
+                 </children>
+                </LM>
+               </children>
+              </LM>
+             </children>
+            </LM>
+           </children>
+          </LM>
+         </children>
+        </LM>
+       </children>
+      </LM>
+     </children>
+    </LM>
+    <LM id="a-mf930709-001-p4s4w19">
+     <m.rf>m#m-mf930709-001-p4s4w19</m.rf>
+     <afun>AuxK</afun>
+     <ord>19</ord>
+    </LM>
+   </children>
+  </LM>
+ </trees>
+</adata>
