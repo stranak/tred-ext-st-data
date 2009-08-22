@@ -38,15 +38,20 @@
         <cdata format="ID"/>
       </member>
 <!--Information on MWEs from s-data - START-->
-      <member name="mwes">
-        <list ordered="0">
-          <structure>
-            <member name="type" required="1" type="s-node.type"/>
-            <member name="set_id" required="1">
-              <cdata format="any"/>
-            </member>
-          </structure>
-        </list>
+<!--      <member name="mwes">-->
+<!--        <list ordered="0">-->
+<!--          <structure>-->
+<!--            <member name="type" required="1" type="s-node.type"/>-->
+<!--            <member name="set_id" required="1">-->
+<!--              <cdata format="any"/>-->
+<!--            </member>-->
+<!--          </structure>-->
+<!--        </list>-->
+<!--      </member>-->
+      <member name="mwes" required="0">
+	      <sequence>
+		      <element name="st" type="st-node.type"/>
+	      </sequence>
       </member>
 <!--Information on MWEs from s-data - END  -->
       <member name="atree.rf">
@@ -504,33 +509,18 @@
   <type name="s-node.type">
       <structure name="s-node">
           <member as_attribute="1" name="id" role="#ID" required="1"><cdata format="ID"/></member>
-          <member name="lexicon-id" required="1"><cdata format="PMLREF"/></member>
+          <member name="lexicon-id" required="1"><cdata format="any"/></member>
       </structure>
   </type>
-
-    <derive name="sm-node.type" type="s-node.type">
-      <structure name="sm-node.type">
-          <member name="m.rf">
-              <list ordered="1" type="m-node.type"/>
-          </member> 
-      </structure>
-  </derive>
-
-  <!-- s-node linking a sense to a set of a-nodes -->
-  <derive name="sa-node.type" type="s-node.type">
-      <structure name="sa-node.type">
-          <member name="a.rf">
-              <list ordered="1" type="a-node.type"/>
-          </member> 
-      </structure>
-  </derive>
 
   <!-- s-node linking a sense to a set of t-nodes -->
   <derive name="st-node.type" type="s-node.type">
       <structure name="st-node.type">
-          <member name="t.rf">
-              <list ordered="1" type="t-node.type"/>
-          </member> 
+	  <member name="t.rf">
+		  <list ordered="0">
+			  <cdata format="PMLREF"/>
+		  </list>
+	  </member>
       </structure>
   </derive>
 

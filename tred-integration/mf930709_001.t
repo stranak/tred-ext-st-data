@@ -270,6 +270,15 @@
    </children>
   </LM>
   <LM id="t-mf930709-001-p3s1B">
+	<mwes>
+	   <st id="s-mf930709-001-l6">
+		   <lexicon-id>s##time</lexicon-id>
+		   <t.rf>
+		   <LM>t#t-mf930709-001-p3s1Bw5</LM>
+		   <LM>t#t-mf930709-001-p3s1Bw7</LM>
+		   </t.rf>
+	   </st>
+    </mwes>
    <atree.rf>a#a-mf930709-001-p3s1B</atree.rf>
    <nodetype>root</nodetype>
    <deepord>0</deepord>
