@@ -1,0 +1,15 @@
+digraph structs {
+    label = "PDT";
+    node [shape=record];
+	subgraph sdata {
+            rankdir=LR;
+            sdata [label="header|<meta> meta|{<sm1> sm.node1|<sm2> sm.node2}"];
+            label="s-data";
+        }
+	subgraph mdata {
+        mdata [label="trees|{tree1| {<w1> word1|word2|word_n}| tree3| {word1|word2|<w3> word3|word_n}|tree_n}"];
+        label = "mdata";
+        }
+	sdata:sm1 -> mdata:w1;
+	sdata:sm2 -> mdata:w3;
+}

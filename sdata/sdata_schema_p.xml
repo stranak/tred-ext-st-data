@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pml_schema xmlns="http://ufal.mff.cuni.cz/pdt/pml/schema/">
+  <description>PDT 2.0 sense (WSD) layer</description>
+  <reference name="mdata" readas="dom"></reference>
+  <reference name="tdata" readas="dom"></reference>
+  <root name="sdata">
+    <element name="meta" required="0">
+      <structure>
+        <member name="annotation_info">
+          <structure name="s-annotation-info">
+            <member name="version_info"><cdata format="any"></cdata></member>
+   	    <member name="desc"><cdata format="any"></cdata></member>
+          </structure>
+        </member>
+      </structure>
+    </element>
+    <element name="doc">
+      <attribute name="id" required="1" role="#ID"><cdata format="ID"></cdata></attribute>
+      <attribute name="source_id"><cdata format="any"></cdata></attribute>
+      <element name="docmeta">
+	<sequence>
+	  <element name="othermeta">
+	    <attribute name="origin"><cdata format="any"></cdata></attribute>
+            <cdata format="any"></cdata>
+          </element>
+	</sequence>
+      </element>
+      <sequence>
+	    <element name="s" type="s-node.type"></element>
+      </sequence>
+    </element>
+  </root>
+
+  <type name="s-node.type">
+    <structure name="s-node">
+      <member as_attribute="1" name="id" required="1" role="#ID"><cdata format="ID"></cdata></member>
+      <member name="lemma" required="1"><cdata format="any"></cdata></member>
+      <member name="m.rf">
+          <list ordered="1" role="#KNIT" type="m-node.type"></list>
+      </member> 
+      <member name="t.rf">
+          <list ordered="1" role="#KNIT" type="t-node.type"></list>
+      </member>     
+  </structure>
+  </type>
+
+  <type name="m-node.type">
+    <structure name="m-node">
+      <member as_attribute="1" name="id" required="1" role="#ID"><cdata format="ID"></cdata></member>
+      <member name="src.rf"><cdata format="PMLREF"></cdata></member>
+      <member name="w.rf">
+        <list ordered="1" role="#KNIT" type="w-node.type"></list>
+      </member>
+      <member name="form_change">
+	<choice>
+	  <value>ctcd</value>
+	  <value>spell</value>
+	  <value>insert</value>
+	  <value>num_normalization</value>
+	</choice>
+      </member>
+      <member name="form" required="1"><cdata format="any"></cdata></member>
+      <member name="lemma" required="1"><cdata format="any"></cdata></member>
+      <member name="tag" required="1"><cdata format="any"></cdata></member>
+    </structure>
+  </type>
+
+  <type name="bool.type">
+    <choice>
+      <value>0</value>
+      <value>1</value>
+    </choice>
+  </type>
+
+</pml_schema>

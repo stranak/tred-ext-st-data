@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<sdata xmlns="http://ufal.mff.cuni.cz/pdt/pml/">
+ <head>
+  <schema href="sdata_schema.xml" />
+  <references>
+   <reffile id="t" name="tdata" href="cmpr9410_001.t.gz" />
+   <reffile id="m" name="mdata" href="cmpr9410_001.m.gz" />
+  </references>
+ </head>
+ <meta>
+  <annotation_info>
+   <desc>Manual annotation with automatic pre-annotation</desc>
+  </annotation_info>
+ </meta>
+ <wsd>
+     
+ </wsd>    
+ </sdata>
