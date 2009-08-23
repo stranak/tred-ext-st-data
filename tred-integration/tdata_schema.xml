@@ -49,9 +49,9 @@
 <!--        </list>-->
 <!--      </member>-->
       <member name="mwes" required="0">
-	      <sequence>
-		      <element name="st" type="st-node.type"/>
-	      </sequence>
+          <sequence>
+              <element name="st" type="st-node.type"/>
+          </sequence>
       </member>
 <!--Information on MWEs from s-data - END  -->
       <member name="atree.rf">
@@ -515,12 +515,12 @@
 
   <!-- s-node linking a sense to a set of t-nodes -->
   <derive name="st-node.type" type="s-node.type">
-      <structure name="st-node.type">
-	  <member name="t.rf">
-		  <list ordered="0">
-			  <cdata format="PMLREF"/>
-		  </list>
-	  </member>
+      <structure name="st-node">
+          <member name="t.rf">
+              <list ordered="0">
+                  <cdata format="PMLREF"/>
+              </list>
+          </member>
       </structure>
   </derive>
 
