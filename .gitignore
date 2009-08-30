@@ -2,9 +2,9 @@
 *.lock
 .DS_Store
 CFG-2009/Paper.pdf
-CFG-2009/Paper.aux
-CFG-2009/Paper.log
-CFG-2009/rosen/cfg.log
-CFG-2009/rosen/cfg.aux
+*.aux
+*.log
+*.bbl
+*.blg
 CFG-2009/rosen/cfg.pdf
 missfont.log
