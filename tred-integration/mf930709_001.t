@@ -274,8 +274,8 @@
         <st id="s-mf930709-001-l6">
             <lexicon-id>s##time</lexicon-id>
             <t.rf>
-                <LM>t#t-mf930709-001-p3s1Bw5</LM>
-                <LM>t#t-mf930709-001-p3s1Bw7</LM>
+                <LM>t-mf930709-001-p3s1Bw5</LM>
+                <LM>t-mf930709-001-p3s1Bw7</LM>
             </t.rf>
         </st>
     </mwes>
@@ -1599,57 +1599,57 @@
           <st id="s-mf930709-001-l13">
               <lexicon-id>s##person</lexicon-id>
               <t.rf>
-                  <LM>t#t-mf930709-001-p4s1w12</LM>
-                  <LM>t#t-mf930709-001-p4s1w13</LM>
+                  <LM>t-mf930709-001-p4s1w12</LM>
+                  <LM>t-mf930709-001-p4s1w13</LM>
               </t.rf>
           </st>
           <st id="s-mf930709-001-l18">
               <lexicon-id>s##person</lexicon-id>
               <t.rf>         
-                  <LM>t#t-mf930709-001-p4s1w22</LM>
-                  <LM>t#t-mf930709-001-p4s1w23</LM>
+                  <LM>t-mf930709-001-p4s1w22</LM>
+                  <LM>t-mf930709-001-p4s1w23</LM>
               </t.rf>
           </st>
           <st id="s-mf930709-001-l23">
               <lexicon-id>s##person</lexicon-id>
               <t.rf>
-                  <LM>t#t-mf930709-001-p4s1w32</LM>
-                  <LM>t#t-mf930709-001-p4s1w33</LM>
+                  <LM>t-mf930709-001-p4s1w32</LM>
+                  <LM>t-mf930709-001-p4s1w33</LM>
               </t.rf>
           </st>
           <st id="s-mf930709-001-l29">
               <lexicon-id>s##person</lexicon-id>
               <t.rf>
-                  <LM>t#t-mf930709-001-p4s1w45</LM>
-                  <LM>t#t-mf930709-001-p4s1w46</LM>
+                  <LM>t-mf930709-001-p4s1w45</LM>
+                  <LM>t-mf930709-001-p4s1w46</LM>
               </t.rf>
           </st>
           <st id="s-mf930709-001-l32">
               <lexicon-id>s##person</lexicon-id>
               <t.rf>
-                  <LM>t#t-mf930709-001-p4s1w53</LM>
-                  <LM>t#t-mf930709-001-p4s1w54</LM>
+                  <LM>t-mf930709-001-p4s1w53</LM>
+                  <LM>t-mf930709-001-p4s1w54</LM>
               </t.rf>
           </st>
           <st id="s-mf930709-001-l35">
               <lexicon-id>s##person</lexicon-id>
               <t.rf>
-                  <LM>t#t-mf930709-001-p4s1w56</LM>
-                  <LM>t#t-mf930709-001-p4s1w57</LM>
+                  <LM>t-mf930709-001-p4s1w56</LM>
+                  <LM>t-mf930709-001-p4s1w57</LM>
               </t.rf>
           </st>
           <st id="s-mf930709-001-l38">
               <lexicon-id>s##person</lexicon-id>
               <t.rf>
-                  <LM>t#t-mf930709-001-p4s1w59</LM>
-                  <LM>t#t-mf930709-001-p4s1w60</LM>
+                  <LM>t-mf930709-001-p4s1w59</LM>
+                  <LM>t-mf930709-001-p4s1w60</LM>
               </t.rf>
           </st>
           <st id="s-mf930709-001-l43">
               <lexicon-id>s##person</lexicon-id>
               <t.rf>
-                  <LM>t#t-mf930709-001-p4s1w63</LM>
-                  <LM>t#t-mf930709-001-p4s1w64</LM>
+                  <LM>t-mf930709-001-p4s1w63</LM>
+                  <LM>t-mf930709-001-p4s1w64</LM>
               </t.rf>
           </st>
       </mwes>
