@@ -272,8 +272,13 @@
   <LM id="t-mf930709-001-p3s1B">
     <mwes>
         <st id="s-mf930709-001-l6">
+<<<<<<< HEAD:tred-integration/mf930709_001.t
         <lexicon-id>s##time</lexicon-id>
         <t.rf>
+=======
+            <lexicon-id>s##time</lexicon-id>
+            <t.rf>
+>>>>>>> 31ba0f1b54f286fb81467cb76ebbddb4fea00665:tred-integration/mf930709_001.t
                 <LM>t-mf930709-001-p3s1Bw5</LM>
                 <LM>t-mf930709-001-p3s1Bw7</LM>
             </t.rf>
