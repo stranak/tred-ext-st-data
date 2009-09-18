@@ -38,24 +38,23 @@ for my $snode (@st) {
     print "\n";
 }
 
-my $tfile = substr( $sfile, 0, -1 );
+my $tfile = substr( $sfile, 0, -2 );
+$tfile = $tfile.'t';
+
 my $ttwig = new XML::Twig;
 $ttwig->parsefile("$tfile");
 my $troot = $ttwig->root;
 my @tdata = $troot->children;
 my @ttree = $tdata[2]->children;
-foreach my $snode (@sdata) {
-    my @trf = $snode->children('t.rf');
-    my $s_first_id = $trf[0] =~ s/t#t/t/;
+foreach my $snode (@st) {
+    my @trf_node = $snode->children('t.rf');
+    my @trf_text = map { $_ = $_->text; s/t#t/t/ }@trf_node;
+    my $s_first_id = $trf_text[0];
+    # BUG!
+    print "S FIRST ID = $s_first_id\n";
     foreach my $troot (@ttree) {
-        if (match( $troot, $snode )) {
-            $snode->paste($troot);
-        };
+        my @lmembers = $troot->descendants('LM');
+        my @tnode_ids = map { $_->att('id') }@lmembers;
+        print join "\n", @tnode_ids, "\n\n";
     }
-}
-
-sub match {
-
-    # projit strom (asi rekurzi) a overit, jestli obsahuje children/LM/@id =
-    # $s_first_id
 }
