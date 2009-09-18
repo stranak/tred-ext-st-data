@@ -39,7 +39,7 @@ for my $snode (@st) {
 }
 
 my $tfile = substr( $sfile, 0, -2 );
-$tfile = $tfile.'t';
+$tfile = $tfile . 't';
 
 my $ttwig = new XML::Twig;
 $ttwig->parsefile("$tfile");
@@ -48,13 +48,23 @@ my @tdata = $troot->children;
 my @ttree = $tdata[2]->children;
 foreach my $snode (@st) {
     my @trf_node = $snode->children('t.rf');
-    my @trf_text = map { $_ = $_->text; s/t#t/t/ }@trf_node;
+    my @trf_text;
+    for my $node (@trf_node) {
+        my $t = $node->text;
+        $t =~ s/t#t/t/;
+        push @trf_text, $t;
+    }
     my $s_first_id = $trf_text[0];
-    # BUG!
-    print "S FIRST ID = $s_first_id\n";
-    foreach my $troot (@ttree) {
+
+    foreach my $troot (@ttree) { 
+        no warnings;
         my @lmembers = $troot->descendants('LM');
-        my @tnode_ids = map { $_->att('id') }@lmembers;
-        print join "\n", @tnode_ids, "\n\n";
+        my @tnode_ids = map { $_->att('id') } @lmembers;
+        my $match = grep { $_ eq $s_first_id } @tnode_ids;
+        if ($match){
+            $snode->paste($troot);
+            # TODO Modify s-node to the correct form first!
+            # make a copy to paste.
+        }
     }
 }
