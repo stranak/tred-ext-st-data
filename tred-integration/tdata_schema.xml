@@ -37,23 +37,6 @@
       <member as_attribute="1" name="id" role="#ID" required="1">
         <cdata format="ID"/>
       </member>
-<!--Information on MWEs from s-data - START-->
-<!--      <member name="mwes">-->
-<!--        <list ordered="0">-->
-<!--          <structure>-->
-<!--            <member name="type" required="1" type="s-node.type"/>-->
-<!--            <member name="set_id" required="1">-->
-<!--              <cdata format="any"/>-->
-<!--            </member>-->
-<!--          </structure>-->
-<!--        </list>-->
-<!--      </member>-->
-      <member name="mwes" required="0">
-          <sequence>
-              <element name="st" type="st-node.type"/>
-          </sequence>
-      </member>
-<!--Information on MWEs from s-data - END  -->
       <member name="atree.rf">
         <cdata format="PMLREF"/>
       </member>
@@ -504,24 +487,5 @@
       <value>1</value>
     </choice>
   </type>
-
-<!-- s-data additions: for now coppied, should be probably linked instead -->
-  <type name="s-node.type">
-      <structure name="s-node">
-          <member as_attribute="1" name="id" role="#ID" required="1"><cdata format="ID"/></member>
-          <member name="lexicon-id" required="1"><cdata format="any"/></member>
-      </structure>
-  </type>
-
-  <!-- s-node linking a sense to a set of t-nodes -->
-  <derive name="st-node.type" type="s-node.type">
-      <structure name="st-node">
-          <member name="tnodes">
-              <list ordered="0">
-                  <cdata format="PMLREF"/>
-              </list>
-          </member>
-      </structure>
-  </derive>
 
 </pml_schema>
