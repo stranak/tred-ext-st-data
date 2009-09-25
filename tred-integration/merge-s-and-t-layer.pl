@@ -41,10 +41,10 @@ foreach my $s_filename (@ARGV) {
     $s_cont->registerNs( pml => 'http://ufal.mff.cuni.cz/pdt/pml/' );
 
     # Parse t-file and get t-trees
-    my $basename   = $s_filename =~ s/$st_suffix//;
-    my $t_filename = <$basename.t*>;
-    my $tdoc       = $parser->parse_file($t_filename);
-    my $t_cont     = XML::LibXML::XPathContext->new( $tdoc->documentElement() );
+    my $basename = $s_filename =~ s/$st_suffix//;
+    my ($t_filename) = <$basename.t*>;
+    my $tdoc = $parser->parse_file($t_filename);
+    my $t_cont = XML::LibXML::XPathContext->new( $tdoc->documentElement() );
     $t_cont->registerNs( pml => 'http://ufal.mff.cuni.cz/pdt/pml/' );
     my @t_tree = $tdoc->findnodes('/pml:tdata/pml:trees/pml:LM');
     my ($t_scheme_href_att) =
@@ -53,8 +53,8 @@ foreach my $s_filename (@ARGV) {
 
     # Modify the s-nodes to the correct form and merge them into t-trees
   SNODE:
-    foreach my $snode ( $s_cont->findnodes('/pml:sdata/pml:wsd/pml:st') )
-    {
+    foreach my $snode ( $s_cont->findnodes('/pml:sdata/pml:wsd/pml:st') ) {
+
         # twig - start - to rewrite
         my $lex_id = $snode->first_child('lexicon-id');
         $lex_id->cut;
@@ -88,6 +88,7 @@ foreach my $s_filename (@ARGV) {
                 $snode->move( 'last_child', $mwes );
             }
         }
+
         # twig - end
     }
     open( my $out, '>', "$s_filename" . ".mwe" );
