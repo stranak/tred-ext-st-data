@@ -23,61 +23,74 @@ use warnings;
 use open qw/:utf8 :std/;
 use XML::Twig;
 use XML::LibXML;
+use Carp;
 
-# Parse s-file and get s-nodes
-my $sfile = $ARGV[0] || die "No file passed: $!";
-$sfile =~ /.st$/ || die "This is not an 'st' file.";
-my $stwig = new XML::Twig;
-$stwig->parsefile("$sfile");
-my $sroot = $stwig->root;
-my @sdata = $sroot->children;
-my @st    = $sdata[2]->children;
+my $st_suffix = qr/\.st\.g?zi?p?$/;
+my $t_suffix  = qr/\.t\.g?zi?p?$/;
 
-# Parse t-file and get t-trees
-my $tfile = substr( $sfile, 0, -2 );
-$tfile = $tfile . 't';
-my $ttwig = new XML::Twig( pretty_print => 'nice' );
-$ttwig->parsefile("$tfile");
-my $troot = $ttwig->root;
-my ($sch) = $troot->get_xpath('/tdata/head/schema');
-$sch->set_att('href', 'tdata_mwe_schema.xml');
-my @tdata = $troot->children;
-my @ttree = $tdata[2]->children;
+foreach my $s_filename (@ARGV) {
 
-# Modify the s-nodes to the correct form and merge them into t-trees
-SNODE: foreach my $snode (@st) {
-    my $lex_id = $snode->first_child('lexicon-id');
-    $lex_id->cut;
-    $snode->insert('tnodes');
-    my $tnodes_list = $snode->first_child('tnodes');
-    $lex_id->paste( 'first_child', $snode );
-    my @tnodes = $tnodes_list->children;
-    map {
-        $_->set_tag('LM');
-        my $t = $_->text;
-        $t =~ s/t#t/t/;
-        $_->set_text($t);
-    } @tnodes;
-    my $s_first_tnode = $tnodes[0]->text;
-
-  TNODE: foreach my $troot (@ttree) {
-        no warnings;
-        my @lmembers  = $troot->descendants('LM');
-        my @tnode_ids = map { $_->att('id') } @lmembers;
-        my $match     = grep { $_ eq $s_first_tnode } @tnode_ids;
-        my ( $mwes_exist, $mwes );
-        if ( $troot->first_child('mwes') ) {
-            $mwes_exist = 1;
-            $mwes       = $troot->first_child('mwes');
-        }
-        else {
-            $mwes = new XML::Twig::Elt('mwes');
-        }
-        if ($match) {
-            $mwes->paste($troot) if not $mwes_exist;
-            $snode->move( 'last_child', $mwes );
-        }
+    # Parse s-file and get s-nodes
+    if ( not $s_filename =~ $st_suffix ) {
+        carp "$s_filename is not an 'st' file.";
+        next;
     }
+    my $parser = XML::LibXML->new();
+    my $sdoc   = $parser->parse_file($s_filename);
+    my $s_cont = XML::LibXML::XPathContext->new( $sdoc->documentElement() );
+    $s_cont->registerNs( pml => 'http://ufal.mff.cuni.cz/pdt/pml/' );
+
+    # Parse t-file and get t-trees
+    my $basename = $s_filename =~ s/$st_suffix//;
+    my ($t_filename) = <$basename.t*>;
+    my $tdoc = $parser->parse_file($t_filename);
+    my $t_cont = XML::LibXML::XPathContext->new( $tdoc->documentElement() );
+    $t_cont->registerNs( pml => 'http://ufal.mff.cuni.cz/pdt/pml/' );
+    my @t_tree = $tdoc->findnodes('/pml:tdata/pml:trees/pml:LM');
+    my ($t_scheme_href_att) =
+      $tdoc->findnodes('/pml:tdata/pml:head/pml:schema/@href');
+    $t_scheme_href_att->setValue('tdata_mwe_schema.xml');
+
+    # Modify the s-nodes to the correct form and merge them into t-trees
+  SNODE:
+    foreach my $snode ( $s_cont->findnodes('/pml:sdata/pml:wsd/pml:st') ) {
+
+        # twig - start - to rewrite
+        my $lex_id = $snode->first_child('lexicon-id');
+        $lex_id->cut;
+        $snode->insert('tnodes');
+        my $tnodes_list = $snode->first_child('tnodes');
+        $lex_id->paste( 'first_child', $snode );
+        my @tnodes = $tnodes_list->children;
+        map {
+            $_->set_tag('LM');
+            my $t = $_->text;
+            $t =~ s/t#t/t/;
+            $_->set_text($t);
+        } @tnodes;
+        my $s_first_tnode = $tnodes[0]->text;
+
+      TNODE: foreach my $troot (@t_tree) {
+            no warnings;
+            my @lmembers  = $troot->descendants('LM');
+            my @tnode_ids = map { $_->att('id') } @lmembers;
+            my $match     = grep { $_ eq $s_first_tnode } @tnode_ids;
+            my ( $mwes_exist, $mwes );
+            if ( $troot->first_child('mwes') ) {
+                $mwes_exist = 1;
+                $mwes       = $troot->first_child('mwes');
+            }
+            else {
+                $mwes = new XML::Twig::Elt('mwes');
+            }
+            if ($match) {
+                $mwes->paste($troot) if not $mwes_exist;
+                $snode->move( 'last_child', $mwes );
+            }
+        }
+
+        # twig - end
+    }
+    open( my $out, '>', "$s_filename" . ".mwe" );
+    print $out $tdoc->toString;
 }
-open( my $out, '>', "$ARGV[0]" . ".mwe" );
-$ttwig->print($out);
