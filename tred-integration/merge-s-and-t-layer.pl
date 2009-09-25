@@ -22,6 +22,7 @@ use strict;
 use warnings;
 use open qw/:utf8 :std/;
 use XML::Twig;
+use XML::LibXML;
 
 # Parse s-file and get s-nodes
 my $sfile = $ARGV[0] || die "No file passed: $!";
