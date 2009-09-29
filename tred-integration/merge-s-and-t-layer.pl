@@ -47,14 +47,14 @@ foreach my $s_filename (@ARGV) {
     my $t_cont = XML::LibXML::XPathContext->new( $tdoc->documentElement() );
     $t_cont->registerNs( pml => 'http://ufal.mff.cuni.cz/pdt/pml/' );
     my @t_tree = $tdoc->findnodes('/pml:tdata/pml:trees/pml:LM');
-    my ($t_scheme_href_att) =
-      $tdoc->findnodes('/pml:tdata/pml:head/pml:schema/@href');
-    $t_scheme_href_att->setValue('tdata_mwe_schema.xml');
+    my ($t_schema) = $tdoc->findnodes('/pml:tdata/pml:head/pml:schema');
+    $t_schema->setAttribute('href', 'tdata_mwe_schema.xml');
 
     # Modify the s-nodes to the correct form and merge them into t-trees
   SNODE:
     foreach my $snode ( $s_cont->findnodes('/pml:sdata/pml:wsd/pml:st') ) {
 
+        my (
         # twig - start - to rewrite
         my $lex_id = $snode->first_child('lexicon-id');
         $lex_id->cut;
