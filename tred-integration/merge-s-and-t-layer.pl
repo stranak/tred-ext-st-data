@@ -46,14 +46,14 @@ foreach my $s_filename (@ARGV) {
     my $tdoc = $parser->parse_file($t_filename);
     my $t_cont = XML::LibXML::XPathContext->new( $tdoc->documentElement() );
     $t_cont->registerNs( pml => 'http://ufal.mff.cuni.cz/pdt/pml/' );
-    my @t_tree = $tdoc->findnodes('/pml:tdata/pml:trees/pml:LM');
+    my @t_trees = $tdoc->findnodes('/pml:tdata/pml:trees/pml:LM');
     my ($t_schema) = $tdoc->findnodes('/pml:tdata/pml:head/pml:schema');
     $t_schema->setAttribute( 'href', 'tdata_mwe_schema.xml' );
 
     # Modify the s-nodes to the correct form and merge them into t-trees
   SNODE:
     foreach my $snode ( $s_cont->findnodes('/pml:sdata/pml:wsd/pml:st') ) {
-        my @tnode_rf   = $snode->findnodes('./pml:t.rf');
+        my @tnode_rf   = $snode->findnodes('/pml:t.rf');
         my @tnodes_lms = map $_->unbindNode, @tnode_rf;
         my $tnodes     = $sdoc->createElement('tnodes');
         $tnodes = $snode->appendChild($tnodes);
@@ -62,28 +62,29 @@ foreach my $s_filename (@ARGV) {
             $_->replaceDataRegEx( 't#t', 't' );
             $tnodes->appendChild($_)
         } @tnodes_lms;
-        my ($s_first_tnode) = $tnodes->findnodes('./pml:LM');
+        my ($s_first_tnode) = $tnodes->findnodes('/pml:LM');
 
-      TNODE: foreach my $troot (@t_tree) {
+      TNODE: foreach my $troot (@t_trees) {
             no warnings;
-            my @lmembers  = $troot->descendants(' LM ');
-            my @tnode_ids = map { $_->att(' id ') } @lmembers;
-            my $match     = grep { $_ eq $s_first_tnode } @tnode_ids;
+            my @lmembers  = $troot->findnodes('//pml:LM');
+            my @tnode_ids = map $_->getAttribute(' id '), @lmembers;
+            my $match     = grep $_ eq $s_first_tnode, @tnode_ids;
             my ( $mwes_exist, $mwes );
-            if ( $troot->first_child(' mwes ') ) {
+            if ( $troot->exists('/pml:mwes') ) {
                 $mwes_exist = 1;
-                $mwes       = $troot->first_child(' mwes ');
+                ($mwes) = $troot->findnodes('/pml:mwes');
             }
             else {
-                $mwes = new XML::Twig::Elt(' mwes ');
+                $mwes = $tdoc->createElement('mwes');
             }
             if ($match) {
-                $mwes->paste($troot) if not $mwes_exist;
-                $snode->move( ' last_child ', $mwes );
+                $troot->appendChild($mwes) if not $mwes_exist;
+                my $snode_parent = $snode->parentNode;
+                $snode = removeChild($snode_parent);
+                $mwes->appendChild($snode);
             }
         }
 
-        # twig - end
     }
     open( my $out, ' > ', "$s_filename" . ".mwe" );
     print $out $tdoc->toString;
