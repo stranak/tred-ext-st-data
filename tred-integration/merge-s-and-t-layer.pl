@@ -86,6 +86,6 @@ foreach my $s_filename (@ARGV) {
         }
 
     }
-    open( my $out, ' > ', "$s_filename" . ".mwe" );
+    open( my $out, ' > ', "$t_filename" . ".mwe" );
     print $out $tdoc->toString;
 }
