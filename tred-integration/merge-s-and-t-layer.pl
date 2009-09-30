@@ -48,49 +48,43 @@ foreach my $s_filename (@ARGV) {
     $t_cont->registerNs( pml => 'http://ufal.mff.cuni.cz/pdt/pml/' );
     my @t_tree = $tdoc->findnodes('/pml:tdata/pml:trees/pml:LM');
     my ($t_schema) = $tdoc->findnodes('/pml:tdata/pml:head/pml:schema');
-    $t_schema->setAttribute('href', 'tdata_mwe_schema.xml');
+    $t_schema->setAttribute( 'href', 'tdata_mwe_schema.xml' );
 
     # Modify the s-nodes to the correct form and merge them into t-trees
   SNODE:
     foreach my $snode ( $s_cont->findnodes('/pml:sdata/pml:wsd/pml:st') ) {
-
-        my (
-        # twig - start - to rewrite
-        my $lex_id = $snode->first_child('lexicon-id');
-        $lex_id->cut;
-        $snode->insert('tnodes');
-        my $tnodes_list = $snode->first_child('tnodes');
-        $lex_id->paste( 'first_child', $snode );
-        my @tnodes = $tnodes_list->children;
+        my @tnode_rf   = $snode->findnodes('./pml:t.rf');
+        my @tnodes_lms = map $_->unbindNode, @tnode_rf;
+        my $tnodes     = $sdoc->createElement('tnodes');
+        $tnodes = $snode->appendChild($tnodes);
         map {
-            $_->set_tag('LM');
-            my $t = $_->text;
-            $t =~ s/t#t/t/;
-            $_->set_text($t);
-        } @tnodes;
-        my $s_first_tnode = $tnodes[0]->text;
+            $_->setNodeName('LM');
+            $_->replaceDataRegEx( 't#t', 't' );
+            $tnodes->appendChild($_)
+        } @tnodes_lms;
+        my ($s_first_tnode) = $tnodes->findnodes('./pml:LM');
 
       TNODE: foreach my $troot (@t_tree) {
             no warnings;
-            my @lmembers  = $troot->descendants('LM');
-            my @tnode_ids = map { $_->att('id') } @lmembers;
+            my @lmembers  = $troot->descendants(' LM ');
+            my @tnode_ids = map { $_->att(' id ') } @lmembers;
             my $match     = grep { $_ eq $s_first_tnode } @tnode_ids;
             my ( $mwes_exist, $mwes );
-            if ( $troot->first_child('mwes') ) {
+            if ( $troot->first_child(' mwes ') ) {
                 $mwes_exist = 1;
-                $mwes       = $troot->first_child('mwes');
+                $mwes       = $troot->first_child(' mwes ');
             }
             else {
-                $mwes = new XML::Twig::Elt('mwes');
+                $mwes = new XML::Twig::Elt(' mwes ');
             }
             if ($match) {
                 $mwes->paste($troot) if not $mwes_exist;
-                $snode->move( 'last_child', $mwes );
+                $snode->move( ' last_child ', $mwes );
             }
         }
 
         # twig - end
     }
-    open( my $out, '>', "$s_filename" . ".mwe" );
+    open( my $out, ' > ', "$s_filename" . ".mwe" );
     print $out $tdoc->toString;
 }
