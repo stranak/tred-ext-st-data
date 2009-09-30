@@ -8,7 +8,7 @@
 #  DESCRIPTION:  Integrate the s-layer annotation into the t-layer files.
 #
 #      OPTIONS:  ---
-# REQUIREMENTS:  S-files and t-files uncompressed, a,m,w files gzipped.
+# REQUIREMENTS:  
 #         BUGS:  Will create duplicate <st> nodes, if there are already some
 #                in the input t-file.
 #        NOTES:  ---
