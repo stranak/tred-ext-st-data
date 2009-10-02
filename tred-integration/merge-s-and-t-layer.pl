@@ -8,7 +8,7 @@
 #  DESCRIPTION:  Integrate the s-layer annotation into the t-layer files.
 #
 #      OPTIONS:  ---
-# REQUIREMENTS:  
+# REQUIREMENTS:
 #         BUGS:  Will create duplicate <st> nodes, if there are already some
 #                in the input t-file.
 #        NOTES:  ---
@@ -21,7 +21,6 @@
 use strict;
 use warnings;
 use open qw/:utf8 :std/;
-use XML::Twig;
 use XML::LibXML;
 use Carp;
 
@@ -41,51 +40,54 @@ foreach my $s_filename (@ARGV) {
     $s_cont->registerNs( pml => 'http://ufal.mff.cuni.cz/pdt/pml/' );
 
     # Parse t-file and get t-trees
-    my $basename = $s_filename =~ s/$st_suffix//;
-    my ($t_filename) = <$basename.t*>;
+    $s_filename =~ s/$st_suffix//;
+    my ($t_filename) = <$s_filename.t*>;
     my $tdoc = $parser->parse_file($t_filename);
     my $t_cont = XML::LibXML::XPathContext->new( $tdoc->documentElement() );
     $t_cont->registerNs( pml => 'http://ufal.mff.cuni.cz/pdt/pml/' );
-    my @t_trees = $tdoc->findnodes('/pml:tdata/pml:trees/pml:LM');
-    my ($t_schema) = $tdoc->findnodes('/pml:tdata/pml:head/pml:schema');
+    my @t_trees = $t_cont->findnodes('/pml:tdata/pml:trees/pml:LM');
+    my ($t_schema) = $t_cont->findnodes('/pml:tdata/pml:head/pml:schema');
     $t_schema->setAttribute( 'href', 'tdata_mwe_schema.xml' );
 
     # Modify the s-nodes to the correct form and merge them into t-trees
+    my @snodes = $s_cont->findnodes('/pml:sdata/pml:wsd/pml:st');
   SNODE:
-    foreach my $snode ( $s_cont->findnodes('/pml:sdata/pml:wsd/pml:st') ) {
-        my @tnode_rf   = $snode->findnodes('/pml:t.rf');
-        my @tnodes_lms = map $_->unbindNode, @tnode_rf;
-        my $tnodes     = $sdoc->createElement('tnodes');
+    foreach my $snode (@snodes) {
+        my @tnode_rf = $s_cont->findnodes( './pml:t.rf', $snode );
+        map $_->unbindNode, @tnode_rf;
+        my $tnodes = $sdoc->createElement('tnodes');
         $tnodes = $snode->appendChild($tnodes);
         map {
             $_->setNodeName('LM');
-            $_->replaceDataRegEx( 't#t', 't' );
-            $tnodes->appendChild($_)
-        } @tnodes_lms;
-        my ($s_first_tnode) = $tnodes->findnodes('/pml:LM');
+            my ($textchild) = $_->childNodes;
+            $textchild->replaceDataRegEx( 't#t', 't' );
+            $tnodes->appendChild($_);
+        } @tnode_rf;
+        my ($s_first_tnode) = map $_->toString,
+          $s_cont->findnodes( './pml:LM/text()', $tnodes );
 
       TNODE: foreach my $troot (@t_trees) {
             no warnings;
-            my @lmembers  = $troot->findnodes('//pml:LM');
-            my @tnode_ids = map $_->getAttribute(' id '), @lmembers;
-            my $match     = grep $_ eq $s_first_tnode, @tnode_ids;
+            my @lmembers = $t_cont->findnodes( './/pml:LM', $troot );
+            my @tnode_ids = map $_->getAttribute('id'), @lmembers;
+            my ($match) = grep $_ eq $s_first_tnode, @tnode_ids;
             my ( $mwes_exist, $mwes );
-            if ( $troot->exists('/pml:mwes') ) {
-                $mwes_exist = 1;
-                ($mwes) = $troot->findnodes('/pml:mwes');
-            }
-            else {
-                $mwes = $tdoc->createElement('mwes');
-            }
             if ($match) {
-                $troot->appendChild($mwes) if not $mwes_exist;
-                my $snode_parent = $snode->parentNode;
-                $snode = removeChild($snode_parent);
-                $mwes->appendChild($snode);
+                if ( $t_cont->exists( './mwes', $troot ) ) {
+                    $mwes_exist = 1;
+                    ($mwes) = $t_cont->findnodes( './mwes', $troot );
+                }
+                else {
+                    $mwes = $tdoc->createElement('mwes');
+            $troot->insertBefore($mwes, $troot->firstChild);
+                }
+            my $snode_parent = $snode->parentNode;
+            $snode = $snode_parent->removeChild($snode);
+            $mwes->appendChild($snode);
             }
         }
-
     }
-    open( my $out, ' > ', "$t_filename" . ".mwe" );
-    print $out $tdoc->toString;
+my $tmwe_filename = $t_filename . ".mwe.gz";
+$tdoc->setCompression('6');
+$tdoc->toFile( $tmwe_filename, '1' );
 }
