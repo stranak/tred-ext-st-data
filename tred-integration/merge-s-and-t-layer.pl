@@ -3,26 +3,21 @@
 #
 #         FILE:  merge-s-and-t-layer.pl
 #
-#        USAGE:  ./merge-s-and-t-layer.pl <st-file>
+#        USAGE:  ./merge-s-and-t-layer.pl <st-files>
 #
 #  DESCRIPTION:  Integrate the s-layer annotation into the t-layer files.
 #
 #      OPTIONS:  ---
-# REQUIREMENTS:
+# REQUIREMENTS:  Corresponding t-files in the same directory.
 #         BUGS:  Will create duplicate <st> nodes, if there are already some
 #                in the input t-file.
 #        NOTES:  ---
 #       AUTHOR:  Pavel Stranak (stranak@ufal.mff.cuni.cz),
-#      COMPANY:
-#      VERSION:  1.0
-#      CREATED:  2009/09/16 15:14:58
 #===============================================================================
 
 use strict;
 use warnings;
-use open qw/:utf8 :std/;
 use XML::LibXML;
-use Carp;
 
 my $st_suffix = qr/\.st\.g?zi?p?$/;
 my $t_suffix  = qr/\.t\.g?zi?p?$/;
@@ -31,7 +26,7 @@ foreach my $s_filename (@ARGV) {
 
     # Parse s-file and get s-nodes
     if ( not $s_filename =~ $st_suffix ) {
-        carp "$s_filename is not an 'st' file.";
+        warn "$s_filename is not an 'st' file.";
         next;
     }
     my $parser = XML::LibXML->new();
@@ -79,15 +74,15 @@ foreach my $s_filename (@ARGV) {
                 }
                 else {
                     $mwes = $tdoc->createElement('mwes');
-            $troot->insertBefore($mwes, $troot->firstChild);
+                    $troot->insertBefore( $mwes, $troot->firstChild );
                 }
-            my $snode_parent = $snode->parentNode;
-            $snode = $snode_parent->removeChild($snode);
-            $mwes->appendChild($snode);
+                my $snode_parent = $snode->parentNode;
+                $snode = $snode_parent->removeChild($snode);
+                $mwes->appendChild($snode);
             }
         }
     }
-my $tmwe_filename = $t_filename . ".mwe.gz";
-$tdoc->setCompression('6');
-$tdoc->toFile( $tmwe_filename, '1' );
+    my $tmwe_filename = $t_filename . ".mwe.gz";
+    $tdoc->setCompression('6');
+    $tdoc->toFile( $tmwe_filename, '1' );
 }
