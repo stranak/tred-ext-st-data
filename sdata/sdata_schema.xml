@@ -12,7 +12,7 @@
   <!-- Mostly used for old annotation of files that don't have t-layer --> 
   <derive name="sm-node.type" type="s-node.type">
       <structure name="sm-node.type">
-          <member name="m.rf">
+          <member name="mnodes">
               <list ordered="0">
                   <cdata format="PMLREF"/>
               </list>
@@ -23,7 +23,7 @@
   <!-- s-node linking a sense to a set of a-nodes -->
   <derive name="sa-node.type" type="s-node.type">
       <structure name="sa-node.type">
-          <member name="a.rf">
+          <member name="anodes">
               <list ordered="0">
                   <cdata format="PMLREF"/>
               </list>
