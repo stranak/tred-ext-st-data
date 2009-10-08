@@ -30,6 +30,7 @@ foreach my $s_filename (@ARGV) {
         next;
     }
     my $parser = XML::LibXML->new();
+    $parser->keep_blanks(0);
     my $sdoc   = $parser->parse_file($s_filename);
     my $s_cont = XML::LibXML::XPathContext->new( $sdoc->documentElement() );
     $s_cont->registerNs( pml => 'http://ufal.mff.cuni.cz/pdt/pml/' );
@@ -84,5 +85,5 @@ foreach my $s_filename (@ARGV) {
     }
     my $tmwe_filename = $t_filename . ".mwe.gz";
     $tdoc->setCompression('6');
-    $tdoc->toFile( $tmwe_filename, '1' );
+    $tdoc->toFile( $tmwe_filename, 1 );
 }
