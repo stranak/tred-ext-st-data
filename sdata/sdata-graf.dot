@@ -7,9 +7,11 @@ digraph structs {
             label="s-data";
         }
 	subgraph mdata {
-        mdata [label="trees|{tree1| {<w1> word1|word2|word_n}| tree3| {word1|word2|<w3> word3|word_n}|tree_n}"];
+        mdata [label="trees|{tree 1| {<t2w1> word 1|<t2w2> word 2|word m}| tree 3| {<t4w1> word 1|word 2|<t4w3> word 3|word n}|tree n}"];
         label = "mdata";
         }
-	sdata:sm1 -> mdata:w1;
-	sdata:sm2 -> mdata:w3;
+	sdata:sm1 -> mdata:t2w1;
+	sdata:sm1 -> mdata:t2w2;
+	sdata:sm2 -> mdata:t4w1;
+	sdata:sm2 -> mdata:t4w3;
 }
