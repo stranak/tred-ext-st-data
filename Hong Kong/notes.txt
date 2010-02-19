@@ -1,0 +1,11 @@
+sobota:
+- Slajdy budou na webu Tilburg University.
+
+= = SynAF ==  Thierry Declerck (DFKI)
+SynAF v DSpinu a (tedy) Clarinu
+ - synaf uz dovoluje hrany mezi terminaly!
+  * to drive nebylo (JS)
+ 
+ - 30. cerven - cancelation date 
+  * museji do te doby dodat finalni proposal (mozna i schvalit??), aby WG
+    nebyla zrusena.
