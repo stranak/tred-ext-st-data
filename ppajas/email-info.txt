@@ -1,0 +1,73 @@
+From: Petr Pajas <pajas@ufal.mff.cuni.cz>
+Date: 11. února 2010 17:39:40 GMT+01:00
+To: Pavel Stranak <stranak@ufal.mff.cuni.cz>
+Subject: Re: PML transformace
+
+Tak v ~pajas/tred-devel/tred uz by to melo fungovat.
+
+Prikladam pmlbackend_conf, ktery je potreba mit v resource paths
+(napr. v .tred.d nebo adresari resources/ v prislusnem rozsireni) a
+dale opravene tdata_mwe_schema (mate tam chybny import), mirne
+predelany prevodni skript - je ted rozdeleny na modul a skript. TrEdu
+staci ten modul. Musel jsem opravit korektni vyhledani t-souboru na
+zaklade reffiles a ne manipulace s priponami, a nahradit createElement
+za createElementNS, aby byl spravne uz DOM a ne jen vystupni XML
+soubor.
+
+To sdata_schema.xml mate taky blbe (resp neodpovidaji mu st soubory),
+ale to jsem neopravoval. Doporucuju pouzit
+/f/common/exec/validate_pml_stream .
+
+POZOR: vse funguje jen s PML_COMPILE=2 (z nej udelam default jeste
+pred svym odchodem).
+
+Celkove jsem do PMLCompiledReaderu pridal nasledujici nove
+transformace (zatim jen pro cteni):
+
+- transformaci lze provest na zalkade jmena korenoveho elementu a
+namespacu a/nebo XPath. Test namespacu je povinny, pokud se
+transformuje PML vstup (abych zbytecne na PML vstupech netestoval
+vsechny XPath vyrazy ostatnich transformaci)
+
+- transformaci muze zajistit
+* XSLT 1.0, nebo
+* Perl skrze XML::LibXML DOM API (kod dostane a musi vratit
+XML::LibXML::Document)
+* externi program, ktery dostane input jako STDIN a vrati STDOUT
+* externi program, ktery dostane input v souboru (posledni argument) a
+vrati STDOUT
+
+Transformacim se v pmlbackend_conf daji predavat parametry pres <param
+name="jmeno">hodnota</param> nebo <param>hodnota</param> (v Perlu jsou
+v @_ jako 2. a dalsi argument, v shellu jsou to argumenty na prikazove
+radce; jmeno vstupniho souboru je pak posledni argument).
+
+Pro pouziti v extenzi TrEdu doporucuju knihovnu dat do libs/,
+pmlbackend_conf.inc do resources/ a pokud budete chtit pribalit i ten
+skript, tak ten dat do bin/ (ale pouzival bych transformaci pres Perl
+na zaklade modulu).
+
+-- Petr
+
+Dne 8. února 2010 21:25 Pavel Stranak <stranak@ufal.mff.cuni.cz> napsal(a):
+Vkladam seznam s-uzlu do atributu <mwes> t-rootu, v jehoz strome se dane s-uzly vyskytuji.
+Prikladam skript, kterym to delam, zdrojove soubory a vysledek.
+Diky za pomoc, bude prima, kdyz budeme mit pri vydani dat nacitani takhle vylepsene.
+
+-Pavel
+
+
+
+
+On 8.2.2010, at 21:17, Petr Pajas wrote:
+
+Pavle,
+
+jakym zpusobem nakonec delate tu transformaci (slevani) svych PML
+souboru? Potrebuju vedet, na jaky usecase se prioritne zamerit.
+
+-- p
+
+
+
+    
