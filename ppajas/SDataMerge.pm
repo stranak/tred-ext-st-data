@@ -48,7 +48,7 @@ sub transform {
     foreach my $snode (@snodes) {
         my @tnode_rf = $s_cont->findnodes( './pml:t.rf', $snode );
         map $_->unbindNode, @tnode_rf;
-        my $tnodes = $sdoc->createElementNS(PML_NS, 'tnodes');
+        my $tnodes = $sdoc->createElementNS(PML_NS, 'tnode.rfs');
         $tnodes = $snode->appendChild($tnodes);
         map {
             $_->setNodeName('LM');

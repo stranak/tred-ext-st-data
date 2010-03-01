@@ -51,7 +51,7 @@ foreach my $s_filename (@ARGV) {
     foreach my $snode (@snodes) {
         my @tnode_rf = $s_cont->findnodes( './pml:t.rf', $snode );
         map $_->unbindNode, @tnode_rf;
-        my $tnodes = $sdoc->createElement('tnodes');
+        my $tnodes = $sdoc->createElement('tnode.rfs');
         $tnodes = $snode->appendChild($tnodes);
         map {
             $_->setNodeName('LM');
