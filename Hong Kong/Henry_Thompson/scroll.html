@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta name="copyright" content="Copyright (C) 2007 Henry S. Thompson"/><meta http-equiv="Content-type" content="text/html; charset=utf-8"/><style type="text/css">
+     @page { size: A4 portrait; margin: 2cm} 
+     @media screen {
+     body {width: 20cm; margin-left: auto; margin-right: auto}
+       }
+     body {font-size: 12pt}
+       pre.code {font-family: monospace}
+       pre {margin-left: 0em}
+       ul.nolabel { margin: 0; margin-left: -2.5em}
+       ul.naked li { list-style-type: none }
+       ol ol {list-style-type: lower-alpha}
+       div.ndli { margin-bottom: 1ex }
+       .math {font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', serif}
+       .sub {font-size: 80%; vertical-align: sub}
+       .termref {text-decoration: none; color: #606000}
+       div.toc h2 {font-size: 120%; margin-top: 0em; margin-bottom: 0em}
+       div.toc h4 {font-size: 100%; margin-top: 0em; margin-bottom: 0em;
+                   margin-left: 1em}
+       div.toc h1 {font-size: 140%; margin-bottom: 0em}
+       div.toc ul {margin-top: 1ex}
+       .byline {font-size: 120%}
+       div.figure {margin-left: 2em}
+       div.caption {font-style: italic; font-weight: bold; margin-top: 1em}
+       i i {font-style: normal}
+     
+   blockquote div {background-color: #FDFCAB; font-style: normal}
+   li blockquote ul li {font-style: normal}
+   span.bubble {background-color: #ABFDEE}
+  </style><title>Why is interoperability for language resources so hard to achieve?</title></head><body style="font-family: DejaVu Sans, Arial; background: rgb(254,250,246)">
+ <div style="text-align: center">
+  <h1>Why is interoperability for language resources so hard to achieve?</h1>
+  <div class="byline">Henry S. Thompson</div>
+  <div class="byline">ICCS/HCRC</div>
+  <div class="byline">School of Informatics</div>
+  <div class="byline">University of Edinburgh</div>
+  <div class="byline"> </div>
+  <div class="byline">W3C Technical Architecture Group</div>
+  <div class="byline"> </div>
+  <div class="byline">Markup Systems Ltd.</div>
+  <div class="byline"> </div>
+  <div class="byline">18 January 2010</div>
+  
+ </div>
+ 
+  <div>
+   <h2>1.  We've come a long way</h2>
+   <p>It's 46 years since the Brown corpus was first published</p>
+   <ul> 
+   <li>It was created using punched cards,</li>
+   <li><img src="punch.jpg" style="border: 0" alt="An 80-column punchcard" width="80%"/></li>
+   <li>and distributed on mag tape.</li>
+   <li><img src="magtape2.jpg" style="border: 0" alt="A 1/2 inch mag. tape reel" width="80%"/></li>
+   </ul>
+  </div>
+  <div>
+   <h2>2.  The Brown Corpus</h2>          
+   <p>Produced initially in 1964 by Henry Kucera and Nelson Francis of the
+Linguistics Department of Brown University: <a href="http://icame.uib.no/brown/bcm.html">The Brown Corpus</a> was a 'balanced' corpus of roughly 1 million words of American English text.</p>
+   <p>It's composed of 500 texts of roughly 2000 words each.</p>
+   <p>Part-of-speech information was added in 1979.</p>
+   <p>Here are a few punched card lines from the original corpus (text cf03):</p>
+   <blockquote><div><pre class="code">
+TELEVISION IMPULSES, SOUND WAVES, ULTRA-VIOLET RAYS, ETC**., THAT MAY   1020ElF03
+OC*                                                                     1025ElF03
+CUPY THE VERY SAME SPACE, EACH SOLITARY UPON ITS OWN FREQUENCY, IS INF  1030ElF03
+INITE. *SO WE MAY CONCEIVE THE COEXISENCE OF THE INFINITE NUMBER OF U   1040ElF03
+NIVERSAL, APPARENTLY MOMENTARY STATES OF MATTER, SUCCESSIVE ONE AFTER   1050ElF03</pre></div></blockquote>
+   <div style="width: 20%; float: right; clear: right; margin-left: .5em"><small><i>Typo ('coexisence') in original</i></small></div>
+  </div>
+  <div>
+   <h2>3.  Change for the better, part 1</h2>
+   <p>We've had decent structured markup languages for exactly half
+the lifetime of the field:</p>
+   <ul>
+      <li>SGML is 23 years old</li>
+      <li>XML is 12 years old</li>
+     </ul>
+   <p>And markup languages for language resources followed soon on
+their heels:</p>
+   <ul>
+    <li>the TEI will be 20 next
+year</li>
+    <li>the CES is 10</li>
+   </ul>
+   <p>So the Brown corpus now looks like this:</p>
+   <blockquote><div><pre class="code">&lt;s n="41"&gt;. . .
+&lt;w type="NN"&gt;television&lt;/w&gt; &lt;w type="NNS"&gt;impulses&lt;/w&gt; &lt;c type="pct"&gt;,&lt;/c&gt;
+&lt;w type="NN"&gt;sound&lt;/w&gt; &lt;w type="NNS"&gt;waves&lt;/w&gt; &lt;c type="pct"&gt;,&lt;/c&gt;
+&lt;w type="JJ"&gt;ultra-violet&lt;/w&gt; &lt;w type="NNS"&gt;rays&lt;/w&gt; &lt;c type="pct"&gt;,&lt;/c&gt;
+&lt;w type="RB"&gt;etc.&lt;/w&gt; &lt;c type="pct"&gt;,&lt;/c&gt; &lt;w type="WPS"&gt;that&lt;/w&gt;
+&lt;w type="MD"&gt;may&lt;/w&gt; &lt;w type="VB"&gt;occupy&lt;/w&gt; &lt;w type="AT"&gt;the&lt;/w&gt;
+&lt;w type="QL"&gt;very&lt;/w&gt; &lt;w type="AP"&gt;same&lt;/w&gt; &lt;w type="NN"&gt;space&lt;/w&gt;
+&lt;c type="pct"&gt;,&lt;/c&gt; &lt;w type="DT"&gt;each&lt;/w&gt; &lt;w type="NN"&gt;solitary&lt;/w&gt;
+&lt;w type="IN"&gt;upon&lt;/w&gt; &lt;w type="PPg"&gt;its&lt;/w&gt; &lt;w type="JJ"&gt;own&lt;/w&gt;
+&lt;w type="NN"&gt;frequency&lt;/w&gt; &lt;c type="pct"&gt;,&lt;/c&gt; &lt;w type="BEZ"&gt;is&lt;/w&gt;
+&lt;w type="JJ"&gt;infinite&lt;/w&gt; &lt;c type="pct"&gt;.&lt;/c&gt; &lt;/s&gt;
+</pre></div></blockquote>
+   <p>And, of course, we have CD-ROMs, DVDs and the Web for distribution</p>
+  </div>
+  <div>
+   <h2>4.  It's not just technology that was different</h2>
+   <p>Forty-five years ago corpora were <i>owned</i></p>
+   <ul>
+    <li>Scholarly identities were closely bound up with corpora</li>
+    <li>You published <i>about</i> your corpus</li>
+    <li>You did <i>not</i> publish the corpus itself</li>
+   </ul>
+  </div>
+  <div>
+   <h2>5.  Change for the better, part 2</h2>
+   <p>The <i>intellectual</i> substrate has changed dramatically as well</p>
+   <ul>
+    <li>"There's no data like more data", as Bob Mercer said</li>
+    <li>Almost everyone has come around to the view that it's to
+everyone's advantage if everyone gives away their data</li>
+    <li>And national and international bodies are now willing to
+underwrite the creation and annotation of language resources.</li>
+   </ul>
+  </div>
+  <div>
+   <h2>6.  Something else has changed as well</h2>
+   <p>In the beginning, <i>all</i> corpus material originated outside computers.</p>
+   <p>So the computer-based representation came <i>second</i>: it was
+some transcription or transcoding of an original which existed on paper:</p>
+   <ul>
+    <li>hand-written</li>
+    <li>typewritten</li>
+    <li>printed</li>
+   </ul>
+   <p>So decisions had to be made about every aspect of the original which
+<i>could</i> be represented:</p>
+   <ol>
+    <li>Whether to represent it or not;</li>
+    <li>If so, <i>how</i> to represent it.</li>
+   </ol>
+   <p>The cost of transcription necessarily limited the scale of corpora
+created in this way.</p>
+  </div>
+  <div>
+   <h2>7.  Phases 2 and 3 of corpus origin</h2>
+   <p>The real breakthrough came when computers began to be used to
+<i>create</i> text for printing, particular for large-volume printing.</p>
+   <p>Corpus creation then became a matter of:</p>
+   <ol>
+    <li>Getting access to the designed-for-print representation;</li>
+    <li>Getting the necessary license to work with and distribute it;</li>
+    <li>Converting it from a print-appropriate form to one suitable for NLP.</li>
+    <li>Distribution was by CD-ROM</li>
+   </ol>
+   <p>The third and most recent phase came when texts began to be created for
+online distribution.</p>
+   <p>Access is no longer a problem, but issues of rights and conversion still
+arise, just in different forms.</p>
+   <p>That story was for text, but speech is actually starting to
+follow the same trajectory (as is video)</p>
+  </div>
+  <div>
+   <h2>8.  Are we nearly there yet?</h2>
+   <p>Given that good news, it seems fair to ask, are we done?</p>
+   <ul>
+      <li>Have we achieved a sufficient level of standardisation
+for language resources?</li>
+      <li>Is there a broadly interoperable consensus approach to
+representing annotation and metadata?</li>
+     </ul>
+   <p>Answer, clearly: no.</p>
+   <p>Five years ago, we might have said that at least there's
+consensus on using angle brackets and equal signs</p>
+   <ul>
+    <li>But even that consensus has shown some signs of eroding lately</li>
+   </ul>
+  </div>
+  <div>
+   <h2>9.  We keep re-inventing the wheel</h2>
+   <p>The primary evidence for the depressing conclusion on the last
+slide is empirical</p>
+   <ul>
+    <li>Since TEI P1 (1990) and LT NSL (1994), there has been a
+steady stream of markup languages and toolsets</li>
+    <li>And at the metadata level, ontologies proliferate as well</li>
+   </ul>
+   <p>And there's no sign that this is going to change</p>
+   <ul>
+    <li>We keep producing new languages, ontologies and toolsets</li>
+    <li>Instead of using the old ones</li>
+   </ul>
+  </div>
+  <div>
+   <h2>10.  Diagnosing the problem</h2>
+   <p>What's behind the failure to converge?</p>
+   <p>Short answer: People seem to prefer to create their own
+annotation</p>
+   <p>Is this just laziness?</p>
+   <p>Or misplaced territoriality (the <b>Not Invented Here</b> syndrome)?</p>
+   <p>Or is there some deeper and better justification?</p>
+  </div>
+  <div>
+   <h2>11.  NIH is not always petty</h2>
+   <p>John Sinclair was one of the founders of modern corpus linguistics</p>
+   <p>In collaboration with the dictionary publishers Collins he
+created the COBUILD corpus at the University of Birmingham in the early 1980s</p>
+   <p>He used to infuriate the rest of us</p>
+   <ul>
+    <li>He argued <i>against</i> public funding for creation of
+annotated corpora
+     <ul>
+      <li>Very forcefully</li>
+      <li>In front of the funders</li>
+      </ul>     
+    </li>
+   </ul>
+   <p>This was not (primarily) from selfishness</p>
+   <p>He really didn't think any <i>other</i> linguist's
+annotations were of any interest or use</p>
+   <ul>
+    <li>"Just the raw data please"</li>
+   </ul>
+  </div>
+  <div>
+   <h2>12.  The argument from translation</h2>
+   <p>Sinclair wasn't claiming the rest of us were bad linguists</p>
+   <ul>
+    <li>Just <i>different</i></li>
+   </ul>
+   <p>Anything beyond 'raw' data is theory-laden</p>
+   <ul>
+    <li>So if you and I don't share a theory,</li>
+    <li>My annotations aren't meaningful to you, and <i>vice versa</i></li>
+   </ul>
+   <p>The analogy with translation is instructive</p>
+   <ul>
+    <li>Inter-theory conversion requires more than just
+one-to-one substitution of terms</li>
+    <li>The boundaries between terms may be shifted</li>
+    <li>Distinctions made differently, or not at all</li>
+   </ul>
+  </div>
+  <div>
+   <h2>13.  Another analogy: grammars, parsers and grammatical theory</h2>
+   <p>A very long time ago I built a parser for a then-popular grammatical
+theory, GPSG</p>
+   <p>An older and wiser colleague told me I was mistaken to do so</p>
+   <ul>
+    <li>Theoretical linguists don't write grammars, she said</li>
+    <li>They invent grammatical theories</li>
+    <li>Your parser will be out-of-date before it's even finished</li>
+   </ul>
+   <p>And she was right</p>
+   <p>The interesting <i>science</i> is concerned with the nature of
+linguistic categories</p>
+   <ul>
+    <li>That is, designing ontologies for annotation</li>
+    <li>Not actually <i>doing</i> annotation</li>
+   </ul>
+   <p>To some extent, building infrastructure to support a particular approach
+to annotation is doomed to produce out-of-date results</p>
+  </div>
+  <div>
+   <h2>14.  A genuine scientific problem</h2>
+   <p>There's more than just intellectual ego at work here</p>
+   <p>There is a real scientific problem (too)</p>
+   <ul>
+    <li>We just don't know what language resources <i>are</i></li>
+   </ul>
+   <p>Linguistic theory doesn't actually provide the answers we need</p>
+   <ul>
+    <li>What's a phone?  A phoneme?</li>
+    <li>What's a grammatical feature?  What's a morpheme?  A word?</li>
+    <li>What are utterances?  Where are their boundaries, external and internal?</li>
+    <li>All the way up to, What is linguistic analysis?</li>
+   </ul>
+   <p>This list is, literally, endless.  There are virtually <i>no</i>
+terms of art in linguistics about which there is agreement.</p>
+   <p><i>This</i> is what drives NIH</p>
+  </div>
+  <div>
+   <h2>15.  An example of the problem</h2>
+   <p>Consider the term 'subject'</p>
+   <p>I did a little experiment</p>
+   <p>In six linguistic ontologies I found on the Web</p>
+   <ul>
+    <li>Three formalised 'subject' as a class;</li>
+    <li>Two formalised 'subject' as a property;</li>
+    <li>One formalised 'subject' as a "First-order collection".</li>
+   </ul>
+   <p>It's not surprising that, when confronted by such fundamental variation,
+people tend to make up their own ontologies rather than re-using someone else's.
+. .</p>
+  </div>
+  <div>
+   <h2>16.  An exception: Gold standards</h2>
+   <p>The news isn't all bad</p>
+   <p>Sinclair's position seems obviously wrong to us now</p>
+   <ul>
+    <li>Because major funding was available
+     <ul>
+      <li>Driven by the political necessity of evaluation-driven research
+funding management</li>
+     </ul>
+    </li>
+    <li>So at least the <i>reliability</i> of annotation could be improved
+     <ul>
+      <li>By multiple annotators</li>
+      <li>And the kappa statistic</li>
+     </ul>
+    </li>
+   </ul>
+   <p>A 'gold standard' really <i>is</i> better than what an individual
+can produce</p>
+  </div>
+  <div>
+   <h2>17.  Gold standards induce consensus</h2>
+   <p>So we <i>do</i> have islands of interoperability</p>
+   <ul>
+    <li>created by a community of interest</li>
+    <li>with shared goals and metrics</li>
+    <li>as well as mutual support networks with respect to publication and funding</li>
+   </ul>
+   <p>Everyone who works with a particular gold standard adopts whatever
+annotation system it is delivered with</p>
+   <p>And anyone who extends the task for which a gold standard was designed</p>
+   <ul>
+    <li>For example, to a new language</li>
+   </ul>
+   <p>will use the same annotation system, as the price of admission to that community</p>
+  </div>
+  <div>
+   <h2>18.  What next?</h2>
+   <p>So, there are reasons why things haven't gone well overall</p>
+   <p>And some islands of success</p>
+   <p>What ought we to be doing</p>
+   <ul>
+    <li>better?</li>
+    <li>or, at least, differently?</li>
+   </ul>
+  </div>
+  <div>
+   <h2>19.  'sufficient' for whom/what?</h2>
+   <p>Back at the beginning I asked</p>
+   <ul>
+    <li>Have we achieved a sufficient level of standardisation
+for language resources?</li>
+   </ul>
+   <p>That begs a question</p>
+   <ul>
+    <li>Who are language resources <i>for</i>?</li>
+    <li>Who are our customers, in other words?</li>
+   </ul>
+   <p>Just as the <i>origin</i> of resources has changed</p>
+   <ul>
+    <li>So has the destination</li>
+   </ul>
+   <p>Remember that KWIC was <i>the</i> corpus linguistics tool for many
+many years</p>
+   <ul>
+    <li>Because the consumers of text language resources were primarily lexicographers</li>
+    <li>and descriptive linguists more generally</li>
+   </ul>
+  </div>
+  <div>
+   <h2>20.  How things have changed</h2>
+   <p>There has been an enormous shift in the intellectual background to our
+work in the last 30 years</p>
+   <p>The 1970s and into the 1980s were a hugely exciting time for theoretical linguistics
+and computational linguistics</p>
+   <ul>
+    <li>Because many of us saw a merger coming</li>
+    <li>with huge potential synergies</li>
+   </ul>
+   <p>Natural language processing would be based on the new grammatical theories</p>
+   <p>and grammatical theory would become increasingly computational in conception</p>
+   <p>But then it all changed</p>
+   <ul>
+    <li><blockquote><div>Every time I fire a linguist, the performance of my system improves</div></blockquote></li>
+    <li>Fred Jelinek, 1980 (or maybe not :-)</li>
+   </ul>
+  </div>
+  <div>
+   <h2>21.  The new empiricism</h2>
+   <p>The mutually reinforcing effect of</p>
+   <ul>
+    <li>the availability of large amounts of language data</li>
+    <li>Moore's law</li>
+   </ul>
+   <p>changed the role of language resources profoundly</p>
+   <ul>
+    <li>First for speech processing, with the TI corpus</li>
+    <li>and progressing up the speech chain ever since, with the ACL Wall
+Street Journal corpus and everything that followed after</li>
+   </ul>
+   <p>Our customers are now almost all in the business of noisy channel decoding</p>
+   <ul>
+    <li>Speech and language processing has become a branch of applied mathematics</li>
+    <li>Language resources are attractive insofar as the feed the machine
+learning engines</li>
+   </ul>
+  </div>
+  <div>
+   <h2>22.  He who pays the piper calls the tune</h2>
+   <p>Talking about customers is misleading to some extent</p>
+   <p>In that the consumers don't actually pay much or at all</p>
+   <p>Governments and NGOs pay</p>
+   <ul>
+    <li>Why?</li>
+   </ul>   
+   <p>Because patient efforts over many years by people such as Mark Liberman,
+Antonio Zampolli, Nagao sensei convinced them</p>
+   <p>Because the evaluation-driven methodology required it</p>
+   <p>Because it's now a part of the orthodoxy</p>
+   <ul>
+    <li>Because it's obviously the right thing?</li>
+   </ul>
+  </div>
+  <div>
+   <h2>23.  Why standardise?</h2>
+   <p><i>Ad-hoc</i> standards bodies such as the W3C, IETF, IEEE and OASIS
+were created and continue to exist only insofar as their membership get value
+from them</p>
+   <ul>
+    <li>Typically because interoperability is understood to be of more-or-less
+immediate (commercial) benefit</li>
+   </ul>
+   <p>(Supra-)governmental standards bodies such as ANSI, BSI and ISO were
+created and continue to exist because self-interest doesn't always bring people
+to the table</p>
+   <p>Is there a community of interest for whom interoperability of generic
+language resource annotation is of real value?</p>
+   <ul>
+    <li>If so, find them and get them on board!</li>
+    <li>If not, think hard about what we're doing</li>
+   </ul>
+  </div>
+  <div>
+   <h2>24.  A realistic fallback</h2>
+   <p>Maybe getting consensus on using XML (and RDF?) is enough</p>
+   <p>It's certainly a huge step forward from line-orientated formats</p>
+   <ul>
+    <li>UNICODE</li>
+    <li>No need for (other) escape conventions</li>
+    <li>Ubiquity of infrastructure</li>
+   </ul>
+   <p>Convertibility is what matters</p>
+   <ul>
+    <li>Where we can't realistically hope for interoperability</li>
+   </ul>
+  </div>
+  <div>
+   <h2>25.  Conclusion</h2>
+   <p>As the community whose job it is to facilitate NLP we should</p>
+   <ul>
+    <li>Focus on methodology, not artefacts</li>
+    <li>Find roadblocks to conversion, and help shift them out of the way</li>
+    <li>Not expect miracles</li>
+   </ul>
+  </div>
+ 
+</body></html>
