@@ -66,9 +66,9 @@ sub transform {
             my ($match) = grep $_ eq $s_first_tnode, @tnode_ids;
             my ( $mwes_exist, $mwes );
             if ($match) {
-                if ( $t_cont->exists( './mwes', $troot ) ) {
+                if ( $t_cont->exists( './pml:mwes', $troot ) ) {
                     $mwes_exist = 1;
-                    ($mwes) = $t_cont->findnodes( './mwes', $troot );
+                    ($mwes) = $t_cont->findnodes( './pml:mwes', $troot );
                 }
                 else {
                     $mwes = $tdoc->createElementNS(PML_NS, 'mwes');
