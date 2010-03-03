@@ -5,7 +5,7 @@
   <import schema="tdata_schema.xml"/>
   <import type="st-node.type" schema="sdata_schema.xml"/>
 
-  <derive name="t-root.type" type="t-root.type">
+  <derive type="t-root.type">
     <structure role="#NODE" name="t-root">
       <member name="mwes" required="0">
           <sequence>
