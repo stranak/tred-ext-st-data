@@ -4,15 +4,16 @@
   <description> PDT 2.0 tectogrammatic trees with multiword lexemes and named entities </description>
   <import schema="tdata_schema.xml"/>
   <import type="st-node.type" schema="sdata_schema.xml"/>
-
   <derive type="t-root.type">
     <structure role="#NODE" name="t-root">
       <member name="mwes" required="0">
+        <sequence>
+          <element name="annotator" required="1"/>
           <sequence>
-              <element name="st" type="st-node.type"/>
+            <element name="st" type="st-node.type"/>
           </sequence>
+        </sequence>
       </member>
     </structure>
   </derive>
-
 </pml_schema>
