@@ -14,10 +14,9 @@ sub transform {
 
     my $s_cont = XML::LibXML::XPathContext->new( $sdoc->documentElement() );
     $s_cont->registerNs( pml => PML_NS );
-    my $t_filename =
-      $s_cont->findvalue(
+    my $t_filename = $s_cont->findvalue(
 '/pml:sdata/pml:head[1]/pml:references[1]/pml:reffile[@name="tdata"]/@href'
-      );
+    );
     my $t_file_URI =
       URI->new_abs( $t_filename,
         URI->new( $sdoc->URI )->abs( URI::file->cwd ) );
@@ -32,15 +31,15 @@ sub transform {
     my ($t_schema) = $t_cont->findnodes('/pml:tdata/pml:head/pml:schema');
 
     $t_schema->setAttribute( 'href', 'tdata_mwe_schema.xml' );
+    my $old_sfile_bool = is_sfile_format_old($s_cont);
 
     # Modify the s-nodes to the correct form and merge them into t-trees
     my @snodes = $s_cont->findnodes('/pml:sdata/pml:wsd/pml:st');
   SNODE:
     foreach my $snode (@snodes) {
-        my $tnodes; # the t-nodes in this s-node
-        if ( sfile_format_is_old($s_cont) ) {
-            warn "$sdoc looks like old, not valid, s-data file. I will transform
-                its contents.\n";
+        my $tnodes;    # the t-nodes in this s-node
+        if ($old_sfile_bool) {
+
             # Modify the s-node to the correct form
             my @tnode_rf = $s_cont->findnodes( './pml:t.rf', $snode );
             map $_->unbindNode, @tnode_rf;
@@ -54,8 +53,8 @@ sub transform {
             } @tnode_rf;
         }
         else {
-            warn "$sdoc looks like a valid s-data file.\n";
-        # only change references into a 't' file to references into 'this' file
+
+         # only change references into a 't' file to references into 'this' file
             $tnodes = $s_cont->findnodes( './pml:tnode.rfs', $snode );
             my @tnode_rf =
               $s_cont->findnodes( './pml:tnode.rfs/pml:LM', $snode );
@@ -95,12 +94,17 @@ sub transform {
 
 #Check the version of an s-file. Original s-files produced during annotations
 #are not valid (according to the sdata schema) and they need to be transformed.
-sub sfile_format_is_old {
+sub is_sfile_format_old {
     my $s_cont = shift;
     if ( $s_cont->findnodes('/pml:sdata/pml:wsd/pml:st/pml:t.rf') ) {
+        warn
+"Looks like old, not valid s-data file. I will transform its contents.\n";
         return 1;
     }
-    else { return 0 }
+    else {
+        warn "Looks like a valid s-data file.\n";
+        return 0;
+    }
 }
 
 1;
