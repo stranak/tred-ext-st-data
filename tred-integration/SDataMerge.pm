@@ -11,9 +11,14 @@ use constant PML_NS => 'http://ufal.mff.cuni.cz/pdt/pml/';
 
 sub transform {
     my ($sdoc) = @_;
-
     my $s_cont = XML::LibXML::XPathContext->new( $sdoc->documentElement() );
     $s_cont->registerNs( pml => PML_NS );
+    my $annotator = $s_cont->findvalue(
+'/pml:sdata/pml:meta/pml:annotation_info/pml:annotator');
+    $annotator =~ s/.*?(\w+)$/$1/;
+#    print $annotator, "\n";
+    my $old_sfile_bool = is_sfile_format_old($s_cont);
+
     my $t_filename = $s_cont->findvalue(
 '/pml:sdata/pml:head[1]/pml:references[1]/pml:reffile[@name="tdata"]/@href'
     );
@@ -31,7 +36,6 @@ sub transform {
     my ($t_schema) = $t_cont->findnodes('/pml:tdata/pml:head/pml:schema');
 
     $t_schema->setAttribute( 'href', 'tdata_mwe_schema.xml' );
-    my $old_sfile_bool = is_sfile_format_old($s_cont);
 
     # Modify the s-nodes to the correct form and merge them into t-trees
     my @snodes = $s_cont->findnodes('/pml:sdata/pml:wsd/pml:st');
