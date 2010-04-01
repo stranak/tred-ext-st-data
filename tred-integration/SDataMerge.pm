@@ -6,6 +6,7 @@ use warnings;
 use XML::LibXML;
 use URI;
 use URI::file;
+use List::Util qw(first);
 
 use constant PML_NS => 'http://ufal.mff.cuni.cz/pdt/pml/';
 
@@ -16,8 +17,8 @@ sub transform {
     my $annotator = $s_cont->findvalue(
 '/pml:sdata/pml:meta/pml:annotation_info/pml:annotator');
     $annotator =~ s/.*?(\w+)$/$1/;
-#    print $annotator, "\n";
-    my $old_sfile_bool = is_sfile_format_old($s_cont);
+    print $annotator, "\n";
+    my $is_sfile_old = is_sfile_format_old($s_cont);
 
     my $t_filename = $s_cont->findvalue(
 '/pml:sdata/pml:head[1]/pml:references[1]/pml:reffile[@name="tdata"]/@href'
@@ -41,25 +42,25 @@ sub transform {
     my @snodes = $s_cont->findnodes('/pml:sdata/pml:wsd/pml:st');
   SNODE:
     foreach my $snode (@snodes) {
-        my $tnodes;    # the t-nodes in this s-node
-        if ($old_sfile_bool) {
+        my $tnode_rfs;    # the t-nodes in this s-node
+        if ($is_sfile_old) {
 
             # Modify the s-node to the correct form
             my @tnode_rf = $s_cont->findnodes( './pml:t.rf', $snode );
             map $_->unbindNode, @tnode_rf;
-            $tnodes = $sdoc->createElementNS( PML_NS, 'tnode.rfs' );
-            $tnodes = $snode->appendChild($tnodes);
+            $tnode_rfs = $sdoc->createElementNS( PML_NS, 'tnode.rfs' );
+            $tnode_rfs = $snode->appendChild($tnode_rfs);
             map {
                 $_->setNodeName('LM');
                 my ($textchild) = $_->childNodes;
                 $textchild->replaceDataRegEx( 't#t', 't' );
-                $tnodes->appendChild($_);
+                $tnode_rfs->appendChild($_);
             } @tnode_rf;
         }
         else {
 
          # only change references into a 't' file to references into 'this' file
-            $tnodes = $s_cont->findnodes( './pml:tnode.rfs', $snode );
+            $tnode_rfs = $s_cont->findnodes( './pml:tnode.rfs', $snode );
             my @tnode_rf =
               $s_cont->findnodes( './pml:tnode.rfs/pml:LM', $snode );
             map {
@@ -70,23 +71,16 @@ sub transform {
 
         # ID of the first t-node in this s-node
         my ($s_first_tnode) = map $_->toString,
-          $s_cont->findnodes( './pml:LM/text()', $tnodes );
+          $s_cont->findnodes( './pml:LM/text()', $tnode_rfs );
 
-      TNODE: foreach my $troot (@t_trees) {
-            no warnings;
-            my @lmembers = $t_cont->findnodes( './/pml:LM', $troot );
-            my @tnode_ids = map $_->getAttribute('id'), @lmembers;
-            my ($match) = grep $_ eq $s_first_tnode, @tnode_ids;
-            my ( $mwes_exist, $mwes );
+      TROOT: foreach my $troot (@t_trees) {
+#            no warnings;
+            my @nodes_in_this_tree = $t_cont->findnodes( './/pml:children/pml:LM', $troot );
+            my @tnode_ids = map $_->getAttribute('id'), @nodes_in_this_tree;
+#            warn join ', ', @tnode_ids, "\n"; next TROOT;
+            my $match = first { $_ eq $s_first_tnode } @tnode_ids;
             if ($match) {
-                if ( $t_cont->exists( './pml:mwes', $troot ) ) {
-                    $mwes_exist = 1;
-                    ($mwes) = $t_cont->findnodes( './pml:mwes', $troot );
-                }
-                else {
-                    $mwes = $tdoc->createElementNS( PML_NS, 'mwes' );
-                    $troot->insertBefore( $mwes, $troot->firstChild );
-                }
+                my $mwes = get_mwes($tdoc, $t_cont, $troot);
                 my $snode_parent = $snode->parentNode;
                 $snode = $snode_parent->removeChild($snode);
                 $mwes->appendChild($snode);
@@ -109,6 +103,20 @@ sub is_sfile_format_old {
         warn "Looks like a valid s-data file.\n";
         return 0;
     }
+}
+
+
+sub get_mwes {
+    my ($tdoc, $t_cont, $troot) = @_;
+    my $mwes;
+    if ( $t_cont->exists( './pml:mwes', $troot ) ) {
+        ($mwes) = $t_cont->findnodes( './pml:mwes', $troot );
+    }
+    else {
+        $mwes = $tdoc->createElementNS( PML_NS, 'mwes' );
+        $troot->insertBefore( $mwes, $troot->firstChild );
+    }
+    return $mwes;
 }
 
 1;

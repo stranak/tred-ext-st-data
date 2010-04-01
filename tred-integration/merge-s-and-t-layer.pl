@@ -31,7 +31,7 @@ my $t_suffix  = qr/\.t\.g?zi?p?$/;
 
 foreach my $s_filename (@ARGV) {
 
-    # Parse s-file and get s-nodes
+    # Parse s-file and get a DOM
     if ($s_filename !~ $st_suffix ) {
         warn "$s_filename is not an 'st' file.";
         next;

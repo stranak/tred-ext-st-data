@@ -8,7 +8,9 @@
     <structure role="#NODE" name="t-root">
       <member name="mwes" required="0">
         <sequence>
-          <element name="annotator" required="1"/>
+            <element name="annotator" required="1"> 
+                <attribute name="name" required="1" />
+            </element>
           <sequence>
             <element name="st" type="st-node.type"/>
           </sequence>
