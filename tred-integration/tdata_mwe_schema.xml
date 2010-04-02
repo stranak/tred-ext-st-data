@@ -10,7 +10,9 @@
         <sequence content_pattern="(annotator)+">
           <element name="annotator">
             <container>
-              <attribute name="name" required="1"/>
+              <attribute name="name" required="1">
+                <cdata format="any"/>
+              </attribute>
               <sequence>
                 <element name="st" type="st-node.type"/>
               </sequence>
