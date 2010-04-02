@@ -1,0 +1,8 @@
+sub after_redraw_hook {
+  my @stnodes =ListV($root->attr('mwes/annotator/#content/st'));
+  foreach my $st (@stnodes){
+    my @group =  map { PML_T::GetNodeByID($_) } ListV($st->{'tnode.rfs'});
+    TrEd::NodeGroups::draw_groups( $grp, [[@group]], {colors => ['#9FF'], stipples => TrEd::NodeGroups::dense_stipples($grp)} );
+  }
+}
+
