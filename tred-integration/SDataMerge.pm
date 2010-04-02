@@ -80,10 +80,11 @@ sub transform {
 #            warn join ', ', @tnode_ids, "\n"; next TROOT;
             my $match = first { $_ eq $s_first_tnode } @tnode_ids;
             if ($match) {
-                my $mwes = get_mwes($tdoc, $t_cont, $troot);
+                my $annotators_mwes = get_annot_mwes($tdoc, $t_cont, $troot,
+                    $annotator);
                 my $snode_parent = $snode->parentNode;
                 $snode = $snode_parent->removeChild($snode);
-                $mwes->appendChild($snode);
+                $annotators_mwes->appendChild($snode);
             }
         }
     }
@@ -106,8 +107,8 @@ sub is_sfile_format_old {
 }
 
 
-sub get_mwes {
-    my ($tdoc, $t_cont, $troot) = @_;
+sub get_annot_mwes {
+    my ($tdoc, $t_cont, $troot, $annotator) = @_;
     my $mwes;
     if ( $t_cont->exists( './pml:mwes', $troot ) ) {
         ($mwes) = $t_cont->findnodes( './pml:mwes', $troot );
@@ -116,7 +117,21 @@ sub get_mwes {
         $mwes = $tdoc->createElementNS( PML_NS, 'mwes' );
         $troot->insertBefore( $mwes, $troot->firstChild );
     }
-    return $mwes;
+
+    # get the <annotator> element of this t-root for the
+    # $annotator (from the s-file). Create it, if it doesn't exist.
+    my $annot_mwes; 
+    if ( $t_cont->exists( './pml:annotator/@name', $mwes ) ) {
+        my @annotators = $t_cont->findnodes( './pml:annotator', $mwes );
+        $annot_mwes = first { $_->getAttribute('name') =~ $annotator } @annotators;
+    }
+    else {
+        $annot_mwes = $tdoc->createElementNS( PML_NS, 'annotator' );
+        my $name_attr = $tdoc->createAttribute('name', $annotator);
+        $name_attr = $annot_mwes->addChild($name_attr);
+        $mwes->insertBefore( $annot_mwes, $mwes->firstChild );
+    }
+    return $annot_mwes;
 }
 
 1;
