@@ -1,6 +1,5 @@
 # vim: set syntax=perl: 
 
-
 {
 package PML_ST_Data;
 
@@ -21,19 +20,6 @@ unshift @TredMacro::AUTO_CONTEXT_GUESSING, sub {
   return;
 };
 
-sub allow_switch_context_hook {
-  return 'stop' unless detect();
-}
-sub switch_context_hook {
-  if(PML::SchemaName() eq 'tdata' and
-     PML::Schema->find_type_by_path('!t-root.type/mwes')){
-    SetCurrentStylesheet('HYDT');
-  }else{ # SchemaName eq 'hydtmorph'
-    SetCurrentStylesheet('hydt-morph');
-  }
-  Redraw() if GUI();
-}
-
 #binding-context PML_ST_Data
 
 #include <contrib/support/fold_subtree.inc>
@@ -41,6 +27,14 @@ sub switch_context_hook {
 #bind fold_subtree_toggle to space menu Fold/unfold current subtree (toggle)
 #bind fold_subtree_unfold_all to Ctrl+space menu Unfold all in the current subtree
 
+sub allow_switch_context_hook {
+  return 'stop' unless detect();
+}
+
+sub switch_context_hook {
+PML_T::CreateStylesheets() && SetCurrentStylesheet('PML_T_Compact');
+    Redraw() if GUI();
+}
 
 sub after_redraw_hook {
   my @stnodes =ListV($root->attr('mwes/annotator/#content/st'));
