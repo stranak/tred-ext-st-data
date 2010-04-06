@@ -1,3 +1,4 @@
+# vim: set syntax=perl: 
 sub after_redraw_hook {
   my @stnodes =ListV($root->attr('mwes/annotator/#content/st'));
   foreach my $st (@stnodes){
