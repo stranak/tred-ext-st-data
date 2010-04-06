@@ -7,8 +7,6 @@
 
     BEGIN { import TredMacro; }
 
-    our ( @persons, @stnodes );
-
     sub detect {
         return ( ( PML::SchemaName() || '' ) =~ /tdata/
               and PML::Schema->find_type_by_path('!t-root.type/mwes') ? 1 : 0 );
@@ -43,11 +41,21 @@
 
     sub after_redraw_hook {
         no strict 'refs';
+	our ( @stnodes, @person, @institution, @location, @time, @other);
+
         @stnodes = ListV( $root->attr('mwes/annotator/#content/st') );
-        @persons = grep { $_->{'lexicon-id'} eq 's##person' } @stnodes;
+        @person = grep { $_->{'lexicon-id'} eq 's##person' } @stnodes;
+        @institution = grep { $_->{'lexicon-id'} eq 's##institution' } @stnodes;
+        @location = grep { $_->{'lexicon-id'} eq 's##location' } @stnodes;
+        @time = grep { $_->{'lexicon-id'} eq 's##time' } @stnodes;
+        @other = grep { $_->{'lexicon-id'} eq 's##other' } @stnodes;
         my %mwe_colours = (
-            stnodes => '#9FF',
-            persons => '#3AA',
+            stnodes => 'orange',
+            person => 'green',
+	    institution => 'yellow',
+	    location => 'blue',
+	    time => 'grey',
+	    other => 'brown',
         );
         foreach my $mwe_type ( keys %mwe_colours ) {
             foreach my $st (@$mwe_type) {
