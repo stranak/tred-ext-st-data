@@ -3,7 +3,7 @@
 {
 
     package PML_ST_Data;
-    use strict;
+#     use strict;
 
     BEGIN { import TredMacro; }
 
@@ -40,25 +40,24 @@
     }
 
     sub after_redraw_hook {
-        no strict 'refs';
-	our ( @stnodes, @person, @institution, @location, @time, @other);
-
-        @stnodes = ListV( $root->attr('mwes/annotator/#content/st') );
-        @person = grep { $_->{'lexicon-id'} eq 's##person' } @stnodes;
-        @institution = grep { $_->{'lexicon-id'} eq 's##institution' } @stnodes;
-        @location = grep { $_->{'lexicon-id'} eq 's##location' } @stnodes;
-        @time = grep { $_->{'lexicon-id'} eq 's##time' } @stnodes;
-        @other = grep { $_->{'lexicon-id'} eq 's##other' } @stnodes;
         my %mwe_colours = (
-            stnodes => 'orange',
-            person => 'green',
-	    institution => 'yellow',
-	    location => 'blue',
-	    time => 'grey',
-	    other => 'brown',
+	    semlex      => 'maroon',
+	    person      => 'olive drab',
+	    institution => 'hot pink',
+	    location    => 'Turquoise1',
+	    object      => 'plum',
+	    address     => 'light slate blue',
+	    time        => 'lime green',
+	    biblio      => '#8aa3ff',
+	    foreign     => '#8a535c',
+	    other       => 'orange1',
         );
+        my @stnodes = ListV( $root->attr('mwes/annotator/#content/st') );
         foreach my $mwe_type ( keys %mwe_colours ) {
-            foreach my $st (@$mwe_type) {
+	 my @these_mwes = $mwe_type eq 'semlex'                    ? 
+		 grep { $_->{'lexicon-id'} =~ /^s#\d+$/ } @stnodes :
+		 grep { $_->{'lexicon-id'} eq "s##$mwe_type" } @stnodes;
+            foreach my $st (@these_mwes) {
                 my @group =
                   map { PML_T::GetNodeByID($_) } ListV( $st->{'tnode.rfs'} );
                 TrEd::NodeGroups::draw_groups(
@@ -66,7 +65,7 @@
                     [ [@group] ],
                     {
                         colors   => [ $mwe_colours{$mwe_type} ],
-                        stipples => TrEd::NodeGroups::dense_stipples($grp)
+			stipples => ['dense1']
                     }
                 );
             }
