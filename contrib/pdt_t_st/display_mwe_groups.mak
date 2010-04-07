@@ -67,6 +67,7 @@
                     {
                         colors   => [ $mwe_colours{$mwe_type} ],
 			stipples => ['dense1']
+			# group_line_width => 30, # default
                     }
                 );
             }
