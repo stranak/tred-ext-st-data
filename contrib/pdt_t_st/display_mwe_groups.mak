@@ -40,6 +40,7 @@
     }
 
     sub after_redraw_hook {
+    # TODO ruzny stipple pro ruzne anotatory.
         my %mwe_colours = (
 	    semlex      => 'maroon',
 	    person      => 'olive drab',
