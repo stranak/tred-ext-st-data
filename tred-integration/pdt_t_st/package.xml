@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tred_extension xmlns="http://ufal.mff.cuni.cz/pdt/pml/" install_size="50000">
+<tred_extension xmlns="http://ufal.mff.cuni.cz/pdt/pml/">
   <head>
     <schema href="tred_extension_schema.xml"/>
   </head>
@@ -12,7 +12,7 @@
       expressions annotated therein as node groups in tectogrammatical trees. 
   </description>
   <require>
-    <tred min_version="1.4385"/>
+    <tred min_version="1.4391"/>
     <extension name="pdt20" min_version="1.0" href="http://ufal.mff.cuni.cz/~pajas/tred/extensions/pdt20"/>
   </require>
 </tred_extension>
