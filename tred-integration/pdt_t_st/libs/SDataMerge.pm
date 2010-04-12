@@ -17,52 +17,21 @@ sub transform {
     my $annotator = $s_cont->findvalue(
 '/pml:sdata/pml:meta/pml:annotation_info/pml:annotator');
     $annotator =~ s/.*?(\w+)$/$1/;
-    print $annotator, "\n";
-    my $is_sfile_old = is_sfile_format_old($s_cont);
+#    print STDERR $annotator, "\n";
 
-    my $t_filename = $s_cont->findvalue(
-'/pml:sdata/pml:head[1]/pml:references[1]/pml:reffile[@name="tdata"]/@href'
-    );
-    my $t_file_URI =
-      URI->new_abs( $t_filename,
-        URI->new( $sdoc->URI )->abs( URI::file->cwd ) );
-
-    # Parse t-file and get t-trees
-    my $parser = XML::LibXML->new();
-    $parser->keep_blanks(0);
-    my $tdoc   = $parser->parse_file($t_file_URI);
-    my $t_cont = XML::LibXML::XPathContext->new( $tdoc->documentElement() );
-    $t_cont->registerNs( pml => PML_NS );
-    my @t_trees = $t_cont->findnodes('/pml:tdata/pml:trees/pml:LM');
-    my ($t_schema) = $t_cont->findnodes('/pml:tdata/pml:head/pml:schema');
-
+    my ($t_tree_listref, $tdoc, $t_cont, $t_schema) = get_t_trees($sdoc, $s_cont);
     $t_schema->setAttribute( 'href', 'tdata_mwe_schema.xml' );
 
     # Modify the s-nodes to the correct form and merge them into t-trees
     my @snodes = $s_cont->findnodes('/pml:sdata/pml:wsd/pml:st');
+    my $sfile_old = is_sfile_format_old($s_cont);
   SNODE:
     foreach my $snode (@snodes) {
-        my $tnode_rfs;    # the t-nodes in this s-node
-        if ($is_sfile_old) {
-
-            # Modify the s-node to the correct form
-            my @tnode_rf = $s_cont->findnodes( './pml:t.rf', $snode );
-            map $_->unbindNode, @tnode_rf;
-            $tnode_rfs = $sdoc->createElementNS( PML_NS, 'tnode.rfs' );
-            $tnode_rfs = $snode->appendChild($tnode_rfs);
-            map {
-                $_->setNodeName('LM');
-                my ($textchild) = $_->childNodes;
-                $textchild->replaceDataRegEx( 't#t', 't' );
-                $tnode_rfs->appendChild($_);
-            } @tnode_rf;
+        if ($sfile_old) {
+            ($sdoc, $s_cont, $snode) = correct_snode($sdoc, $s_cont, $snode);
         }
         else {
-
-         # only change references into a 't' file to references into 'this' file
-            $tnode_rfs = $s_cont->findnodes( './pml:tnode.rfs', $snode );
-            my @tnode_rf =
-              $s_cont->findnodes( './pml:tnode.rfs/pml:LM', $snode );
+            my @tnode_rf = $s_cont->findnodes( './pml:tnode.rfs/pml:LM', $snode );
             map {
                 my ($textchild) = $_->childNodes;
                 $textchild->replaceDataRegEx( 't#t', 't' );
@@ -70,14 +39,12 @@ sub transform {
         }
 
         # ID of the first t-node in this s-node
-        my ($s_first_tnode) = map $_->toString,
-          $s_cont->findnodes( './pml:LM/text()', $tnode_rfs );
+        my $s_first_tnode = $s_cont->findvalue( './pml:tnode.rfs/pml:LM[1]',
+            $snode );
 
-      TROOT: foreach my $troot (@t_trees) {
-#            no warnings;
+      TROOT: foreach my $troot (@{$t_tree_listref}) {
             my @nodes_in_this_tree = $t_cont->findnodes( './/pml:children/pml:LM', $troot );
             my @tnode_ids = map $_->getAttribute('id'), @nodes_in_this_tree;
-#            warn join ', ', @tnode_ids, "\n"; next TROOT;
             my $match = first { $_ eq $s_first_tnode } @tnode_ids;
             if ($match) {
                 my $annotators_mwes = get_annot_mwes($tdoc, $t_cont, $troot,
@@ -132,6 +99,43 @@ sub get_annot_mwes {
         $mwes->insertBefore( $annot_mwes, $mwes->firstChild );
     }
     return $annot_mwes;
+}
+
+
+sub get_t_trees {
+    my ($sdoc, $s_cont) = @_;
+    # Parse t-file and get t-trees
+    my $t_filename = $s_cont->findvalue(
+        '/pml:sdata/pml:head[1]/pml:references[1]/pml:reffile[@name="tdata"]/@href'
+    );
+    my $t_file_URI =
+    URI->new_abs( $t_filename,
+        URI->new( $sdoc->URI )->abs( URI::file->cwd ) );
+    my $parser = XML::LibXML->new();
+    $parser->keep_blanks(0);
+    my $tdoc   = $parser->parse_file($t_file_URI);
+    my $t_cont = XML::LibXML::XPathContext->new( $tdoc->documentElement() );
+    $t_cont->registerNs( pml => PML_NS );
+    my @t_trees = $t_cont->findnodes('/pml:tdata/pml:trees/pml:LM');
+    my ($t_schema) = $t_cont->findnodes('/pml:tdata/pml:head/pml:schema');
+    return (\@t_trees, $tdoc, $t_cont, $t_schema);
+}
+
+
+sub correct_snode{
+    my ($sdoc, $s_cont, $snode) = @_;
+    # Modify the s-node to the correct form
+    my @tnode_rf = $s_cont->findnodes( './pml:t.rf', $snode );
+    map $_->unbindNode, @tnode_rf;
+    my $tnode_rfs = $sdoc->createElementNS( PML_NS, 'tnode.rfs' );
+    $tnode_rfs = $snode->appendChild($tnode_rfs);
+    map {
+        $_->setNodeName('LM');
+        my ($textchild) = $_->childNodes;
+        $textchild->replaceDataRegEx( 't#t', 't' );
+        $tnode_rfs->appendChild($_);
+    } @tnode_rf;
+    return ($sdoc, $s_cont, $snode);
 }
 
 1;
