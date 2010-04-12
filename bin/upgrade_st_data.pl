@@ -28,8 +28,6 @@ foreach my $filename (@ARGV) {
     if ($use_stdout) {
         $sdoc->toFH( \*STDOUT );
     }
-    elsif ($in_place) {
-    }
     else {
         copy($filename, "$filename.old.gz") if not $in_place;
         $sdoc->setCompression('6');
