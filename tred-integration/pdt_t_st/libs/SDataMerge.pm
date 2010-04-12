@@ -10,6 +10,23 @@ use List::Util qw(first);
 
 use constant PML_NS => 'http://ufal.mff.cuni.cz/pdt/pml/';
 
+
+sub upgrade_st {
+    my ($sdoc) = @_;
+    my $s_cont = XML::LibXML::XPathContext->new( $sdoc->documentElement() );
+    $s_cont->registerNs( pml => PML_NS );
+    my @snodes = $s_cont->findnodes('/pml:sdata/pml:wsd/pml:st');
+    my $sfile_old = is_sfile_format_old($s_cont);
+  SNODE:
+    foreach my $snode (@snodes) {
+        if ($sfile_old) {
+            correct_snode($sdoc, $s_cont, $snode);
+        }
+    }
+    return $sdoc;
+}
+
+
 sub transform {
     my ($sdoc) = @_;
     my $s_cont = XML::LibXML::XPathContext->new( $sdoc->documentElement() );
@@ -17,7 +34,6 @@ sub transform {
     my $annotator = $s_cont->findvalue(
 '/pml:sdata/pml:meta/pml:annotation_info/pml:annotator');
     $annotator =~ s/.*?(\w+)$/$1/;
-#    print STDERR $annotator, "\n";
 
     my ($t_tree_listref, $tdoc, $t_cont, $t_schema) = get_t_trees($sdoc, $s_cont);
     $t_schema->setAttribute( 'href', 'tdata_mwe_schema.xml' );
@@ -28,7 +44,7 @@ sub transform {
   SNODE:
     foreach my $snode (@snodes) {
         if ($sfile_old) {
-            ($sdoc, $s_cont, $snode) = correct_snode($sdoc, $s_cont, $snode);
+            correct_snode($sdoc, $s_cont, $snode, 'merge');
         }
         else {
             my @tnode_rf = $s_cont->findnodes( './pml:tnode.rfs/pml:LM', $snode );
@@ -123,7 +139,7 @@ sub get_t_trees {
 
 
 sub correct_snode{
-    my ($sdoc, $s_cont, $snode) = @_;
+    my ($sdoc, $s_cont, $snode, $merge_st_into_t) = @_;
     # Modify the s-node to the correct form
     my @tnode_rf = $s_cont->findnodes( './pml:t.rf', $snode );
     map $_->unbindNode, @tnode_rf;
@@ -132,7 +148,7 @@ sub correct_snode{
     map {
         $_->setNodeName('LM');
         my ($textchild) = $_->childNodes;
-        $textchild->replaceDataRegEx( 't#t', 't' );
+        $textchild->replaceDataRegEx( 't#t', 't' ) if $merge_st_into_t;
         $tnode_rfs->appendChild($_);
     } @tnode_rf;
     return ($sdoc, $s_cont, $snode);
