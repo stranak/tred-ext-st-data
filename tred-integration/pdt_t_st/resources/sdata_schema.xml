@@ -4,7 +4,7 @@
 <!--  <reference name="mdata" readas="dom"/>-->
 <!--  <reference name="adata" readas="dom"/>-->
   <reference name="tdata" readas="dom"/>
-<!--  <reference name="semlex"/> |+ for SemLex as well as Vallex, etc. +|-->
+  <reference name="semlex"/> <!-- for SemLex as well as Vallex, etc. -->
   <!-- TODO: For the lexicon used <lexicon> in <s-annotation-info> should be
           referenced!! -->
 
