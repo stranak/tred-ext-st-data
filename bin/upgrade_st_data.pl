@@ -15,8 +15,6 @@ GetOptions( "stdout|S" => \our $use_stdout, "inplace|i" => \our $in_place )
 my $st_suffix = qr/\.st\.g?zi?p?$/;
 
 foreach my $filename (@ARGV) {
-
-    # Parse s-file and get a DOM
     if ( $filename !~ $st_suffix ) {
         warn "$filename does not look like an 'st' file.";
         next;

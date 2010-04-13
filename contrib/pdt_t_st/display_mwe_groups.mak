@@ -39,6 +39,10 @@
         Redraw() if GUI();
     }
 
+    sub get_value_line_hook {
+	PML_T::get_value_line_hook(@_)
+    }
+
     sub after_redraw_hook {
     # TODO ruzny stipple pro ruzne anotatory.
         my %mwe_colours = (

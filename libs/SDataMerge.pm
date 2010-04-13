@@ -79,12 +79,12 @@ sub transform {
 sub is_sfile_format_old {
     my $s_cont = shift;
     if ( $s_cont->findnodes('/pml:sdata/pml:wsd/pml:st/pml:t.rf') ) {
-        warn
+        print STDERR
 "Looks like old, not valid s-data file. I will transform its contents.\n";
         return 1;
     }
     else {
-        warn "Looks like a valid s-data file.\n";
+        print STDERR "Looks like a valid s-data file.\n";
         return 0;
     }
 }
