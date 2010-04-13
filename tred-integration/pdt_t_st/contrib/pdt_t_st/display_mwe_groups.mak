@@ -56,6 +56,10 @@
             foreign     => '#8a535c',
             other       => 'orange1',
         );
+        
+        # cyklus pres anotatory
+        my @annotators = ListV( $root->attr('mwes/annotator/@name') ); 
+        print @annotators, "\n\n";
         my @stnodes = ListV( $root->attr('mwes/annotator/#content/st') );
         foreach my $mwe_type ( keys %mwe_colours ) {
             my @these_mwes =
