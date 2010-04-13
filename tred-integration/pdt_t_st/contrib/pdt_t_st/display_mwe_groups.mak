@@ -1,10 +1,8 @@
 # vim: set syntax=perl:
 
 {
-
     package PML_ST_Data;
-#     use strict;
-
+    use strict;
     BEGIN { import TredMacro; }
 
     sub detect {
@@ -40,28 +38,30 @@
     }
 
     sub get_value_line_hook {
-	PML_T::get_value_line_hook(@_)
+        PML_T::get_value_line_hook(@_);
     }
 
     sub after_redraw_hook {
-    # TODO ruzny stipple pro ruzne anotatory.
+
+        # TODO ruzny stipple pro ruzne anotatory.
         my %mwe_colours = (
-	    semlex      => 'maroon',
-	    person      => 'olive drab',
-	    institution => 'hot pink',
-	    location    => 'Turquoise1',
-	    object      => 'plum',
-	    address     => 'light slate blue',
-	    time        => 'lime green',
-	    biblio      => '#8aa3ff',
-	    foreign     => '#8a535c',
-	    other       => 'orange1',
+            semlex      => 'maroon',
+            person      => 'olive drab',
+            institution => 'hot pink',
+            location    => 'Turquoise1',
+            object      => 'plum',
+            address     => 'light slate blue',
+            time        => 'lime green',
+            biblio      => '#8aa3ff',
+            foreign     => '#8a535c',
+            other       => 'orange1',
         );
         my @stnodes = ListV( $root->attr('mwes/annotator/#content/st') );
         foreach my $mwe_type ( keys %mwe_colours ) {
-	 my @these_mwes = $mwe_type eq 'semlex'                    ? 
-		 grep { $_->{'lexicon-id'} =~ /^s#\d+$/ } @stnodes :
-		 grep { $_->{'lexicon-id'} eq "s##$mwe_type" } @stnodes;
+            my @these_mwes =
+              $mwe_type eq 'semlex'
+              ? grep { $_->{'lexicon-id'} =~ /^s#\d+$/ } @stnodes
+              : grep { $_->{'lexicon-id'} eq "s##$mwe_type" } @stnodes;
             foreach my $st (@these_mwes) {
                 my @group =
                   map { PML_T::GetNodeByID($_) } ListV( $st->{'tnode.rfs'} );
@@ -70,8 +70,8 @@
                     [ [@group] ],
                     {
                         colors   => [ $mwe_colours{$mwe_type} ],
-			stipples => ['dense1']
-			# group_line_width => 30, # default
+                        stipples => ['dense1']
+                      # group_line_width => 30, # default
                     }
                 );
             }
