@@ -55,16 +55,14 @@ sub transform {
         }
 
         # ID of the first t-node in this s-node
-        my $s_first_tnode = $s_cont->findvalue( './pml:tnode.rfs/pml:LM[1]',
-            $snode );
+        my $s_first_tnode = $s_cont->findvalue( './pml:tnode.rfs/pml:LM[1]', $snode );
 
       TROOT: foreach my $troot (@{$t_tree_listref}) {
             my @nodes_in_this_tree = $t_cont->findnodes( './/pml:children/pml:LM', $troot );
             my @tnode_ids = map $_->getAttribute('id'), @nodes_in_this_tree;
             my $match = first { $_ eq $s_first_tnode } @tnode_ids;
             if ($match) {
-                my $annotators_mwes = get_annot_mwes($tdoc, $t_cont, $troot,
-                    $annotator);
+                my $annotators_mwes = get_annot_mwes($tdoc, $t_cont, $troot, $annotator);
                 my $snode_parent = $snode->parentNode;
                 $snode = $snode_parent->removeChild($snode);
                 $annotators_mwes->appendChild($snode);
@@ -104,11 +102,11 @@ sub get_annot_mwes {
     # get the <annotator> element of this t-root for the
     # $annotator (from the s-file). Create it, if it doesn't exist.
     my $annot_mwes; 
-    if ( $t_cont->exists( './pml:annotator/@name', $mwes ) ) {
+    if ( $t_cont->exists( './pml:annotator', $mwes ) ) {
         my @annotators = $t_cont->findnodes( './pml:annotator', $mwes );
         $annot_mwes = first { $_->getAttribute('name') =~ $annotator } @annotators;
     }
-    else {
+    if (not $annot_mwes) { # an element for this annotator's MWEs doesn't exist 
         $annot_mwes = $tdoc->createElementNS( PML_NS, 'annotator' );
         my $name_attr = $tdoc->createAttribute('name', $annotator);
         $name_attr = $annot_mwes->addChild($name_attr);
