@@ -27,7 +27,7 @@ GetOptions("stdout|S" => \ our $use_stdout)
   or die "Usage: $0 [--stdout|-S] <st-files>\n";
 
 my $st_suffix = qr/\.st\.g?zi?p?$/;
-my $t_suffix  = qr/\.t\.g?zi?p?$/;
+my $t_suffix  = qr/\.t\.(mwe.)?g?zi?p?$/;
 
 foreach my $s_filename (@ARGV) {
 
@@ -43,7 +43,8 @@ foreach my $s_filename (@ARGV) {
     if ($use_stdout) {
       $tdoc->toFH(\*STDOUT);
     } else {
-      my $tmwe_filename = $tdoc->URI . ".mwe.gz";
+      my $tmwe_filename = $tdoc->URI;
+      my $tmwe_filename =~ s/t\.gz$/t\.mwe\.gz/;
       $tdoc->setCompression('6');
       $tdoc->toFile( $tmwe_filename, 1 );
     }
