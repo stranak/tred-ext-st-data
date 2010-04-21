@@ -5,6 +5,11 @@
   <reference name="adata" readas="trees"/>
   <import schema="tdata_schema.xml"/>
   <import type="st-node.type" schema="sdata_schema.xml"/>
+  <derive type="st-node.type">
+      <structure name="s-node">
+        <member as_attribute="1" name="id" required="1"><cdata format="ID"/></member>
+      </structure>
+  </derive>
   <derive type="t-root.type">
     <structure role="#NODE" name="t-root">
       <member name="mwes" required="0">
