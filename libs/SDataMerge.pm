@@ -147,7 +147,8 @@ sub get_t_trees {
         URI->new( $sdoc->URI )->abs( URI::file->cwd ) );
     
     # Take t.mwe.gz instead, if it exists!
-    my $t_mwe_file_URI = $t_file_URI =~ s/t\.gz$/t\.mwe\.gz/;
+    my $t_mwe_file_URI = $t_file_URI;
+    $t_mwe_file_URI =~ s/t\.gz$/t\.mwe\.gz/;
     $t_file_URI = -s $t_mwe_file_URI ? $t_mwe_file_URI : $t_file_URI;
   
     my $parser = XML::LibXML->new();
