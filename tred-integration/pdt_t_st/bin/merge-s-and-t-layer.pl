@@ -27,7 +27,6 @@ GetOptions("stdout|S" => \ our $use_stdout)
   or die "Usage: $0 [--stdout|-S] <st-files>\n";
 
 my $st_suffix = qr/\.st\.g?zi?p?$/;
-my $t_suffix  = qr/\.t\.(mwe.)?g?zi?p?$/;
 
 foreach my $s_filename (@ARGV) {
 
