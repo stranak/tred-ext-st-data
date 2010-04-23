@@ -67,7 +67,6 @@
 		  ? grep { $_->{'lexicon-id'} =~ /^s#\d+$/ } @stnodes
 		  : grep { $_->{'lexicon-id'} eq "s##$mwe_type" } @stnodes;
 		foreach my $st (@these_mwes) {
-	    print STDERR "$annotator: ", $stipples[$i], " - $mwe_type\n\n";
 		    my @group =
 		      map { PML_T::GetNodeByID($_) } ListV( $st->{'tnode.rfs'} );
 		    TrEd::NodeGroups::draw_groups(
