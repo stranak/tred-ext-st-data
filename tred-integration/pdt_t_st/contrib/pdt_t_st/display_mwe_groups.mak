@@ -1,4 +1,4 @@
-# vim: set syntax=perl:
+# vim: set ft=perl:
 
 {
     package PML_ST_Data;
