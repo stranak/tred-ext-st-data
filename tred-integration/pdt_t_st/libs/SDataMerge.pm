@@ -152,7 +152,6 @@ sub get_t_trees {
     my $t_mwe_file_abs_path = $t_mwe_file_URI;
     $t_mwe_file_abs_path =~ s{file://}{};
     $t_file_URI = -s $t_mwe_file_abs_path ? $t_mwe_file_URI : $t_file_URI;
-    print STDERR "\n>>$t_file_URI\n\n";
   
     my $parser = XML::LibXML->new();
     $parser->keep_blanks(0);
@@ -178,7 +177,7 @@ sub correct_snode {
         $textchild->replaceDataRegEx( 't#t', 't' ) if $merge_st_into_t;
         $tnode_rfs->appendChild($_);
     } @tnode_rf;
-    return ( $sdoc, $s_cont, $snode );
+    return;
 }
 
 1;
