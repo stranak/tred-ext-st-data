@@ -1,9 +1,12 @@
 # vim: set ft=perl:
 
 {
+
     package PML_ST_Data;
     use strict;
     BEGIN { import TredMacro; }
+
+    our %annotator;    #to keep stable order of annotators between trees;
 
     sub detect {
         return ( ( PML::SchemaName() || '' ) =~ /tdata/
@@ -54,34 +57,35 @@
             foreign     => '#8a535c',
             other       => 'orange1',
         );
-	
+
         # cyklus pres anotatory
-	my @stipples = (qw(dense1 dense2 dense5 dense6));
-	my $i = 0;
-	foreach my $element ( ListV( $root->attr('mwes/annotator') ) ){ 
-	    my $annotator = $element->{name}; 
-	    my @stnodes = $element->value()->values(); # get a seq. of st-node values
-	    foreach my $mwe_type ( keys %mwe_colours ) {
-		my @these_mwes =
-		  $mwe_type eq 'semlex'
-		  ? grep { $_->{'lexicon-id'} =~ /^s#\d+$/ } @stnodes
-		  : grep { $_->{'lexicon-id'} eq "s##$mwe_type" } @stnodes;
-		foreach my $st (@these_mwes) {
-		    my @group =
-		      map { PML_T::GetNodeByID($_) } ListV( $st->{'tnode.rfs'} );
-		    TrEd::NodeGroups::draw_groups(
-			$grp,
-			[ [@group] ],
-			{
-			    colors   => [ $mwe_colours{$mwe_type} ],
-			    stipples => [$stipples[$i]]
-			  # group_line_width => 30, # default
-			}
-		    );
-		}
-	    }
-	$i++; # change the stipple for the next annotator
-	}
+        my @stipples = (qw(dense1 dense2 dense5 dense6));
+        foreach my $element ( ListV( $root->attr('mwes/annotator') ) ) {
+            my $name = $element->{name};
+            $annotator{$name} = (keys %annotator)+ 1 if not $annotator{$name};
+            my @stnodes =
+              $element->value()->values();    # get a seq. of st-node values
+            foreach my $mwe_type ( keys %mwe_colours ) {
+                my @these_mwes =
+                  $mwe_type eq 'semlex'
+                  ? grep { $_->{'lexicon-id'} =~ /^s#\d+$/ } @stnodes
+                  : grep { $_->{'lexicon-id'} eq "s##$mwe_type" } @stnodes;
+                foreach my $st (@these_mwes) {
+                    my @group =
+                      map { PML_T::GetNodeByID($_) }
+                      ListV( $st->{'tnode.rfs'} );
+                    TrEd::NodeGroups::draw_groups(
+                        $grp,
+                        [ [@group] ],
+                        {
+                            colors   => [ $mwe_colours{$mwe_type} ],
+                            stipples => [ $stipples[ $annotator{$name} -1 ] ]
+                          # group_line_width => 30, # default
+                        }
+                    );
+                }
+            }
+        }
     }
 
 }
