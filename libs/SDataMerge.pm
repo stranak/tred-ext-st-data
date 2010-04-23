@@ -149,7 +149,10 @@ sub get_t_trees {
     # Take t.mwe.gz instead, if it exists!
     my $t_mwe_file_URI = $t_file_URI;
     $t_mwe_file_URI =~ s/t\.gz$/t\.mwe\.gz/;
-    $t_file_URI = -s $t_mwe_file_URI ? $t_mwe_file_URI : $t_file_URI;
+    my $t_mwe_file_abs_path = $t_mwe_file_URI;
+    $t_mwe_file_abs_path =~ s{file://}{};
+    $t_file_URI = -s $t_mwe_file_abs_path ? $t_mwe_file_URI : $t_file_URI;
+    print STDERR "\n>>$t_file_URI\n\n";
   
     my $parser = XML::LibXML->new();
     $parser->keep_blanks(0);
