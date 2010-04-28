@@ -10,12 +10,11 @@ EXTDIR=/net/work/projects/tred/extensions
 WWW=/home/pajas/WWW/tred/extensions
 LOGO=icon.png
 
-cd "$bindir"/../tred-extension
+#cd "$bindir"/../tred-extension
 
 "$EXTDIR"/make $EXTNAME
-mkdir -p "$WWW"/$EXTNAME/icons
+mkdir -p "$WWW"/$EXTNAME/icons || exit 1
 cp $EXTNAME/icons/$LOGO  "$WWW"/$EXTNAME/icons
 chmod g+w /home/pajas/WWW/tred/extensions/$EXTNAME.zip
-rsync -avr "$WWW"/{index.html,$EXTNAME{,.zip}}
-ufal:/home/pajas/WWW/tred/extensions/
+rsync -avr "$WWW"/{index.html,$EXTNAME{,.zip}} ufal:/home/pajas/WWW/tred/extensions/
 rm -rf "$WWW"/$EXTNAME/icons/
