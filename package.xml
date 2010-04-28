@@ -3,7 +3,7 @@
   <head>
     <schema href="tred_extension_schema.xml"/>
   </head>
-  <pkgname>pdt_st_data</pkgname>
+  <pkgname>pdt_t_st</pkgname>
   <repository href="http://ufal.mff.cuni.cz/~pajas/tred/extensions/"/>
   <title>Display st-data in the tectogrammatical trees</title>
   <version>0.6</version>
