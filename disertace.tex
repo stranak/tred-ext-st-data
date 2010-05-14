@@ -6,7 +6,7 @@
 \defaultfontfeatures{Mapping=tex-text}
 \setmainfont{Adobe Caslon Pro}
 \setmonofont[Scale=MatchLowercase]{Monaco}
-\setmathsf{Cambria Math}
+%\setmathsf{Cambria Math}
 
 \usepackage{paralist} % for better itemize and enumerate
 % asparaenum, inparaenum, \begin{compactenum}[{Example} a)] etc.
@@ -61,9 +61,9 @@ Barack Obama accused his Republican rivals of stirring a controversy over a comm
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{PDT 2.0}\label{PDT}
-In the Prague dependency treebank version 2.0 (PDT, ) there are several functors that refer to multiword expressions (MWEs) in one way or another. There are also some technical lemmas (??? nebo jen 1?) like {\tt \#Forn} that identify roots of subtrees representing MWE's. Tectogrammatical annotation is described in detail in~\citet{mikulova:2006}.
+In the Prague dependency treebank version 2.0 (PDT, ) there are several functors that refer to multiword expressions (MWEs) in one way or another. There are also two technical lemmas \texttt{\#Idph} and \texttt{\#Forn} that identify roots of subtrees representing MWE's. Tectogrammatical annotation is described in detail in~\citet{mikulova:2006}.
 
-There are currently two graphical search engines for PDT: Netgraph \cite{netgraph} and TrEd \cite{tred}. Both have their respective benefits, but since TrEd is considerably faster due to its use of an SQL database backend \cite{pmltq}, we have used TrEd for all the examples in this work. We also give the search queries using the PML Tree Query language \cite{pmltq} where appropriate.
+There are currently two graphical search engines for PDT: Netgraph \citep{mirovsky:2009} and TrEd \citep{pajas:tred}. Both have their respective benefits, but since TrEd is considerably faster due to its use of an SQL database backend \citep{pmltq}, we have used TrEd for all the examples in this work. We also give the search queries using the PML Tree Query language designed by \citet{pmltq} where appropriate.
 
 %%%%%%%%%%
 \subsection{Foreign Phrase: \code{t-node [t\_lemma = \#Forn]}}\label{PDT:Forn}
