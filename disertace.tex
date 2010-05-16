@@ -1,27 +1,14 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
 \documentclass[11pt, a4paper]{article}
-
-\usepackage{fontspec, xunicode, xltxtra}
-\defaultfontfeatures{Mapping=tex-text}
-\setmainfont{Adobe Caslon Pro}
-\setmonofont[Scale=MatchLowercase]{Monaco}
-\setmathsf{Cambria Math}
-
-\usepackage{paralist} % for better itemize and enumerate
-% asparaenum, inparaenum, \begin{compactenum}[{Example} a)] etc.
-% Also, items can be referenced via \label{} and \ref{}
-%
-\frenchspacing
-\usepackage{natbib}
-\bibpunct{(}{)}{;}{a}{,}{,}
-\usepackage{gb4e}
-\usepackage{wrapfig}
+\usepackage{my-additions-x}
 
 % my macros
 \def\code{\texttt}
 \def\tred{\texttt{TrEd}}
+\def\ntred{\texttt{N-TrEd}}
 \def\seman{\texttt{SemAnn}}
+\def\semlex{\texttt{SemLex}}
 \def\astst{$\ast$.st}
 \def\sdata{s-data}
 \def\stn{st-node}
@@ -89,10 +76,10 @@ In case of the bibliographic reference in Figure~\ref{fig:forn-biblio} there is 
 \label{fig:forn-biblio}
 \end{figure}
 
-Names of companies seem to be distinguished more by the country of origin then by any linguistic reasons, as demonstrated in Figure~\ref{fig:forn-firmy}. As far as linguistic criteria are concerned, Chemapol and Inekon are as foreign as Agip or Total. However the first two are, or at least were%
+Names of companies seem to be distinguished more by the country of origin then by any linguistic reasons, as demonstrated in Figure~\ref{fig:forn-firmy}. As far as linguistic criteria are concerned, Chemapol and Inekon are as foreign as Agip or Total. However the first two are, or at least were,%
 \footnote{At the time of writing this thesis Chemapol is owned by another international company, which only emphasises vagueness of this distinction} %
 %
-, Czech companies, while those in the latter group have a foreign origin.
+Czech companies, while those in the latter group have a foreign origin.
 
 \begin{figure}
 \includegraphics[width=\textwidth]{images/vyhledavky/nazvy-firem.pdf}
@@ -134,5 +121,6 @@ Figure~\ref{fig:cphr-echild2} shows on the other hand a coordination of two V-N 
 ``\textit{První} a druhá světová válka'' apod. -- the word ``První'' is an ellipsis of ``První světová válka''. The ellided t-nodes that should had been newly established were not, however, which left us two options, either annotate a single-word (and single-node) expression as an instance of a multi-word lexeme, or annotate the words ``světová válka'' that occure in the text as being a part of both expressions. We decided for the first, because the agreement on ellipses is fairly high in this type of coordinations.
 
 \include{chapters/sdata}
+\include{chapters/semann}
 \bibliographystyle{plainnat}
 \end{document}
