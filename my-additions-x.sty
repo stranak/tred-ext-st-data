@@ -1,0 +1,38 @@
+% The latex packages I use over and over in most of my documents
+% Pavel Stranak
+%
+\usepackage{xltxtra} % automaticall loads fontspec and some other packages
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont{Adobe Caslon Pro}
+\setmonofont[Scale=MatchLowercase]{Consolas}
+%\setmonofont[Scale=MatchLowercase]{Menlo}
+\setmathsf{Cambria Math}
+
+\usepackage{url}
+%\usepackage{underscore}
+\usepackage{color} %pro korektury
+\usepackage{rotating}
+\usepackage{paralist} % for better itemize and enumerate
+% asparaenum, inparaenum, \begin{compactenum}[{Example} a)] etc.
+% Also, items can be referenced via \label{} and \ref{}
+\usepackage{gb4e}
+\usepackage{wrapfig}
+\usepackage{array}
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+
+\usepackage[    
+   pdfdisplaydoctitle, breaklinks, colorlinks, linkcolor=black,
+   citecolor=black, filecolor=black, urlcolor=black, 
+   backref, hyperfootnotes, unicode, xetex
+   ]{hyperref} % backref asi nakonec zrusime 
+
+\usepackage{natbib}
+\bibpunct{(}{)}{;}{a}{,}{,}
+\bibliographystyle{plainnat}
+
+\frenchspacing
+
+\pagestyle{empty}
+
