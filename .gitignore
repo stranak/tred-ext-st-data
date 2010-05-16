@@ -7,5 +7,7 @@ CFG-2009/Paper.pdf
 *.log
 *.bbl
 *.blg
+*.brf
+*.out
+*.synctex.gz
 CFG-2009/rosen/cfg.pdf
-missfont.log

@@ -7,11 +7,7 @@
 \setmonofont[Scale=MatchLowercase]{Consolas}
 %\setmonofont[Scale=MatchLowercase]{Menlo}
 \setmathsf{Cambria Math}
-\usepackage[    
-   pdfdisplaydoctitle, breaklinks, colorlinks, linkcolor=black,
-   citecolor=black, filecolor=black, urlcolor=black, 
-   backref, hyperfootnotes
-   ]{hyperref} % backref asi nakonec zrusime 
+
 \usepackage{url}
 %\usepackage{underscore}
 \usepackage{color} %pro korektury
@@ -22,6 +18,15 @@
 \usepackage{gb4e}
 \usepackage{wrapfig}
 \usepackage{array}
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+
+\usepackage[    
+   pdfdisplaydoctitle, breaklinks, colorlinks, linkcolor=black,
+   citecolor=black, filecolor=black, urlcolor=black, 
+   backref, hyperfootnotes, unicode, xetex
+   ]{hyperref} % backref asi nakonec zrusime 
 
 \usepackage{natbib}
 \bibpunct{(}{)}{;}{a}{,}{,}
