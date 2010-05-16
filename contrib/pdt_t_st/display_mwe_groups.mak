@@ -60,7 +60,7 @@
 
         # cyklus pres anotatory
         my @stipples = (qw(dense1 dense2 dense5 dense6));
-        foreach my $element ( ListV( $root->attr('mwes/annotator') ) ) {
+        foreach my $element ( ListV( $root->attr('mwes/annotator' || '') ) ) {
             my $name = $element->{name};
             $annotator{$name} = (keys %annotator)+ 1 if not $annotator{$name};
             my @stnodes =
