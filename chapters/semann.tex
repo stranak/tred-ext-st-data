@@ -1,7 +1,9 @@
 % !TEX root = ../disertace.tex
 \section{\seman}
 \label{sec:seman}
-The annotation tool \seman\ is witten in Perl 5. It is composed of several parts:
+The annotation tool \seman\ is witten in Perl 5\footnote{\url{www.perl.org}; \url{dev.perl.org/perl5}} with Perl/Tk\footnote{\url{PerlTk.org}} GUI toolkit. The annotation tool depends on working instalation of \tred, specifically its $\ast$nix installation, because it uses \texttt{nTrEd} for efficient execution of \tred\ scripts in the background. \texttt{nTrEd} however, unlike \tred\ itself or \texttt{bTrEd} does not work on Windows, because it uses unix sockets.
+
+ \seman\ itself is composed of several parts:
 \begin{itemize}
 \item A frontend loads an \sf, a \semlex,  and a log file for this \sf, if it had already been annotated. 
 \item \ntred\ backend that is used to 
