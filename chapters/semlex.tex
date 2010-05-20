@@ -1,0 +1,20 @@
+% !TEX root = ../disertace.tex
+\chapter{SemLex}
+\label{sec:semlex}
+
+\section{Building SemLex – JLRE}
+\label{sec:semlex:build}
+Each entry we add into SemLex is considered to be a monosemic MWE. 
+We have also added nine special entries to identify NE types, so we do not need to add all the expressions themselves.
+%These generic entries are ``a~name of a person or an animal'', ``institution'', ``location'', ``other object'' (used for names of books, units of measurement, biological names of plants and animals), ``address'', ``time'', ``bibliographic entry'', ``foreign expression'' and ``other entity''. 
+These types are derived from the NE classification by \citealp{sevcikova:2007}.
+%
+Some frequent names of persons, institutions or other objects (e.g.~film titles) are being added into SemLex during annotation (while keeping the information about their NE type), because this allows for their following occurrences to be pre-annotated automatically (see Section~\ref{sec:pre}). For others, like addresses or bibliographic entries, it makes but little sense, because they most probably will not reappear during the annotation. 
+
+Currently (for the first stage of lexico-semantic annotation of PDT) SemLex contains only MWEs. Its base has been composed of MWEs extracted from Czech WordNet \citep{smrz:03}, Eurovoc \citep{eurovoc:07} and Dictionary of Czech Phraseology and Idiomatics \citep{cermak:1988}.%
+%For the explanation of our use of the SČFI subset see point \ref{pre-hnatkova} in Section~\ref{sec:pre} below. 
+Currently there are over 30,000 MWEs in SemLex and more are being added during annotations.
+
+%In the current ``compiled'' SemLex there are many collocations that can hardly be considered lexias. However, these frequently occurring collocations are pragmatically quite useful and it may be good to identify them, too.\footnote{We would like to mark these entries in SemLex at some point, so that we know these in fact are not lexias and we do not attempt to create a single t-node for them when they are annotated.} The most important thing is to ensure that they are annotated consistently. They can be useful for machine translation, because, e.g., for those collocations that were extracted from Czech WordNet, there are at our disposal their translations into English (CWN). For the collocations that come from Eurovoc we even have translations into all the official languages ("jednací jazyk" ???) of the European Union.
+
+The entries added by annotators must have defined their ``sense''. Annotators define it informally (as well as possible) and we extract an example of usage and the basic form from the annotation automatically. The ``sense'' information will be revised by a lexicographer, based on annotated occurrences.

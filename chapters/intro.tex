@@ -1,0 +1,61 @@
+% !TEX root = ../disertace.tex
+\chapter{Introduction}
+\label{sec:intro}
+\section{Abstract – JLRE}
+ %In this article we want to demonstrate that annotation of multiword expressions in the %Prague Dependency Treebank is a well defined task,  
+%% in theory as well as in practice
+%that it is useful as well as feasible, and that we can achieve good consistency of %such annotations in terms of inter-annotator agreement. 
+We describe annotation of multiword expressions in the Prague Dependency Treebank, using several automatic pre-annotation steps.
+We use subtrees of the tectogrammatical tree structures of the Prague dependency treebank to store representations of the multiword expressions in the dictionary and pre-annotate following occurrences automatically.
+We also show a way to measure reliability of this type of annotation. 
+%We use subtrees of the tectogrammatical tree structures of the Prague dependency treebank to represent the multiword expressions.
+
+%We show that the lexico-semantic annotation\footnote{``word-sense identification'' means almost the same, but it implies ``word'' as the basic unit. We believe this view is incorrect, thus we prefer term ``lexico-semantic annotation'', that 'zduraznuje' \textit{lexeme} as the basic unit.} is necessary part of deeper treebank annotation. Further we present our methodology and subsequently preliminary results of annotation of vanilla texts, statically pre-annotated texts and compare these to preliminary results of our target annotation that includes dynamic pre-annotation based on lexemes' tree structures. Based on these data we show that our pre-annotation is justified and its benefits far outweigh its drawbacks. 
+
+% TODO vypichnout, co je tedy cilem, ze je to ta t-anotace (a nikoli autoanotace -- takto negativne to vsak nepsat)
+
+
+%%%%%
+\section{Motivation – JLRE} 
+\label{sec:intro:motiv}
+
+Various projects involving lexico-semantic annotation have been ongoing for many years. 
+Among those there are the projects of word sense annotation, usually for creating training data for word sense disambiguation. However majority of these projects have only annotated very limited number of word senses (cf. Kilgarriff \citeyear{kilgarriff:1998}). Even among those that aim towards ``all words'' word-sense annotation, multiword expressions (MWE) are not annotated adequately (see Mihalcea~\citeyear{mihalcea:1998} or Hajič et al.~\citeyear{hajic-cwn:04}), 
+because for their successful annotation a metho\-do\-logy allowing identification of new MWEs during annotation is required. Existing dictionaries that include MWEs concentrate only on the most frequent ones, but we argue that there are many more MWEs that can only be identified (and added to the dictionary) by annotation.
+
+There are various projects for identification of named entities (for an overview see \citealp{sevcikova:2007}). We explain below, mainly in Section~\ref{sec:intro}, why we consider named entities to be concerned with lexical meaning. At this place we just wish to recall that these projects only select some specific parts of text and provide information only for these. They do not aim for full lexico-semantic annotation of texts.
+
+There is also another group of projects that have to tackle the problem of lexical meaning, namely treebanking projects that aim to develop a deeper layer of annotation in addition to a surface syntactic layer. This deeper layer is generally agreed to concern lexical meaning. To our best knowledge, the lexico-semantic annotations still deal with separate words, phrases are split and their parts are connected with some kind of dependency. Furthermore, only words with valency are involved in projects like NomBank \citep{nombank}, PropBank \citep{propbank} or PDT.
+
+\nocite{erbach:1993}
+
+%%%%%
+\section{Introduction – JLRE}
+\label{sec:intro:intro-old}
+In our project we annotate all occurrences of MWEs (including named entities, see below) in PDT 2.0. 
+When we speak of \textbf{multiword expressions} we mean ``idiosyncratic interpretations that cross word boundaries'' \citep{sag:2002}. We do not inspect various types of MWEs, because we are not concerned in their grammatical attributes. We only want to identify them. Once there will be a lexicon with them and their occurrences annotated in corpora, the description and sorting of MWEs will take place. We hope that annotation of a treebank will help -- MWEs with fixed syntactic form will be easily distinguished from the others that can be modified by added words.
+
+%, i.e. ``the conjunction of the lexical form and the individual meaning'' \cite{filipec:1994}.
+% TODO Nasledujici vetu rozvest, rozdelit na vic, zduraznit, ze prirazujeme typ.
+We distinguish a special type of MWEs, for which we are mainly interested in its type, during the annotation: \textbf{named entities (NE)}.\footnote{NEs can in general be also single-word, but in this phase of our project we are only interested in multiword expressions, so when we say NE in this paper, we always mean multiword.} 
+%
+Treatment of NEs together with other MWEs is important, because syntactic functions
+%dependencies 
+are more or less arbitrary inside a NE (consider an address with phone numbers, etc.) and so is the assignment of semantic roles.
+%tectogrammatical functors. 
+That is why we need each NE to be combined into a single node, just like we do it with MWEs in general. 
+
+%Having said that in the case of NEs we care mostly for their type, we do not mean that in the future we do not want to have more information on the individual entities and possibly include them in the lexicon. Even individual names or addresses can (and should) be understood as lexias (lexical units). It is however not feasible to do this manually.
+%% TODO Rozvest nasledujici vetu
+%Besides, it is an excellent IR challenge to retrieve appropriate information
+%% TODO NAPRIKLAD which should be appended to the lexicon entry.
+%% This information varies for particular types of NE.
+%for each type of NEs (see for instance \cite{feng:2006}) and
+%% It is desirable to
+%keep this information up to date, where needed (e.g. for persons).
+
+For the purpose of annotation we have built a repository of MWEs, which we call SemLex. We have built it using entries from some existing dictionaries and it is being enriched during the annotation in order to contain every MWE that was annotated. We explain this in detail in Section~\ref{sec:meth:semlex}. 
+
+%Various projects involving lexico-semantic annotation have been ongoing for many years. Majority of these however only annotated very limited number of word senses. Even among those that aimed towards ``all words'' word sense annotation, MWE were usually disregarded. Reason for this is, that these projects were annotations of plain text and so the units they work on are words. These are usually not involved in the question of What is a lexical meaning? What is a unit on the level of lexical meaning? And what level is that?
+
+%There is also second group of projects that have to tackle the problem of lexical meaning, namely treebanking projects that aim to develop a deeper layer of annotation in addition to the surface syntactic layer. This deeper layer is mostly agreed to be the layer of lexical meaning. Therefore the units of this layer cannot be the words anymore, they should be lexias (ref.). %upravit (oslabit)
