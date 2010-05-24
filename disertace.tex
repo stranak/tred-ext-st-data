@@ -1,6 +1,6 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
-\documentclass[11pt, a4paper]{book}
+\documentclass[11pt, a4paper, twopage, titlepage]{book}
 \usepackage{my-additions-x}
 
 % my macros
@@ -22,13 +22,18 @@
 \def\Mwe{multi-word expression}
 \newcommand\Sref[1]{Section~\ref{#1}}
 
-\title{Thesis Notes}
-\author{\textsc{Pavel Straňák}}
+\title{Annotation of Multiword Lexemes in the Prague Dependency Treebank}
+\author{Pavel Straňák}
 
 \begin{document}
 \maketitle
 
 %%%%%%%%%%
+\frontmatter
+\tableofcontents
+\listoffigures
+\listoftables
+x
 \section*{Motto}
 \begin{tabular}{@{} lp{11cm} @{}} % @{} removes default spaces
 Frasier: & ``How was your hunting trip?''\\
@@ -52,6 +57,8 @@ Frasier: & ``Well, there was traffic.''\\
 \subsection{Missing t-nodes in \code{coord}s}
 ``\textit{První} a druhá světová válka'' apod. -- the word ``První'' is an ellipsis of ``První světová válka''. The ellided t-nodes that should had been newly established were not, however, which left us with two options: either annotate a single-word (and single-node) expression as an instance of a multi-word lexeme, or annotate the words ``světová válka'' that occure in the text as being a part of both expressions. We decided for the first, because the agreement on ellipses is fairly high in this type of coordinations.
 
+%%%%%%%%%%%%%
+\mainmatter
 \include{chapters/intro}
 \include{chapters/idioms}
 \include{chapters/pdt}
