@@ -1,4 +1,6 @@
 % !TEX root = ../disertace.tex
+%!TEX encoding = UTF-8 Unicode
+
 \chapter{SemLex}
 \label{sec:semlex}
 
@@ -6,10 +8,41 @@
 \label{sec:semlex:build}
 Each entry we add into SemLex is considered to be a monosemic MWE. 
 We have also added nine special entries to identify NE types, so we do not need to add all the expressions themselves.
-%These generic entries are ``a~name of a person or an animal'', ``institution'', ``location'', ``other object'' (used for names of books, units of measurement, biological names of plants and animals), ``address'', ``time'', ``bibliographic entry'', ``foreign expression'' and ``other entity''. 
-These types are derived from the NE classification by \citealp{sevcikova:2007}.
-%
-Some frequent names of persons, institutions or other objects (e.g.~film titles) are being added into SemLex during annotation (while keeping the information about their NE type), because this allows for their following occurrences to be pre-annotated automatically (see Section~\ref{sec:pre}). For others, like addresses or bibliographic entries, it makes but little sense, because they most probably will not reappear during the annotation. 
+
+\subsection{Named entities}
+\emph{Named entities} are a concept originating in information retrieval (??, quote). This concept does not exist in classical lexicology and its defining criteria do not correspond with a definition of a lexical unit, lexeme, or any other lexicological concept of our knowledge.
+
+We used the NE classification by \citet{sevcikova:2007} as a starting point. However the definition does not seem like much of a definition at all:
+
+%\begin{quotation}
+%Pojmenované entity jsou jednotlivá slova nebo slovní spojení, která v textu vystupují jako
+%pojmenování osob, míst, firem apod. Cílem anotace je označení všech pojmenovaných entit v 
+%předloženém lineárním textu. Současná anotace bude zaměřena na identifikaci především těch 
+%pojmenovaných entit, které jsou zapsány s velkým počátečním písmenem.
+%\end{quotation}
+
+
+Our types of entities are:
+\begin{compactenum}
+\item ``a~name of a person or an animal'', 
+\item``institution'', 
+\item``location'', 
+\item``other object'' (used for names of books, units of measurement, biological names of plants and animals), 
+\item``address'', 
+\item``time'', 
+\item``bibliographic entry'', 
+\item``foreign expression'' and 
+\item``other entity''
+\end{compactenum}
+
+Compared to the original the classification is altered, because we do not use embedded entities. In the original \citeauthor{sevcikova:2007} use a bracketing approach in which entities of all types are further structured into smaller parts. We also altered some rules for classifying particular types of entities as follows:
+\begin{itemize}
+\item  We do not distinguish \emph{names of animals} as a distinct type. Animal names are considered the same type as the names of persons.
+\item We also merge the \emph{names of media} (newspapers, TV stations, \ldots) with names of companies. The reasons are mainly: a) it seems arbitrary to distinguish specifically names of media. b) It is also often hard to distinguish wether a name is a name of media or a company that owns or runs the media. At the same time there is usually little reason to try to make this distinction.
+\item \emph{Numbers with non-quantifying meaning} are merged with addresses. Since the subtypes defined for this type are \code{zip code}, \code{street number} and \code{phone/fax number}, this merge is quite natural, especially since these occur mostly as parts of addresses and we do not annotate any embedded entities.
+\end{itemize}
+
+Some frequent names of persons, institutions or other objects (e.g.~film titles) are being added into SemLex during annotation (while keeping the information about their NE type), because this allows for their following occurrences to be pre-annotated automatically (see Section~\ref{sec:annot:pre}). For others, like addresses or bibliographic entries, it makes but little sense, because they most probably will not reappear during the annotation. 
 
 Currently (for the first stage of lexico-semantic annotation of PDT) SemLex contains only MWEs. Its base has been composed of MWEs extracted from Czech WordNet \citep{smrz:03}, Eurovoc \citep{eurovoc:07} and Dictionary of Czech Phraseology and Idiomatics \citep{cermak:1988}.%
 %For the explanation of our use of the SČFI subset see point \ref{pre-hnatkova} in Section~\ref{sec:pre} below. 

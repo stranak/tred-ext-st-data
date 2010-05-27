@@ -30,5 +30,6 @@
 \contentsline {section}{\numberline {5.4}\texttt {SemAnn}}{27}{section.5.4}
 \contentsline {chapter}{\numberline {6}SemLex}{29}{chapter.6}
 \contentsline {section}{\numberline {6.1}Building SemLex – JLRE}{29}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Named entities}{29}{subsection.6.1.1}
 \contentsline {chapter}{\numberline {7}Conclusion}{31}{chapter.7}
 \contentsline {chapter}{Bibliography}{33}{chapter*.6}
