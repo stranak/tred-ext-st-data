@@ -1,4 +1,6 @@
 % !TEX root = ../disertace.tex
+%!TEX encoding = UTF-8 Unicode
+
 \chapter{\sdata}
 \section{The design and the PML schema}
 \sdata\ means s-layer PML files and the PML schema of these files. The idea behind \sdata\ design is to have a simple way to store additional ``sense'' annotations over any layer of PDT. The annotations are stored as a set of ``sense'' nodes where each s-node contains a link to a sense repository (annotation dictionary) and a set of references to nodes (m-, a- or t-) that correspond to an instance of the sense. An \sf\ is thus basically a very simple flat list of \sn{}s. It does not contain any trees. A single \sf\ can only reference a single PDT file: either tectogrammatical, or analytical, or even morphological layer can be used, but references to different layer cannot be mixed.

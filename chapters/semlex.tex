@@ -4,22 +4,23 @@
 \chapter{SemLex}
 \label{sec:semlex}
 
-\section{Building SemLex – JLRE}
+\section{Building SemLex – based on the JLRE article}
 \label{sec:semlex:build}
 Each entry we add into SemLex is considered to be a monosemic MWE. 
 We have also added nine special entries to identify NE types, so we do not need to add all the expressions themselves.
 
 \subsection{Named entities}
-\emph{Named entities} are a concept originating in information retrieval (??, quote). This concept does not exist in classical lexicology and its defining criteria do not correspond with a definition of a lexical unit, lexeme, or any other lexicological concept of our knowledge.
+\emph{Named entities} are a concept originating in information retrieval (??, quote). This concept is well rooted in NLP but it does not exist in classical lexicology and its defining criteria do not correspond with a definition of a lexical unit, lexeme, or any other lexicologic or lexicographic concept of our knowledge.
 
 We used the NE classification by \citet{sevcikova:2007} as a starting point. However the definition does not seem like much of a definition at all:
 
-%\begin{quotation}
-%Pojmenované entity jsou jednotlivá slova nebo slovní spojení, která v textu vystupují jako
-%pojmenování osob, míst, firem apod. Cílem anotace je označení všech pojmenovaných entit v 
-%předloženém lineárním textu. Současná anotace bude zaměřena na identifikaci především těch 
-%pojmenovaných entit, které jsou zapsány s velkým počátečním písmenem.
-%\end{quotation}
+\begin{quote}
+%\fontspec{Adobe Garamond Pro}
+\emph{Pojmenované entity jsou jednotlivá slova nebo slovní spojení, která v textu vystupují jako
+pojmenování osob, míst, firem apod. Cílem anotace je označení všech pojmenovaných entit v 
+předloženém lineárním textu. Současná anotace bude zaměřena na identifikaci především těch 
+pojmenovaných entit, které jsou zapsány s velkým počátečním písmenem.}
+\end{quote}
 
 
 Our types of entities are:
