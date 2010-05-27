@@ -1,3 +1,4 @@
+\select@language {english}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
@@ -6,4 +7,6 @@
 \contentsline {table}{\numberline {4.2}{\ignorespaces The agreement per class and the associated weights}}{23}{table.4.2}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\select@language {czech}
+\select@language {english}
 \addvspace {10\p@ }
