@@ -14,14 +14,14 @@
 \contentsline {section}{\numberline {3.3}List structures}{7}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Foreign Phrase: \texttt {t-node [t\_lemma = \#Forn]}}{7}{subsection.3.3.1}
 \contentsline {subsubsection}{Foreign phrases with just one t-node}{7}{section*.5}
-\contentsline {section}{\numberline {3.4}CPHR and DPHR}{10}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}CPHR}{10}{subsection.3.4.1}
+\contentsline {section}{\numberline {3.4}CPHR and DPHR}{8}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}CPHR}{8}{subsection.3.4.1}
 \contentsline {section}{\numberline {3.5}JLRE -- Current state of MWEs in PDT 2.0}{10}{section.3.5}
 \contentsline {chapter}{\numberline {4}Annotation}{15}{chapter.4}
 \contentsline {section}{\numberline {4.1}Annotation – JLRE}{15}{section.4.1}
 \contentsline {section}{\numberline {4.2}Pre-annotation}{16}{section.4.2}
 \contentsline {section}{\numberline {4.3}Analysis of Annotations – JLRE}{18}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Inter-annotator Agreement – JLRE}{19}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.1}Inter-annotator Agreement – JLRE}{18}{subsection.4.3.1}
 \contentsline {chapter}{\numberline {5}s-data}{25}{chapter.5}
 \contentsline {section}{\numberline {5.1}The design and the PML schema}{25}{section.5.1}
 \contentsline {section}{\numberline {5.2}Visualisation}{25}{section.5.2}
