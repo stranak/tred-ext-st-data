@@ -8,29 +8,30 @@
 \contentsline {chapter}{\numberline {2}Idioms}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}Sinclair}{3}{section.2.1}
 \contentsline {section}{\numberline {2.2}Žabokrtský}{3}{section.2.2}
-\contentsline {section}{\numberline {2.3}ToAdd}{4}{section.2.3}
-\contentsline {chapter}{\numberline {3}How are things in PDT 2.0}{5}{chapter.3}
-\contentsline {section}{\numberline {3.1}Prague Dependency Treebank}{5}{section.3.1}
-\contentsline {section}{\numberline {3.2}Search and visualisation tools}{6}{section.3.2}
-\contentsline {section}{\numberline {3.3}List structures}{7}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Foreign Phrase: \texttt {t-node [t\_lemma = \#Forn]}}{7}{subsection.3.3.1}
-\contentsline {subsubsection}{Foreign phrases with just one t-node}{7}{section*.5}
-\contentsline {section}{\numberline {3.4}CPHR and DPHR}{8}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}CPHR}{8}{subsection.3.4.1}
-\contentsline {section}{\numberline {3.5}JLRE -- Current state of MWEs in PDT 2.0}{10}{section.3.5}
-\contentsline {chapter}{\numberline {4}Annotation}{15}{chapter.4}
-\contentsline {section}{\numberline {4.1}Annotation – JLRE}{15}{section.4.1}
-\contentsline {section}{\numberline {4.2}Pre-annotation}{16}{section.4.2}
-\contentsline {section}{\numberline {4.3}Analysis of Annotations – JLRE}{18}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Inter-annotator Agreement – JLRE}{18}{subsection.4.3.1}
-\contentsline {chapter}{\numberline {5}s-data}{25}{chapter.5}
-\contentsline {section}{\numberline {5.1}The design and the PML schema}{25}{section.5.1}
-\contentsline {section}{\numberline {5.2}Visualisation}{25}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Visualisation using \texttt {SemAnn}}{25}{subsection.5.2.1}
-\contentsline {section}{\numberline {5.3}\texttt {TrEd}\ extension}{26}{section.5.3}
-\contentsline {section}{\numberline {5.4}\texttt {SemAnn}}{27}{section.5.4}
-\contentsline {chapter}{\numberline {6}SemLex}{29}{chapter.6}
-\contentsline {section}{\numberline {6.1}Building SemLex – based on the JLRE article}{29}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Named entities}{29}{subsection.6.1.1}
-\contentsline {chapter}{\numberline {7}Conclusion}{33}{chapter.7}
-\contentsline {chapter}{Bibliography}{35}{chapter*.6}
+\contentsline {section}{\numberline {2.3}MWE}{4}{section.2.3}
+\contentsline {section}{\numberline {2.4}ToAdd}{5}{section.2.4}
+\contentsline {chapter}{\numberline {3}How are things in PDT 2.0}{7}{chapter.3}
+\contentsline {section}{\numberline {3.1}Prague Dependency Treebank}{7}{section.3.1}
+\contentsline {section}{\numberline {3.2}Search and visualisation tools}{8}{section.3.2}
+\contentsline {section}{\numberline {3.3}List structures}{9}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Foreign Phrase: \texttt {t-node [t\_lemma = \#Forn]}}{9}{subsection.3.3.1}
+\contentsline {subsubsection}{Foreign phrases with just one t-node}{9}{section*.5}
+\contentsline {section}{\numberline {3.4}CPHR and DPHR}{10}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}CPHR}{10}{subsection.3.4.1}
+\contentsline {section}{\numberline {3.5}JLRE -- Current state of MWEs in PDT 2.0}{12}{section.3.5}
+\contentsline {chapter}{\numberline {4}Annotation}{17}{chapter.4}
+\contentsline {section}{\numberline {4.1}Annotation – JLRE}{17}{section.4.1}
+\contentsline {section}{\numberline {4.2}Pre-annotation}{18}{section.4.2}
+\contentsline {section}{\numberline {4.3}Analysis of Annotations – JLRE}{20}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Inter-annotator Agreement – JLRE}{20}{subsection.4.3.1}
+\contentsline {chapter}{\numberline {5}s-data}{27}{chapter.5}
+\contentsline {section}{\numberline {5.1}The design and the PML schema}{27}{section.5.1}
+\contentsline {section}{\numberline {5.2}Visualisation}{27}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Visualisation using \texttt {SemAnn}}{27}{subsection.5.2.1}
+\contentsline {section}{\numberline {5.3}\texttt {TrEd}\ extension}{28}{section.5.3}
+\contentsline {section}{\numberline {5.4}\texttt {SemAnn}}{29}{section.5.4}
+\contentsline {chapter}{\numberline {6}SemLex}{31}{chapter.6}
+\contentsline {section}{\numberline {6.1}Building SemLex – based on the JLRE article}{31}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Named entities}{31}{subsection.6.1.1}
+\contentsline {chapter}{\numberline {7}Conclusion}{35}{chapter.7}
+\contentsline {chapter}{Bibliography}{37}{chapter*.6}
