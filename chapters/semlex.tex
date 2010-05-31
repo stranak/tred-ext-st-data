@@ -13,16 +13,16 @@ We have also added nine special entries to identify NE types, so we do not need 
 \emph{Named entities} are a concept originating in information retrieval (??, quote). This concept is well rooted in NLP but it does not exist in classical lexicology and its defining criteria do not correspond with a definition of a lexical unit, lexeme, or any other lexicologic or lexicographic concept of our knowledge.
 
 We used the NE classification by \citet{sevcikova:2007} as a starting point. However the definition does not seem like much of a definition at all:
-\begin{czech}
-\quote{\cond``Pojmenované entity jsou jednotlivá slova nebo slovní spojení, která v textu vystupují jako
+\begin{quote}
+\textczech{\em``Pojmenované entity jsou jednotlivá slova nebo slovní spojení, která v textu vystupují jako
 pojmenování osob, míst, firem apod. Cílem anotace je označení všech pojmenovaných entit v 
 předloženém lineárním textu. Současná anotace bude zaměřena na identifikaci především těch 
 pojmenovaných entit, které jsou zapsány s velkým počátečním písmenem.''}
-\end{czech}
+\end{quote}
 
-It is however very hard to define named entities. Other authors do not fare much better: ?? definice sem!
+It is however very hard to define named entities. Other authors do not fare much better: {\xxx definice sem!}
 
-We can say that to be considered  named entity an expresion must share at least some {\xxx or all ??} features of idioms: it cannot be an exploitation \citep[see]{hanks:norms}, i.e. it must fulfill some criteria of stability. {\xxx Any more??}
+We believe we can at least provide some additional constraints to the definition above: To be considered a named entity an expresion must share at least some {\xxx or all ??} \emph{features of idioms}: it cannot be an exploitation \citep[see]{hanks:norms}, i.e. it must fulfill some criteria of stability. {\xxx Any more??}
 
 Our types of entities are:
 \begin{compactenum}
@@ -47,9 +47,9 @@ Compared to the original the classification is altered, because we do not use em
 Some frequent names of persons, institutions or other objects (e.g.~film titles) are being added into SemLex during annotation (while keeping the information about their NE type), because this allows for their following occurrences to be pre-annotated automatically (see Section~\ref{sec:annot:pre}). For others, like addresses or bibliographic entries, it makes but little sense, because they most probably will not reappear during the annotation. 
 
 Currently (for the first stage of lexico-semantic annotation of PDT) SemLex contains only MWEs. Its base has been composed of MWEs extracted from Czech WordNet \citep{smrz:03}, Eurovoc \citep{eurovoc:07} and Dictionary of Czech Phraseology and Idiomatics \citep{cermak:1988}.%
-%For the explanation of our use of the SČFI subset see point \ref{pre-hnatkova} in Section~\ref{sec:pre} below. 
-Currently there are over 30,000 MWEs in SemLex and more are being added during annotations.
+For the explanation of our use of the SČFI subset see point \ref{pre-hnatkova} in Section~\ref{sec:annot:pre} below. 
+{\xxx update: Currently there are over 30,000 MWEs in SemLex and more are being added during annotations.}
 
-%In the current ``compiled'' SemLex there are many collocations that can hardly be considered lexias. However, these frequently occurring collocations are pragmatically quite useful and it may be good to identify them, too.\footnote{We would like to mark these entries in SemLex at some point, so that we know these in fact are not lexias and we do not attempt to create a single t-node for them when they are annotated.} The most important thing is to ensure that they are annotated consistently. They can be useful for machine translation, because, e.g., for those collocations that were extracted from Czech WordNet, there are at our disposal their translations into English (CWN). For the collocations that come from Eurovoc we even have translations into all the official languages ("jednací jazyk" ???) of the European Union.
+{\xxx In the current ``compiled'' SemLex there are many collocations that can hardly be considered lexias. However, these frequently occurring collocations are pragmatically quite useful and it may be good to identify them, too.\footnote{We would like to mark these entries in SemLex at some point, so that we know these in fact are not lexias and we do not attempt to create a single t-node for them when they are annotated.} The most important thing is to ensure that they are annotated consistently. They can be useful for machine translation, because, e.g., for those collocations that were extracted from Czech WordNet, there are at our disposal their translations into English (CWN). For the collocations that come from Eurovoc we even have translations into all the official languages ("jednací jazyk" ???) of the European Union.}
 
 The entries added by annotators must have defined their ``sense''. Annotators define it informally (as well as possible) and we extract an example of usage and the basic form from the annotation automatically. The ``sense'' information will be revised by a lexicographer, based on annotated occurrences.
