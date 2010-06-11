@@ -5,36 +5,39 @@
 \contentsline {section}{\numberline {1.1}Abstract – JLRE}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Motivation – JLRE}{1}{section.1.2}
 \contentsline {section}{\numberline {1.3}Introduction – JLRE}{2}{section.1.3}
-\contentsline {chapter}{\numberline {2}Idioms}{3}{chapter.2}
-\contentsline {section}{\numberline {2.1}Sinclair}{3}{section.2.1}
-\contentsline {section}{\numberline {2.2}Žabokrtský}{3}{section.2.2}
-\contentsline {section}{\numberline {2.3}Straňák}{4}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}How about translations}{4}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}A meaning of a lexeme -- a sememe}{5}{subsection.2.3.2}
-\contentsline {section}{\numberline {2.4}MWE}{5}{section.2.4}
-\contentsline {section}{\numberline {2.5}ToAdd}{6}{section.2.5}
-\contentsline {chapter}{\numberline {3}How are things in PDT 2.0}{7}{chapter.3}
-\contentsline {section}{\numberline {3.1}Prague Dependency Treebank}{7}{section.3.1}
-\contentsline {section}{\numberline {3.2}Search and visualisation tools}{8}{section.3.2}
-\contentsline {section}{\numberline {3.3}List structures}{9}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Foreign Phrase: \texttt {t-node [t\_lemma = \#Forn]}}{9}{subsection.3.3.1}
-\contentsline {subsubsection}{Foreign phrases with just one t-node}{9}{section*.5}
-\contentsline {section}{\numberline {3.4}CPHR and DPHR}{10}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}CPHR}{10}{subsection.3.4.1}
-\contentsline {section}{\numberline {3.5}JLRE -- Current state of MWEs in PDT 2.0}{12}{section.3.5}
-\contentsline {chapter}{\numberline {4}Annotation}{17}{chapter.4}
-\contentsline {section}{\numberline {4.1}Annotation – JLRE}{17}{section.4.1}
-\contentsline {section}{\numberline {4.2}Pre-annotation}{18}{section.4.2}
-\contentsline {section}{\numberline {4.3}Analysis of Annotations – JLRE}{20}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Inter-annotator Agreement – JLRE}{20}{subsection.4.3.1}
-\contentsline {chapter}{\numberline {5}s-data}{27}{chapter.5}
-\contentsline {section}{\numberline {5.1}The design and the PML schema}{27}{section.5.1}
-\contentsline {section}{\numberline {5.2}Visualisation}{27}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Visualisation using \texttt {SemAnn}}{27}{subsection.5.2.1}
-\contentsline {section}{\numberline {5.3}\texttt {TrEd}\ extension}{28}{section.5.3}
-\contentsline {section}{\numberline {5.4}\texttt {SemAnn}}{29}{section.5.4}
-\contentsline {chapter}{\numberline {6}SemLex}{31}{chapter.6}
-\contentsline {section}{\numberline {6.1}Building SemLex – based on the JLRE article}{31}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Named entities}{31}{subsection.6.1.1}
-\contentsline {chapter}{\numberline {7}Conclusion}{35}{chapter.7}
-\contentsline {chapter}{Bibliography}{37}{chapter*.6}
+\contentsline {chapter}{\numberline {2}Words, lexemes, lexical units, meanings, and such}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Cruse}{3}{section.2.1}
+\contentsline {subsubsection}{Aiding the intuition}{3}{section*.5}
+\contentsline {section}{\numberline {2.2}Sinclair}{3}{section.2.2}
+\contentsline {section}{\numberline {2.3}Žabokrtský}{4}{section.2.3}
+\contentsline {section}{\numberline {2.4}Straňák}{4}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}How about translations}{4}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}A meaning of a lexeme -- a sememe}{5}{subsection.2.4.2}
+\contentsline {chapter}{\numberline {3}Idioms}{7}{chapter.3}
+\contentsline {section}{\numberline {3.1}MWE}{7}{section.3.1}
+\contentsline {section}{\numberline {3.2}ToAdd}{8}{section.3.2}
+\contentsline {chapter}{\numberline {4}How are things in PDT 2.0}{9}{chapter.4}
+\contentsline {section}{\numberline {4.1}Prague Dependency Treebank}{9}{section.4.1}
+\contentsline {section}{\numberline {4.2}Search and visualisation tools}{10}{section.4.2}
+\contentsline {section}{\numberline {4.3}List structures}{11}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Foreign Phrase: \texttt {t-node [t\_lemma = \#Forn]}}{11}{subsection.4.3.1}
+\contentsline {subsubsection}{Foreign phrases with just one t-node}{11}{section*.6}
+\contentsline {section}{\numberline {4.4}CPHR and DPHR}{12}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}CPHR}{12}{subsection.4.4.1}
+\contentsline {section}{\numberline {4.5}JLRE -- Current state of MWEs in PDT 2.0}{14}{section.4.5}
+\contentsline {chapter}{\numberline {5}Annotation}{19}{chapter.5}
+\contentsline {section}{\numberline {5.1}Annotation – JLRE}{19}{section.5.1}
+\contentsline {section}{\numberline {5.2}Pre-annotation}{20}{section.5.2}
+\contentsline {section}{\numberline {5.3}Analysis of Annotations – JLRE}{22}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Inter-annotator Agreement – JLRE}{22}{subsection.5.3.1}
+\contentsline {chapter}{\numberline {6}s-data}{29}{chapter.6}
+\contentsline {section}{\numberline {6.1}The design and the PML schema}{29}{section.6.1}
+\contentsline {section}{\numberline {6.2}Visualisation}{29}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Visualisation using \texttt {SemAnn}}{29}{subsection.6.2.1}
+\contentsline {section}{\numberline {6.3}\texttt {TrEd}\ extension}{30}{section.6.3}
+\contentsline {section}{\numberline {6.4}\texttt {SemAnn}}{31}{section.6.4}
+\contentsline {chapter}{\numberline {7}SemLex}{33}{chapter.7}
+\contentsline {section}{\numberline {7.1}Building SemLex – based on the JLRE article}{33}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Named entities}{33}{subsection.7.1.1}
+\contentsline {chapter}{\numberline {8}Conclusion}{37}{chapter.8}
+\contentsline {chapter}{Bibliography}{39}{chapter*.7}

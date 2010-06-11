@@ -2,19 +2,20 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces The rendered Czech sentence \emph {Byl by šel dolesa}. (lit.: He-was would went toforest.) contains past conditional of the verb ``jít'' (to go) and a typo ``toforest'' repaired on m-layer.}}{8}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Schema of the changes in t-trees after integration of our annotations; every MWE forms a single node and has its lexicon entry}}{9}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces PML-TQ search query for single-node foreing phrases}}{9}{figure.3.3}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces A bibliographic reference analysed as a coordination of three foreign phrases}}{10}{figure.3.4}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Annotation of Czech and foreign company names}}{11}{figure.3.5}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Coordination of verbonominal idioms, where the verbal parts are further ???rozvite }}{12}{figure.3.7}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces PML-TQ search query for CPHR nodes, whose effective parrent is not its parent}}{12}{figure.3.6}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Coordination of two idioms starting with the same verb}}{13}{figure.3.8}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Idiom \emph {Co nevidět} meaning ``in a blink (of an eye)'', (literally: what not-see)}}{14}{figure.3.9}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces A sentence featuring a personal name and a name of a bilateral treaty (which is not the exact official name, however, thus it is not capitalized)}}{14}{figure.3.10}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces A t-tree of a sentence featuring a light verb construction \emph {mít k dispozici} (lit.: to have at [one's] disposal) and a named entity (a product name\emph {Asistent podnikatele} (lit.: assistant of-businessman) that looks like a common phrase, except for the capital `A'.}}{15}{figure.3.11}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Relation of s-layer to PDT and SemLex}}{17}{figure.4.1}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces The rendered Czech sentence \emph {Byl by šel dolesa}. (lit.: He-was would went toforest.) contains past conditional of the verb ``jít'' (to go) and a typo ``toforest'' repaired on m-layer.}}{10}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Schema of the changes in t-trees after integration of our annotations; every MWE forms a single node and has its lexicon entry}}{11}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces PML-TQ search query for single-node foreing phrases}}{11}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces A bibliographic reference analysed as a coordination of three foreign phrases}}{12}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Annotation of Czech and foreign company names}}{13}{figure.4.5}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Coordination of verbonominal idioms, where the verbal parts are further ???rozvite }}{14}{figure.4.7}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces PML-TQ search query for CPHR nodes, whose effective parrent is not its parent}}{14}{figure.4.6}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Coordination of two idioms starting with the same verb}}{15}{figure.4.8}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Idiom \emph {Co nevidět} meaning ``in a blink (of an eye)'', (literally: what not-see)}}{15}{figure.4.9}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces A sentence featuring a personal name and a name of a bilateral treaty (which is not the exact official name, however, thus it is not capitalized)}}{16}{figure.4.10}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces A t-tree of a sentence featuring a light verb construction \emph {mít k dispozici} (lit.: to have at [one's] disposal) and a named entity (a product name\emph {Asistent podnikatele} (lit.: assistant of-businessman) that looks like a common phrase, except for the capital `A'.}}{17}{figure.4.11}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Relation of s-layer to PDT and SemLex}}{19}{figure.5.1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

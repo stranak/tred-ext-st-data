@@ -3,9 +3,9 @@
 \documentclass[11pt, a4paper, twopage, titlepage]{book}
 \usepackage{my-additions-x}
 % fonts
-\setmainfont{Lido STF CE}
-\setsansfont{Helvetica}
-\newfontface\cond{Lido STF Cond CE}
+%\setmainfont{Lido STF}
+%\setsansfont{Helvetica}
+%\newfontface\cond{Lido STF Condensed}
 % languages
 \usepackage{polyglossia}
 \setmainlanguage[variant=british]{english}
@@ -30,18 +30,19 @@
 \def\Mwe{multi-word expression}
 \newcommand\Sref[1]{Section~\ref{#1}}
 
-\title{Annotation of Multiword Lexemes in the Prague Dependency Treebank}
+\title{Annotation of Multiword Expressions\\
+ in the Prague Dependency Treebank}
 \author{Pavel Straňák}
 
 \begin{document}
-\maketitle
+%\maketitle
 
 %%%%%%%%%%
 \frontmatter
 \tableofcontents
 \listoffigures
 \listoftables
-x
+
 \section*{Motto}
 \begin{tabular}{@{} lp{11cm} @{}} % @{} removes default spaces
 Frasier: & ``How was your hunting trip?''\\
@@ -68,6 +69,7 @@ Frasier: & ``Well, there was traffic.''\\
 %%%%%%%%%%%%%
 \mainmatter
 \include{chapters/intro}
+\include{chapters/meaning-lexeme}
 \include{chapters/idioms}
 \include{chapters/pdt}
 \include{chapters/annotation}
