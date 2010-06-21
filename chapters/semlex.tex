@@ -53,3 +53,41 @@ For the explanation of our use of the SČFI subset see point \ref{pre-hnatkova} 
 {\xxx In the current ``compiled'' SemLex there are many collocations that can hardly be considered lexias. However, these frequently occurring collocations are pragmatically quite useful and it may be good to identify them, too.\footnote{We would like to mark these entries in SemLex at some point, so that we know these in fact are not lexias and we do not attempt to create a single t-node for them when they are annotated.} The most important thing is to ensure that they are annotated consistently. They can be useful for machine translation, because, e.g., for those collocations that were extracted from Czech WordNet, there are at our disposal their translations into English (CWN). For the collocations that come from Eurovoc we even have translations into all the official languages ("jednací jazyk" ???) of the European Union.}
 
 The entries added by annotators must have defined their ``sense''. Annotators define it informally (as well as possible) and we extract an example of usage and the basic form from the annotation automatically. The ``sense'' information will be revised by a lexicographer, based on annotated occurrences.
+
+
+\section{Structure of \semlex}
+
+From the technical point of view, \semlex\ is a simple list of entries. It is stored in YAML format, which makes it easily readable in its source form using any Unicode-aware text editor. Since YAML is a data serialization format and not a markup language, it can also store information needed to represent data as objects in the Perl OO model. 
+
+In addition to the \semlex\ itself we also build an index of basic forms on some special occasions. It is not needed during annotation, so we do not create the index normally but it can be called by passing a second parameter\footnote{The parameter is evaluated as a BOOL type.} to the function \verb=SemLex::load_yaml=. 
+
+\subsection{\semlex\ entry}
+An entry is composed of several user-editable attributes and some read-only and machine-edited metadata:\footnote{By ``user-editable'' we mean in \seman. Everything is of course editable in the YAML format using a text editor.} 
+\begin{verbatim}
+  - !!perl/hash:SemLex_heslo 
+    BASIC_FORM: vysoké kruhy
+    CREATED: 070115163056
+    EXAMPLE: ''
+    GLOSS: ''
+    ID: 0000017495
+    LEMMATIZED: vysoký kruh
+    MODIFIED: 090607124212
+    MODIFIER: merger
+    MORPHO_TAGS: AAIP2----3A---- NNIP2-----A----
+    ORIGID: ''
+    POS: ''
+    SOURCE: SCFI
+    SYNONYMS: []
+    TREE_STRUCT: "--- []\n\n"
+\end{verbatim}
+
+\begin{description}
+\item [Basic form] -- The basic form of a lexeme. We could call it a ``lemma'' of a lexeme, but we do not find it suitable for several reasons: 
+  \begin{itemize}
+    \item In many languages including Czech it often contains word forms in other than the basic form for the given word on its own. I.e. ``vysoké učení'' contains a feminine suffix of the adjective ``vysoký'' (high) because of the required agreement in gender with the noun, whereas the traditional lemma of adjectives in Czech is in the masculine form.
+    \item  It could be confused with the attribute ``lemmatized'' that means something completely different.
+  \end{itemize}
+\end{description}
+
+
+

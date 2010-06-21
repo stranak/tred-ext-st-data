@@ -3,7 +3,7 @@
 
 \section{\seman}
 \label{sec:seman}
-The annotation tool \seman\ is witten in Perl 5\footnote{\url{www.perl.org}; \url{dev.perl.org/perl5}} with Perl/Tk\footnote{\url{PerlTk.org}} GUI toolkit. The annotation tool depends on working instalation of \tred, specifically its $\ast$nix installation, because it uses \texttt{nTrEd} for efficient execution of \tred\ scripts in the background. \texttt{nTrEd} however, unlike \tred\ itself or \texttt{bTrEd} does not work on Windows, because it uses unix sockets.
+The annotation tool \seman\ is written in Perl 5\footnote{\url{www.perl.org}; \url{dev.perl.org/perl5}} with Perl/Tk\footnote{\url{PerlTk.org}} GUI toolkit. The annotation tool depends on working installation of \tred, specifically its unix installation, because it uses \texttt{nTrEd} for efficient execution of \tred\ scripts in the background. \texttt{nTrEd} however, unlike \tred\ itself or \texttt{bTrEd}, does not work on Windows.% because it uses unix sockets.
 
  \seman\ itself is composed of several parts:
 \begin{itemize}
@@ -11,9 +11,9 @@ The annotation tool \seman\ is witten in Perl 5\footnote{\url{www.perl.org}; \ur
 \item \ntred\ backend that is used to 
 	\begin{itemize}
 	\item generate surface sentences from tectogrammatical trees in \tf{}s that are then displayed in the \seman\ GUI,
-	\item perform all the on-the fly preannotations (\Sref{sec:preannot})
+	\item perform all the on-the fly pre-annotations (\Sref{sec:annot:pre})
 	\end{itemize}
 \item A \semlex\ module is used to read, save, and edit \semlex.
-\item There is of course also a suite of miscelaneous scripts mostly for validation of annotated data, comparing and merging multiple annotations, merging annotators' \semlex{}es and computing reliability of annotations.
+\item There is of course also a suite of miscellaneous scripts mostly for validation of annotated data, comparing and merging multiple annotations, merging annotators' \semlex{}es and computing reliability of annotations.
 \end{itemize}
 

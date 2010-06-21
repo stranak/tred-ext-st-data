@@ -35,7 +35,7 @@ On the assumption that \emph{all occurrences of a MWE share the same tree struct
 we have decided to employ four types of pre-annotation:
 
 \begin{asparaenum}[A)]
-\item \label{pre-hnatkova}External pre-annotation provided by our colleague (see~\citealp{hnatkova:2002}). With each MWE a set of rules is associated that limits possible forms and surface word order of parts of a MWE. This approach was devised for corpora that are not syntactically annotated and is very time consuming.
+\item \label{pre-hnatkova}External pre-annotation provided by Milena Hnátková (see~\citealp{hnatkova:2002}). With each MWE a set of rules is associated that limits possible forms and surface word order of parts of a MWE. This approach was devised for corpora that are not syntactically annotated and is very time consuming.
 \item \label{pre-static}Our one-time pre-annotation with those MWEs from SemLex that have been previously used in annotation, and thus have a tree structure as a part of their entry.
 \item \label{pre-on-load}Dynamic pre-annotation as in \ref{pre-static}, only with the SemLex entries that have been recently added by the annotator. 
 \item \label{pre-on-annot}When an annotator tags an occurrence of a MWE in the text, other occurrences of this MWE in the article are identified automatically.%
@@ -55,7 +55,7 @@ Pre-annotation (\ref{pre-hnatkova})~was executed once for all of the PDT. (\ref{
 %, when the lexia (lexicon entry) is merged into the main SemLex. 
  
 {\xxx  PRO FUTURA
-We have currently performed double blind annotation of a part of data without pre-annotation (\ref{pre-static}) and (\ref{pre-on-load}). We also have smaller samples annotated without any pre-annotation and only with pre-annotation (\ref{pre-hnatkova}). Analysis of this data is necessary  to show that our assumption is correct and all the occurrences of a lexia share the same tree structure. Then we can safely add remaining pre-annotation steps. Provided the inter-annotator agreement is good enough we can also stop our current (rather expensive and time consuming) practice of double annotation of each file and comparing the annotations.}
+We have currently performed double blind annotation of a part of data without pre-annotation (\ref{pre-static}) and (\ref{pre-on-load}). We also have smaller samples annotated without any pre-annotation and only with pre-annotation (\ref{pre-hnatkova}). Analysis of this data is necessary  to show that our assumption is correct and all the occurrences of a lexia share the same tree structure. Then we can safely add remaining pre-annotation steps. Provided the inter-annotator agreement is good enough we can also stop our current (rather expensive and time consuming) practice of double annotation of each file and comparing the annotations.} % end XXX
 
 After the pilot annotation without pre-annotation (\ref{pre-on-annot})  we have compared instances of the same tags and found that 10.5\% of repeated MWEs happened to have two different tree representations. Below we analyse several most important sources of these inconsistent t-trees and possible improvements:
 \begin{itemize}
@@ -81,26 +81,31 @@ This should be tackled in some future version of PDT. Once resolved it would all
 Currently we annotate these cases with the same MWE, but all the instances with the derived variants of t-lemma (like \emph{ředitelka } or \emph{domek} must be identified manually (see Section~\ref{sec:pre}). We plan to try automatic identification of some diminutives and gender opposites derived by most common patterns.
 
 %
-\item \emph{Newly established t-nodes corresponding to elided parts of MWEs in coordinations.} Since t-layer contains many newly established t-nodes, many of whom cannot be lexicalised, our original decision was to hide all of these nodes from annotators and generate for them pure surface sentence. This decision resulted however in the current situation, when some MWEs in coordinations cannot be correctly annotated. 
+\item \emph{Newly established t-nodes corresponding to elided parts of MWEs in coordinations.} Since t-layer contains many newly established t-nodes, many of which cannot be lexicalised, our original decision was to hide all of these nodes from annotators and generate for them pure surface sentence. This decision resulted however in the current situation, when some MWEs in coordinations cannot be correctly annotated. 
 %It is necessary to elide common part of coordinated multiword lexeme. 
 For instance \emph{První a druhá světová válka} (First and Second World War) is a coordination of two multiword lexemes. A tectogrammatical tree that includes it does have newly established t-nodes for “world” and “war” of the first lexeme but they are elided in the surface sentence. 
 
 After analysing annotated examples like the one above we have decided to generate surface words from some of the newly established t-nodes in order to allow correct annotation of all the MWEs. These ``added'' words will be displayed in grey and while some morphological forms of these words may be incorrect, we believe they will serve their purpose.
 
-% the first lexeme cannot be identified automatically. In this and other similar cases t-nodes for elided parts of multiword lexemes should have been part of PDT, in our opinion. Given that our goal is to have one t-node for each lexia, however, we believe it would not be efficient to invest substantial amount of manual work into adding these elided t-nodes now only to eliminate them more efficiently in near future. We can just as well leave it to our annotators to identify these instances of MWEs (it is as common for NEs, as it is for lexias) manually.
-%
-%\item \emph{Bridging anaphora} e.g. Ceska narodni banka <- banka \\
-%Since in the context the second expression stands for the first only with some words ellided, our annotators were instructed to annotate it as an instance of the lexia \emph{Česká národní banka}. 
+{\xxx
+ the first lexeme cannot be identified automatically. In this and other similar cases t-nodes for elided parts of multiword lexemes should have been part of PDT, in our opinion. Given that our goal is to have one t-node for each lexia, however, we believe it would not be efficient to invest substantial amount of manual work into adding these elided t-nodes now only to eliminate them more efficiently in near future. We can just as well leave it to our annotators to identify these instances of MWEs (it is as common for NEs, as it is for lexias) manually.
 
-%This problem could be solved by annotations of coreference. If the coreference between nominal expressions was present in the PDT 2.0, our annotators would simply mark the first occurence and all the anaphoric expressions would be marked automatically. 
+\item \emph{Bridging anaphora} e.g. Ceska narodni banka <- banka \\
+Since in the context the second expression stands for the first only with some words ellided, our annotators were instructed to annotate it as an instance of the lexia \emph{Česká národní banka}. 
+This problem could be solved by annotations of coreference. If the coreference between nominal expressions was present in the PDT 2.0, our annotators would simply mark the first occurence and all the anaphoric expressions would be marked automatically. 
+} % end xxx
 \end{itemize}
 
-% spojit s 'itemize' vyse!
-% because these cases are caused by ellipses, variations in lexical form such as diminutives etc., or wrong lemmatisation, rather than inconsistencies in the tree structure. These cases show us some problematic issues in PDT 2.0, for instance:
-%\begin{itemize}
-%\item \textit{jižní Korea {\rm vs.} Jižní Korea} \\(southern vs. South Korea) -- wrong lemmatisation
-%\item \textit{obchodní ředitel {\rm vs.} obchodní ředitelka} \\(lit. managing director-man vs. m. director-woman) -- in future these should have one t-lemma. Morphological gender should be specified by an attribute of a t-node.
-%\end{itemize}
+
+{\xxx
+\emph{spojit s 'itemize' vyse!}\\
+because these cases are caused by ellipses, variations in lexical form such as diminutives etc., or wrong lemmatisation, rather than inconsistencies in the tree structure. These cases show us some problematic issues in PDT 2.0, for instance:
+\begin{itemize}
+\item \textit{jižní Korea {\rm vs.} Jižní Korea} \\(southern vs. South Korea) -- wrong lemmatisation
+\item \textit{obchodní ředitel {\rm vs.} obchodní ředitelka} \\(lit. managing director-man vs. m. director-woman) -- in future these should have one t-lemma. Morphological gender should be specified by an attribute of a t-node.
+\end{itemize}
+} % end xxx
+
 
 Up to now we have not found any MWE such that its structure cannot be represented by a single tectogrammatical tree. 1.1\% of all occurrences were not connected graphs, but this happened due to errors in data and to our incorrect handling of coordinations with newly established t-nodes (see above). This corroborates our assumption that (disregarding errors) all occurrences of a MWE share the same tree structure. As a result, we started storing the tree structures in the SemLex entries and employ them in pre-annotation (\ref{pre-on-annot}). This also allows us to use pre-annotations (\ref{pre-static}) and (\ref{pre-on-load}), but we have decided not to use them at the moment, in order to be able to evaluate each pre-annotation step separately. Thus the following section reports on the experiments that employ pre-annotations (\ref{pre-hnatkova}) and (\ref{pre-on-annot}).
 
@@ -116,7 +121,7 @@ Both annotators have marked about 37,000 t-nodes ($\approx$ 15\%) as parts of MW
 % has grouped them into 7,263 MWEs and annotator $B$ %Sidak
 % into 6,888. So the average length of a MWE is 2.2 t-nodes.
 
-The ratio of general named entities versus SemLex entries was 50:50 for annotator $A$ and 52:48 in the case of annotator $B$. Annotator $A$ used SemLex more frequently (than she used named entities and also than annotator $B$ used SemLex), but did not utilize as many lexicon items as annotator $B$.
+The ratio of general named entities versus SemLex entries was 50:50 for annotator $A$ and 52:48 in the case of annotator $B$. Annotator $A$ used SemLex more frequently (than she used named entities and also than annotator $B$ used SemLex), but did not utilise as many lexicon items as annotator $B$.
 % Annotator $B$ used 10\% more lexias than annotator $A$ (3,279 and 3,677), while they both used almost the same number of NEs.
 This and some other comparison is given in Table~\ref{tab:anot}.
 
@@ -134,7 +139,7 @@ Named Entities&8,435&8,903\\
  - number&1,343&1,053\\
  - object&1,129&888\\
 \end{tabular}
-\caption{Annotated instances \newline of significant types of MWEs}
+\caption{Annotated instances of significant types of MWEs {\xxx update!}}
 \label{tab:anot}
 \end{table}
 
@@ -196,7 +201,7 @@ We can see that two ideal annotators who agree on all their assignments could no
 It should be explained why we do not need to corrected upper bound when working with weighted measures like $\kappa_w$.
 There are weights for some types of disagreement in $\kappa_w$ to distinguish ``better'' disagreement from ``worse'' one. But it is still a disagreement and annotators could agree completely. While in our task this class $c=4$ represents agreement of its kind. The reason why we do not count it as an agreement is the biased resulting measure, if we do so.%
 \footnote{%
-We have also measured standard $\kappa$ without weights. All partial disagreements were treated as full disagreements. In $\kappa_1$ we counted every non-annotated t-node as a disagreement, too; in $\kappa_2$ we think of non-annotation as a new category (with common agreement). And the difference is quite clear ($\kappa_1 = 0.04$ and $\kappa_2 = 0.68$) although $\kappa$ is an agreement above chance and the expected agreement by chancewas also different in $\kappa_1$ and $\kappa_2$.}
+We have also measured standard $\kappa$ without weights. All partial disagreements were treated as full disagreements. In $\kappa_1$ we counted every non-annotated t-node as a disagreement, too; in $\kappa_2$ we think of non-annotation as a new category (with common agreement). And the difference is quite clear ($\kappa_1 = 0.04$ and $\kappa_2 = 0.68$) although $\kappa$ is an agreement above chance and the expected agreement by chance was also different in $\kappa_1$ and $\kappa_2$.}
 The lesser they annotate the higher the agreement would be (with the extreme case of $\kappa = 1$ when they annotate nothing).
  
 \item
@@ -293,9 +298,8 @@ The last important cause of disagreement is simple: both annotators identify \em
 %\end{compactitem}
 %\medskip
 
-%We have recently begun annotations of pre-annota\-ted data (type \ref{pre-hnatkova}). If we may infer from such small data (319 lexias), this type of pre-annotation slightly helps on SemLex entries (it was the object of pre-annotation, from 34.7\% to 36.5\%) and slightly spoils the NE agreement (from 71.8\% to 67.1\%). Generally, on all lexias, it slightly improves agreement (from 58.2\% to 60.1\%). Speed improvement was quite noticeable, because vast majority of pre-annotated tags might be left untouched by annotators.
+{\xxx We have recently begun annotations of pre-annota\-ted data (type \ref{pre-hnatkova}). If we may infer from such small data (319 lexias), this type of pre-annotation slightly helps on SemLex entries (it was the object of pre-annotation, from 34.7\% to 36.5\%) and slightly spoils the NE agreement (from 71.8\% to 67.1\%). Generally, on all lexias, it slightly improves agreement (from 58.2\% to 60.1\%). Speed improvement was quite noticeable, because vast majority of pre-annotated tags might be left untouched by annotators.
 
-
-% k PI:
-% nase Max. je zalozene na predpokladu, ze data budou nadale podobne a anotatori nezacnou naraz anotovat vyrazne vic. 
-% Max. je stanoveno tak, ze za predpokladu vyse anotator nemuze (a ani nema) Max. dosahnout. Jelikoz jde o prunik vsech anotovanych uzlu, jsou v nem i chyby (v neshodach), ty ale kompenzuji pripadne uzly, ktere ani jeden neidentifikoval, ale meli.
+ k PI:\\
+nase Max. je zalozene na predpokladu, ze data budou nadale podobne a anotatori nezacnou naraz anotovat vyrazne vic. 
+Max. je stanoveno tak, ze za predpokladu vyse anotator nemuze (a ani nema) Max. dosahnout. Jelikoz jde o prunik vsech anotovanych uzlu, jsou v nem i chyby (v neshodach), ty ale kompenzuji pripadne uzly, ktere ani jeden neidentifikoval, ale meli.}
