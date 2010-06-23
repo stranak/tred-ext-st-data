@@ -43,6 +43,6 @@
 \contentsline {subsection}{\numberline {8.1.1}Named entities}{35}{subsection.8.1.1}
 \contentsline {section}{\numberline {8.2}Structure of \texttt {SemLex}}{37}{section.8.2}
 \contentsline {subsection}{\numberline {8.2.1}\texttt {SemLex}\ entry}{37}{subsection.8.2.1}
-\contentsline {section}{\numberline {8.3}Zajímavá hesla \leavevmode {\color {red}(provisorni)}}{39}{section.8.3}
+\contentsline {section}{\numberline {8.3}Zajímavá hesla -- provizorni}{39}{section.8.3}
 \contentsline {chapter}{\numberline {9}Conclusion}{41}{chapter.9}
 \contentsline {chapter}{Bibliography}{43}{chapter*.7}
