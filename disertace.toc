@@ -37,11 +37,12 @@
 \contentsline {section}{\numberline {6.2}Visualisation}{29}{section.6.2}
 \contentsline {subsection}{\numberline {6.2.1}Visualisation using \texttt {SemAnn}}{30}{subsection.6.2.1}
 \contentsline {section}{\numberline {6.3}\texttt {TrEd}\ extension}{30}{section.6.3}
-\contentsline {section}{\numberline {6.4}\texttt {SemAnn}}{32}{section.6.4}
-\contentsline {chapter}{\numberline {7}SemLex}{33}{chapter.7}
-\contentsline {section}{\numberline {7.1}Building SemLex – based on the JLRE article}{33}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}Named entities}{33}{subsection.7.1.1}
-\contentsline {section}{\numberline {7.2}Structure of \texttt {SemLex}}{35}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}\texttt {SemLex}\ entry}{35}{subsection.7.2.1}
-\contentsline {chapter}{\numberline {8}Conclusion}{37}{chapter.8}
-\contentsline {chapter}{Bibliography}{39}{chapter*.7}
+\contentsline {chapter}{\numberline {7}\texttt {SemAnn}}{33}{chapter.7}
+\contentsline {chapter}{\numberline {8}SemLex}{35}{chapter.8}
+\contentsline {section}{\numberline {8.1}Building SemLex – based on the JLRE article}{35}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}Named entities}{35}{subsection.8.1.1}
+\contentsline {section}{\numberline {8.2}Structure of \texttt {SemLex}}{37}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}\texttt {SemLex}\ entry}{37}{subsection.8.2.1}
+\contentsline {section}{\numberline {8.3}Zajímavá hesla \leavevmode {\color {red}(provisorni)}}{39}{section.8.3}
+\contentsline {chapter}{\numberline {9}Conclusion}{41}{chapter.9}
+\contentsline {chapter}{Bibliography}{43}{chapter*.7}
