@@ -101,24 +101,28 @@ An entry is composed of several user-editable attributes, and some read-only and
 \item [ORIGID] -- If the entry comes from some other existing dictionary, this is the original ID of the entry in that source dictionary (identified by the attribute \code{SOURCE}).
 
 \item [POS] -- The part of speech of the entry as a unit. Usually it corresponds to the part of speech of the syntactic head of the entry in terms of the underlying tectogrammatic tree structure, but there are some exceptions:
-% POS:
+% POSes:
   \begin{description}
     \item [N] -- noun; 
-    \item [A] -- adjective; 
-    \item [V] -- verb; 
-    \item [D] -- adverb; 
+    \item [A] -- adjective; \pr{trvale udržitelný, ekonomicky aktivní, do očí bijící}
+    \item [V] -- verb; \pr{působit jako blesk z čistého nebe (\xxx{really???}), zaujmout stanovisko, mít dohled, spadl (komu) kámen ze srdce}
+    \item [D] -- adverb; e.g. \pr{mezi čtyřma očima, na lavičce\footnote{Trenér Borovička se zatím nerozhodl, zda král střelců Siegl začne v základní sestavě, nebo zase jen na lavičce.}}, or \pr{o dům dál}
     \item [I] -- interjection;
     \item [F] -- foreign; often Latin, Greek, but also other idioms that are already ``native'' to the Czech language enough to include them in a dictionary instead of annotating them just as a foreign entity, e.g.~\pr{hip hop, a la, de iure}.
-    \item [N/A] -- ``not applicable''; used for peoverbs, sayings, other idioms forming whole sentences, or idioms with unclear part of speech, e.g. \pr{stručně řečeno; stal se kozel zahradníkem, Tady je dobrá rada drahá.}
-  \end{description} % end POS
+    \item [N/A] -- not applicable; used for proverbs, sayings, other idioms forming whole sentences, or idioms with unclear part of speech, e.g. \pr{stručně řečeno; stal se kozel zahradníkem, Tady je dobrá rada drahá.}
+  \end{description} % end POSes
 
-\item [SOURCE] -- 
+The entries in the original \scfi\ do not carry the information on the part of speech, so we were not able to fill the attribute in the beginning. Thus the entries from \scfi\ have the POS information only in case they were manually edited. In that case the POS is always added, because the \seman\ interface does not allow the edited entry to be saved without indicating the part of speech.\footnote{For details of the \seman\ user interface to \semlex\ see \Sref{sec:seman:gui}.} % end of item [POS]
 
-\item [SYNONYMS] -- 
+\item [SOURCE] -- Where did the entry come from. Possible values are {\tt CWN2a}, {\tt Eurovoc}, {\tt SCFI}, or {\tt <annotator>}. {\tt <annotator>} means that the entry was created during annotations and stands for an identifier of the annotator who created it. An annotator found a MWE, searched the \semlex\ for the expression, and decided a new entry is needed. When the entry is created, the annotator's identifier is written as the SOURCE. This attribute is used to trace the origin of entries during analysis of annotations and when merging individual annotators' SemLexes. 
+
+When the entry is a result of merging several entries from different sources (either different source dictionaries or several annotators created the same entry), the value is a concatenation of the sources. In case that automatic merge was not possible \code{SOURCE} 
+
+\item [SYNONYMS] -- a list of synonyms; 
 
 \item [TREE\textunderscore{}STRUCT] -- The tree structure of an entry. This is a simplified tectogrammatic representation of the entry and is a key to the most advanced pre-annotation that we employ: identification of future occurrences of the same tree structure in the text. This pre-annotation requires \ntred. See discussion of various types of pre-annotation in \Sref{sec:annot:pre}.
 
-\end{description} % end - atributes of a SemLex entry
+\end{description} % end - attributes of a SemLex entry
 
 
 %%%%%%%%%
@@ -142,3 +146,62 @@ Some entries seem at the first look just wrong. A class of automobiles is a perf
     TREE_STRUCT: ''
 \end{verbatim}
 
+Creative use -- exploitation (Hanks). Very common in journalism. PDT is composed of daily news, so expolitations of this kind are quite common in our data too.
+\begin{verbatim}
+  - !!perl/hash:SemLex_heslo 
+    BASIC_FORM: mezi osmi očima
+    CREATED: 100622025530
+    EXAMPLE: ~
+    GLOSS: "***derived from 0000032132 (mezi čtyřma očima)"
+    ID: 0000032133
+    LEMMATIZED: mezi osm oko
+    MODIFIED: ~
+    MODIFIER: bejcek
+    MORPHO_TAGS: ''
+    ORIGID: ~
+    POS: 'D'
+    SOURCE: vimmrova
+    SYNONYMS: []
+    TREE_STRUCT: ''
+\end{verbatim}
+
+Partial freedom in an idiomu: \pr{(rozčeřit | rozhýbat) stojaté vody}. Here it is (based on our data and knowleadge) only these two alternatives on this one position. However some idioms show much richer variation and the relations between the alternates are very complex. See \xxx{doplnit.} Due to the complex nature of these alternations we have kept the variants separate. Neither we nor the annotators are trained lexicographers to decide the cases. It would also require completely different setup, searching larger corpora, etc. The efficient approach during annotations was to create separate entries and link them via a special form of gloss, as below.  Thus we do not loose any information and leave it to the lexicographers to come up with a good description of the complex relations of these variants.
+\begin{verbatim}
+  - !!perl/hash:SemLex_heslo 
+    BASIC_FORM: rozčeřit stojaté vody
+    CREATED: 100622030630
+    EXAMPLE: ~
+    GLOSS: "souvisí s 0000029189 (rozhýbat st.v.)"
+    ID: 0000032134
+    LEMMATIZED: rozčeřit stojatý voda
+    MODIFIED: ~
+    MODIFIER: bejcek
+    MORPHO_TAGS: ''
+    ORIGID: ~
+    POS: 'V'
+    SOURCE: vimmrova
+    SYNONYMS: []
+    TREE_STRUCT: ''
+\end{verbatim}
+
+\pr{sloužit mši} je idiomatický rámec i ve Vallexu. Takovych je v nasich datech urcite mnohem vic -- \xxx{relation of our data to Vallex and PDTVallex}
+\medskip
+
+These should probably have been two entries -- for two POS'. \xxx{Jak je zpracované heslo 'postižený' v PDTVallexu?}
+\begin{verbatim}
+  - !!perl/hash:SemLex_heslo
+    BASIC_FORM: zdravotně postižený
+    CREATED: 080408072653
+    EXAMPLE: ~
+    GLOSS: subst. i adj.
+    ID: 0000031992
+    LEMMATIZED: zdravotně postižený
+    MODIFIED: 100502113206
+    MODIFIER: sidak_vimmrova_sidaklexicographer_vimmrova_sidaklexicographer
+    MORPHO_TAGS: ''
+    ORIGID: ''
+    POS: N i A
+    SOURCE: sidak_vimmrova
+    SYNONYMS: ~
+    TREE_STRUCT: ''  
+    \end{verbatim}
