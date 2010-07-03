@@ -42,9 +42,14 @@
 \contentsline {section}{\numberline {7.1}User interface}{35}{section.7.1}
 \contentsline {chapter}{\numberline {8}SemLex}{37}{chapter.8}
 \contentsline {section}{\numberline {8.1}Building SemLex – based on the JLRE article}{37}{section.8.1}
-\contentsline {subsection}{\numberline {8.1.1}Named entities}{37}{subsection.8.1.1}
-\contentsline {section}{\numberline {8.2}Structure of \texttt {SemLex}}{39}{section.8.2}
-\contentsline {subsection}{\numberline {8.2.1}\texttt {SemLex}\ entry}{39}{subsection.8.2.1}
-\contentsline {section}{\numberline {8.3}Zajímavá hesla -- provizorni}{41}{section.8.3}
-\contentsline {chapter}{\numberline {9}Conclusion}{45}{chapter.9}
-\contentsline {chapter}{Bibliography}{47}{chapter*.7}
+\contentsline {section}{\numberline {8.2}Named entities}{37}{section.8.2}
+\contentsline {section}{\numberline {8.3}Lexemes from other dictionaries}{38}{section.8.3}
+\contentsline {subsubsection}{Eurovoc}{39}{section*.7}
+\contentsline {subsubsection}{CWN2a}{39}{section*.8}
+\contentsline {subsubsection}{SČFI}{39}{section*.9}
+\contentsline {section}{\numberline {8.4}Structure of \texttt {SemLex}}{39}{section.8.4}
+\contentsline {subsection}{\numberline {8.4.1}\texttt {SemLex}\ entry}{39}{subsection.8.4.1}
+\contentsline {section}{\numberline {8.5}Zajímavá hesla -- provizorni}{43}{section.8.5}
+\contentsline {subsection}{\numberline {8.5.1}Partial freedom in an idiom}{44}{subsection.8.5.1}
+\contentsline {chapter}{\numberline {9}Conclusion}{47}{chapter.9}
+\contentsline {chapter}{Bibliography}{49}{chapter*.10}
