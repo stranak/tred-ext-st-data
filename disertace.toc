@@ -11,10 +11,10 @@
 \contentsline {subsection}{\numberline {2.2.1}Aiding the intuition}{4}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Context, intuition, normality, and meaning}{4}{subsection.2.2.2}
 \contentsline {subsubsection}{Lexical unit}{4}{section*.5}
-\contentsline {section}{\numberline {2.3}Sinclair}{4}{section.2.3}
-\contentsline {section}{\numberline {2.4}Žabokrtský}{4}{section.2.4}
+\contentsline {section}{\numberline {2.3}Sinclair}{5}{section.2.3}
+\contentsline {section}{\numberline {2.4}Žabokrtský}{5}{section.2.4}
 \contentsline {section}{\numberline {2.5}Straňák}{5}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}How about translations}{5}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.1}How about translations}{6}{subsection.2.5.1}
 \contentsline {subsection}{\numberline {2.5.2}A meaning of a lexeme -- a sememe}{6}{subsection.2.5.2}
 \contentsline {chapter}{\numberline {3}Idioms}{7}{chapter.3}
 \contentsline {section}{\numberline {3.1}MWE}{7}{section.3.1}
