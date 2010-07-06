@@ -17,6 +17,7 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Relation of s-layer to PDT and SemLex}}{23}{figure.5.1}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces A schema of a PML workflow. It does not illustrate all the possible interactions of PML data and schema files.}}{34}{figure.6.1}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {7.1}{\ignorespaces An annotated document in \texttt {SemAnn}. the ``\texttt {sel}''-- selection tag is barely visible on the word \emph {umění} (second word from the left, second line from the bottom). The \texttt {SemLex}\ entry that is displayed in the Semlex-part of the UI -- \emph {výtvarná umění} -- is the one used to annotate the selected word. }}{38}{figure.7.1}
 \addvspace {10\p@ }

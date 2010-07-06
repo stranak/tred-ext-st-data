@@ -37,9 +37,10 @@
 \contentsline {subsection}{\numberline {5.3.1}Inter-annotator Agreement – JLRE}{27}{subsection.5.3.1}
 \contentsline {chapter}{\numberline {6}s-data}{33}{chapter.6}
 \contentsline {section}{\numberline {6.1}The design and the PML schema}{33}{section.6.1}
-\contentsline {section}{\numberline {6.2}Visualisation}{33}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Visualisation using \texttt {SemAnn}}{34}{subsection.6.2.1}
-\contentsline {section}{\numberline {6.3}\texttt {TrEd}\ extension}{34}{section.6.3}
+\contentsline {section}{\numberline {6.2}PML -- Prague Markup Language}{33}{section.6.2}
+\contentsline {section}{\numberline {6.3}Visualisation}{34}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Visualisation using \texttt {SemAnn}}{34}{subsection.6.3.1}
+\contentsline {section}{\numberline {6.4}\texttt {TrEd}\ extension}{35}{section.6.4}
 \contentsline {chapter}{\numberline {7}\texttt {SemAnn}}{37}{chapter.7}
 \contentsline {section}{\numberline {7.1}User interface}{37}{section.7.1}
 \contentsline {chapter}{\numberline {8}SemLex}{39}{chapter.8}
