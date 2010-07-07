@@ -30,7 +30,7 @@ Figure~\ref{fig:layers} shows the relations between the neighboring layers of PD
    \label{fig:layers}
 \end{figure}
 
-Our project aims at improving the current state of t-lemmas. Our goal is to assign each t-node a t-lemma that would correspond to a lexeme, i.e. that would really distinguish the t-node's lexical meanings. To achieve this goal, in the first phase of the project, which we report on in this paper, we \emph{identify multiword expressions and create a lexicon of the corresponding lexias}. A simple view of the result of our annotations is given in the Figure~\ref{fig:trees}, some technical details are in Section~\ref{sec:meth:annot}.
+Our project aims at improving the current state of t-lemmas. Our goal is to assign each t-node a t-lemma that would correspond to a lexeme, i.e. that would really distinguish the t-node's lexical meanings. To achieve this goal, in the first phase of the project, which we report on in this paper, we \emph{identify multiword expressions and create a lexicon of the corresponding lexias}. A simple view of the result of our annotations is given in the Figure~\ref{fig:trees}, some technical details are in Section~\ref{sec:annot:analysis}.
 %Remaining t-lemmas of ``single-word t-nodes'' will be examined and possibly changed later. But to do that, we must finish the current phase in order to know what the remaining ``single-word'' nodes are.
 
 % to leave out ???
@@ -44,12 +44,12 @@ Our project aims at improving the current state of t-lemmas. Our goal is to assi
 \end{figure}
 
 
-In the Prague dependency treebank version 2.0 (PDT, ) there are several functors that refer to multiword expressions (MWEs) in one way or another. There are also two technical lemmas \texttt{\#Idph} and \texttt{\#Forn} that identify roots of subtrees representing MWE's. Tectogrammatical annotation is described in detail in~\citet{mikulova:2006}.
+In the Prague dependency treebank version 2.0 \citep{pdt2:2006} there are several functors that refer to multiword expressions (MWEs) in one way or another. There are also two technical lemmas \texttt{\#Idph} and \texttt{\#Forn} that identify roots of subtrees representing MWE's. Tectogrammatical annotation is described in detail in~\citet{mikulova:2006}.
 
 
 \section{Search and visualisation tools}
 
-There are currently two graphical search engines for PDT: Netgraph \citep{mirovsky:2009} and TrEd \citep{pajas:tred}. Both have their respective benefits, but since TrEd is considerably faster due to its use of an SQL database backend \citep{pmltq}, we have used TrEd for all the examples in this work. We also give the search queries using the PML Tree Query language designed by \citet{pmltq} where appropriate.
+There are currently three graphical search engines for PDT: Netgraph \citep{mirovsky:2009}, TrEd \citep{pajas:tred} and PML-TQ \citep{pmltq}. Both have their respective benefits, but since TrEd is considerably faster due to its use of an SQL database backend \citep{pmltq}, we have used TrEd for all the examples in this work. We also give the search queries using the PML Tree Query language designed by \citet{pmltq} where appropriate.
 
 %%%%%%%%%%
 \section{List structures}
@@ -131,12 +131,11 @@ In Figures~\ref{fig:co-nevidet}, \ref{fig:klaus}, and \ref{fig:asistent} we give
 \begin{figure}[htbp]
    \centerline{\includegraphics[scale=.7]{images/co-nevidet-clause.pdf}}
    \caption{\label{fig:co-nevidet}Idiom \emph{Co nevidět} meaning ``in a blink (of an eye)'', (literally: what not-see)}
-  
 \end{figure}
 
 \begin{figure}[htbp]
    \centerline{\includegraphics[width=3.7in]{images/klaus-a-smlouva.pdf}}
-   \caption{A sentence featuring a personal name and a name of a bilateral treaty (which is not the exact official name, however, thus it is not capitalized)}
+   \caption{A sentence featuring a personal name and a name of a bilateral treaty (which is not the exact official name, however, thus it is not capitalised)}
    \label{fig:klaus}
 \end{figure}
 

@@ -12,13 +12,13 @@
 \contentsline {figure}{\numberline {4.6}{\ignorespaces PML-TQ search query for CPHR nodes, whose effective parrent is not its parent}}{18}{figure.4.6}
 \contentsline {figure}{\numberline {4.8}{\ignorespaces Coordination of two idioms starting with the same verb}}{19}{figure.4.8}
 \contentsline {figure}{\numberline {4.9}{\ignorespaces Idiom \emph {Co nevidět} meaning ``in a blink (of an eye)'', (literally: what not-see)}}{19}{figure.4.9}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces A sentence featuring a personal name and a name of a bilateral treaty (which is not the exact official name, however, thus it is not capitalized)}}{20}{figure.4.10}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces A sentence featuring a personal name and a name of a bilateral treaty (which is not the exact official name, however, thus it is not capitalised)}}{20}{figure.4.10}
 \contentsline {figure}{\numberline {4.11}{\ignorespaces A t-tree of a sentence featuring a light verb construction \emph {mít k dispozici} (lit.: to have at [one's] disposal) and a named entity (a product name\emph {Asistent podnikatele} (lit.: assistant of-businessman) that looks like a common phrase, except for the capital `A'.}}{21}{figure.4.11}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Relation of s-layer to PDT and SemLex}}{23}{figure.5.1}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces A schema of a PML workflow. It does not illustrate all the possible interactions of PML data and schema files.}}{34}{figure.6.1}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces An annotated document in \texttt {SemAnn}. the ``\texttt {sel}''-- selection tag is barely visible on the word \emph {umění} (second word from the left, second line from the bottom). The \texttt {SemLex}\ entry that is displayed in the Semlex-part of the UI -- \emph {výtvarná umění} -- is the one used to annotate the selected word. }}{38}{figure.7.1}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces An annotated document in \texttt {SemAnn}. the ``\texttt {sel}''-- selection tag is barely visible on the word \emph {umění} (second word from the left, second line from the bottom). The \texttt {SemLex}\ entry that is displayed in the Semlex-part of the UI -- \emph {výtvarná umění} -- is the one used to annotate the selected word. }}{40}{figure.7.1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
