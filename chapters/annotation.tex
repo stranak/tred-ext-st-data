@@ -4,7 +4,7 @@
 \chapter{Annotation}
 \label{sec:annot}
 
-\section{Annotation – JLRE}
+\section{Annotation – JLRE -- prekryv s kapitolou s-data a \seman}
 \label{sec:annot:jlre}
 
 PDT 2.0 uses PML~\citep{pajas:2005}, which is an application of XML that utilizes a stand-off annotation scheme. We have extended the PDT-PML with a new schema for so-called s-files. We use these files to store all of our annotation without altering the PDT itself.
@@ -110,7 +110,7 @@ Up to now we have not found any MWE such that its structure cannot be represente
 
 
 %%%%%
-\section{Analysis of Annotations – JLRE}
+\section{Analysis of interannotator agreement – JLRE}
 \label{sec:annot:analysis}
 Two annotators have started to use (and test) the tool we have developed.
 They both have got the same texts. The text is generated from the t-trees and presented as a plain text with pre-annotated words mark\-ed by colour labels. Annotators add their tags in the form of different colour labels and they can delete the pre-annotated tags. 
@@ -302,3 +302,8 @@ The last important cause of disagreement is simple: both annotators identify \em
 \xxx{ k PI:\\
 nase Max. je zalozene na predpokladu, ze data budou nadale podobne a anotatori nezacnou naraz anotovat vyrazne vic. 
 Max. je stanoveno tak, ze za predpokladu vyse anotator nemuze (a ani nema) Max. dosahnout. Jelikoz jde o prunik vsech anotovanych uzlu, jsou v nem i chyby (v neshodach), ty ale kompenzuji pripadne uzly, ktere ani jeden neidentifikoval, ale meli.}
+
+\section{Time analysis}
+One of the reasons to implement detailed logs of all the annotations \see{sec:logs} was to allow detailed analysis of the time aspect of annotations. By ``time aspect'' we do not mean just checking, how much it takes annotators to tag the data, even though this is an important information too. We wanted to make it possible to ask any number of questions: Is there correlation between annotation speed and frequency of work? Does the speed increase or decrease in long stretches of continuous work? In how long intervals do annotators tend to work? Is the number of tags per minute/hour more or less constant? Et cetera, et cetera. 
+
+\todo \xxx{problem toho, co vlastne vidime, jak nastavit pocitani, nas skript, zakladni udaje, grafy}
