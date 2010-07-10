@@ -1,0 +1,1 @@
+cat other/timestamps.txt|grep sta|sed 's/davka-//' | sed 's/_typ.//' |sed 's/^0//'|cut -f1,5 >times-sta.txt

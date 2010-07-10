@@ -9,6 +9,9 @@ CFG-2009/Paper.pdf
 *.blg
 *.brf
 *.out
+*.lof
+*.lot
+*.toc
 *.synctex.gz
 CFG-2009/rosen/cfg.pdf
 anotace
