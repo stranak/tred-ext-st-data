@@ -1,6 +1,7 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
 \documentclass[11pt, a4paper, twopage, titlepage]{book}
+\usepackage{listings}
 \usepackage{my-additions-x}
 % fonts
 %\setmainfont{Lido STF}
@@ -39,6 +40,11 @@
 \author{Pavel Straňák}
 
 \begin{document}
+
+\lstset{
+  language=XML,
+}
+
 \maketitle
 
 %%%%%%%%%%

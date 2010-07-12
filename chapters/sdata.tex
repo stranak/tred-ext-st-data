@@ -37,6 +37,30 @@ PML is a XML language, which means it can take advantage of the rich existing XM
 The design of \sdata\ is quite universal. S-files can be used to provide additional annotations over any PML files that contain nodes thati have an attribute ID. The sense repository (annotation lexicon) can be any dictionary that provides IDs for the entries. The tools used in our annotations mostly expect PDT PML or the particular \sf{}s that we have used, but that is mostly for convenience. Should the need appear to adapt the workflow a different corpus represented by PML files and a different annotation lexicon, the changes required would be rather minor.
 
 
+\begin{lstlisting}[float,caption=\sdata\ PML schema] 
+<?xml version="1.0" encoding="utf-8"?>
+<pml_schema xmlns="http://ufal.mff.cuni.cz/pdt/pml/schema/" version="1.1">
+  <description>PDT 2.0 sense (WSD) annotation</description>
+<!--  <reference name="mdata" readas="dom"/>-->
+<!--  <reference name="adata" readas="dom"/>-->
+  <reference name="tdata" readas="dom"/>
+  <reference name="semlex"/> <!-- for SemLex as well as Vallex, etc. -->
+  <!-- TODO: For the lexicon used <lexicon> in <s-annotation-info> should be
+          referenced!! -->
+
+  <!-- s-node linking a sense to a set of m-nodes -->
+  <!-- Mostly used for old annotation of files that don't have t-layer --> 
+  <derive name="sm-node.type" type="s-node.type">
+      <structure name="sm-node.type">
+          <member name="mnode.rfs">
+              <list ordered="0">
+                  <cdata format="PMLREF"/>
+              </list>
+          </member> 
+      </structure>
+  </derive>
+\end{lstlisting}
+%\lstinputlisting[language=xml]{sdata_schema.xml} %
 
 %%%%%%%%%%%%%%%%%%%%%%
 \section{Visualisation}
@@ -55,11 +79,10 @@ Integration of the SemLex browser is also beneficial, because it allows fast and
 There are, however, also some drawbacks of this ``full plain text of an article'' approach: 
 \begin{itemize}
 \item The exact text of the original sentences is not enough to correctly annotate all the MWEs on the tectogrammatic layer, because there is no way to correctly annotate newly established nodes \see{} \todo
-\item 
+\item It provides no way to directly compare two or more annotations. 
+\item It is not efficient in case one needs to examine not only the annotation, but also the tectogrammatical tree structures, or any attributes of t-nodes.
 \end{itemize}
 
-
-\xxx{dokoncit}
 
 
 %%%%%%
@@ -67,7 +90,7 @@ There are, however, also some drawbacks of this ``full plain text of an article'
 
 \Fref{fig:nodegroups} shows a tectogrammatical tree from a file that was annotated by two annotators. One of them identified two MWEs in this tree, the other only one. We can see that by looking at the patterns of the node groups (the ``bubbles'' around the groups of nodes). The crosscheck pattern is actually an overlap of two co-extensive node groups.
 
-The colours used for node groups correspond to those used in \seman:%
+The colours used for node groups correspond to those used in \seman, but they can be easily redifined:%
 \footnote{This is a quotation of the perl code from one of the source files of the \tred\ extension: \url{/pdt_t_st/contrib/pdt_t_st/display_mwe_groups.mak}} 
 %
 \begin{verbatim}
@@ -89,7 +112,7 @@ The colours used for node groups correspond to those used in \seman:%
 \begin{figure}[htbp]
    \centering
    \includegraphics[width=\textwidth]{images/bubliny.pdf} 
-   \caption{MWEs displayed as node groups in a tectogrammatical tree}
+   \caption{MWEs displayed as node groups in a tectogrammatical tree. Different angles of a pattern distinguish annotators, thus the crosscheck pattern means the MWE was annotated by both. Colours distinguish \semlex\ entries (the expression \pr{soudní orgán} and types of NEs (the expression \pr{Ústavní soud} is of a NE type `institution'.}
    \label{fig:nodegroups}
 \end{figure}
 
@@ -111,7 +134,7 @@ Types of annotated MWEs (i.e. types of NEs and \semlex\ entries) are distinguish
 \item
 Allows to merge annotations of several annotators into one \tf. 
 \item
-Each annotator's MWEs have a unique raster. It is thus easy to spot annotators' partial or full disagreement not on types of MWEs, but also on their spans.
+Each annotator's MWEs have a unique raster. It is thus easy to spot annotators' partial or full disagreement not on types of MWEs, but also on their spans. See the MWE that was annotated by two annotators, and the one that was not in \Fref{fig:nodegroups}.
 \end{itemize}
 
  There are two ways to merge the \sdata\ and \tdata: 
@@ -125,3 +148,23 @@ The dynamic merging is done using a newly developed feature of \tred\footnote{De
 \footnote{The directory with \tred\ extensions is platform dependent. On Linux and Mac OS X operating systems it is \url{~/.tred/extensions/}.}
 
 \todo\ \xxx{Doplnit, co je v extenzi, jak extenze bojuje o to, aby dostala ``svoje'' data prave ona (ten podivny nedokumentovany hack). Doplnit, jak funguje exekuce a jak nadvakrat se to zatim dela, kdyz chci mit soubor s anotacemi dvou anotatoru.}
+
+Full structure of the extension is displayed in \Fref{fig:tred-ext}. We shall briefly describe the most important components, with emphasis on the bits of information that are not ideally documented.\footnote{The official documentation of extensions is a chapter of \tred\ user manual: \url{http://ufal.mff.cuni.cz/~pajas/tred/ar01s17.html}.}
+
+The extension can be used either in \tred, as intended, for the most part, or its merging functionality can be invoked without \tred\ by using the files in \code{<ext>/bin/}:\footnote{See \Fref{fig:tred-ext}}
+\begin{description}
+\item [\code{merge-s-and-t-layer.pl}] -- Integrates the s-layer annotation into the t-layer files. T-files must be in the same directory as the s-files. 
+\item [\url{upgrade_st_data.pl}] -- Detect the format of s-files and if they are in the legacy (incorrect) format used by \seman during annotations, correct the data. 
+\end{description}
+
+
+
+
+
+
+\begin{figure}[htbp]
+   \centering
+   \includegraphics[width=\textwidth]{images/extension-structure} 
+   \caption{The structure of the `pdt-t-st' \tred\ extension.}
+   \label{fig:tred-ext}
+\end{figure}
