@@ -139,7 +139,7 @@ Merge on opening the \stf\ in \tred, and
 \item
 Static merge that produces the merged \verb=*.t.mwe.gz= file. 
 \end{enumerate}
-The dynamic merging is done using a newly developed feature of \tred\footnote{Developed by Petr Pajas} that allows to apply arbitrary perl transformations on the input data. Thus we open the \stf, use the mechanism of extensions to activate our extension by identifying the \stf\ as data the extension can process and call our transformation. The transformation requires a \tf\ annotated by this \sf\ to be present in the same directory. The \tf\ and \sf\ are parsed, and for each \stn\ we find a tectogrammatical tree that includes \tn{}s annotated (i.e. referenced) in this \stn. When we have a root of the correct t-tree, the \stn{}s are basically added into an attribute \texttt{mwes} of this t-root. The attribute is rather complex, because it contains lists of \stn{}s for all annotators that annotated any \stn{}s in this tree. Some small transformations of \stn{}s are needed, as well as creation of some new XML nodes, to represent the information from \sf{}s in the \tf{}s properly. For all the details inspect the code of \verb=<tred-extensions-dir>/pdt_t_st/libs/SDataMerge.pm=.%
+The dynamic merging is done using a newly developed feature of \tred\footnote{Developed by Petr Pajas} that allows to apply arbitrary perl transformations on the input data. To see, how this is done, see Listing \ref{code:pmlback}. Thus we open the \stf, use the mechanism of extensions to activate our extension by identifying the \stf\ as data the extension can process and call our transformation. The transformation requires a \tf\ annotated by this \sf\ to be present in the same directory. The \tf\ and \sf\ are parsed, and for each \stn\ we find a tectogrammatical tree that includes \tn{}s annotated (i.e. referenced) in this \stn. When we have a root of the correct t-tree, the \stn{}s are basically added into an attribute \texttt{mwes} of this t-root. The attribute is rather complex, because it contains lists of \stn{}s for all annotators that annotated any \stn{}s in this tree. Some small transformations of \stn{}s are needed, as well as creation of some new XML nodes, to represent the information from \sf{}s in the \tf{}s properly. For all the details inspect the code of \verb=<tred-extensions-dir>/pdt_t_st/libs/SDataMerge.pm=.%
 \footnote{The directory with \tred\ extensions is platform dependent. On Linux and Mac OS X operating systems it is \url{~/.tred/extensions/}.}
 
 \todo\ \xxx{Doplnit, co je v extenzi, jak extenze bojuje o to, aby dostala ``svoje'' data prave ona (ten podivny nedokumentovany hack). Doplnit, jak funguje exekuce a jak nadvakrat se to zatim dela, kdyz chci mit soubor s anotacemi dvou anotatoru.}
@@ -154,17 +154,25 @@ Our original PML schema for s-data was incorrect, in terms of PML specification.
  used by \seman\ during annotations, correct the data. 
 \end{description}
 
-
+\lstinputlisting[%
+float,
+numbers=left,
+resetmargins=true,
+breaklines=true,
+caption=The file \code{pmlbackend-conf.inc}. Written by Petr Pajas -- it allows an extension to use a Perl transformation on the input file that is not directly supported by any existing backend. In the commented section we can see that also any arbitrary shell command outputting valid PML to STDOUT can be used as an alternative transformation.%
+\label{code:pmlback}
+]{lst-pmlbackend-conf.inc}
 
 
 \begin{figure}[htbp]
    \centering
-   \includegraphics[width=\textwidth]{images/extension-structure} 
+   \includegraphics[width=0.6\textwidth]{images/extension-structure} 
    \caption{The structure of the `pdt-t-st' \tred\ extension.}
    \label{fig:tred-ext}
 \end{figure}
 
 %%%%%%%% code listings %%%%%%%%%%
+\newpage
 \lstinputlisting[%
 %float,%
 numbers=left,%
@@ -173,8 +181,9 @@ resetmargins=true,%
 breaklines=true,%
 caption=\sdata\ PML schema%
 \label{code:sdata-schema}
-] {sdata-schema-for-print.xml} 
+] {lst-sdata-schema-for-print.xml} 
 
+\newpage
 \lstinputlisting[%
 %float,%
 numbers=left,%
@@ -183,4 +192,4 @@ resetmargins=true,%
 breaklines=true,%
 caption=An \sdata\ file. The annotation includes named entities (identifiable by their special \semlex\ IDs) as welll as other MWEs and also an automatically pre-annotated MWE (line 19)%
 \label{code:st-data}
-] {ln94203-3.st} 
+] {lst-ln94203-3.st} 
