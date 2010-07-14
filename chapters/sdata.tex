@@ -36,7 +36,26 @@ PML is a XML language, which means it can take advantage of the rich existing XM
 
 The design of \sdata\ is quite universal. S-files can be used to provide additional annotations over any PML files that contain nodes thati have an attribute ID. The sense repository (annotation lexicon) can be any dictionary that provides IDs for the entries. The tools used in our annotations mostly expect PDT PML or the particular \sf{}s that we have used, but that is mostly for convenience. Should the need appear to adapt the workflow a different corpus represented by PML files and a different annotation lexicon, the changes required would be rather minor.
 
-The PML schema of \sdata\ (see the code listing \ref{code:sdata-schema}) is not too complex: references define that \sf{}s can use references to nodes defined in \tdata\ and in \semlex. \todo preusporadat soubor a popsat. Nekam vhodne pridat, ze toto jsou st-data (viz zakomentovane reference na m- a a-data).
+The PML schema of \sdata\ (see the code listing \ref{code:sdata-schema}) is not too complex: the elements \code{reference} in the beginning say that \sf{}s can use references to nodes defined in m-data, a-data, or t-data, and in \semlex. Then there is a definition of the main structure of an \sf: the root element \code{sdata} with the child \code{meta} for metadata about the annotation and the child \code{wsd} for the annotation itself. The annotation, i.e. content of the \code{wsd} element, is defined as a sequence of \code{sm-, sa-}, or \code{st-nodes}. Those nodes are units that refer to nodes in m-, a- or t-files to define their extent, as described below. The whole sequence must contain nodes of only one of these types, because we cannot think of annotation that would require mixing references to m-nodes, a-nodes and t-nodes.
+
+After defining the structure of \sf{}s, the schema defines the node types mentioned above. In order to do that, there is first a definition of a \emph{generic s-node}. This generic s-node cannot be used in annotations directly, since it was not named in the definition of the element \code{wsd}, as described above. Thus we can see the definition of s-node as a description of common features of the \emph{real} s-nodes: an s-node must have attributes \code{ID} and \code{src} and an element \code{lexicon-id}, that contains an ID or other unique identifier of an entry in an annotation lexicon, i.e. \semlex\ in our case (but it can be a different lexicon, in different data format, so the value of \code{lexicon-id} can be for instance a reference to a node in a PML file of a lexicon). 
+
+The specific s-nodes: \code{sm-}, \code{sa-}, and \code{st-node} are defined next. The mechanism used for these definitions is called \emph{derivation} and is similar for instance to type classes of some programming languages. It allows to define a generic type and then derive its more specific sub-types. All three definitions are almost identical, so we shall look only at the definition of the \code{st-node}: 
+
+The element \code{derive} defines the type \code{st-node} as a subtype of {s-node}. St-node thus inherits all that has already been defined for s-node and only extends the definition. The rest of the derivation defines that every node of the type \code{st-node} must have a main element \code{<st-node>} and it must also (in addition to `ID', `src', and `lexicon-id') contain an element \code{<tnode.rfs>} that shall contain a list of PML references. An example of a single st-node is given in \Fref{fig:st-node}. A short \sdata\ file from our annotations is given in Listing~\ref{code:st-data} to provide full example including metadata and a list of annotated MWEs (i.e. st-nodes).
+
+\begin{lstlisting}[
+   caption = An st-node that identifies two nodes in a t-tree as a \semlex\ entry with ID \code{\#institution} -- a named entity of the type `institution'.,%
+   label=fig:st-node,%
+   ]
+<st id="s-mf930709-001-l61">
+  <lexicon-id>s##institution</lexicon-id>
+  <tnode.rfs>
+    <LM>t#t-mf930709-001-p3s1Bw14</LM>
+    <LM>t#t-mf930709-001-p3s1Bw15</LM>
+  </tnode.rfs>
+</st>
+\end{lstlisting}
 
 %%%%%%%%%%%%%%%%%%%%%%
 \section{Visualisation}
@@ -130,7 +149,9 @@ Full structure of the extension is displayed in \Fref{fig:tred-ext}. We shall br
 The extension can be used either in \tred, as intended, for the most part, or its merging functionality can be invoked without \tred\ by using the files in \code{<ext>/bin/}:\footnote{See \Fref{fig:tred-ext}}
 \begin{description}
 \item [\code{merge-s-and-t-layer.pl}] -- Integrates the s-layer annotation into the t-layer files. T-files must be in the same directory as the s-files. 
-\item [\url{upgrade_st_data.pl}] -- Detect the format of s-files and if they are in the legacy (incorrect, see \ref{}\todo) format used by \seman\ during annotations, correct the data. 
+\item [\url{upgrade_st_data.pl}] -- Detect the format of s-files and if they are in the legacy format\footnote{%
+Our original PML schema for s-data was incorrect, in terms of PML specification. That is, however, the form of data we used during the whole course of annotations and consequently all the legacy scripts expect this form.}% 
+ used by \seman\ during annotations, correct the data. 
 \end{description}
 
 
@@ -152,4 +173,14 @@ resetmargins=true,%
 breaklines=true,%
 caption=\sdata\ PML schema%
 \label{code:sdata-schema}
-] {sdata-schema-for-print.xml} %
+] {sdata-schema-for-print.xml} 
+
+\lstinputlisting[%
+%float,%
+numbers=left,%
+tabsize=2,%
+resetmargins=true,%
+breaklines=true,%
+caption=An \sdata\ file. The annotation includes named entities (identifiable by their special \semlex\ IDs) as welll as other MWEs and also an automatically pre-annotated MWE (line 19)%
+\label{code:st-data}
+] {ln94203-3.st} 
