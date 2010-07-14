@@ -36,31 +36,7 @@ PML is a XML language, which means it can take advantage of the rich existing XM
 
 The design of \sdata\ is quite universal. S-files can be used to provide additional annotations over any PML files that contain nodes thati have an attribute ID. The sense repository (annotation lexicon) can be any dictionary that provides IDs for the entries. The tools used in our annotations mostly expect PDT PML or the particular \sf{}s that we have used, but that is mostly for convenience. Should the need appear to adapt the workflow a different corpus represented by PML files and a different annotation lexicon, the changes required would be rather minor.
 
-
-\begin{lstlisting}[float,caption=\sdata\ PML schema] 
-<?xml version="1.0" encoding="utf-8"?>
-<pml_schema xmlns="http://ufal.mff.cuni.cz/pdt/pml/schema/" version="1.1">
-  <description>PDT 2.0 sense (WSD) annotation</description>
-<!--  <reference name="mdata" readas="dom"/>-->
-<!--  <reference name="adata" readas="dom"/>-->
-  <reference name="tdata" readas="dom"/>
-  <reference name="semlex"/> <!-- for SemLex as well as Vallex, etc. -->
-  <!-- TODO: For the lexicon used <lexicon> in <s-annotation-info> should be
-          referenced!! -->
-
-  <!-- s-node linking a sense to a set of m-nodes -->
-  <!-- Mostly used for old annotation of files that don't have t-layer --> 
-  <derive name="sm-node.type" type="s-node.type">
-      <structure name="sm-node.type">
-          <member name="mnode.rfs">
-              <list ordered="0">
-                  <cdata format="PMLREF"/>
-              </list>
-          </member> 
-      </structure>
-  </derive>
-\end{lstlisting}
-%\lstinputlisting[language=xml]{sdata_schema.xml} %
+The PML schema of \sdata\ (see the code listing \ref{code:sdata-schema}) is not too complex: references define that \sf{}s can use references to nodes defined in \tdata\ and in \semlex. \todo preusporadat soubor a popsat. Nekam vhodne pridat, ze toto jsou st-data (viz zakomentovane reference na m- a a-data).
 
 %%%%%%%%%%%%%%%%%%%%%%
 \section{Visualisation}
@@ -154,7 +130,7 @@ Full structure of the extension is displayed in \Fref{fig:tred-ext}. We shall br
 The extension can be used either in \tred, as intended, for the most part, or its merging functionality can be invoked without \tred\ by using the files in \code{<ext>/bin/}:\footnote{See \Fref{fig:tred-ext}}
 \begin{description}
 \item [\code{merge-s-and-t-layer.pl}] -- Integrates the s-layer annotation into the t-layer files. T-files must be in the same directory as the s-files. 
-\item [\url{upgrade_st_data.pl}] -- Detect the format of s-files and if they are in the legacy (incorrect) format used by \seman during annotations, correct the data. 
+\item [\url{upgrade_st_data.pl}] -- Detect the format of s-files and if they are in the legacy (incorrect, see \ref{}\todo) format used by \seman during annotations, correct the data. 
 \end{description}
 
 
@@ -168,3 +144,12 @@ The extension can be used either in \tred, as intended, for the most part, or it
    \caption{The structure of the `pdt-t-st' \tred\ extension.}
    \label{fig:tred-ext}
 \end{figure}
+
+%%%%%%%% code listings %%%%%%%%%%
+\lstinputlisting[%
+%float,%
+numbers=left,%
+tabsize=2,%
+caption=\sdata\ PML schema%
+\label{code:sdata-schema}
+] {sdata-schema-for-print.xml} %
