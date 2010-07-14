@@ -139,7 +139,7 @@ Merge on opening the \stf\ in \tred, and
 \item
 Static merge that produces the merged \verb=*.t.mwe.gz= file. 
 \end{enumerate}
-The dynamic merging is done using a newly developed feature of \tred\footnote{Developed by Petr Pajas} that allows to apply arbitrary perl transformations on the input data. To see, how this is done, see Listing \ref{code:pmlback}. Thus we open the \stf, use the mechanism of extensions to activate our extension by identifying the \stf\ as data the extension can process and call our transformation. The transformation requires a \tf\ annotated by this \sf\ to be present in the same directory. The \tf\ and \sf\ are parsed, and for each \stn\ we find a tectogrammatical tree that includes \tn{}s annotated (i.e. referenced) in this \stn. When we have a root of the correct t-tree, the \stn{}s are basically added into an attribute \texttt{mwes} of this t-root. The attribute is rather complex, because it contains lists of \stn{}s for all annotators that annotated any \stn{}s in this tree. Some small transformations of \stn{}s are needed, as well as creation of some new XML nodes, to represent the information from \sf{}s in the \tf{}s properly. For all the details inspect the code of \verb=<tred-extensions-dir>/pdt_t_st/libs/SDataMerge.pm=.%
+The dynamic merging is done using a newly developed feature of \tred\footnote{Developed by Petr Pajas} that allows to apply arbitrary Perl transformations on the input data. To see, how this is done, see Listing \ref{code:pmlback}. Thus we open the \stf, use the mechanism of extensions to activate our extension by identifying the \stf\ as data the extension can process and call our transformation. The transformation requires a \tf\ annotated by this \sf\ to be present in the same directory. The \tf\ and \sf\ are parsed, and for each \stn\ we find a tectogrammatical tree that includes \tn{}s annotated (i.e. referenced) in this \stn. When we have a root of the correct t-tree, the \stn{}s are basically added into an attribute \texttt{mwes} of this t-root. The attribute is rather complex, because it contains lists of \stn{}s for all annotators that annotated any \stn{}s in this tree. Some small transformations of \stn{}s are needed, as well as creation of some new XML nodes, to represent the information from \sf{}s in the \tf{}s properly. For all the details inspect the code of \verb=<tred-extensions-dir>/pdt_t_st/libs/SDataMerge.pm=.%
 \footnote{The directory with \tred\ extensions is platform dependent. On Linux and Mac OS X operating systems it is \url{~/.tred/extensions/}.}
 
 \todo\ \xxx{Doplnit, co je v extenzi, jak extenze bojuje o to, aby dostala ``svoje'' data prave ona (ten podivny nedokumentovany hack). Doplnit, jak funguje exekuce a jak nadvakrat se to zatim dela, kdyz chci mit soubor s anotacemi dvou anotatoru.}
@@ -147,26 +147,53 @@ The dynamic merging is done using a newly developed feature of \tred\footnote{De
 Full structure of the extension is displayed in \Fref{fig:tred-ext}. We shall briefly describe the most important components, with emphasis on the bits of information that are not ideally documented.\footnote{The official documentation of extensions is a chapter of \tred\ user manual: \url{http://ufal.mff.cuni.cz/~pajas/tred/ar01s17.html}.}
 
 The extension can be used either in \tred, as intended, for the most part, or its merging functionality can be invoked without \tred\ by using the files in \code{<ext>/bin/}:\footnote{See \Fref{fig:tred-ext}}
+
+%%% important extension files %%%
 \begin{description}
-\item [\code{merge-s-and-t-layer.pl}] -- Integrates the s-layer annotation into the t-layer files. T-files must be in the same directory as the s-files. 
+
+\item [\code{merge-s-and-t-layer.pl}] -- Integrates the s-layer annotation into the t-layer files. T-files must be in the same directory as the s-files. Runs the merge, that is actually implemented in the module SDataMerge.pm. This script is used to generate t-mwe-files statically. This is needed for instance in order to get t-mwe-files annotated by multiple annotators, because the transformation can be run only on one s-file at a time. So to merge two s-files with one t-file, first one is merged statically, creating t-mwe-file and then this file is either merged dynamically by opening a different s-file while this t-mwe-file is present in the same directory, or by running this script again with a different s-file, resulting in t-mwe-file with both annotations.
+
 \item [\url{upgrade_st_data.pl}] -- Detect the format of s-files and if they are in the legacy format\footnote{%
 Our original PML schema for s-data was incorrect, in terms of PML specification. That is, however, the form of data we used during the whole course of annotations and consequently all the legacy scripts expect this form.}% 
  used by \seman\ during annotations, correct the data. 
+
+\item [\code{contrib.mac}] -- 
+
+\item [\code{display\textunderscore{}mwe\textunderscore{}groups.mak}] -- 
+
+\item [\code{SDataMerge.pm}] -- 
+
+\item [\code{pmlbackend-conf.inc}] -- Alows to open unsupported files (\stf{}s) and transform them on the input. See the Listing~\ref{code:pmlback}.
+
+\item [\code{sdata\textunderscore{}schema.xml}] -- PML schema for the input s-files, described in detail in \Sref{sec:s:design}. It is used in the \code{tdata\textunderscore{}mwe\textunderscore{}schema.xml}, see below. 
+
+\item [\code{tdata\textunderscore{}mwe\textunderscore{}schema.xml}] -- The PML schema of the t-data enhanced with information from the \sf{}s. It imports the complete t-data schema, then imports st-node.type from s-data schema, and using these defines a new structured attribute of t-root (a root node of a tectogrammatical tree): The t-root can have an attribute `mwes' to contain any MWEs. That attribute must have at least one child `annotator' with an attribute `name' that stores the annotator's name, and a content, that is a sequence (i.e. list) od st-nodes. See \Fref{fig:mwes-at-t-root} for an illustration.\todo
+
 \end{description}
 
+
 \lstinputlisting[%
-float,
 numbers=left,
 resetmargins=true,
 breaklines=true,
-caption=The file \code{pmlbackend-conf.inc}. Written by Petr Pajas -- it allows an extension to use a Perl transformation on the input file that is not directly supported by any existing backend. In the commented section we can see that also any arbitrary shell command outputting valid PML to STDOUT can be used as an alternative transformation.%
+caption=\code{pmlbackend-conf.inc}. \\
+Written by Petr Pajas -- it allows an extension to use a Perl transformation on the input file that is not directly supported by any existing backend. In the commented section we can see that also any arbitrary shell command outputting valid PML to STDOUT can be used as an alternative transformation.%
 \label{code:pmlback}
 ]{lst-pmlbackend-conf.inc}
 
+\vspace{2cm}
+\lstinputlisting[%
+numbers=left,
+resetmargins=true,
+breaklines=true,
+caption=\code{tdata\textunderscore{}mwe\textunderscore{}schema.xml}.\\
+%
+\label{code:pmlback}
+]{lst-tdata-mwe.xml}
 
 \begin{figure}[htbp]
    \centering
-   \includegraphics[width=0.6\textwidth]{images/extension-structure} 
+   \includegraphics[width=\textwidth]{images/extension-structure} 
    \caption{The structure of the `pdt-t-st' \tred\ extension.}
    \label{fig:tred-ext}
 \end{figure}
