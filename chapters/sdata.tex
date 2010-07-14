@@ -130,10 +130,8 @@ Full structure of the extension is displayed in \Fref{fig:tred-ext}. We shall br
 The extension can be used either in \tred, as intended, for the most part, or its merging functionality can be invoked without \tred\ by using the files in \code{<ext>/bin/}:\footnote{See \Fref{fig:tred-ext}}
 \begin{description}
 \item [\code{merge-s-and-t-layer.pl}] -- Integrates the s-layer annotation into the t-layer files. T-files must be in the same directory as the s-files. 
-\item [\url{upgrade_st_data.pl}] -- Detect the format of s-files and if they are in the legacy (incorrect, see \ref{}\todo) format used by \seman during annotations, correct the data. 
+\item [\url{upgrade_st_data.pl}] -- Detect the format of s-files and if they are in the legacy (incorrect, see \ref{}\todo) format used by \seman\ during annotations, correct the data. 
 \end{description}
-
-
 
 
 
@@ -150,6 +148,8 @@ The extension can be used either in \tred, as intended, for the most part, or it
 %float,%
 numbers=left,%
 tabsize=2,%
+resetmargins=true,%
+breaklines=true,%
 caption=\sdata\ PML schema%
 \label{code:sdata-schema}
 ] {sdata-schema-for-print.xml} %
