@@ -124,7 +124,7 @@ More information on technical aspects of this visualisation follows in the next 
 \section{\tred\ extension}
 \label{sec:s:ext}
 
-\tred\ has a powerful mechanism that allows it to be extended for new tasks. We developed an extension \texttt{pdt-t-st} that allows to see MWEs as graphically marked groups of tectogrammatical nodes. 
+\tred\ has a powerful mechanism that allows it to be extended for new tasks. We developed an extension \texttt{pdt-t-st} that allows to see MWEs as graphically marked groups of tectogrammatical nodes. In order to do that we enhanced the t-data PML schema with information from s-files. For details on the resulting t-mwe-data PML schema see the item \code{tdata\textunderscore{}mwe\textunderscore{}schema.xml} on page~\pageref{item:t-mwe-schema} and Listing~\ref{code:t-mwe-schema}.
 
  Main features of the extension:
  \begin{itemize}
@@ -171,7 +171,7 @@ Our original PML schema for s-data was incorrect, in terms of PML specification.
 
 \item [\code{sdata\textunderscore{}schema.xml}] -- PML schema for the input s-files, described in detail in \Sref{sec:s:design}. It is used in the \code{tdata\textunderscore{}mwe\textunderscore{}schema.xml}, see below. 
 
-\item [\code{tdata\textunderscore{}mwe\textunderscore{}schema.xml}] -- The PML schema of the t-data enhanced with information from the \sf{}s. It imports the complete t-data schema, then imports st-node.type from s-data schema, and using these defines a new structured attribute of t-root (a root node of a tectogrammatical tree): The t-root can have an attribute `mwes' to contain any MWEs. That attribute must have at least one child `annotator' with an attribute `name' that stores the annotator's name, and a content, that is a sequence (i.e. list) od st-nodes. See \Fref{fig:mwes-at-t-root} for an illustration.
+\item [\code{tdata\textunderscore{}mwe\textunderscore{}schema.xml}\label{item:t-mwe-schema}] -- The PML schema of the t-data enhanced with information from the \sf{}s. It imports the complete t-data schema, then imports st-node.type from s-data schema, and using these defines a new structured attribute of t-root (a root node of a tectogrammatical tree): The t-root can have an attribute `mwes' to contain any MWEs. That attribute must have at least one child `annotator' with an attribute `name' that stores the annotator's name, and a content, that is a sequence (i.e. list) od st-nodes. See \Fref{fig:mwes-at-t-root} for an illustration.
 
 \end{description}
 
@@ -198,7 +198,7 @@ resetmargins=true,
 breaklines=true,
 caption=\code{tdata\textunderscore{}mwe\textunderscore{}schema.xml}.\\
 %
-\label{code:pmlback}
+\label{code:t-mwe-schema}
 ]{lst-tdata-mwe.xml}
 
 \begin{figure}[htbp]
