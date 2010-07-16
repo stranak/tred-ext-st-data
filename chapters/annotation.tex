@@ -7,15 +7,6 @@
 \section{Annotation – JLRE -- prekryv s kapitolou s-data a \seman}
 \label{sec:annot:jlre}
 
-PDT 2.0 uses PML~\citep{pajas:2005}, which is an application of XML that utilizes a stand-off annotation scheme. We have extended the PDT-PML with a new schema for so-called s-files. We use these files to store all of our annotation without altering the PDT itself.
-These s-files are very simple: basically each of them corresponds to one file of PDT and consists of a list of s-nodes. Each s-node corresponds to an occurrence of a MWE and is composed of a link to an entry in SemLex and a list of identifiers of t-nodes that correspond to this \mbox{s-node}. Figure~\ref{fig:s-layer} shows a relation of s-layer to PDT layers and SemLex.\footnote{Although we have created the PML schema of s-layer primarily for annotations of MWEs, we made it quite generic. It can be utilized for any treebank annotations that use a large lexicon. For instance one s-file can contain multiple annotations of valency referencing to different valency dictionaries. This generic nature of s-layer is the reason why it allows references to morphological, analytical or tectogrammatical layer of PDT, even though in our current project we only need the references to t-layer.}
-%\colorbox{yellow}{TODO: odkaz na užití v anotacích podle CWN.}}.
-\begin{figure}[htbp]
-   \centering
-   \includegraphics[scale=.5]{images/layers-with-s-layer.pdf} % requires the graphicx package
-   \caption{Relation of s-layer to PDT and SemLex}
-    \label{fig:s-layer}
-\end{figure}
 
 
 Our annotation program reads in a tectogrammatical representation (t-file) and calls TrEd \citep{pajas:tred} to generate plain text. This plain text (still linked to the tectogrammatical representation) is presented to the annotator. While the annotator marks MWEs already present in SemLex or adds new MWEs into SemLex, tree representations of these MWEs extracted from underlying t-trees are added into their SemLex entries via TrEd scripts. 

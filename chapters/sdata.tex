@@ -8,10 +8,9 @@
 %%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 \label{sec:s:intro}
-When we faced the prospect of creating annotations of MWEs in the PDT, we already knew that we want to work with t-layer, as described in \Sref{sec:intro:motiv}. We were however reluctant to add our data directly into t-files. The principal reason was our uncertainty, whether this information really belongs to the tectogrammatical layer of description. There were also secondary, but all the more practical reasons: the t-files are rather complex and we wanted a simple way to isolate our annotations. Also, we prefer to keep the stable PDT 2 as is and clearly separate our experiments from this stable data. 
+When we faced the prospect of creating annotations of MWEs in the PDT, we already knew that we wanted to work with t-layer, as described in \Sref{sec:intro:motiv}. We were however reluctant to add our data directly into t-files. The principal reason was our uncertainty whether this information really belongs to the tectogrammatical layer of description. There were also secondary, but all the more practical reasons: the t-files are rather complex and we wanted a simple way to isolate our annotations. Also, we prefer to keep the stable PDT 2 as is and clearly separate our experiments from this stable data. 
 
 That is why we decided to create a stand-off layer for any additional annotations that use nodes of a tree and creates some new units, while linking these new units to entries from some annotation lexicon. Since PDT 2 uses the PML format, our obvious choice was to design an additional PML layer.
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%
@@ -32,11 +31,19 @@ PML is a XML language, which means it can take advantage of the rich existing XM
 %%%%%%%%%%%%%%%%%%%%%%
 \section{The design and the PML schema of \sdata}
 \label{sec:s:design}
-\sdata\ means s-layer PML files and the PML schema of these files. The idea behind \sdata\ design is to have a simple way to store additional ``sense'' annotations over any layer of PDT. The annotations are stored as a set of ``sense'' nodes. Each s-node contains a link to a sense repository (annotation lexicon) and a set of references to nodes (m-, a- or t-) that correspond to an instance of the sense. An \sf\ is thus basically a very simple flat list of \sn{}s. It does not contain any trees. A single \sf\ can only reference a single PDT file: either tectogrammatical, or analytical, or even morphological layer can be used, but references to different layers cannot be mixed in one s-file.
+\sdata\ means s-layer PML files and the PML schema of these files. The idea behind \sdata\ design is to have a simple way to store additional ``sense'' annotations over any layer of PDT. The annotations are stored as a set of ``sense'' nodes. Each s-node contains a link to a sense repository (annotation lexicon) and a set of references to nodes (m-, a- or t-) that correspond to an instance of the sense.\footnote{Although we have created the PML schema of s-layer primarily for annotations of MWEs, we made it quite generic. It can be utilized for any treebank annotations that use a large lexicon. For instance one s-file can contain multiple annotations of valency referencing to different valency dictionaries. This generic nature of s-layer is the reason why it allows references to morphological, analytical or tectogrammatical layer of PDT, even though in our current project we only need the references to t-layer.} An \sf\ is thus basically a simple flat list of \sn{}s. It does not contain any trees. A single \sf\ can only reference a single PDT file: either tectogrammatical, or analytical, or even morphological layer can be used, but references to different layers cannot be mixed in one s-file. Figure~\ref{fig:s-layer} shows a relation of s-layer to PDT layers and SemLex.
+
+\begin{figure}[htbp]
+   \centering
+   \includegraphics[scale=.5]{images/layers-with-s-layer.pdf} % requires the graphicx package
+   \caption{Relation of s-layer to PDT and SemLex}
+    \label{fig:s-layer}
+\end{figure}
+
 
 The design of \sdata\ is quite universal. S-files can be used to provide additional annotations over any PML files that contain nodes thati have an attribute ID. The sense repository (annotation lexicon) can be any dictionary that provides IDs for the entries. The tools used in our annotations mostly expect PDT PML or the particular \sf{}s that we have used, but that is mostly for convenience. Should the need appear to adapt the workflow a different corpus represented by PML files and a different annotation lexicon, the changes required would be rather minor.
 
-The PML schema of \sdata\ (see the code listing \ref{code:sdata-schema}) is not too complex: the elements \code{reference} in the beginning say that \sf{}s can use references to nodes defined in m-data, a-data, or t-data, and in \semlex. Then there is a definition of the main structure of an \sf: the root element \code{sdata} with the child \code{meta} for metadata about the annotation and the child \code{wsd} for the annotation itself. The annotation, i.e. content of the \code{wsd} element, is defined as a sequence of \code{sm-, sa-}, or \code{st-nodes}. Those nodes are units that refer to nodes in m-, a- or t-files to define their extent, as described below. The whole sequence must contain nodes of only one of these types, because we cannot think of annotation that would require mixing references to m-nodes, a-nodes and t-nodes.
+The PML schema of \sdata\ (see the code listing \ref{code:sdata-schema}) is also not too complex: the elements \code{reference} in the beginning say that \sf{}s can use references to nodes defined in m-data, a-data, or t-data, and in \semlex. Then there is a definition of the main structure of an \sf: the root element \code{sdata} with the child \code{meta} for metadata about the annotation and the child \code{wsd} for the annotation itself. The annotation, i.e. content of the \code{wsd} element, is defined as a sequence of \code{sm-, sa-}, or \code{st-nodes}. Those nodes are units that refer to nodes in m-, a- or t-files to define their extent, as described below. The whole sequence must contain nodes of only one of these types, because we cannot think of annotation that would require mixing references to m-nodes, a-nodes and t-nodes.
 
 After defining the structure of \sf{}s, the schema defines the node types mentioned above. In order to do that, there is first a definition of a \emph{generic s-node}. This generic s-node cannot be used in annotations directly, since it was not named in the definition of the element \code{wsd}, as described above. Thus we can see the definition of s-node as a description of common features of the \emph{real} s-nodes: an s-node must have attributes \code{ID} and \code{src} and an element \code{lexicon-id}, that contains an ID or other unique identifier of an entry in an annotation lexicon, i.e. \semlex\ in our case (but it can be a different lexicon, in different data format, so the value of \code{lexicon-id} can be for instance a reference to a node in a PML file of a lexicon). 
 
@@ -111,8 +118,7 @@ The colours used for node groups correspond to those used in \seman, but they ca
    \label{fig:nodegroups}
 \end{figure}
 
-\todo
-
+More information on technical aspects of this visualisation follows in the next section.
 
 %%%%%%%%%%%%%%%%%%%%%%
 \section{\tred\ extension}
