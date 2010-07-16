@@ -295,13 +295,35 @@ nase Max. je zalozene na predpokladu, ze data budou nadale podobne a anotatori n
 Max. je stanoveno tak, ze za predpokladu vyse anotator nemuze (a ani nema) Max. dosahnout. Jelikoz jde o prunik vsech anotovanych uzlu, jsou v nem i chyby (v neshodach), ty ale kompenzuji pripadne uzly, ktere ani jeden neidentifikoval, ale meli.}
 
 \section{Time analysis}
+\label{sec:time-analysis}
 One of the reasons to implement detailed logs of all the annotations \see{sec:logs} was to allow detailed analysis of the time aspect of annotations. By ``time aspect'' we do not mean just checking, how much it takes annotators to tag the data, even though this is an important information too. We wanted to make it possible to ask any number of questions: Is there correlation between annotation speed and frequency of work? Does the speed increase or decrease in long stretches of continuous work? In how long intervals do annotators tend to work? Is the number of tags per minute/hour more or less constant? Et cetera, et cetera. 
+
+In \Fref{fig:speed} we can see some inter- and -intra annotator variance in speed, but it seems there are some clear broad tendencies: annotators tend to have their own speed, as shown by the splines They also show different amount of variance in speed, epsecially annotator \emph{sid}'s speed is visibly more stable.
 
 \begin{figure}[htbp]
    \centering
-   \includegraphics[width=\textwidth]{images/speed/speed-anot} 
-   \caption{Average speed of each annotator for each batch that he/she annotated. We can see some inter- and -intra annotator variance in speed and some broad tendencies: annotators tend to have their own speed.}
+   \includegraphics[width=\textwidth]{images/speed/speed-anot3} 
+   \caption{Average speed of each annotator for each batch that he/she annotated. Grey vertical bars show 5\% error intervals.}
    \label{fig:speed}
 \end{figure}
+
+
+
+The data plotted in \Fref{fig:hist} and \Fref{fig:hist-detail}, even though not normalised to disregard the different amount of data annotated, shows remarkable similarity in behaviour of all three annotators.
+
+\begin{figure}[htbp]
+   \centering
+   \includegraphics[width=.8\textwidth]{images/speed/histograms} 
+   \caption{A histogram showing how many times ($y$) did an annotator place the next tag $x$ seconds after the previous one.} 
+   \label{fig:hist}
+\end{figure}
+
+\begin{figure}[htbp]
+   \centering
+   \includegraphics[width=.8\textwidth]{images/speed/histograms-detail} 
+   \caption{Detail of the histogram in \Fref{fig:hist} in an interval where we have placed our \emph{fluency} value for the preliminary experiment with clustering of work into annotation intervals (see \Sref{sec:time-analysis} and \Fref{fig:speed}).}
+\label{fig:hist-detail}
+\end{figure}
+
 
 \todo \xxx{problem toho, co vlastne vidime, jak nastavit pocitani, nas skript, zakladni udaje, grafy}
