@@ -4,15 +4,15 @@
 \chapter{Annotation}
 \label{sec:annot}
 
-\section{Annotation – JLRE -- prekryv s kapitolou s-data a \seman}
-\label{sec:annot:jlre}
+\section{Annotation process}
+\label{sec:annot:how}
+\todo pozor, neco o tom, jak se anotovalo, je v uvodu \Sref{sec:annot:analysis}. \\
+Takze s nastrojem a daty predanotovanymi dle Hnatkove jsme postupovali takto: rozdeleni na davky, podle toho, jak jsme doplnovali nove predanotace, ale take abychom mohli zkoumat vliv ruznych postupu v anotaci na kvalitu vyslednych dat (neco malo hotovo, ale jinak future work). 
 
+Put the table from wiki here.
 
-
-Our annotation program reads in a tectogrammatical representation (t-file) and calls TrEd \citep{pajas:tred} to generate plain text. This plain text (still linked to the tectogrammatical representation) is presented to the annotator. While the annotator marks MWEs already present in SemLex or adds new MWEs into SemLex, tree representations of these MWEs extracted from underlying t-trees are added into their SemLex entries via TrEd scripts. 
-
-%These tree representations are quite simple: for each node in a MWE we only record its t-lemma and its father's ID.
-
+\section{Basic quantitative characteristics of the annotations}
+\label{sec:annot:what}
 
 %%%%%
 \section{Pre-annotation}
@@ -69,18 +69,18 @@ This should be tackled in some future version of PDT. Once resolved it would all
 	\item \textit{rodinný dům {\rm vs.} rodinný domek} \\(lit.: family house vs. family little-house; but the diminutive \emph{domek} means basically “family house”)
 	\end{itemize}
 %
-Currently we annotate these cases with the same MWE, but all the instances with the derived variants of t-lemma (like \emph{ředitelka } or \emph{domek} must be identified manually (see Section~\ref{sec:pre}). We plan to try automatic identification of some diminutives and gender opposites derived by most common patterns.
+Currently we annotate these cases with the same MWE, but all the instances with the derived variants of t-lemma (like \emph{ředitelka } or \emph{domek} must be identified manually (see Section~\ref{sec:annot:pre}). We had plans to try automatic identification of some diminutives and gender opposites derived by the most common derivation patterns, but annotations were faster than coding, so we never got to it.
 
 %
-\item \emph{Newly established t-nodes corresponding to elided parts of MWEs in coordinations.} Since t-layer contains many newly established t-nodes, many of which cannot be lexicalised, our original decision was to hide all of these nodes from annotators and generate for them pure surface sentence. This decision resulted however in the current situation, when some MWEs in coordinations cannot be correctly annotated. 
+\item \emph{Newly established t-nodes corresponding to elided parts of MWEs in coordinations.} Since t-layer contains many newly established t-nodes, many of which cannot generate a surface word, our original decision was to hide all of these nodes from annotators and generate for them pure surface sentence. This decision resulted however in the current situation, when some MWEs in coordinations cannot be correctly annotated. 
 %It is necessary to elide common part of coordinated multiword lexeme. 
 For instance \emph{První a druhá světová válka} (First and Second World War) is a coordination of two multiword lexemes. A tectogrammatical tree that includes it does have newly established t-nodes for “world” and “war” of the first lexeme but they are elided in the surface sentence. 
 
 After analysing annotated examples like the one above we have decided to generate surface words from some of the newly established t-nodes in order to allow correct annotation of all the MWEs. These ``added'' words will be displayed in grey and while some morphological forms of these words may be incorrect, we believe they will serve their purpose.
 
-{\xxx The first lexeme cannot be identified automatically. In this and other similar cases t-nodes for elided parts of multiword lexemes should have been part of PDT, in our opinion. Given that our goal is to have one t-node for each lexia, however, we believe it would not be efficient to invest substantial amount of manual work into adding these elided t-nodes now only to eliminate them more efficiently in near future. We can just as well leave it to our annotators to identify these instances of MWEs (it is as common for NEs, as it is for lexias) manually.
+\xxx{The first lexeme cannot be identified automatically. In this and other similar cases t-nodes for elided parts of multiword lexemes should have been part of PDT, in our opinion. Given that our goal is to have one t-node for each lexia, however, we believe it would not be efficient to invest substantial amount of manual work into adding these elided t-nodes now only to eliminate them more efficiently in near future. We can just as well leave it to our annotators to identify these instances of MWEs (it is as common for NEs, as it is for lexias) manually.}
 
-\item \emph{Bridging anaphora} e.g. Ceska narodni banka <- banka \\
+\item \xxx{\emph{Bridging anaphora} e.g. Ceska narodni banka <- banka \\
 Since in the context the second expression stands for the first only with some words ellided, our annotators were instructed to annotate it as an instance of the lexia \emph{Česká národní banka}. 
 This problem could be solved by annotations of coreference. If the coreference between nominal expressions was present in the PDT 2.0, our annotators would simply mark the first occurence and all the anaphoric expressions would be marked automatically. 
 } % end xxx

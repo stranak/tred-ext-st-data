@@ -4,7 +4,7 @@
 \chapter{How are things in PDT 2.0}\label{PDT}
 \label{sec:pdt}
 \section{Prague Dependency Treebank}
-\label{sec:pdt/pdt}
+\label{sec:pdt:pdt}
 We work with the Prague Dependency Treebank (PDT, see \citealp{hajic:2005}), which is a large corpus with rich annotation on three layers: it has in addition to the morphological and the surface syntactic layers also the tectogrammatical layer.
 (In fact, there is also one non-annotation layer, representing the ``raw-text'' segmented into documents, paragraphs, and tokens.)
 Annotation of a sentence on the morphological layer consists of attaching several attributes to the tokens of the w-layer, the most important of which are morphological lemma and tag.
@@ -48,7 +48,7 @@ In the Prague dependency treebank version 2.0 \citep{pdt2:2006} there are severa
 
 
 \section{Search and visualisation tools}
-
+\label{sec:pdt:tools}
 There are currently three graphical search engines for PDT: Netgraph \citep{mirovsky:2009}, TrEd \citep{pajas:tred} and PML-TQ \citep{pmltq}. Both have their respective benefits, but since TrEd is considerably faster due to its use of an SQL database backend \citep{pmltq}, we have used TrEd for all the examples in this work. We also give the search queries using the PML Tree Query language designed by \citet{pmltq} where appropriate.
 
 %%%%%%%%%%
@@ -115,10 +115,7 @@ Figure~\ref{fig:cphr-echild2} shows on the other hand a coordination of two V-N 
 
 %%%%%
 \section{JLRE -- Current state of MWEs in PDT 2.0}
-\label{sec:pdt}
-%
-%\subsection{Multiword Expressions}
-%\label{sec:pdt-mwe}
+\label{sec:pdt:mwes}
 
 During the annotation of valency, which is a part of the tectogrammatical layer of PDT 2.0, the t-lemmas, have been basically identified for all the verbs and some nouns and adjectives.
 The resulting valency lexicon is called PDT-VALLEX \citep{hajic:2003} and we can see it as a repository of lexemes based on verbs, adjectives and nouns in PDT that have valency.
