@@ -362,6 +362,9 @@ Max. je stanoveno tak, ze za predpokladu vyse anotator nemuze (a ani nema) Max. 
 
 \section{Time analysis}
 \label{sec:time-analysis}
+Logs are a source of valuable information that can provide an insight into what is actually going on during annotation. Analysis of logs together with s-files can help estimate the real cost of annotations, which we have done during annotations to some extent, by estimating speed of annotations \see{sec:time-analysis}. 
+But the analysis can go further and, to formulate the problem in economic terms, try to examine in general what factors influence the price of a (correct) tag. What is the relation of speed, length of work intervals, time of day, order of processing of the file, and other factors? We give only a very brief glimpse of one of the factors -- speed of annotations in \Sref{sec:time-analysis}, but in our opinion thorough statistical analysis of log files is an important source of information also for future annotation projects.
+
 One of the reasons to implement detailed logs of all the annotations \see{sec:logs} was to allow detailed analysis of the time aspect of annotations. By ``time aspect'' we do not mean just checking, how much it takes annotators to tag the data, even though this is an important information too. We wanted to make it possible to ask any number of questions: Is there correlation between annotation speed and frequency of work? Does the speed increase or decrease in long stretches of continuous work? In how long intervals do annotators tend to work? Is the number of tags per minute/hour more or less constant?  
 
 In \Fref{fig:speed} we can see some inter- and -intra annotator variance in speed, but it seems there are some clear broad tendencies: annotators tend to have their own speed, as shown by the splines They also show different amount of variance in speed, epsecially annotator \emph{sid}'s speed is visibly more stable.
