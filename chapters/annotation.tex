@@ -19,27 +19,29 @@ Put the table from wiki here.
 \label{sec:annot:pre}
 Because MWEs tend to occur repeatedly in a text, we have decided to test pre-annotation both for speed improvement and for improving the consistency of annotations. 
 %We work o
-On the assumption that \emph{all occurrences of a MWE share the same tree structure}, while there are no restrictions on the surface word order other than those imposed by the tree structure itself
-%
-% pre-annotation types
-%W
-we have decided to employ four types of pre-annotation:
+We use an assumption that \emph{all occurrences of a MWE share the same tectogrammatical tree structure}. We can call this assumption \emph{``One tree per MWE,''} and view it as a modification of famous assumption ``One sense per collocation'' of \citet{yarowsky:1993}. In the surface representation of the MWE, there are \emph{no restrictions on the word order} other than those imposed by the tree structure itself. Our assumption is however more inspired by an idea of \citet{holub-bohmova:2000:RANLPIR}, who proposed to use so called ``Dependency microcontext structures (DMCS)'' in information retrieval. DMCS were inspired by tectogrammatical tree structures, but modified a bit for easier extraction and handling. In contrast, we use tectogrammatical structures as they are. What impact it has for instance in relation to coordinations can be seen in \todo\ \Sref{}. For the analysis of results of our assumption see \todo.
 
-\begin{asparaenum}[A)]
+We employed four types of pre-annotation, only some of wich are based on the above assumption:
+
+\begin{enumerate}[A)]
+
 \item \label{pre-hnatkova}External pre-annotation provided by Milena Hnátková (see~\citealp{hnatkova:2002}). With each MWE a set of rules is associated that limits possible forms and surface word order of parts of a MWE. This approach was devised for corpora that are not syntactically annotated and is very time consuming.
-\item \label{pre-static}Our one-time pre-annotation with those MWEs from SemLex that have been previously used in annotation, and thus have a tree structure as a part of their entry.
-\item \label{pre-on-load}Dynamic pre-annotation as in \ref{pre-static}, only with the SemLex entries that have been recently added by the annotator. 
-\item \label{pre-on-annot}When an annotator tags an occurrence of a MWE in the text, other occurrences of this MWE in the article are identified automatically.%
-%
-\footnote{This is exactly what happens:
-\begin{inparaenum}[1)]
-\item Tree structure of the selected MWE is identified via TrEd
-\item The tree structure is added to the lexeme's entry in SemLex
-\item All the sentences in the given file are searched for the same MWE using its tree structure (via TrEd)
-\item Other occurrences returned by TrEd are tagged with this MWE's ID, but these occurrences receive an attribute ``auto'', which identifies them (both in the s-files and visually in the annotation tool) as annotated automatically.
-\end{inparaenum}
-} % end footonote
-\end{asparaenum}
+
+\item \label{pre-static}Our one-time pre-annotation with those MWEs from SemLex that have been previously used in annotation, and as a result of that, they already have a tree structure as a part of their entry.
+
+\item \label{pre-on-load}Dynamic pre-annotation as in \ref{pre-static}, only with the SemLex entries that have been recently added by an annotator. 
+
+\item \label{pre-on-annot}When an annotator tags an occurrence of a MWE in the text, other occurrences of this MWE in the article are identified automatically.
+
+This is exactly what happens:
+	\begin{enumerate}[1)]
+	\item Tree structure of the selected MWE is identified via \ntred
+	\item The tree structure is added to the MWE's entry in SemLex
+	\item All the sentences in the given file are searched for the same MWE using its tree structure (via  \ntred)
+	\item Other occurrences returned by  \ntred\ are tagged with this MWE's ID, but these occurrences receive an additional attribute ``auto'', which identifies them (both in the s-files and visually in the annotation tool) as annotated automatically.
+	\end{enumerate}
+
+\end{enumerate}
 
 Pre-annotation (\ref{pre-hnatkova})~was executed once for all of the PDT. (\ref{pre-static})~is performed each time we merge MWEs added by annotators into the main SemLex. We carry out this annotation in one batch for all PDT files remaining to annotate. (\ref{pre-on-load})~is done for each file while it is being opened in the annotation environment. 
 (\ref{pre-on-annot})~happens each time the annotator adds a new MWE into SemLex and uses it to annotate an occurrence in the text. In subsequent files instances of this MWE are already annotated in step (\ref{pre-on-load}), and later even in (\ref{pre-static}).
@@ -270,6 +272,45 @@ where $n_{q_iA}$ is the number of lexicon entry $q_i$ in annotated data from ann
 The resulting $\kappa_w^U$ is then
 %\[\pi_w = \frac{A_o - A_e}{\widehat{U} - A_e} = \frac{0.160 - 0.047}{0.215 - 0.047} = 0.676.\]
 \[\kappa_w^U = \frac{A_o - A_e}{\widehat{U} - A_e} = \frac{0.154 - 0.046}{0.213 - 0.046} \doteq 0.644.\]
+
+
+%%% tables and graphs for kappa_{w} --START
+\begin{table}[htdp]
+%\begin{center}
+\begin{tabular}{l|r|r|r|r|r|r|r|r|r}
+annotation type   & \multicolumn{9}{c}{3}   \\
+batch number   & 04   & 05   & 06   & 07   & 08   & 10   & 11   & 12   & 13   \\
+number of files & 89   & 72   & 85   & 87   & 45   & 3    & 69   & 50   & 69   \\
+annotator 1  & sid  & .    & .    & .    & .    & .    & .    & .    & .    \\
+annotator 2  & vim  & .    & .    & .    & .    & .    & .    & .    & .    \\
+$\kappa_w^U$  & 6714 & 7474 & 7289 & 7312 & 7029 & 6622 & 6162 & 6703 & 6804 \\
+\hline
+\end{tabular}
+
+\begin{tabular}{l|r|r|r|r}
+annotation type & \multicolumn{4}{c}{4}  \\
+batch number    & 14   & 15   & 16   & 17   \\
+number of files & 99   & 124  & 146  & 152  \\
+annotator 1     & sid  & .    & .    & .    \\
+annotator 2     & vim  & .    & .    & .    \\
+$\kappa_w^U$    & 6940 & 7196 & 7162 & 6703 \\
+\hline
+\end{tabular}
+
+\begin{tabular}{l|r|r|r}
+annotation type & \multicolumn{3}{c}{8} \\
+batch number    & 21   & 34   & 35   \\
+number of files & 81   & 147  & 162  \\
+annotator 1     & vim  & .    & .    \\
+annotator 2     & sta  & .    & .    \\
+$\kappa_w^U$    & 7576 & 6958 & 7361 \\
+\end{tabular}
+\caption{Kappa per annotation type. These are all the data that were annotated in parallel.}
+\label{tab:kappa}
+%\end{center}
+\end{table}%
+%%% tables and graphs for kappa_{w} -- END
+
 
 We introduced improved $\kappa_w^U$ measure, which is weighted kappa with the upper bound moved from the value 1. We also inspected other measures like simple $\kappa$ (results differ according to the treatment of non-annotated t-nodes: $\kappa_1 = 0.04$ and $\kappa_2 = 0.68$), or weighted variant of $\pi$ with no respect for individual coder distributions (but with results almost exactly the same as $\kappa$: $\pi_w = 0.644$).
 
