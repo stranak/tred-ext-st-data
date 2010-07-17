@@ -75,6 +75,7 @@ From the technical point of view, \semlex\ is a simple list of entries. It is st
 In addition to the \semlex\ itself we also build an index of basic forms on some special occasions. It is not needed during annotation, so we do not create the index normally but it can be called by passing a second parameter\footnote{The parameter is evaluated as a BOOL type.} to the function \verb=SemLex::load_yaml()=. 
 
 \subsection{\semlex\ entry}
+\label{sec:semlex:entry}
 An entry is composed of several user-editable attributes, and some read-only and machine-generated metadata:\footnote{By ``user-editable'' we mean editable in \seman. Everything is of course editable in the YAML source format using a text editor, but that is not what a typical user that we have in mind does.} 
 \begin{verbatim}
   - !!perl/hash:SemLex_heslo 

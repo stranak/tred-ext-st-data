@@ -53,7 +53,7 @@ It is possible to generate the surface (plain text) sentence from a t-tree using
 
 %%%%%%
 \subsection{Annotation buttons}
-The row of buttons below the text widget is rather straightforward: 
+The row of buttons below the text widget and the status bar is rather straightforward: 
 
 The first group (from the left) contains two buttons that are connected to general commands used for all annotations (NEs and other \semlex\ entries alike). The first button shows a tag (i.e. the corresponding \semlex\ entry), on the word in focus (the word that is selected, or in which the cursor is placed). The second button removes the tag on the word in focus.
 
@@ -65,8 +65,17 @@ The last check button toggles the on-the-fly pre-annotation of other instances o
 
 %%%%%%
 \subsection{SemLex editor}
-\todo
+The \semlex\ editor and browser (see the lower part of \Fref{fig:seman-gui}) simply displays SemLex entries, allows to edit them, or to search SemLex by basic or lemmatised forms (see~\Fref{fig:semlex-search}), and browse the search results (using their basic forms). There is also a function to annotate the selected words (t-nodes) with the current SemLex entry. It is mapped simply to the return/enter key, once the focus moves from the SemLex part of the GUI to the text widget.
 
+The attributes of an entry that are displayed include the basic and lemmatised form of an entry, its ID and source, example of usage, synonyms, if present, and a gloss. There is also a time stamp and a signature of the last modification. The attributes of a SemLex entry are explained in detail in \Sref{sec:semlex:entry}.
+
+The search string is by default matched as a substring, and there is a check box to toggle case sensitivity. However when needed (and in case an annotator has the knowledge), full Perl regular expressions can be used. 
+\begin{figure}[htbp]
+   \centering
+   \includegraphics[width=\textwidth]{images/semlex-search}
+   \caption{A result of a search in SemLex by a substring of the lemmatised form: 206 entries were found (see the status line at the top). Browsing the basic forms of the results.}
+   \label{fig:semlex-search}
+\end{figure}
 
 %%%%%%
 \subsection{General UI remarks}
