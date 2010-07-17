@@ -11,10 +11,30 @@ Takze s nastrojem a daty predanotovanymi dle Hnatkove jsme postupovali takto: ro
 
 Put the table from wiki here.
 
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Basic quantitative characteristics of the annotations}
 \label{sec:annot:what}
 
-%%%%%
+\begin{table}[htdp]
+\begin{tabular}{l|r|r|r|r|r|r}
+ parallel annotations  & 1    & 2    & 3   & PDT    & 2+3$/$PDT & *$/$PDT \\
+ \hline
+ t-files & 1288   & 1412   & 465   & 3165   & 59\%        & 100\% \\
+ t-nodes & 248448 & 343834 & 82683 & 674965 & 63\%        & 100\% \\
+\end{tabular}
+\caption{How much data was annotated by 1, 2, or 3 annotators in parallel; compared to the size of PDT (t-data). The last collumn just indicates that we have indeed annotated all the data of PDT 2.0 t-layer.}
+\label{tab:parallel-anot}
+\end{table}%
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Pre-annotation}
 \label{sec:annot:pre}
 Because MWEs tend to occur repeatedly in a text, we have decided to test pre-annotation both for speed improvement and for improving the consistency of annotations. 
@@ -47,8 +67,8 @@ Pre-annotation (\ref{pre-hnatkova})~was executed once for all of the PDT. (\ref{
 (\ref{pre-on-annot})~happens each time the annotator adds a new MWE into SemLex and uses it to annotate an occurrence in the text. In subsequent files instances of this MWE are already annotated in step (\ref{pre-on-load}), and later even in (\ref{pre-static}).
 %, when the lexia (lexicon entry) is merged into the main SemLex. 
  
-\xxx{PRO FUTURA
-We have currently performed double blind annotation of a part of data without pre-annotation (\ref{pre-static}) and (\ref{pre-on-load}). We also have smaller samples annotated without any pre-annotation and only with pre-annotation (\ref{pre-hnatkova}). Analysis of this data is necessary  to show that our assumption is correct and all the occurrences of a lexia share the same tree structure. Then we can safely add remaining pre-annotation steps. Provided the inter-annotator agreement is good enough we can also stop our current (rather expensive and time consuming) practice of double annotation of each file and comparing the annotations.} % end XXX
+%\xxx{PRO FUTURA
+%We have currently performed double blind annotation of a part of data without pre-annotation (\ref{pre-static}) and (\ref{pre-on-load}). We also have smaller samples annotated without any pre-annotation and only with pre-annotation (\ref{pre-hnatkova}). Analysis of this data is necessary  to show that our assumption is correct and all the occurrences of a lexia share the same tree structure. Then we can safely add remaining pre-annotation steps. Provided the inter-annotator agreement is good enough we can also stop our current (rather expensive and time consuming) practice of double annotation of each file and comparing the annotations.} % end XXX
 
 After the pilot annotation without pre-annotation (\ref{pre-on-annot})  we have compared instances of the same tags and found that 10.5\% of repeated MWEs happened to have two different tree representations. Below we analyse several most important sources of these inconsistent t-trees and possible improvements:
 \begin{itemize}
@@ -102,46 +122,46 @@ because these cases are caused by ellipses, variations in lexical form such as d
 Up to now we have not found any MWE such that its structure cannot be represented by a single tectogrammatical tree. 1.1\% of all occurrences were not connected graphs, but this happened due to errors in data and to our incorrect handling of coordinations with newly established t-nodes (see above). This corroborates our assumption that (disregarding errors) all occurrences of a MWE share the same tree structure. As a result, we started storing the tree structures in the SemLex entries and employ them in pre-annotation (\ref{pre-on-annot}). This also allows us to use pre-annotations (\ref{pre-static}) and (\ref{pre-on-load}), but we have decided not to use them at the moment, in order to be able to evaluate each pre-annotation step separately. Thus the following section reports on the experiments that employ pre-annotations (\ref{pre-hnatkova}) and (\ref{pre-on-annot}).
 
 
-%%%%%
-\section{Analysis of interannotator agreement – JLRE}
+
+
+
+%%%%%%%%%%%%%%%%%
+\section{Measuring the inter-annotator agreement}
 \label{sec:annot:analysis}
-Two annotators have started to use (and test) the tool we have developed.
-They both have got the same texts. The text is generated from the t-trees and presented as a plain text with pre-annotated words mark\-ed by colour labels. Annotators add their tags in the form of different colour labels and they can delete the pre-annotated tags. 
-In this experiment the data consists of approx. 310,000 tokens, which correspond to 250,000 t-nodes.
-Both annotators have marked about 37,000 t-nodes ($\approx$ 15\%) as parts of MWEs and grouped them into 17,000 MWEs. So the average length of a MWE is 2.2 t-nodes.
-% Annotator $A$ %Vimmrova
-% has grouped them into 7,263 MWEs and annotator $B$ %Sidak
-% into 6,888. So the average length of a MWE is 2.2 t-nodes.
+During the annotations we employed four annotators. Three of them annotated a significant amount of work, the fourth, who is not mentioned elswhere in this text, helped with various experiments. The annotator identified by name $sta$ replaced annotator $sid$, while $vim$ worked with us during whole course of the project. 
 
-The ratio of general named entities versus SemLex entries was 50:50 for annotator $A$ and 52:48 in the case of annotator $B$. Annotator $A$ used SemLex more frequently (than she used named entities and also than annotator $B$ used SemLex), but did not utilise as many lexicon items as annotator $B$.
-% Annotator $B$ used 10\% more lexias than annotator $A$ (3,279 and 3,677), while they both used almost the same number of NEs.
-This and some other comparison is given in Table~\ref{tab:anot}.
+Below we 
 
+The ratio of general named entities versus SemLex entries was approx. 52:48 for annotator $sid$ and 50:50 in the case of annotator $vim$. This, and some other comparisons are given in Table~\ref{tab:anot}. Both of them annotated 1090 files in parallel. The data consisted of  350,177 tokens representing 284,029 t-nodes.
 
 \begin{table}[h]
 \centering
 \begin{tabular}{l|r|r}
-type of MWE&$A$&$B$\\
+type of MWE&$sid$&$vim$\\
 \cline{1-3}
-SemLex entries&8,447&8,312\\
- - different items&3,844&4,089\\
-Named Entities&8,435&8,903\\
- - person/animal&2,797&2,811\\
- - institution&1,702&2,047\\
- - number&1,343&1,053\\
- - object&1,129&888\\
+SemLex entries -- instances&9,427&9,477\\
+ - total entries used&4,472&4,067\\
+Named Entities&10,208&9,621\\
+ - address & 20 & 2 \\
+ - biblio & 4 & 14 \\
+ - foreign & 83 & 50 \\
+ - institution&2,344&1,928\\
+ - location&619&700\\
+ - object&1,046&1,299\\
+ - other&1,188&1,498\\
+   - person/animal&3,246&3,232\\
+      - time&1,658&898\\
+
 \end{tabular}
-\caption{Annotated instances of significant types of MWEs \xxx{update!}}
+\caption{Annotated instances of significant types of MWEs by annotators $sid$ and $vim$}
 \label{tab:anot}
 \end{table}
 
-Both annotators also needed to add missing entries to the originally compiled SemLex or to edit existing entries. Annotator $A$ added 1,361 entries while annotator $B$ added 2,302. They modified 1,307 and 2,127 existing entries, respectively.
 
-
-\subsection{Inter-annotator Agreement – JLRE}
+\subsection{The measure}
 \label{agreement}
 
-In this section our primary goal is to assess whether with our current methodology we produce a reliable annotation of MWEs. To that end we measure the amount of inter-annotator agreement that is above chance. Our attempt exploits {\it weighted kappa measure} $\kappa_w$ \cite{cohen:1968}.
+In this section our primary goal is to assess whether with our current methodology we produce reliable annotations of MWEs. To that end we measure the amount of inter-annotator agreement that is above chance. Our attempt exploits {\it weighted kappa measure} $\kappa_w$ \cite{cohen:1968}.
 
 The reason for using a weighted measure is essential for our task: we do not know which parts of sentences are MWEs and which are not. Therefore annotators work with all words and even if they do not agree on the type of a particular MWE, it is still an agreement on the fact that this t-node is a part of some MWE and thus should be tagged. This means we have to allow for partial agreement on a tag.
 
@@ -156,8 +176,7 @@ There are, however, a few sources of complications in measuring agreement of our
 	There is not a clear and simple way to estimate the amount of agreement by chance, because it must include the partial agreements mentioned above.
 \end{itemize}
 
-Since we want to keep our agreement calculation as simple as possible but we also need to take into account the issues above, we have decided (as mentioned above) to start from $\kappa_w$ as defined in \cite{artstein:2007}: $\kappa_w = 1 - \frac{D_o}{D_e} = \frac{A_o - A_e}{1 - A_e}$ (explanation in Equation \ref{ourkappa}) and to make a few adjustments to allow for an agreement on non-annotation and an estimated upper bound. We explain these adjustments in following paragraphs.
-
+Since we want to keep our agreement calculation as simple as possible but we also need to take into account the issues above, we have decided (as mentioned above) to start from $\kappa_w$ as defined in \cite{artstein:2007}: $\kappa_w = 1 - \frac{D_o}{D_e} = \frac{A_o - A_e}{1 - A_e}$ (explanation in Equation \ref{ourkappa}) and to make a few adjustments to allow for an agreement on non-annotation and an estimated upper bound. We explain these adjustments in following paragraphs on the example of paralled data of annotators $sid$ and $vim$\footnote{The same calculations are done for our other pair: $sta$ and $vim$.} and we summary quantitative data for this pair in Table~\ref{tab-agreement}.
 
 Because we do not know how many MWEs there are in our texts, we need to \textit{calculate the agreement over all t-nodes}, rather than just the \mbox{t-nodes} that ``should be annotated''. This also means that the theoretical maximal agreement (upper bound) $U$ cannot be 1. If it was 1, it would be saying that all nodes are part of MWEs. 
 
@@ -168,7 +187,7 @@ Since we know that $U < 1$ but we do not know its exact value, we use the \texti
 This allows us to positively discriminate the cases where annotators agree that a t-node is not a part of a MWE from the cases where one annotator annotates a t-node and the other one does not, which is evidently worse.
 
 %\newpage
-If $N$ is the number of all t-nodes in our data and $n_{A \cup B}$ is the number of t-nodes annotated by at least one annotator, then we estimate $\widehat{U}$ as follows:
+If $N$ is the number of all t-nodes in our parallel data and $n_{A \cup B}$ is the number of t-nodes annotated by at least one annotator, then we estimate $\widehat{U}$ as follows:
 \begin{equation}
 \label{eq-upper-bound}
 \widehat{U} = \frac{n_{A \cup B}}{N} + 0.051 \cdot \frac{N - n_{A \cup B}}{N}= 0.213.
@@ -187,7 +206,7 @@ If they agree that the t-node is a part of a NE or they agree that it is a part 
 If they agree that the t-node is a part of a MWE, but disagree whether a NE or an entry from SemLex, it is again half the information compared to when $c=2$, so $w_3 = 0.25$.
 \item
 If they agree that the t-node is not a part of a MWE, $w_4 = 0.051$. This low value of $w$ accounts for frequency of t-nodes that are not a part of a MWE, as estimated from data: Agreement on not annotating provides the same amount of information as agreement on annotating, but we have to take into account higher frequency of t-nodes that are not annotated: 
-  \[  w_4 = w_3 \cdot \frac{\sum annotated}{\sum not\ annotated} = 0.25 \cdot \frac{42779}{208437} \approx 0.051. \]
+  \[  w_4 = w_3 \cdot \frac{\sum annotated}{\sum not\ annotated} \approx 0.051. \]
 We can see that two ideal annotators who agree on all their assignments could not reach high agreement measure, since they naturally leave some t-nodes without an annotation and even if they are the same t-nodes for both of them, this agreement is weighted by $w_4$. Now we can look back at Equation \ref{eq-upper-bound} and see that $\widehat{U}$ is exactly the agreement which two ideal annotators reach.
 
 It should be explained why we do not need to corrected upper bound when working with weighted measures like $\kappa_w$.
@@ -217,14 +236,14 @@ The numbers of t-nodes $n_c$ and weights $w$ per class $c$ are given in Table~\r
 \cline{1-6}
 class $c$& 1 & 2 & 3 & 4 & 5\\
 \cline{1-6}
-\# of t-nodes $n$& 24,386 & 6,355 & 1,399 & 208,437 & 10,639\\
+\# of t-nodes $n$& 31,290 & 2,864 & 1,555 & 235,739 & 11,790\\
 \cline{1-6}
 weight $w$ & 1 & 0.5 & 0.25 & 0.051 & 0 \\
 \cline{1-6}
-$w_c n_c$ & 24,386 & 3,178 & 350 & 10,695 & 0\\
+$w_c n_c$ & 31,290 & 1,432 & 388.75 & 12,022 & 0\\
 \end{tabular}
 \end{center}
-\caption{The agreement per class and the associated weights}
+\caption{The agreement per class and the associated weights for annotators $sid$ a $vim$ over the data they annotated in parallel (batches 04--17).}
 \label{tab-agreement}
 \end{table}
 
@@ -243,9 +262,7 @@ Weights $w$ come into account in calculation of $A_o$ and $A_e$.
 
 We calculate $A_o$ by multiplying the number of t-nodes in each category $c$ by that category's weight $w_c$ (see Table \ref{tab-agreement}), summing these five weighted sums and dividing this sum of all the observed agreement in the data by the total number of t-nodes:
 %\begin{align*}
-\[	A_o = \frac{1}{N} \sum_{c =1}^{5} w_c n_c = \\
-%\frac{1}{100556} ((6908+3619)\cdot1 + (437+1928)\cdot0.5 + 389\cdot0.25 + 83287\cdot0.052 + 3988\cdot0) =
-	 \frac{1}{251216} (24386 + 3178 + 350 + 10695 + 0) \doteq 0.154.
+\[	A_{o, sid, vim} = \frac{1}{N} \sum_{c =1}^{5} w_c n_c \doteq 0.162.
 	\]
 %\end{align*}
 
@@ -264,18 +281,18 @@ $A_e$ is the probability of agreement expected by chance over all t-nodes. This 
 
 We estimated these probabilities from annotated data
 \[
-A_e = \sum_i^{SemLex} \sum_j^{SemLex}
-	\frac{n_{q_iA}}{N_A} \frac{n_{q_jB}}{N_B} w_{ij} \approx 0.046\ ,
+A_{e, sid, vim} = \sum_i^{SemLex} \sum_j^{SemLex}
+	\frac{n_{q_iA}}{N_A} \frac{n_{q_jB}}{N_B} w_{ij} \approx 0.047\ ,
 \]
 where $n_{q_iA}$ is the number of lexicon entry $q_i$ in annotated data from annotator $A$ and $N_A$ is the amount of t-nodes given to annotator $A$. Here, the non-annotation is treated like any other label assigned to a t-node.
 
 The resulting $\kappa_w^U$ is then
 %\[\pi_w = \frac{A_o - A_e}{\widehat{U} - A_e} = \frac{0.160 - 0.047}{0.215 - 0.047} = 0.676.\]
-\[\kappa_w^U = \frac{A_o - A_e}{\widehat{U} - A_e} = \frac{0.154 - 0.046}{0.213 - 0.046} \doteq 0.644.\]
+\[\kappa_w^U = \frac{A_o - A_e}{\widehat{U} - A_e} \doteq 0.695.\]
 
 
 %%% tables and graphs for kappa_{w} --START
-\begin{table}[H]
+\begin{table}[htdp]
 \begin{small}
 \begin{tabular}{l|r|r|r|r|r|r|r|r|r}
 annotation type   & \multicolumn{9}{c}{3}   \\
@@ -313,14 +330,15 @@ $\kappa_w^U$    & 0.7576 & 0.6958 & 0.7361 \\
 \begin{figure}[htbp]
    \centering
    \includegraphics[width=\textwidth]{images/kappa.pdf}
-   \caption{Weighted kappa per annotation type (colour line), annotators pair, and batch (points)}
+   \caption{Weighted kappa per annotation type (colour line), a pair of annotators, and batches of annotated files (data points).}
    \label{fig:kappa}
 \end{figure}
 %%% tables and graphs for kappa_{w} -- END
 
 
-We introduced improved $\kappa_w^U$ measure, which is weighted kappa with the upper bound moved from the value 1. We also inspected other measures like simple $\kappa$ (results differ according to the treatment of non-annotated t-nodes: $\kappa_1 = 0.04$ and $\kappa_2 = 0.68$), or weighted variant of $\pi$ with no respect for individual coder distributions (but with results almost exactly the same as $\kappa$: $\pi_w = 0.644$).
+We introduced improved $\kappa_w^U$ measure, which is weighted kappa with the upper bound moved from the value 1. This measure is the best fit for our problem that we were able to come up with. 
 
+\subsection{Analysis of the disagreement}
 When we analyse disagreement and partial agreement we find that most cases have to do with SemLex entries rather than NEs. This is mostly due to the deficiencies of the dictionary and its size (annotators could not explore each of almost 30,000 of SemLex entries). Our current methodology, which relies too much on searching the SemLex, is also to blame. This should, however, improve by employing pre-annotations (\ref{pre-static}) and (\ref{pre-on-load}). 
 
 %\begin{compactitem}
@@ -344,7 +362,7 @@ Max. je stanoveno tak, ze za predpokladu vyse anotator nemuze (a ani nema) Max. 
 
 \section{Time analysis}
 \label{sec:time-analysis}
-One of the reasons to implement detailed logs of all the annotations \see{sec:logs} was to allow detailed analysis of the time aspect of annotations. By ``time aspect'' we do not mean just checking, how much it takes annotators to tag the data, even though this is an important information too. We wanted to make it possible to ask any number of questions: Is there correlation between annotation speed and frequency of work? Does the speed increase or decrease in long stretches of continuous work? In how long intervals do annotators tend to work? Is the number of tags per minute/hour more or less constant? Et cetera, et cetera. 
+One of the reasons to implement detailed logs of all the annotations \see{sec:logs} was to allow detailed analysis of the time aspect of annotations. By ``time aspect'' we do not mean just checking, how much it takes annotators to tag the data, even though this is an important information too. We wanted to make it possible to ask any number of questions: Is there correlation between annotation speed and frequency of work? Does the speed increase or decrease in long stretches of continuous work? In how long intervals do annotators tend to work? Is the number of tags per minute/hour more or less constant?  
 
 In \Fref{fig:speed} we can see some inter- and -intra annotator variance in speed, but it seems there are some clear broad tendencies: annotators tend to have their own speed, as shown by the splines They also show different amount of variance in speed, epsecially annotator \emph{sid}'s speed is visibly more stable.
 
@@ -362,16 +380,17 @@ The data plotted in \Fref{fig:hist} and \Fref{fig:hist-detail}, even though not 
 \begin{figure}[htbp]
    \centering
    \includegraphics[width=.8\textwidth]{images/speed/histograms} 
-   \caption{A histogram showing how many times ($y$) did an annotator place the next tag $x$ seconds after the previous one.} 
+   \caption{A histogram showing how many times ($y$) did an annotator place the next tag exactly $x$ seconds after the previous one.} 
    \label{fig:hist}
 \end{figure}
 
 \begin{figure}[htbp]
    \centering
    \includegraphics[width=.8\textwidth]{images/speed/histograms-detail} 
-   \caption{Detail of the histogram in \Fref{fig:hist} in an interval where we have placed our \emph{fluency} value for the preliminary experiment with clustering of work into annotation intervals (see \Sref{sec:time-analysis} and \Fref{fig:speed}).}
+   \caption{Detail of the histogram in \Fref{fig:hist} in an interval where we have placed our \emph{fluency} value for the preliminary experiment with clustering of work into annotation intervals ($f=60$, see \Sref{sec:time-analysis} and \Fref{fig:speed}).}
 \label{fig:hist-detail}
 \end{figure}
 
 
-\todo \xxx{problem toho, co vlastne vidime, jak nastavit pocitani, nas skript, zakladni udaje, grafy}
+\todo \xx{popsat analyzacni skript a fluency (f=60).}\\
+\xxx{problem toho, co vlastne vidime, jak nastavit pocitani, nas skript, zakladni udaje, grafy}
