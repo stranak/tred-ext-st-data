@@ -275,15 +275,15 @@ The resulting $\kappa_w^U$ is then
 
 
 %%% tables and graphs for kappa_{w} --START
-\begin{table}[htdp]
-%\begin{center}
+\begin{table}[H]
+\begin{small}
 \begin{tabular}{l|r|r|r|r|r|r|r|r|r}
 annotation type   & \multicolumn{9}{c}{3}   \\
 batch number   & 04   & 05   & 06   & 07   & 08   & 10   & 11   & 12   & 13   \\
 number of files & 89   & 72   & 85   & 87   & 45   & 3    & 69   & 50   & 69   \\
 annotator 1  & sid  & .    & .    & .    & .    & .    & .    & .    & .    \\
 annotator 2  & vim  & .    & .    & .    & .    & .    & .    & .    & .    \\
-$\kappa_w^U$  & 6714 & 7474 & 7289 & 7312 & 7029 & 6622 & 6162 & 6703 & 6804 \\
+$\kappa_w^U$  & 0.6714 & 0.7474 & 0.7289 & 0.7312 & 0.7029 & 0.6622 & 0.6162 & 0.6703 & 0.6804 \\
 \hline
 \end{tabular}
 
@@ -293,7 +293,7 @@ batch number    & 14   & 15   & 16   & 17   \\
 number of files & 99   & 124  & 146  & 152  \\
 annotator 1     & sid  & .    & .    & .    \\
 annotator 2     & vim  & .    & .    & .    \\
-$\kappa_w^U$    & 6940 & 7196 & 7162 & 6703 \\
+$\kappa_w^U$    & 0.6940 & 0.7196 & 0.7162 & 0.6703 \\
 \hline
 \end{tabular}
 
@@ -303,12 +303,19 @@ batch number    & 21   & 34   & 35   \\
 number of files & 81   & 147  & 162  \\
 annotator 1     & vim  & .    & .    \\
 annotator 2     & sta  & .    & .    \\
-$\kappa_w^U$    & 7576 & 6958 & 7361 \\
+$\kappa_w^U$    & 0.7576 & 0.6958 & 0.7361 \\
 \end{tabular}
 \caption{Kappa per annotation type. These are all the data that were annotated in parallel.}
 \label{tab:kappa}
-%\end{center}
+\end{small}
 \end{table}%
+
+\begin{figure}[htbp]
+   \centering
+   \includegraphics[width=\textwidth]{images/kappa.pdf}
+   \caption{Weighted kappa per annotation type (colour line), annotators pair, and batch (points)}
+   \label{fig:kappa}
+\end{figure}
 %%% tables and graphs for kappa_{w} -- END
 
 
