@@ -21,7 +21,7 @@ The annotation tool \seman\ is written in Perl 5\footnote{\url{www.perl.org}; \u
 	  \item generate surface sentences from tectogrammatical trees in \tf{}s that are then displayed in the \seman\ GUI,
 	  \item perform all the on-the fly pre-annotations (\Sref{sec:annot:pre})
 	\end{itemize}
-	What we call ``backend'' is thus the running \ntred\ instance itself (that is run by the \seman\ during start-up), and the scripts used to generate the sentences that are displayed in \seman\ and to pre-annotate MWEs using their tectogrammatical tree structures.\footnote{these scripts were written entirely by E. Bejček~(\citeyear{bejcek:2010}).}
+A \tred engine without a GUI with a few modifications aimed towards batch processing is called \btred. \ntred is essentially a modification of \btred that allows it to run as a daemon and process scripts over a network. We opted for \ntred, even though we ran it locally, because it can run as a daemon, thus eliminating a significant startup penalty of \btred. What we call ``\ntred\ backend'' is thus the running \ntred\ instance itself (that is started by the \seman\ during start-up, if there has not been a running instance detected), and the scripts used to generate the sentences that are displayed in \seman\ and to pre-annotate MWEs using their tectogrammatical tree structures.\footnote{these scripts were written entirely by E. Bejček~(\citeyear{bejcek:2010}).}
   \item The module \code{SemLex.pm} is used to read, save, query, and edit \semlex.
     \item The module \code{SemLex\textunderscore{}heslo.pm} implements the \semlex\ entry: its structure, attributes and accessors.
   \item There is also a suite of miscellaneous scripts mostly for validation of annotated data, comparing and merging multiple annotations, merging annotators' \semlex{}es, computing reliability of annotations, and other small tasks related to annotation and managing the annotated data and \semlex{}es.
@@ -44,8 +44,8 @@ It is possible to generate the surface (plain text) sentence from a t-tree using
 %% comparison of plain text and the same with hidden text -- screenshots%%
 \begin{figure}[htbp]
    \centering
-   \includegraphics[width=.95\textwidth]{images/hidden-text}
-   \caption{Comparison of the plain text, as normally displayed, and the underlying representation that is used to relate the actions of annotators, who mark words, to references to tectogrammatical nodes,that are actually saved in the annotation files.}
+   \includegraphics[width=.95\textwidth]{images/hidden-text2}
+   \caption{Comparison of the plain text, as normally displayed, and the underlying representation that is used to relate the actions of annotators who mark words, to the references to tectogrammatical nodes that are actually saved in the annotation files.}
    \label{fig:seman:hidden}
 \end{figure}
 
@@ -85,6 +85,11 @@ Inspired by command mode of modal text editors and by some annotation regimes of
 %%%%%%%%%%%%%%%%%%%
 \section{Annotation logs}
 \label{sec:logs}
-\todo
+An important, and as far as we know unique, feature of \seman\ is the design of annotation logs. As soon as an \sf is loaded in \seman, a \verb=*.st.log= file is created and every action taken henceforth, that modifies the \sf, is logged, together with a timestamp. 
 
+Logs are saved in YAML format and timestamps are human readable on purpose. Thus it is easy to visually inspect the logs in case of problems with sf{}s, e.g. data corruption. It was helpful on several occasions. However the main point of logs is different.
 
+Logs are a source of valuable information that can provide an insight into what is actually going on during annotation. Analysis of logs together with s-files can help estimate the real cost of annotations, which we have done during annotations to some extent, by estimating speed of annotations \see{sec:time-analysis}. 
+But the analysis can go further and, to formulate the problem in economic terms, try to examine in general what factors influence the price of a (correct) tag. What is the relation of speed, length of work intervals, time of day, order of processing of the file, and other factors? We give only a very brief glimpse of one of the factors -- speed of annotations in \Sref{sec:time-analysis}, but in our opinion thorough statistical analysis of log files is an important source of information also for future annotation projects. \xx{Presunout odstavec do casove analyzy ve Future Work?}
+
+The log files are however useful also directly to annotators during their daily work, because they provide information necessary for persistent undo and redo. Even when the file has been partially annotated long time ago, an annotator can review the last steps taken and continue with more information.

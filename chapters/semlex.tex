@@ -116,7 +116,8 @@ An entry is composed of several user-editable attributes, and some read-only and
 Secondary use of this attribute is for additional notes or processing instructions. Annotators put specially formated notes into this field to mark that the entry has some special property that we do not have an attribute for, that the entry should be removed, or they could indicate that they have just some other note for the entry. This secondary use of GLOSS and  the type of note was marked by special format of the beginning of the note:
     \begin{description}
     \item [\code{***(<type>)}] -- The entry is a NE that the user wants to add into \semlex. The usual reason is that the NE is common in the annotated text. When it is added into \semlex, it can be pre-annotated automatically more efficiently (see \Sref{sec:annot:pre} for details). \code{<type>} means that at this place there is a name of one of the types of NEs as described in \Sref{sec:semlex:ne}.\footnote{The notes actually use Czech names of these types.} 
-    \item [\code{***derived from: <ID>}] -- The entry is derived from another entry that already exists in \semlex. \xxx{popsat, rozsirit. Nemela by to byt subsekce a odkaz?}
+    \item [\code{***derived from: <ID>}] -- The entry is derived from another entry that already exists in \semlex. 
+    %\xxx{popsat, rozsirit. Nemela by to byt subsekce a odkaz?}
         \item [\code{***remove}] -- The entry is not a MWE, thus its instances should not be annotated and the entry should be removed from \semlex.
         \item [\code{***<anything else>}] -- Other notes. The entry must be inspected and something (other than removing it) must be done.
   \end{description}
@@ -136,7 +137,9 @@ The morphological tags could however still prove useful if \semlex\ should be us
   \begin{description}
     \item [N] -- noun; 
     \item [A] -- adjective; \pr{trvale udržitelný, ekonomicky aktivní, do očí bijící}
-    \item [V] -- verb; \pr{působit jako blesk z čistého nebe (\xxx{really???}), zaujmout stanovisko, mít dohled, spadl (komu) kámen ze srdce}
+    \item [V] -- verb; \pr{působit jako blesk z čistého nebe
+    %(\xxx{really???})
+    , zaujmout stanovisko, mít dohled, spadl (komu) kámen ze srdce}
     \item [D] -- adverb; e.g. \pr{mezi čtyřma očima, na lavičce\footnote{Trenér Borovička se zatím nerozhodl, zda král střelců Siegl začne v základní sestavě, nebo zase jen na lavičce.}}, or \pr{o dům dál}
     \item [I] -- interjection;
     \item [F] -- foreign; often Latin, Greek, but also other idioms that are already ``native'' to the Czech language enough to include them in a dictionary instead of annotating them just as a foreign entity, e.g.~\pr{hip hop, a la, de iure}.
