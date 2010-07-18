@@ -47,74 +47,74 @@ Our project aims at improving the current state of t-lemmas. Our goal is to assi
 In the Prague dependency treebank version 2.0 \citep{pdt2:2006} there are several functors that refer to multiword expressions (MWEs) in one way or another. There are also two technical lemmas \texttt{\#Idph} and \texttt{\#Forn} that identify roots of subtrees representing MWE's. Tectogrammatical annotation is described in detail in~\citet{mikulova:2006}.
 
 
-\section{Search and visualisation tools}
-\label{sec:pdt:tools}
-There are currently three graphical search engines for PDT: Netgraph \citep{mirovsky:2009}, TrEd \citep{pajas:tred} and PML-TQ \citep{pmltq}. Both have their respective benefits, but since TrEd is considerably faster due to its use of an SQL database backend \citep{pmltq}, we have used TrEd for all the examples in this work. We also give the search queries using the PML Tree Query language designed by \citet{pmltq} where appropriate.
+%\section{Search and visualisation tools}
+%\label{sec:pdt:tools}
+%There are currently three graphical search engines for PDT: Netgraph \citep{mirovsky:2009}, TrEd \citep{pajas:tred} and PML-TQ \citep{pmltq}. Both have their respective benefits, but since TrEd is considerably faster due to its use of an SQL database backend \citep{pmltq}, we have used TrEd for all the examples in this work. We also give the search queries using the PML Tree Query language designed by \citet{pmltq} where appropriate.
 
 %%%%%%%%%%
-\section{List structures}
-
-\subsection{Foreign Phrase: \code{t-node [t\_lemma = \#Forn]}}\label{PDT:Forn}
-Foreign Phrase seems to be overused and its overuse seems a bit arbitrary. \\
-- jmena firem jsou nekdy forn, nekdy ne. (dohledat)\\
-
-%%
-\subsubsection{Foreign phrases with just one t-node}
-There are 34 occurrences of this construction in the PDT~2.0. Counting them is as easy as writing a query in Figure~\ref{fig:tq-forn1} and extending it with this filter: \code{>>count(\$n)}.
-
-\begin{wrapfigure}{r}{0.32 \textwidth}
-\includegraphics[width=0.3 \textwidth]{images/vyhledavky/query-forn-1-x.pdf}
-\caption{PML-TQ search query for single-node foreing phrases}
-\label{fig:tq-forn1}
-\end{wrapfigure}
-
-In case of the bibliographic reference in Figure~\ref{fig:forn-biblio} there is coordination of three foreign phrases corresponding to the parts of a bibliographic reference annotated, but the reason for this is not very clear. After all, the point of annotating foreign phrases as simple lists with a \code{\#Forn} node as a head was to make no assumptions about these pieces of a text \pageref{pdt-t-man:300}.  \\
-- je to kvuli te interpunkci???
-
-\begin{figure}[h]
-\includegraphics[width=\textwidth]{images/vyhledavky/forn-coord1x-biblio.pdf}
-\caption{A bibliographic reference analysed as a coordination of three foreign phrases}
-\label{fig:forn-biblio}
-\end{figure}
-
-Names of companies seem to be distinguished more by the country of origin then by any linguistic reasons, as demonstrated in Figure~\ref{fig:forn-firmy}. As far as linguistic criteria are concerned, Chemapol and Inekon are as foreign as Agip or Total. However the first two are, or at least were,%
-\footnote{At the time of writing this thesis Chemapol is owned by another international company, which only emphasises vagueness of this distinction} %
+%\section{List structures}
 %
-Czech companies, while those in the latter group have a foreign origin.
-
-\begin{figure}
-\includegraphics[width=\textwidth]{images/vyhledavky/nazvy-firem.pdf}
-\caption{Annotation of Czech and foreign company names}
-\label{fig:forn-firmy}
-\end{figure}
-
-%%%%%%%%%%
-\section{CPHR and DPHR}
-
-\subsection{CPHR}
-There are 76 occurrences of {\tt CPHR} nodes, whose head verb is not its parent, but only effective parent, in 40 sentences. See Figure~\ref{fig:tq-echild} for the query and Figures~\ref{fig:cphr-echild} and~\ref{fig:cphr-echild2} for examples.
-\begin{wrapfigure}{r}{0.32 \textwidth}
-\includegraphics[width=0.3 \textwidth]{images/vyhledavky/query-echild.pdf}
-\caption{PML-TQ search query for CPHR nodes, whose effective parrent is not its parent}
-\label{fig:tq-echild}
-\end{wrapfigure}
-
-\begin{figure}[h]
-\includegraphics[width=0.8\textwidth]{images/vyhledavky/cphr-echild.pdf}
-\caption{Coordination of verbonominal idioms, where the verbal parts are further ???rozvite }
-\label{fig:cphr-echild}
-\end{figure}
-
-Figure~\ref{fig:cphr-echild2} shows on the other hand a coordination of two V-N idioms with the same verbal part.
-\begin{figure}[h]
-\includegraphics[width=\textwidth]{images/vyhledavky/cphr-ukladat-sankce-a-penale.pdf}
-\caption{Coordination of two idioms starting with the same verb}
-\label{fig:cphr-echild2}
-\end{figure}
+%\subsection{Foreign Phrase: \code{t-node [t\_lemma = \#Forn]}}\label{PDT:Forn}
+%Foreign Phrase seems to be overused and its overuse seems a bit arbitrary. \\
+%- jmena firem jsou nekdy forn, nekdy ne. (dohledat)\\
+%
+%%%
+%\subsubsection{Foreign phrases with just one t-node}
+%There are 34 occurrences of this construction in the PDT~2.0. Counting them is as easy as writing a query in Figure~\ref{fig:tq-forn1} and extending it with this filter: \code{>>count(\$n)}.
+%
+%\begin{wrapfigure}{r}{0.32 \textwidth}
+%\includegraphics[width=0.3 \textwidth]{images/vyhledavky/query-forn-1-x.pdf}
+%\caption{PML-TQ search query for single-node foreing phrases}
+%\label{fig:tq-forn1}
+%\end{wrapfigure}
+%
+%In case of the bibliographic reference in Figure~\ref{fig:forn-biblio} there is coordination of three foreign phrases corresponding to the parts of a bibliographic reference annotated, but the reason for this is not very clear. After all, the point of annotating foreign phrases as simple lists with a \code{\#Forn} node as a head was to make no assumptions about these pieces of a text \pageref{pdt-t-man:300}.  \\
+%- je to kvuli te interpunkci???
+%
+%\begin{figure}[h]
+%\includegraphics[width=\textwidth]{images/vyhledavky/forn-coord1x-biblio.pdf}
+%\caption{A bibliographic reference analysed as a coordination of three foreign phrases}
+%\label{fig:forn-biblio}
+%\end{figure}
+%
+%Names of companies seem to be distinguished more by the country of origin then by any linguistic reasons, as demonstrated in Figure~\ref{fig:forn-firmy}. As far as linguistic criteria are concerned, Chemapol and Inekon are as foreign as Agip or Total. However the first two are, or at least were,%
+%\footnote{At the time of writing this thesis Chemapol is owned by another international company, which only emphasises vagueness of this distinction} %
+%%
+%Czech companies, while those in the latter group have a foreign origin.
+%
+%\begin{figure}
+%\includegraphics[width=\textwidth]{images/vyhledavky/nazvy-firem.pdf}
+%\caption{Annotation of Czech and foreign company names}
+%\label{fig:forn-firmy}
+%\end{figure}
+%
+%%%%%%%%%%%
+%\section{CPHR and DPHR}
+%
+%\subsection{CPHR}
+%There are 76 occurrences of {\tt CPHR} nodes, whose head verb is not its parent, but only effective parent, in 40 sentences. See Figure~\ref{fig:tq-echild} for the query and Figures~\ref{fig:cphr-echild} and~\ref{fig:cphr-echild2} for examples.
+%\begin{wrapfigure}{r}{0.32 \textwidth}
+%\includegraphics[width=0.3 \textwidth]{images/vyhledavky/query-echild.pdf}
+%\caption{PML-TQ search query for CPHR nodes, whose effective parrent is not its parent}
+%\label{fig:tq-echild}
+%\end{wrapfigure}
+%
+%\begin{figure}[h]
+%\includegraphics[width=0.8\textwidth]{images/vyhledavky/cphr-echild.pdf}
+%\caption{Coordination of verbonominal idioms, where the verbal parts are further ???rozvite }
+%\label{fig:cphr-echild}
+%\end{figure}
+%
+%Figure~\ref{fig:cphr-echild2} shows on the other hand a coordination of two V-N idioms with the same verbal part.
+%\begin{figure}[h]
+%\includegraphics[width=\textwidth]{images/vyhledavky/cphr-ukladat-sankce-a-penale.pdf}
+%\caption{Coordination of two idioms starting with the same verb}
+%\label{fig:cphr-echild2}
+%\end{figure}
 
 
 %%%%%
-\section{JLRE -- Current state of MWEs in PDT 2.0}
+\section{Current state of MWEs in PDT 2.0}
 \label{sec:pdt:mwes}
 
 During the annotation of valency, which is a part of the tectogrammatical layer of PDT 2.0, the t-lemmas, have been basically identified for all the verbs and some nouns and adjectives.
