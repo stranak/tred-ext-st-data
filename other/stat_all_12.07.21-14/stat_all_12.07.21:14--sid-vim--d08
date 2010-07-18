@@ -1,0 +1,197 @@
+Volano jako:
+	-s /net/work/projects/lexemann/data_procistena/SemLex.yml -a sidak vimmrova -d /net/work/projects/lexemann/data_procistena/davka-08_typ3 /net/work/projects/lexemann/data_procistena/davka-08_typ3--nedokoncena
+
+/net/work/projects/lexemann/data_procistena/SemLex.yml
+   | /net/work/projects/lexemann/data_procistena/davka-08_typ3...
+      | /net/work/projects/lexemann/data_procistena/davka-08_typ3/SemLex...
+         | /net/work/projects/lexemann/data_procistena/davka-08_typ3/SemLex/vim...
+            | /net/work/projects/lexemann/data_procistena/davka-08_typ3/SemLex/vim/old...
+      | /net/work/projects/lexemann/data_procistena/davka-08_typ3/vim...
+   | /net/work/projects/lexemann/data_procistena/davka-08_typ3--nedokoncena...
+      | /net/work/projects/lexemann/data_procistena/davka-08_typ3--nedokoncena/SemLex...
+         | /net/work/projects/lexemann/data_procistena/davka-08_typ3--nedokoncena/SemLex/sid...
+            | /net/work/projects/lexemann/data_procistena/davka-08_typ3--nedokoncena/SemLex/sid/old...
+      | /net/work/projects/lexemann/data_procistena/davka-08_typ3--nedokoncena/sid...
+
+----- pocty jednotlivych souboru:
+| 132	w-souboru.
+| 132	m-souboru.
+| 132	a-souboru.
+| 132	t-souboru.
+| 132	st-souboru.
+| 132	log-souboru.
+-----
+
+Odlozeny soubory bez ostatnich PDT souboru...
+
+----- pocty jednotlivych souboru:
+| 132	w-souboru.
+| 132	m-souboru.
+| 132	a-souboru.
+| 132	t-souboru.
+| 132	st-souboru.
+| 132	log-souboru.
+-----
+
+Odlozeny soubory od pouze jednoho anotatora...
+
+----- pocty jednotlivych souboru:
+| 90	w-souboru.
+| 90	m-souboru.
+| 90	a-souboru.
+| 90	t-souboru.
+| 90	st-souboru.
+| 90	log-souboru.
+-----
+
+----- pocty anotovanych uzlu:
+| Anotator sidak:	45 anotovanych souboru
+|    -    15039	tokenu na vstupu
+|    -    12391	t-uzlu na vstupu
+|    -    1765	anotovanych t-uzlu, (tj. 14.24%)
+|    -    806	vzniklych st-uzlu, (prumerna delka 2.18 t-uzlu), z toho
+|       - 424	pojmenovanych entit (52.6%) a
+|       - 382	pomoci SemLexu (47.39%) a
+| Anotator vimmrova:	45 anotovanych souboru
+|    -    15039	tokenu na vstupu
+|    -    12391	t-uzlu na vstupu
+|    -    1712	anotovanych t-uzlu, (tj. 13.81%)
+|    -    780	vzniklych st-uzlu, (prumerna delka 2.19 t-uzlu), z toho
+|       - 404	pojmenovanych entit (51.79%) a
+|       - 376	pomoci SemLexu (48.2%) a
+-----
+Anotator [NEZNAMY ANOTATOR /net/work/projects/lexemann/data_procistena/SemLex.yml => ZARADIT] ze SemLexu nema zadnou anotaci dat...
+
+----- pocty hesel ze SemLexu:
+|  anotator sidak:
+|	284	pouzitych hesel SemLexu
+|	8	pouzitych pojmenovanych entit; o jednotlivych poctech vyskytu:
+|		_________________________________________________________________
+|		|1	|1	|106	|20	|62	|62	|119	|53	|
+|		|0.2 %	|0.2 %	|25.0 %	|4.7 %	|14.6 %	|14.6 %	|28.1 %	|12.5 %	|
+|		|addres	|foreig	|instit	|locati	|object	|other	|person	|time	|
+|		-----------------------------------------------------------------
+|	0	vytvorenych hesel v SemLexu
+|		(tj. hesel se 'SOURCE: jiri' v souboru SemLex_jiri), z toho:
+|		0	v zakladni casti a
+|		0	v dodatecne anotatorske casti.
+|	0	zmenenych hesel v SemLexu
+|		(tj. hesel s 'MODIFIER: jiri' v souboru SemLex_jiri), z toho:
+|		0	v zakladni casti a
+|		0	v dodatecne anotatorske casti.
+|  anotator vimmrova:
+|	263	pouzitych hesel SemLexu
+|	7	pouzitych pojmenovanych entit; o jednotlivych poctech vyskytu:
+|		_________________________________________________________
+|		|4	|83	|27	|52	|64	|120	|54	|
+|		|1.0 %	|20.5 %	|6.7 %	|12.9 %	|15.8 %	|29.7 %	|13.4 %	|
+|		|foreig	|instit	|locati	|object	|other	|person	|time	|
+|		---------------------------------------------------------
+|	0	vytvorenych hesel v SemLexu
+|		(tj. hesel se 'SOURCE: jiri' v souboru SemLex_jiri), z toho:
+|		0	v zakladni casti a
+|		0	v dodatecne anotatorske casti.
+|	0	zmenenych hesel v SemLexu
+|		(tj. hesel s 'MODIFIER: jiri' v souboru SemLex_jiri), z toho:
+|		0	v zakladni casti a
+|		0	v dodatecne anotatorske casti.
+-----
+
+  PI:	----- Shoda anotatoru sidak a vimmrova:
+-N	| 12391	t-uzlu, ktere mohli anotovat (12391, 12391)
+-A	| 1982	t-uzlu, ktere byly alespon jednim z anotatoru anotovany
++0	| 10409	t-uzlu, ktere ani jeden vubec neoznacil
+-0	| 497	t-uzlu, ktere prave jeden vubec neoznacil
+	| 145	t-uzlu, ktere byly oznaceny ruznymi tagy, z toho:
+-SL	|	 70	ruzne polozky SemLexu
+-NE	|	 38	ruzne pojmenovane entity
+-NESL	|	 37	jeden SemLex, druhy pojmenovanou entitu
+	| 71	t-uzlu, ktere jsou dobre, ale
+	|		tag je sirsi a neprekryva se s tagem druheho anotatora
+	| 1269	t-uzlu, kde nastala plna shoda (=i co do rozsahu tagu)
+	|	z toho z obojiho:
++SL	|	 517	t-uzlu se shodou v SemLexu
++NE	|	 823	t-uzlu se shodou na pojmenovane entite
+	| 595	st-uzlu, kde nastala plna shoda,
+	|		tj. 73.82% z sidak a 76.28% z vimmrova (75.03% prumerne)
+	|	 256.5	SemLex hesel, kde nastala plna shoda,
+	|		tj. 67.14% z sidak a 68.21% z vimmrova (67.67% prumerne)
+	|	 338	pojmenovanych entit, kde nastala plna shoda,
+	|		tj. 79.71% z sidak a 83.66% z vimmrova (81.64% prumerne)
+	-----
+Spoustim:
+auxiliary/stat/count_pi_and_kappa_measure.pl -N 12391 -A 1982 +0 10409 -0 497 -SL 70 -NE 38 -NESL 37 +SL 517 +NE 823 -a1 sid -a2 vim -f <parametr -d> (/net/work/projects/lexemann/data_procistena/davka-08_typ3)
+
+A_obs = (10409*0.0476030358343741 + 497*0 + 823 * 1 + 38 * 0.5 + 517 * 1 + 70 * 0.5 + 37 * 0.25)/12391
+0.043542355296199 = (0.705675928117883 		* 0.0476030358343741	* 1 + 0.00746495922081129	* 0	* 9*2 + 2.23948776624339e-06	* 0	* 30000*2 + 7.89677158423158e-05				* 1		* 9 + 7.89677158423158e-05				* 0.5	* 9*8 + 7.10709442580842e-12				* 1		* 30000 + 7.10709442580842e-12				* 0.5	* 30000*29999 + 2.36903147526947e-08				* 0.25	* 9*30000*2
+parametr shody na nicem = 0.04760
+anotace   = 15.995 %
+neanotace = 84.005 %
+A_o = 0.153
+A_e = 0.044
+max = 0.200
+      A_o - A_e     0.15 - 0.04     0.11
+PI = ----------- = ------------- = ------ = 0.7014
+      max - A_e     0.20 - 0.04     0.16
+D_observed = 1/12391 *
+				(10409*0.952396964165626 + 497*1 +
+				 823 * 0 + 38 * 0.5 +
+				 517 * 0 + 70 * 0.5 +
+				 37 * 0.75)
+sid hotov
+ vim hotova
+ N_x = 29927
+ N_x = 29927
+ \sum_i \sum_j n_qi,A/N_A * n_qj,B/N_B * d(qi,qj) = 0.957245934323578
+
+
+
+D_o = 0.847
+D_e = 0.957
+max = 0.200
+                D_o      A_o - A_e      A_o - A_e      D_e - D_o    
+\kappa_w = 1 - ----- = ----------- ~> ----------- = ------------- =
+                D_e       1  - A_e       U  - A_e     U - 1 + D_e   
+
+              0.96 - 0.85       0.11
+         = ----------------- = ------ = 0.7029
+            0.20 - 1 + 0.96     0.16
+
+
+======================================================================
+Jak by vypadalo standardni pi:
+      A_o - A_e     0.95 - 0.71     0.24
+PI = ----------- = ------------- = ------ = 0.8239
+       1 - A_e        1  - 0.71     0.29
+I kdyz ted nejak pochybuju, ze to funguje spravne... i pro nase PI je nejaka podivna ta pravdepodobnost, ze oba vyberou nic apod.
+
+
+---
+Jak by vypadala standardni kappa:
+sid hotov
+ vim hotova
+ N_x = 0
+ (a nebo)
+              n_q,A * n_q,B        
+A_e = \sum_q --------------- = 0.0000
+                N_A * N_B          
+
+         A_o - A_e     0.95 - 0.00     0.95
+kappa = ----------- = ------------- = ------ = 0.9482
+          1 - A_e        1  - 0.00     1.00
+
+
+-----
+A kdyz nebudu pocitat "nic" jako znacku...:
+sid hotov
+ vim hotova
+ N_x = 
+ N_x = 3838
+ \sum_q n_q,A/N_A * n_q,B/N_B = 
+              n_q,A * n_q,B                       
+A_e = \sum_q --------------- = 0.0000
+                N_A * N_B             
+
+         A_o - A_e     0.11 - 0.00     0.11
+kappa = ----------- = ------------- = ------ = 0.1081
+          1 - A_e        1  - 0.00     1.00

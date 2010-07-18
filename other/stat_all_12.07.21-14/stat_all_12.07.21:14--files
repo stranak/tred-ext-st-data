@@ -1,0 +1,17 @@
+Assigning implicit data directory.
+Ratio between annotated files
+	/net/work/projects/lexemann/data_procistena
+and all files
+	/net/projects/pdt/pdt20/data/full/tamw
+List of all annotated files... Done!
+Files annotated by one, two or three annotators... Done!
+T-lemmas annotated by three annotators... Done!
+T-lemmas annotated by two annotators... Done!
+T-lemmas annotated by one annotator... Done!
+
+         & '1'    & '2'    & '3'   & PDT    & '2'+'3'/PDT & */PDT \\
+ t-files & 1288   & 1412   & 465   & 3165   & 59 %        & 100 % \\
+ t-nodes & 248448 & 343834 & 82683 & 674965 & 63 %        & 100 % \\
+
+
+
