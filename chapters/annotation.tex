@@ -4,21 +4,15 @@
 \chapter{Annotation}
 \label{sec:annot}
 
-\section{Annotation process}
-\label{sec:annot:how}
-\todo pozor, neco o tom, jak se anotovalo, je v uvodu \Sref{sec:annot:analysis}. \\
-Takze s nastrojem a daty predanotovanymi dle Hnatkove jsme postupovali takto: rozdeleni na davky, podle toho, jak jsme doplnovali nove predanotace, ale take abychom mohli zkoumat vliv ruznych postupu v anotaci na kvalitu vyslednych dat (neco malo hotovo, ale jinak future work). 
+%\section{Annotation process}
+%\label{sec:annot:how}
+%\todo pozor, neco o tom, jak se anotovalo, je v uvodu \Sref{sec:annot:analysis}. \\
+%Takze s nastrojem a daty predanotovanymi dle Hnatkove jsme postupovali takto: rozdeleni na davky, podle toho, jak jsme doplnovali nove predanotace, ale take abychom mohli zkoumat vliv ruznych postupu v anotaci na kvalitu vyslednych dat (neco malo hotovo, ale jinak future work). 
+%
+%Put the table from wiki here.
+We have completed annotation of the t-layer of the PDT with NEs and MWEs. All the MWEs that were annotated are part of annotation lexicon \semlex. A large part of data was annotated in parallel. Table~\ref{tab:parallel-anot} shows how much data was annotated by 1, 2, or 3 annotators in parallel, compared to the size of PDT (t-data). The last column just indicates that we have indeed annotated all the data of PDT 2.0 t-layer.
+\label{tab:parallel-anot}
 
-Put the table from wiki here.
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Basic quantitative characteristics of the annotations}
-\label{sec:annot:what}
-\todo
 \begin{table}[htdp]
 \begin{tabular}{l|r|r|r|r|r|r}
  parallel annotations  & 1    & 2    & 3   & PDT    & 2+3$/$PDT & *$/$PDT \\
@@ -26,64 +20,195 @@ Put the table from wiki here.
  t-files & 1288   & 1412   & 465   & 3165   & 59\%        & 100\% \\
  t-nodes & 248448 & 343834 & 82683 & 674965 & 63\%        & 100\% \\
 \end{tabular}
-\caption{How much data was annotated by 1, 2, or 3 annotators in parallel; compared to the size of PDT (t-data). The last collumn just indicates that we have indeed annotated all the data of PDT 2.0 t-layer.}
+\caption{Annotated data}
 \label{tab:parallel-anot}
 \end{table}%
+%
+%
+%
+%%%%%%%%%%
+%\section{Zajímavá hesla -- provizorni}
+%\xx{tahle sekce asi prijde do kapitoly Anotace}
+%Some entries seem at the first look just wrong. A class of automobiles is a perfectly compositional collocation with clear syntactic structure, isn't it? However ``automobil nižší střední třídy'' is a different matter.
+%\begin{verbatim}
+% - !!perl/hash:SemLex_heslo 
+%    BASIC_FORM: třída automobilů
+%    CREATED: 070926062821
+%    EXAMPLE: ~
+%    GLOSS: ~
+%    ID: 0000003520
+%    LEMMATIZED: třída automobil
+%    MODIFIED: 070926062833
+%    MODIFIER: sidak
+%    MORPHO_TAGS: ~
+%    ORIGID: ~
+%    POS: 'N'
+%    SOURCE: sidak
+%    SYNONYMS: []
+%    TREE_STRUCT: ''
+%\end{verbatim}
+%
+%Creative use -- exploitation (Hanks). Very common in journalism. PDT is composed of daily news, so expolitations of this kind are quite common in our data too.
+%\begin{verbatim}
+%  - !!perl/hash:SemLex_heslo 
+%    BASIC_FORM: mezi osmi očima
+%    CREATED: 100622025530
+%    EXAMPLE: ~
+%    GLOSS: "***derived from 0000032132 (mezi čtyřma očima)"
+%    ID: 0000032133
+%    LEMMATIZED: mezi osm oko
+%    MODIFIED: ~
+%    MODIFIER: bejcek
+%    MORPHO_TAGS: ''
+%    ORIGID: ~
+%    POS: 'D'
+%    SOURCE: vimmrova
+%    SYNONYMS: []
+%    TREE_STRUCT: ''
+%\end{verbatim}
+%
+%\subsection{Partial freedom in an idiom}
+%\pr{(rozčeřit | rozhýbat) stojaté vody}. Here it is (based on our data and knowleadge) only these two alternatives on this one position. However some idioms show much richer variation and the relations between the alternates are very complex. See \xxx{doplnit.} Due to the complex nature of these alternations we have kept the variants separate. Neither we nor the annotators are trained lexicographers to decide the cases. It would also require completely different setup, searching larger corpora, etc. The efficient approach during annotations was to create separate entries and link them via a special form of gloss, as below.  Thus we do not loose any information and leave it to the lexicographers to come up with a good description of the complex relations of these variants.
+%\begin{verbatim}
+%  - !!perl/hash:SemLex_heslo 
+%    BASIC_FORM: rozčeřit stojaté vody
+%    CREATED: 100622030630
+%    EXAMPLE: ~
+%    GLOSS: "souvisí s 0000029189 (rozhýbat st.v.)"
+%    ID: 0000032134
+%    LEMMATIZED: rozčeřit stojatý voda
+%    MODIFIED: ~
+%    MODIFIER: bejcek
+%    MORPHO_TAGS: ''
+%    ORIGID: ~
+%    POS: 'V'
+%    SOURCE: vimmrova
+%    SYNONYMS: []
+%    TREE_STRUCT: ''
+%\end{verbatim}
+%
+%\pr{sloužit mši} je idiomatický rámec i ve Vallexu. Takovych je v nasich datech urcite mnohem vic -- \xxx{relation of our data to Vallex and PDTVallex}
+%\medskip
+%
+%These should probably have been two entries -- for two POS'. \xxx{Jak je zpracované heslo 'postižený' v PDTVallexu?}
+%\begin{verbatim}
+%  - !!perl/hash:SemLex_heslo
+%    BASIC_FORM: zdravotně postižený
+%    CREATED: 080408072653
+%    EXAMPLE: ~
+%    GLOSS: subst. i adj.
+%    ID: 0000031992
+%    LEMMATIZED: zdravotně postižený
+%    MODIFIED: 100502113206
+%    MODIFIER: sidak_vimmrova_sidaklexicographer_vimmrova_sidaklexicographer
+%    MORPHO_TAGS: ''
+%    ORIGID: ''
+%    POS: N i A
+%    SOURCE: sidak_vimmrova
+%    SYNONYMS: ~
+%    TREE_STRUCT: ''  
+%    \end{verbatim}
 
-\subsection{Hypothesis of a contiguous tectogrammatical structure of a MWE}
 
-\subsection{Hypothesis of one tectogrammatical structure per MWE}
+
+
+%%%%%%
+\section{Hypothesis of a contiguous tectogrammatical structure of a MWE}
+\label{contiguous}
+Analysis of tree structures of MWEs in SemLex confirms our hypothesis. All the multiword expressions can be represented by a single contiguous tree structure. There is only one exception, but even that is more theoretical than practical problem. 
+
+When MWEs appear in coordinating constructions, e.g. \pr{červené a bílé víno} (red and white wine), the common part of the expressions is not repeated. According to \citet{mikulova:2006} in this type of coordination the t-node common to both MWEs should actually be duplicated, because these are clearly two different objects. The rule serves the purpose of distinguishing a coordination of two objects from a  coordination of attributes of one object. From what we observed, however, the rule was not very well observed. There are many coordinations where the common part of two MWEs is represented by only one t-node, as in the example above. 
+
+Therefore we had no choice but to implement our tree structure of MWEs via ``effective parent'' relation, that skips coordinating conjunctions. That solves one problem well, but creates another one. There are MWEs that include coordinating conjunctions. And since these conjunctions are skipped when we construct tree structures of MWEs, resulting tree structures are contiguous with the exception of the conjunctions that remain unattached. 
+
+Pre-annotation of these MWEs still works, for the same reason that creates the unattached conjunctions: we use the effective parent relation, so we do not need the conjunctions. 
+
+%%%%%%
+\section{Hypothesis of one tectogrammatical structure per MWE}
+Because MWEs tend to occur repeatedly in a text, we have decided to test pre-annotation both for speed improvement and for improving the consistency of annotations. 
+%We work o
+We use an assumption that \emph{all occurrences of a MWE share the same tectogrammatical tree structure}. We can call this assumption \emph{``One tree per MWE,''} and view it as a modification of famous assumption ``One sense per collocation'' of \citet{yarowsky:1993}. In the surface representation of the MWE, there are \emph{no restrictions on the word order} other than those imposed by the tree structure itself. Our assumption is however more inspired by an idea of \citet{holub-bohmova:2000:RANLPIR}, who proposed to use so called ``Dependency microcontext structures (DMCS)'' in information retrieval. DMCS were inspired by tectogrammatical tree structures, but modified a bit for easier extraction and handling. In contrast, we use tectogrammatical structures as they are. 
+
 771 \semlex\ entries have been used with more than one tectogrammatical tree structure in the annotated data. 
 
-\begin{wrapfigure}{l}{0.3\textwidth}
+\begin{figure}
   \begin{verbatim}
 ID 0000000636:
-24x:    --- 
-- 
-  - zákoník
-  - ~
-  - []
-
-- 
-  - občanský
-  - 0
-  - []
-
-2x:     --- 
-- 
-  - zákon
-  - ~
-  - []
-
-- 
-  - občanský
-  - 0
-  - []
-
-2x:     --- 
-- 
-  - zákoník
-  - ~
-  - []
-
-- 
-  - Občanský
-  - 0
-  - []
+24x:    ---      2x:     ---     2x:     --- 
+-                -               - 
+  - zákoník        - zákon         - zákoník
+  - ~              - ~             - ~
+                                 
+-                -               - 
+  - občanský       - občanský      - Občanský
+  - 0              - 0             - 0
 \end{verbatim}
 \caption{Three different tree structures in data for the SemLex entry 0000000636: ``občanský zákoník''.}
 \label{fig:semlex:more-tts}
-\end{wrapfigure}
+\end{figure}
+
+Below we analyse several of the most important sources of these inconsistent t-trees (see \Fref{fig:semlex:more-tts}) and possible improvements:
+\begin{itemize}
+%
+\item \emph{Occasional lemmatisation errors.} They are not very frequent, but there is no efficient way to find and correct them before the annotations. So there is not much we can do but it is not very important. Our annotations can however serve as a source for automatic corrections.
+	\begin{itemize}
+	\item \textit{Občanský} (Citizen (adj.)) in \Fref{fig:semlex:more-tts} is a good example of bad lemmatisation. More typical cases of mixing literal and idiomatic meaning:
+	\item \textit{jižní Korea {\rm vs.} Jižní Korea} (southern vs. South Korea),
+	\item \emph{rudé právo {\rm vs.} Rudé právo} (red law vs. The Red Law, i.e. a Czechoslovak communist newspaper)
+	\end{itemize}
+	The occasional incorrectly lemmatised occurrence must be identified by annotators manually. 
+% chyba anotatora (neoznaci v LexSemAnnu slovo)
+\item \emph{Annotator's mistake (not marking correct words).} When an annotator makes an error while marking a first occurrence of a MWE, the tree representation that gets stored in SemLex is incorrect. As a result, pre-annotation gives false positives or fails to work. 
+
+It is therefore necessary to allow annotators to correct the tree structure of a SemLex entry, i.e. extend functionality of the annotation tool. Once all the types of pre-annotation are employed, this error can happen only once, because all the following occurrences of a MWE are pre-annotated automatically. We are currently working on these improvements.
+%
+\item \emph{Gender opposites, diminutives and augmentatives.} These are currently represented by variations of t-lemma. 
+We believe that they should be represented by attributes of t-nodes %, which would explicate information that is now given only implicitly. 
+that could be roughly equivalent to some of the lexical functions in the Meaning-text theory (see \cite{melcuk:1992}).
+This should be tackled in some future version of PDT. Once resolved it would allow us to identify following (and many similar) cases automatically. 
+	\begin{itemize}
+	\item \textit{obchodní ředitel {\rm vs.} obchodní ředitelka} \\(lit.: managing director-man vs. m. director-woman)
+	\item \textit{rodinný dům {\rm vs.} rodinný domek} \\(lit.: family house vs. family little-house; but the diminutive \emph{domek} means basically “family house”)
+	\end{itemize}
+%
+Currently we annotate these cases with the same MWE, but all the instances with the derived variants of t-lemma (like \emph{ředitelka } or \emph{domek} must be identified manually (see Section~\ref{sec:annot:pre}).%
+%\footnote{We had plans to try automatic identification of some diminutives and gender opposites derived by the most common derivation patterns, but annotations were in the end faster than coding, so we never got to it.}
+
+%
+\item \emph{Newly established t-nodes corresponding to elided parts of MWEs in coordinations.} Since t-layer contains many newly established t-nodes, many of which cannot generate a surface word, our original decision was to hide all of these nodes from annotators and generate for them pure surface sentence. This decision resulted however in the current situation, when some MWEs in coordinations cannot be correctly annotated. 
+%It is necessary to elide common part of coordinated multiword lexeme. 
+For instance \emph{První a druhá světová válka} (First and Second World War) is a coordination of two multiword lexemes. A tectogrammatical tree that includes it does have newly established t-nodes for “world” and “war” of the first lexeme but they are elided in the surface sentence. 
+%
+%After analysing annotated examples like the one above we have decided to generate surface words from some of the newly established t-nodes in order to allow correct annotation of all the MWEs. These ``added'' words should be displayed in grey and while some morphological forms of these words may be incorrect, we believe they will serve their purpose. 
+
+%\xxx{The first lexeme cannot be identified automatically. In this and other similar cases t-nodes for elided parts of multiword lexemes should have been part of PDT, in our opinion. Given that our goal is to have one t-node for each lexia, however, we believe it would not be efficient to invest substantial amount of manual work into adding these elided t-nodes now only to eliminate them more efficiently in near future. We can just as well leave it to our annotators to identify these instances of MWEs (it is as common for NEs, as it is for lexias) manually.}
+%
+%\item \xxx{\emph{Bridging anaphora} e.g. Ceska narodni banka <- banka \\
+%Since in the context the second expression stands for the first only with some words ellided, our annotators were instructed to annotate it as an instance of the lexia \emph{Česká národní banka}. 
+%This problem could be solved by annotations of coreference. If the coreference between nominal expressions was present in the PDT 2.0, our annotators would simply mark the first occurence and all the anaphoric expressions would be marked automatically. 
+%} % end xxx
+\end{itemize}
+%
+%
+%\xxx{
+%\emph{spojit s 'itemize' vyse!}\\
+%because these cases are caused by ellipses, variations in lexical form such as diminutives etc., or wrong lemmatisation, rather than inconsistencies in the tree structure. These cases show us some problematic issues in PDT 2.0, for instance:
+%\begin{itemize}
+%\item \textit{jižní Korea {\rm vs.} Jižní Korea} \\(southern vs. South Korea) -- wrong lemmatisation
+%\item \textit{obchodní ředitel {\rm vs.} obchodní ředitelka} \\(lit. managing director-man vs. m. director-woman) -- in future these should have one t-lemma. Morphological gender should be specified by an attribute of a t-node.
+%\end{itemize}
+%} % end xxx
+
+
+Up to now we have not found any MWE such that its structure cannot be represented by a single tectogrammatical tree. 1.1\% of all occurrences were not connected graphs, but this happened due to errors in data and to our incorrect handling of coordinations with newly established t-nodes (see above). This corroborates our assumption that (disregarding errors) all occurrences of a MWE share the same tree structure. As a result, we started storing the tree structures in the SemLex entries and employ them in pre-annotation (\ref{pre-on-annot}). This also allows us to use pre-annotations (\ref{pre-static}) and (\ref{pre-on-load}), but we have decided not to use them at the moment, in order to be able to evaluate each pre-annotation step separately. Thus the following section reports on the experiments that employ pre-annotations (\ref{pre-hnatkova}) and (\ref{pre-on-annot}).
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \section{Pre-annotation}
 \label{sec:annot:pre}
-Because MWEs tend to occur repeatedly in a text, we have decided to test pre-annotation both for speed improvement and for improving the consistency of annotations. 
-%We work o
-We use an assumption that \emph{all occurrences of a MWE share the same tectogrammatical tree structure}. We can call this assumption \emph{``One tree per MWE,''} and view it as a modification of famous assumption ``One sense per collocation'' of \citet{yarowsky:1993}. In the surface representation of the MWE, there are \emph{no restrictions on the word order} other than those imposed by the tree structure itself. Our assumption is however more inspired by an idea of \citet{holub-bohmova:2000:RANLPIR}, who proposed to use so called ``Dependency microcontext structures (DMCS)'' in information retrieval. DMCS were inspired by tectogrammatical tree structures, but modified a bit for easier extraction and handling. In contrast, we use tectogrammatical structures as they are. What impact it has for instance in relation to coordinations can be seen in \todo\ \Sref{}. For the analysis of results of our assumption see \todo.
-
-We employed four types of pre-annotation, only some of wich are based on the above assumption:
-
+We employed four types of pre-annotation, only some of which are based on the assumption of unique tree structure \see{contiguous}:
 \begin{enumerate}[A)]
 
 \item \label{pre-hnatkova}External pre-annotation provided by Milena Hnátková (see~\citealp{hnatkova:2002}). With each MWE a set of rules is associated that limits possible forms and surface word order of parts of a MWE. This approach was devised for corpora that are not syntactically annotated and is very time consuming.
@@ -111,67 +236,16 @@ Pre-annotation (\ref{pre-hnatkova})~was executed once for all of the PDT. (\ref{
 %\xxx{PRO FUTURA
 %We have currently performed double blind annotation of a part of data without pre-annotation (\ref{pre-static}) and (\ref{pre-on-load}). We also have smaller samples annotated without any pre-annotation and only with pre-annotation (\ref{pre-hnatkova}). Analysis of this data is necessary  to show that our assumption is correct and all the occurrences of a lexia share the same tree structure. Then we can safely add remaining pre-annotation steps. Provided the inter-annotator agreement is good enough we can also stop our current (rather expensive and time consuming) practice of double annotation of each file and comparing the annotations.} % end XXX
 
-After the pilot annotation without pre-annotation (\ref{pre-on-annot})  we have compared instances of the same tags and found that 10.5\% of repeated MWEs happened to have two different tree representations. Below we analyse several most important sources of these inconsistent t-trees and possible improvements:
-\begin{itemize}
-%
-\item \emph{Occasional lemmatisation errors.} They are not very frequent, but there is no efficient way to find and correct them before the annotations. So there is not much we can do but it is not very important. Our annotations can however serve as a source for automatic corrections.
-	\begin{itemize}
-	\item \textit{jižní Korea {\rm vs.} Jižní Korea} (southern vs. South Korea)
-	\end{itemize}
-% chyba anotatora (neoznaci v LexSemAnnu slovo)
-\item \emph{Annotator's mistake (not marking correct words).} When an annotator makes an error while marking a first occurrence of a MWE, the tree representation that gets stored in SemLex is incorrect. As a result, pre-annotation gives false positives or fails to work. 
-
-It is therefore necessary to allow annotators to correct the tree structure of a SemLex entry, i.e. extend functionality of the annotation tool. Once all the types of pre-annotation are employed, this error can happen only once, because all the following occurrences of a MWE are pre-annotated automatically. We are currently working on these improvements.
-%
-\item \emph{Gender opposites, diminutives and augmentatives.} These are currently represented by variations of t-lemma. 
-We believe that they should be represented by attributes of t-nodes %, which would explicate information that is now given only implicitly. 
-that could be roughly equivalent to some of the lexical functions in the Meaning-text theory (see \cite{melcuk:1992}).
-This should be tackled in some future version of PDT. Once resolved it would allow us to identify following (and many similar) cases automatically. 
-	\begin{itemize}
-	\item \textit{obchodní ředitel {\rm vs.} obchodní ředitelka} \\(lit.: managing director-man vs. m. director-woman)
-	\item \textit{rodinný dům {\rm vs.} rodinný domek} \\(lit.: family house vs. family little-house; but the diminutive \emph{domek} means basically “family house”)
-	\end{itemize}
-%
-Currently we annotate these cases with the same MWE, but all the instances with the derived variants of t-lemma (like \emph{ředitelka } or \emph{domek} must be identified manually (see Section~\ref{sec:annot:pre}). We had plans to try automatic identification of some diminutives and gender opposites derived by the most common derivation patterns, but annotations were faster than coding, so we never got to it.
-
-%
-\item \emph{Newly established t-nodes corresponding to elided parts of MWEs in coordinations.} Since t-layer contains many newly established t-nodes, many of which cannot generate a surface word, our original decision was to hide all of these nodes from annotators and generate for them pure surface sentence. This decision resulted however in the current situation, when some MWEs in coordinations cannot be correctly annotated. 
-%It is necessary to elide common part of coordinated multiword lexeme. 
-For instance \emph{První a druhá světová válka} (First and Second World War) is a coordination of two multiword lexemes. A tectogrammatical tree that includes it does have newly established t-nodes for “world” and “war” of the first lexeme but they are elided in the surface sentence. 
-
-After analysing annotated examples like the one above we have decided to generate surface words from some of the newly established t-nodes in order to allow correct annotation of all the MWEs. These ``added'' words will be displayed in grey and while some morphological forms of these words may be incorrect, we believe they will serve their purpose.
-
-%\xxx{The first lexeme cannot be identified automatically. In this and other similar cases t-nodes for elided parts of multiword lexemes should have been part of PDT, in our opinion. Given that our goal is to have one t-node for each lexia, however, we believe it would not be efficient to invest substantial amount of manual work into adding these elided t-nodes now only to eliminate them more efficiently in near future. We can just as well leave it to our annotators to identify these instances of MWEs (it is as common for NEs, as it is for lexias) manually.}
-%
-%\item \xxx{\emph{Bridging anaphora} e.g. Ceska narodni banka <- banka \\
-%Since in the context the second expression stands for the first only with some words ellided, our annotators were instructed to annotate it as an instance of the lexia \emph{Česká národní banka}. 
-%This problem could be solved by annotations of coreference. If the coreference between nominal expressions was present in the PDT 2.0, our annotators would simply mark the first occurence and all the anaphoric expressions would be marked automatically. 
-%} % end xxx
-\end{itemize}
-%
-%
-%\xxx{
-%\emph{spojit s 'itemize' vyse!}\\
-%because these cases are caused by ellipses, variations in lexical form such as diminutives etc., or wrong lemmatisation, rather than inconsistencies in the tree structure. These cases show us some problematic issues in PDT 2.0, for instance:
-%\begin{itemize}
-%\item \textit{jižní Korea {\rm vs.} Jižní Korea} \\(southern vs. South Korea) -- wrong lemmatisation
-%\item \textit{obchodní ředitel {\rm vs.} obchodní ředitelka} \\(lit. managing director-man vs. m. director-woman) -- in future these should have one t-lemma. Morphological gender should be specified by an attribute of a t-node.
-%\end{itemize}
-%} % end xxx
-
-
-Up to now we have not found any MWE such that its structure cannot be represented by a single tectogrammatical tree. 1.1\% of all occurrences were not connected graphs, but this happened due to errors in data and to our incorrect handling of coordinations with newly established t-nodes (see above). This corroborates our assumption that (disregarding errors) all occurrences of a MWE share the same tree structure. As a result, we started storing the tree structures in the SemLex entries and employ them in pre-annotation (\ref{pre-on-annot}). This also allows us to use pre-annotations (\ref{pre-static}) and (\ref{pre-on-load}), but we have decided not to use them at the moment, in order to be able to evaluate each pre-annotation step separately. Thus the following section reports on the experiments that employ pre-annotations (\ref{pre-hnatkova}) and (\ref{pre-on-annot}).
-
-
+After the pilot annotation without pre-annotation (\ref{pre-on-annot})  we have compared instances of the same tags and found that 10.5\% of repeated MWEs happened to have two different tree representations. 
 
 
 
 %%%%%%%%%%%%%%%%%
 \section{Measuring the inter-annotator agreement}
 \label{sec:annot:analysis}
-During the annotations we employed four annotators. Three of them annotated a significant amount of work, the fourth, who is not mentioned elswhere in this text, helped with various experiments. The annotator identified by name $sta$ replaced annotator $sid$, while $vim$ worked with us during whole course of the project. 
+During the annotations we employed four annotators. Three of them annotated a significant amount of work, the fourth, who is not mentioned elsewhere in this text, helped with various experiments. The annotator identified by name $sta$ replaced annotator $sid$, while $vim$ worked with us during whole course of the project. 
 
-Below we 
+Below we give examples of calculating and describe some parallel data just on a pair of annotators $(sid, vim)$. We saw little point in filling text with all the numbers for both pairs of annotators. In some places, where it seems meaningful, however, we report for instance the kappa scores fully.
 
 The ratio of general named entities versus SemLex entries was approx. 52:48 for annotator $sid$ and 50:50 in the case of annotator $vim$. This, and some other comparisons are given in Table~\ref{tab:anot}. Both of them annotated 1090 files in parallel. The data consisted of  350,177 tokens representing 284,029 t-nodes.
 
@@ -392,18 +466,18 @@ The last important cause of disagreement is simple: both annotators identify \em
 %\end{compactitem}
 %\medskip
 
-\xxx{We have recently begun annotations of pre-annota\-ted data (type \ref{pre-hnatkova}). If we may infer from such small data (319 lexias), this type of pre-annotation slightly helps on SemLex entries (it was the object of pre-annotation, from 34.7\% to 36.5\%) and slightly spoils the NE agreement (from 71.8\% to 67.1\%). Generally, on all lexias, it slightly improves agreement (from 58.2\% to 60.1\%). Speed improvement was quite noticeable, because vast majority of pre-annotated tags might be left untouched by annotators.}
-
-\xxx{ k PI:\\
-nase Max. je zalozene na predpokladu, ze data budou nadale podobne a anotatori nezacnou naraz anotovat vyrazne vic. 
-Max. je stanoveno tak, ze za predpokladu vyse anotator nemuze (a ani nema) Max. dosahnout. Jelikoz jde o prunik vsech anotovanych uzlu, jsou v nem i chyby (v neshodach), ty ale kompenzuji pripadne uzly, ktere ani jeden neidentifikoval, ale meli.}
+%\xxx{We have recently begun annotations of pre-annota\-ted data (type \ref{pre-hnatkova}). If we may infer from such small data (319 lexias), this type of pre-annotation slightly helps on SemLex entries (it was the object of pre-annotation, from 34.7\% to 36.5\%) and slightly spoils the NE agreement (from 71.8\% to 67.1\%). Generally, on all lexias, it slightly improves agreement (from 58.2\% to 60.1\%). Speed improvement was quite noticeable, because vast majority of pre-annotated tags might be left untouched by annotators.}
+%
+%\xxx{ k PI:\\
+%nase Max. je zalozene na predpokladu, ze data budou nadale podobne a anotatori nezacnou naraz anotovat vyrazne vic. 
+%Max. je stanoveno tak, ze za predpokladu vyse anotator nemuze (a ani nema) Max. dosahnout. Jelikoz jde o prunik vsech anotovanych uzlu, jsou v nem i chyby (v neshodach), ty ale kompenzuji pripadne uzly, ktere ani jeden neidentifikoval, ale meli.}
 
 \section{Estimation of annotation intervals and speed}
 \label{sec:time-analysis}
 
-One of the reasons to implement detailed logs of all the annotations \see{sec:logs} was to allow detailed analysis of the time aspect of annotations. By ``time aspect'' we do not mean just checking, how much it takes annotators to tag the data, even though this is an important information too. We wanted to make it possible to ask any number of questions: Is there correlation between annotation speed and frequency of work? Does the speed increase or decrease in long stretches of continuous work? In how long intervals do annotators tend to work? Is the number of tags per minute/hour more or less constant?  
+One of the reasons to implement detailed logs of all the annotations \see{sec:logs} was to allow detailed analysis of the time aspect of annotations. By ``time aspect'' we do not mean just checking, how much time it takes annotators to tag the data, even though this is an important information too. We wanted to make it possible to ask any number of questions: Is there correlation between annotation speed and frequency of work? Does the speed increase or decrease in long stretches of continuous work? In how long intervals do annotators tend to work? Is the number of tags per minute/hour more or less constant?  
 
-In \Fref{fig:speed} we can see some inter- and -intra annotator variance in speed, but it seems there are some clear broad tendencies: annotators tend to have their own speed, as shown by the splines They also show different amount of variance in speed, epsecially annotator \emph{sid}'s speed is visibly more stable.
+In \Fref{fig:speed} we can see some inter- and -intra annotator variance in speed. It seems there are some clear tendencies: annotators tend to have their own speed, as shown by the splines. They also show different amount of variance in speed, especially annotator \emph{sid}'s speed is visibly more stable.
 
 \begin{figure}[htbp]
    \centering
@@ -412,7 +486,6 @@ In \Fref{fig:speed} we can see some inter- and -intra annotator variance in spee
    \label{fig:speed}
 \end{figure}
 
+We analysed the speed of work during annotations to gain some basic insight into the time it actually takes annotators to create the amount of data they annotated. At this moment we must emphasise that we by no means imply some distrust within our project. Let the kind reader try to estimate how much time he/she spent this morning actually producing some work, be that writing a paper, writing a code, or anything else. It is by no means easy to estimate clean work time without some aid. So our aid were the log files.
 
-
-\todo \xx{popsat analyzacni skript a fluency (f=60).}\\
-\xxx{problem toho, co vlastne vidime, jak nastavit pocitani, nas skript, zakladni udaje, grafy}
+We wrote a script tries to establish ``work intervals'' as follows: It simply takes all logs in a given batch of annotated files, extracts the timestamps, transforms them into POSIX time (\url{http://en.wikipedia.org/wiki/Unix_time}), and sorts this list of integers. Then we try to approximate work intervals by setting two variables: $fluency$ and $start$. The default is $fluency=300$, which means that as long as two timestamps are less than 300 seconds apart, it is considered a continuous (fluent) work. The value of $start$ is how much time we add to the length of interval of work on account of starting the work (start the computer, open the file, etc.) before first tag is logged. Default value is $start=60$ (sec). So we split the list of timestamps into intervals, when there is at least 1 new timestamp every 5 minutes, add a minute to each interval and that gives us work intervals for each batch of files. We then divided the length of intervals by the number of timestamps in them to get an average speed of work in each interval. Finally average speeds counted over all intervals in a given batch of work are given in \Fref{fig:speed}.

@@ -22,9 +22,13 @@ především těch pojmenovaných entit, které jsou zapsány s velkým počáte
 \end{quote}
 The definition basically says that named entities are single- or multi-word units that are used to name persons, locations, firms, etc. I.e. named entities are the expressions used to name entities. It is actually hard to call this a definition at all.
 
-It is nevertheless not easy to define named entities properly. Other authors do not fare much better: \xxx{definice sem!}
+It is nevertheless not easy to define named entities properly. Other authors do not fare much better.
+%: \xxx{definice sem!}
 
-We believe we can provide at least some additional constraints to the definition above: To be considered a named entity an expression must share at least some \xxx{(or all ??)} \emph{features of idioms}: it cannot be an exploitation \citep[see][]{hanks:norms}, i.e. it must fulfill some criteria of stability. \xxx{Any more??}
+We believe we can provide at least some additional constraints to the definition above: To be considered a named entity an expression must share at least some 
+% \xxx{(or all ??)} 
+\emph{features of idioms}: it cannot be an exploitation \citep[see][]{hanks:norms}, i.e. it must fulfill some criteria of stability. 
+%\xxx{Any more??}
 
 Our types of entities are:
 \begin{compactenum}
@@ -92,7 +96,13 @@ An entry is composed of several user-editable attributes, and some read-only and
     POS: ''
     SOURCE: SCFI
     SYNONYMS: []
-    TREE_STRUCT: "--- []\n\n"
+    TREE_STRUCT: 
+      - 
+        - kruh
+        - ~
+      - 
+        - vysoký
+        - 0
 \end{verbatim}
 
 \begin{description} % atributes of a SemLex entry
@@ -154,90 +164,7 @@ When the entry is a result of merging several entries from different sources (ei
 
 \item [SYNONYMS] -- A list of synonyms (implemented as an array). In case of Entries from WordNet, the synsets were split to individual entries, but the relation between them was kept via the ORIGID attribute and the basic forms of the synonymous MWEs were copied into this attribute as the synonyms of the MWE. This attribute helps annotators to understand an entry's meaning, especially since most synsets in the WordNet did not have any glosses or examples. See \Sref{sec:semlex:cwn} for more information on entries derived from WordNet. Occasionally annotators added synonyms manually, if they just happened to think about them when using an entry. It was however by no means systematic work and it was not one of the goals of annotation.
 
-\item [TREE\textunderscore{}STRUCT] -- The tree structure of an entry. This is a simplified tectogrammatic representation of the entry and is a key to the most advanced pre-annotation that we employ: identification of future occurrences of the same tree structure in the text. This pre-annotation requires \ntred. See discussion of various types of pre-annotation in \Sref{sec:annot:pre}.
+\item [TREE\textunderscore{}STRUCT] -- The tree structure of an entry. It is implemented as an array (see above in the example entry). Each node in this tree structure has only two attributes: its tectogrammatical lemma, and an effective parent (identified by an index in the array).\footnote{'$\sim$' means 'undef', i.e. the node is a root of the tree structure, because it does not have an effective parent. Indices start from zero, i.e. zero means the first element.} 
+This much simplified tectogrammatical representation of an entry is sufficient for our purpose. It is a key to the most advanced pre-annotation that we employ: identification of future occurrences of the same tree structure in the text. This pre-annotation requires \ntred. See discussion of various types of pre-annotation in \Sref{sec:annot:pre}.
 
 \end{description} % end - attributes of a SemLex entry
-
-
-%%%%%%%%%
-\section{Zajímavá hesla -- provizorni}
-\xx{tahle sekce asi prijde do kapitoly Anotace}
-Some entries seem at the first look just wrong. A class of automobiles is a perfectly compositional collocation with clear syntactic structure, isn't it? However ``automobil nižší střední třídy'' is a different matter.
-\begin{verbatim}
- - !!perl/hash:SemLex_heslo 
-    BASIC_FORM: třída automobilů
-    CREATED: 070926062821
-    EXAMPLE: ~
-    GLOSS: ~
-    ID: 0000003520
-    LEMMATIZED: třída automobil
-    MODIFIED: 070926062833
-    MODIFIER: sidak
-    MORPHO_TAGS: ~
-    ORIGID: ~
-    POS: 'N'
-    SOURCE: sidak
-    SYNONYMS: []
-    TREE_STRUCT: ''
-\end{verbatim}
-
-Creative use -- exploitation (Hanks). Very common in journalism. PDT is composed of daily news, so expolitations of this kind are quite common in our data too.
-\begin{verbatim}
-  - !!perl/hash:SemLex_heslo 
-    BASIC_FORM: mezi osmi očima
-    CREATED: 100622025530
-    EXAMPLE: ~
-    GLOSS: "***derived from 0000032132 (mezi čtyřma očima)"
-    ID: 0000032133
-    LEMMATIZED: mezi osm oko
-    MODIFIED: ~
-    MODIFIER: bejcek
-    MORPHO_TAGS: ''
-    ORIGID: ~
-    POS: 'D'
-    SOURCE: vimmrova
-    SYNONYMS: []
-    TREE_STRUCT: ''
-\end{verbatim}
-
-\subsection{Partial freedom in an idiom}
-\pr{(rozčeřit | rozhýbat) stojaté vody}. Here it is (based on our data and knowleadge) only these two alternatives on this one position. However some idioms show much richer variation and the relations between the alternates are very complex. See \xxx{doplnit.} Due to the complex nature of these alternations we have kept the variants separate. Neither we nor the annotators are trained lexicographers to decide the cases. It would also require completely different setup, searching larger corpora, etc. The efficient approach during annotations was to create separate entries and link them via a special form of gloss, as below.  Thus we do not loose any information and leave it to the lexicographers to come up with a good description of the complex relations of these variants.
-\begin{verbatim}
-  - !!perl/hash:SemLex_heslo 
-    BASIC_FORM: rozčeřit stojaté vody
-    CREATED: 100622030630
-    EXAMPLE: ~
-    GLOSS: "souvisí s 0000029189 (rozhýbat st.v.)"
-    ID: 0000032134
-    LEMMATIZED: rozčeřit stojatý voda
-    MODIFIED: ~
-    MODIFIER: bejcek
-    MORPHO_TAGS: ''
-    ORIGID: ~
-    POS: 'V'
-    SOURCE: vimmrova
-    SYNONYMS: []
-    TREE_STRUCT: ''
-\end{verbatim}
-
-\pr{sloužit mši} je idiomatický rámec i ve Vallexu. Takovych je v nasich datech urcite mnohem vic -- \xxx{relation of our data to Vallex and PDTVallex}
-\medskip
-
-These should probably have been two entries -- for two POS'. \xxx{Jak je zpracované heslo 'postižený' v PDTVallexu?}
-\begin{verbatim}
-  - !!perl/hash:SemLex_heslo
-    BASIC_FORM: zdravotně postižený
-    CREATED: 080408072653
-    EXAMPLE: ~
-    GLOSS: subst. i adj.
-    ID: 0000031992
-    LEMMATIZED: zdravotně postižený
-    MODIFIED: 100502113206
-    MODIFIER: sidak_vimmrova_sidaklexicographer_vimmrova_sidaklexicographer
-    MORPHO_TAGS: ''
-    ORIGID: ''
-    POS: N i A
-    SOURCE: sidak_vimmrova
-    SYNONYMS: ~
-    TREE_STRUCT: ''  
-    \end{verbatim}
