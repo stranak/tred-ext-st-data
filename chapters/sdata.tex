@@ -33,12 +33,12 @@ PML is a XML language, which means it can take advantage of the rich existing XM
 \label{sec:s:design}
 \sdata\ means s-layer PML files and the PML schema of these files. The idea behind \sdata\ design is to have a simple way to store additional ``sense'' annotations over any layer of PDT. The annotations are stored as a set of ``sense'' nodes. Each s-node contains a link to a sense repository (annotation lexicon) and a set of references to nodes (m-, a- or t-) that correspond to an instance of the sense.\footnote{Although we have created the PML schema of s-layer primarily for annotations of MWEs, we made it quite generic. It can be utilized for any treebank annotations that use a large lexicon. For instance one s-file can contain multiple annotations of valency referencing to different valency dictionaries. This generic nature of s-layer is the reason why it allows references to morphological, analytical or tectogrammatical layer of PDT, even though in our current project we only need the references to t-layer.} An \sf\ is thus basically a simple flat list of \sn{}s. It does not contain any trees. A single \sf\ can only reference a single PDT file: either tectogrammatical, or analytical, or even morphological layer can be used, but references to different layers cannot be mixed in one s-file. Figure~\ref{fig:s-layer} shows a relation of s-layer to PDT layers and SemLex.
 
-\begin{figure}[htbp]
+\begin{wrapfigure}{r}{0.6\textwidth}
    \centering
    \includegraphics[scale=.5]{images/layers-with-s-layer.pdf} % requires the graphicx package
    \caption{Relation of s-layer to PDT and SemLex}
     \label{fig:s-layer}
-\end{figure}
+\end{wrapfigure}
 
 
 The design of \sdata\ is quite universal. S-files can be used to provide additional annotations over any PML files that contain nodes thati have an attribute ID. The sense repository (annotation lexicon) can be any dictionary that provides IDs for the entries. The tools used in our annotations mostly expect PDT PML or the particular \sf{}s that we have used, but that is mostly for convenience. Should the need appear to adapt the workflow a different corpus represented by PML files and a different annotation lexicon, the changes required would be rather minor.

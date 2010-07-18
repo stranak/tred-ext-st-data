@@ -18,7 +18,7 @@ Put the table from wiki here.
 %%%%%%%%%%%%%%%%%%%%%%%%
 \section{Basic quantitative characteristics of the annotations}
 \label{sec:annot:what}
-
+\todo
 \begin{table}[htdp]
 \begin{tabular}{l|r|r|r|r|r|r}
  parallel annotations  & 1    & 2    & 3   & PDT    & 2+3$/$PDT & *$/$PDT \\
@@ -30,9 +30,50 @@ Put the table from wiki here.
 \label{tab:parallel-anot}
 \end{table}%
 
+\subsection{Hypothesis of a contiguous tectogrammatical structure of a MWE}
 
+\subsection{Hypothesis of one tectogrammatical structure per MWE}
+771 \semlex\ entries have been used with more than one tectogrammatical tree structure in the annotated data. 
 
+\begin{wrapfigure}{l}{0.3\textwidth}
+  \begin{verbatim}
+ID 0000000636:
+24x:    --- 
+- 
+  - zákoník
+  - ~
+  - []
 
+- 
+  - občanský
+  - 0
+  - []
+
+2x:     --- 
+- 
+  - zákon
+  - ~
+  - []
+
+- 
+  - občanský
+  - 0
+  - []
+
+2x:     --- 
+- 
+  - zákoník
+  - ~
+  - []
+
+- 
+  - Občanský
+  - 0
+  - []
+\end{verbatim}
+\caption{Three different tree structures in data for the SemLex entry 0000000636: ``občanský zákoník''.}
+\label{fig:semlex:more-tts}
+\end{wrapfigure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \section{Pre-annotation}
@@ -100,23 +141,23 @@ For instance \emph{První a druhá světová válka} (First and Second World War
 
 After analysing annotated examples like the one above we have decided to generate surface words from some of the newly established t-nodes in order to allow correct annotation of all the MWEs. These ``added'' words will be displayed in grey and while some morphological forms of these words may be incorrect, we believe they will serve their purpose.
 
-\xxx{The first lexeme cannot be identified automatically. In this and other similar cases t-nodes for elided parts of multiword lexemes should have been part of PDT, in our opinion. Given that our goal is to have one t-node for each lexia, however, we believe it would not be efficient to invest substantial amount of manual work into adding these elided t-nodes now only to eliminate them more efficiently in near future. We can just as well leave it to our annotators to identify these instances of MWEs (it is as common for NEs, as it is for lexias) manually.}
-
-\item \xxx{\emph{Bridging anaphora} e.g. Ceska narodni banka <- banka \\
-Since in the context the second expression stands for the first only with some words ellided, our annotators were instructed to annotate it as an instance of the lexia \emph{Česká národní banka}. 
-This problem could be solved by annotations of coreference. If the coreference between nominal expressions was present in the PDT 2.0, our annotators would simply mark the first occurence and all the anaphoric expressions would be marked automatically. 
-} % end xxx
+%\xxx{The first lexeme cannot be identified automatically. In this and other similar cases t-nodes for elided parts of multiword lexemes should have been part of PDT, in our opinion. Given that our goal is to have one t-node for each lexia, however, we believe it would not be efficient to invest substantial amount of manual work into adding these elided t-nodes now only to eliminate them more efficiently in near future. We can just as well leave it to our annotators to identify these instances of MWEs (it is as common for NEs, as it is for lexias) manually.}
+%
+%\item \xxx{\emph{Bridging anaphora} e.g. Ceska narodni banka <- banka \\
+%Since in the context the second expression stands for the first only with some words ellided, our annotators were instructed to annotate it as an instance of the lexia \emph{Česká národní banka}. 
+%This problem could be solved by annotations of coreference. If the coreference between nominal expressions was present in the PDT 2.0, our annotators would simply mark the first occurence and all the anaphoric expressions would be marked automatically. 
+%} % end xxx
 \end{itemize}
-
-
-\xxx{
-\emph{spojit s 'itemize' vyse!}\\
-because these cases are caused by ellipses, variations in lexical form such as diminutives etc., or wrong lemmatisation, rather than inconsistencies in the tree structure. These cases show us some problematic issues in PDT 2.0, for instance:
-\begin{itemize}
-\item \textit{jižní Korea {\rm vs.} Jižní Korea} \\(southern vs. South Korea) -- wrong lemmatisation
-\item \textit{obchodní ředitel {\rm vs.} obchodní ředitelka} \\(lit. managing director-man vs. m. director-woman) -- in future these should have one t-lemma. Morphological gender should be specified by an attribute of a t-node.
-\end{itemize}
-} % end xxx
+%
+%
+%\xxx{
+%\emph{spojit s 'itemize' vyse!}\\
+%because these cases are caused by ellipses, variations in lexical form such as diminutives etc., or wrong lemmatisation, rather than inconsistencies in the tree structure. These cases show us some problematic issues in PDT 2.0, for instance:
+%\begin{itemize}
+%\item \textit{jižní Korea {\rm vs.} Jižní Korea} \\(southern vs. South Korea) -- wrong lemmatisation
+%\item \textit{obchodní ředitel {\rm vs.} obchodní ředitelka} \\(lit. managing director-man vs. m. director-woman) -- in future these should have one t-lemma. Morphological gender should be specified by an attribute of a t-node.
+%\end{itemize}
+%} % end xxx
 
 
 Up to now we have not found any MWE such that its structure cannot be represented by a single tectogrammatical tree. 1.1\% of all occurrences were not connected graphs, but this happened due to errors in data and to our incorrect handling of coordinations with newly established t-nodes (see above). This corroborates our assumption that (disregarding errors) all occurrences of a MWE share the same tree structure. As a result, we started storing the tree structures in the SemLex entries and employ them in pre-annotation (\ref{pre-on-annot}). This also allows us to use pre-annotations (\ref{pre-static}) and (\ref{pre-on-load}), but we have decided not to use them at the moment, in order to be able to evaluate each pre-annotation step separately. Thus the following section reports on the experiments that employ pre-annotations (\ref{pre-hnatkova}) and (\ref{pre-on-annot}).
@@ -158,7 +199,7 @@ Named Entities&10,208&9,621\\
 \end{table}
 
 
-\subsection{The measure}
+\subsection{The measure -- weighted kappa}
 \label{agreement}
 
 In this section our primary goal is to assess whether with our current methodology we produce reliable annotations of MWEs. To that end we measure the amount of inter-annotator agreement that is above chance. Our attempt exploits {\it weighted kappa measure} $\kappa_w$ \cite{cohen:1968}.
@@ -357,10 +398,8 @@ The last important cause of disagreement is simple: both annotators identify \em
 nase Max. je zalozene na predpokladu, ze data budou nadale podobne a anotatori nezacnou naraz anotovat vyrazne vic. 
 Max. je stanoveno tak, ze za predpokladu vyse anotator nemuze (a ani nema) Max. dosahnout. Jelikoz jde o prunik vsech anotovanych uzlu, jsou v nem i chyby (v neshodach), ty ale kompenzuji pripadne uzly, ktere ani jeden neidentifikoval, ale meli.}
 
-\section{Time analysis}
+\section{Estimation of annotation intervals and speed}
 \label{sec:time-analysis}
-Logs are a source of valuable information that can provide an insight into what is actually going on during annotation. Analysis of logs together with s-files can help estimate the real cost of annotations, which we have done during annotations to some extent, by estimating speed of annotations \see{sec:time-analysis}. 
-But the analysis can go further and, to formulate the problem in economic terms, try to examine in general what factors influence the price of a (correct) tag. What is the relation of speed, length of work intervals, time of day, order of processing of the file, and other factors? We give only a very brief glimpse of one of the factors -- speed of annotations in \Sref{sec:time-analysis}, but in our opinion thorough statistical analysis of log files is an important source of information also for future annotation projects.
 
 One of the reasons to implement detailed logs of all the annotations \see{sec:logs} was to allow detailed analysis of the time aspect of annotations. By ``time aspect'' we do not mean just checking, how much it takes annotators to tag the data, even though this is an important information too. We wanted to make it possible to ask any number of questions: Is there correlation between annotation speed and frequency of work? Does the speed increase or decrease in long stretches of continuous work? In how long intervals do annotators tend to work? Is the number of tags per minute/hour more or less constant?  
 
@@ -373,23 +412,6 @@ In \Fref{fig:speed} we can see some inter- and -intra annotator variance in spee
    \label{fig:speed}
 \end{figure}
 
-
-
-The data plotted in \Fref{fig:hist} and \Fref{fig:hist-detail}, even though not normalised to disregard the different amount of data annotated, shows remarkable similarity in behaviour of all three annotators.
-
-\begin{figure}[htbp]
-   \centering
-   \includegraphics[width=.8\textwidth]{images/speed/histograms} 
-   \caption{A histogram showing how many times ($y$) did an annotator place the next tag exactly $x$ seconds after the previous one.} 
-   \label{fig:hist}
-\end{figure}
-
-\begin{figure}[htbp]
-   \centering
-   \includegraphics[width=.8\textwidth]{images/speed/histograms-detail} 
-   \caption{Detail of the histogram in \Fref{fig:hist} in an interval where we have placed our \emph{fluency} value for the preliminary experiment with clustering of work into annotation intervals ($f=60$, see \Sref{sec:time-analysis} and \Fref{fig:speed}).}
-\label{fig:hist-detail}
-\end{figure}
 
 
 \todo \xx{popsat analyzacni skript a fluency (f=60).}\\
