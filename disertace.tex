@@ -35,59 +35,76 @@
 \def\xx#1{\colorbox{red}{#1}}
 \def\see#1{(see Section~\ref{#1})}
 
-\title{Annotation of Multiword Expressions\\
- in the Prague Dependency Treebank}
-\author{Pavel Straňák}
+
 
 \begin{document}
-\maketitle
+\begin{titlepage}
+\setlength\voffset{4cm}
+\centering
+
+{\fontsize{21}{32}\selectfont
+Annotation of Multiword Expressions \\[3mm]
+ in the Prague Dependency Treebank }
+\vspace{3cm}
+
+\fontsize{18}{18}\selectfont Pavel Straňák
+\vspace{3cm}
+
+\Large  Doctoral Thesis\\
+\vspace{2cm}
+
+\includegraphics[scale=0.7]{images/UK-logo-cerne.pdf}\\
+\bigskip
+Charles University in Prague\\
+Faculty of Mathematics and Physics\\
+Institute of Formal and Applied Linguistics\\
+\vspace{0.8cm}
+Praha, 2010
+\end{titlepage}
+
+\phantom{nic}
+\thispagestyle{empty}
+
+\begin{table}[htdp]
+\begin{center}
+\begin{tabular}{lp{7cm}}
+Author: & Pavel Straňák \\[1cm]
+Supervisor: & Prof. RNDr. Jan Hajič, Dr. \\[1cm]
+Department: & Institute of Formal and Applied Linguistics, Faculty of Mathematics and Physics, Charles University in Prague\\[1cm]
+Opponents: & 
+Doc. PhDr. Karel Pala, CSc.,\newline Masaryk University,\newline Faculty of Informatics,\newline Botanicka 68a\newline 602 00 BRNO \newline Czech Republic \\[0.5cm]
+               & Pavel Pecina\newline
+Centre for Next Generation Localisation\newline
+School of Computing\newline
+Dublin City University\newline
+Glasnevin\newline
+Dublin 9\newline
+Ireland\\
+\end{tabular}
+\end{center}
+\label{default}
+\end{table}%
+
 
 %%%%%%%%%%
-\frontmatter
+%\frontmatter
 \tableofcontents
 \listoffigures
 \listoftables
 
-\section*{Motto}
-%\begin{tabular}{@{} p{1.3cm}p{11cm} @{}} % @{} removes default spaces
-%Frasier: & ``How was your hunting trip?''\\
-%Martin: & ``Came home empty handed.''\\
-%Frasier: & ``Oh dear; I guess that means for the next several weeks we'll hear your grouse about the grouse and carp about the carp.''\\
-%Niles: & ``You've been working on that, haven't you?''\\
-%Frasier: & ``Well, there was traffic.''\\
-% & \raggedleft\emph{Frasier, Season 9, Part 3}\\
-%\end{tabular}
-
-\noindent
-Dean of Balliol College:  ``It's such an awful country, [\ldots] women get stoned when they commit adultery.'' \\
-Sir Humphrey: ``Unlike Britain, where they commit adultery when they get stoned.''
-\begin{flushright}
-\emph{Yes, Prime Minister: The Bishop Gambit}
-\end{flushright}
-
-\vspace{1cm}
-\noindent
-``So much wool in his head, it's child's play to pull it over his eyes.''
-\begin{flushright}
-\emph{Yes, Prime Minister: One of Us}
-\end{flushright}
-
-
-
-
-\newpage
-\section{Notes}
-
-{\em``Prokopnout pětku''} -- prokopnout [trestný kop after scoring] pětka -- ellipsis crossing into pragmatics(?), because it is {\em not} an ellipsis of some exact linguistic construction, but rather an ellipsis of a situation which everyone in the discourse understand.  
-
-``Návrh / novela Zákona na ochranu osobních údajů''  $$((\mathrm{návrh} \lor \mathrm{novela}) | \mathrm{zákon} \lor \mathrm{předpis})$$
--- lexikální funkce?? \citep{melcuk:1992} ?
-
-\subsection{Missing t-nodes in \code{coord}s}
-``\textit{První} a druhá světová válka'' apod. -- the word ``První'' is an ellipsis of ``První světová válka''. The ellided t-nodes that should had been newly established were not, however, which left us with two options: either annotate a single-word (and single-node) expression as an instance of a multi-word lexeme, or annotate the words ``světová válka'' that occure in the text as being a part of both expressions. We decided for the first, because the agreement on ellipses is fairly high in this type of coordinations.
+%\newpage
+%\section{Notes}
+%
+%{\em``Prokopnout pětku''} -- prokopnout [trestný kop after scoring] pětka -- ellipsis crossing into pragmatics(?), because it is {\em not} an ellipsis of some exact linguistic construction, but rather an ellipsis of a situation which everyone in the discourse understand.  
+%
+%``Návrh / novela Zákona na ochranu osobních údajů''  $$((\mathrm{návrh} \lor \mathrm{novela}) | \mathrm{zákon} \lor \mathrm{předpis})$$
+%-- lexikální funkce?? \citep{melcuk:1992} ?
+%
+%\subsection{Missing t-nodes in \code{coord}s}
+%``\textit{První} a druhá světová válka'' apod. -- the word ``První'' is an ellipsis of ``První světová válka''. The ellided t-nodes that should had been newly established were not, however, which left us with two options: either annotate a single-word (and single-node) expression as an instance of a multi-word lexeme, or annotate the words ``světová válka'' that occure in the text as being a part of both expressions. We decided for the first, because the agreement on ellipses is fairly high in this type of coordinations.
 
 %%%%%%%%%%%%%
-\mainmatter
+%\mainmatter
 \include{chapters/intro}
 \include{chapters/meaning-lexeme}
 \include{chapters/idioms}
