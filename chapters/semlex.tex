@@ -52,24 +52,39 @@ Compared to the original, the classification is altered because we do not use em
 
 Some frequent names of persons, institutions or other objects (e.g.~film titles) are being added into SemLex during annotation (while keeping the information about their NE type), because this allows for their following occurrences to be pre-annotated automatically (see Section~\ref{sec:annot:pre}). For others, such as common addresses or bibliographic entries, it makes but little sense, because they most probably will not reappear during the annotation. 
 
-\section{Lexemes from other dictionaries}
+\section{MWEs from other dictionaries}
 \label{sec:semlex:dicts}
-The base of \semlex\ has been composed of MWEs extracted from Czech WordNet \citep{smrz:03}, Eurovoc \citep{eurovoc:07} and Dictionary of Czech Phraseology and Idiomatics \citep[SČFI, ][]{cermak:1988}.%
-For the explanation of our use of the SČFI subset see point \ref{pre-hnatkova} in Section~\ref{sec:annot:pre} below. 
-\xxx{update: Currently there are 32196 MWEs in SemLex (po sliti a dokonceni davky 42).}
+The base of \semlex\ has been composed of MWEs extracted from Czech WordNet \citep{smrz:03}, Eurovoc \citep{eurovoc:07} and Dictionary of Czech Phraseology and Idiomatics \citep[SCFI, ][]{cermak:1988}.%
 
-\xxx{In the current ``compiled'' SemLex there are many collocations that can hardly be considered MWEs. However, these frequently occurring collocations are pragmatically quite useful and it may be good to identify them, too.\footnote{We would like to mark these entries in SemLex at some point, so that we know these in fact are not MWEs and we do not attempt to create a single t-node for them when they are annotated.} The most important thing is to ensure that they are annotated consistently. They can be useful for machine translation, because, e.g., for those collocations that were extracted from Czech WordNet, there are at our disposal their translations into English (CWN). For the collocations that come from Eurovoc we even have translations into all the official languages of the European Union.}
+For an explanation of a special use of a SCFI subset see Point \ref{pre-hnatkova} in Section~\ref{sec:annot:pre}. 
+
+
+%\xxx{In the current ``compiled'' SemLex there are many collocations that can hardly be considered MWEs. However, these frequently occurring collocations are pragmatically quite useful and it may be good to identify them, too.\footnote{We would like to mark these entries in SemLex at some point, so that we know these in fact are not MWEs and we do not attempt to create a single t-node for them when they are annotated.} The most important thing is to ensure that they are annotated consistently. They can be useful for machine translation, because, e.g., for those collocations that were extracted from Czech WordNet, there are at our disposal their translations into English (CWN). For the collocations that come from Eurovoc we even have translations into all the official languages of the European Union.}
 
 The entries added by annotators must have a gloss. Annotators define it informally but as well as possible and we extract an example of usage and the basic form from the annotation automatically. The meaning information in a gloss can be revised by a lexicographer, based on annotated occurrences.
 
+Most of the MWEs (or potential MWEs, in some cases) that were complied from the resources described in this section, were actually never used during annotation. Nevertheless, it was very beneficial to have an annotation lexicon to start with.
+
+
 \subsubsection{Eurovoc}
 \label{sec:semlex:eurovoc}
+We extracted a huge amount of multiword entries from the Eurovoc thesaurus \citep{eurovoc:07}. Many of them were, however, not MWEs. They were often phrases, sometimes whole clauses. After some filtering we ended up with 15,176 potential MWEs that were added to SemLex.
 
-\subsubsection{CWN2a}
+\subsubsection{Czech WordNet}
 \label{sec:semlex:cwn}
+We used the Czech WordNet \citep{smrz:03,pala:2004} in its most up-to-date development version available at the time. It was significantly larger than then-current public release. It was however also not yet the more recent version described by \citet{pala:2007}. We had used this version of CWN previously in a different annotation project \citep{bejcek:2006}. 
 
-\subsubsection{SČFI}
+A significant benefit of CWN is its simple structure and XML implementation. Since the basic unit of any WordNet is a \emph{synset} -- a set of synonyms, we took advantage of this and created an entry for each synonym of a synset, storing the other synonyms in an appropriate attribute of a SemLex entry. These synonyms proved quite valuable. Since most CWN entries have no glosses, they also serve as a definition.
+
+We acquired 11,345 MWEs from CWN and stored them in our preliminary SemLex.
+ 
+\subsubsection{Dictionary of Czech Phraseology and Idiomatics}
 \label{sec:semlex:scfi}
+By processing an electronic version of Dictionary of Czech Phraseology and Idiomatics (SCFI) \citep{cermak:1988} we created \emph{3,985 initial MWEs as entries in SemLex}. 
+
+SCFI has several nice properties. First of all, its entries contain a lot of information, especially compared to the other two resources we used. Rich explanatory glosses that even contain examples are one thing worth mentioning. Translation equivalents in English, German, French and Russian are another very valuable property, especially considering the dictionary contains large amount of idioms.
+
+The slightly problematic property of the source data we obtained was a proprietary 8bit text format that essentially copies the paper version of a dictionary, thus not giving precise machine-readable distinctions of properties of entries.
 
 
 \section{Structure of \semlex}
@@ -113,7 +128,7 @@ An entry is composed of several user-editable attributes, and some read-only and
     \item [/hash] The object is implemented as a hash.
     \item [:Semlex\textunderscore{}heslo] The object belongs to the class Semlex\textunderscore{}heslo.
   \end{description}
-\item [BASIC\textunderscore{}FORM] -- The basic form of a lexeme. We could call it a ``lemma'' of a lexeme, but we do not find it suitable for several reasons: 
+\item [BASIC\textunderscore{}FORM] -- The basic form of a MWE. We could call it a ``lemma'' of a MWE, but we do not find it suitable for several reasons: 
   \begin{itemize}
     \item In many languages including Czech it often contains word forms in other than the basic form for the given word on its own. I.e. ``vysoké učení'' contains a feminine suffix of the adjective ``vysoký'' (high) because of the required agreement in gender with the noun, whereas the traditional lemma of adjectives in Czech is in the masculine form.
     \item  It could be confused with the attribute ``lemmatized'' that means something completely different.
