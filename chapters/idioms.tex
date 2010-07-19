@@ -1,17 +1,17 @@
 % !TEX root = ../disertace.tex
 %!TEX encoding = UTF-8 Unicode
 
-\chapter{Idioms}
-Even ``non-compositional'' idioms are actually (originally) metaphorical or metonymical.  Even though sometimes it is hard to see that. At other times a speaker may forget that rather straightforward metaphoric aspect:
-
-\begin{quote}
-Barack Obama accused his Republican rivals of stirring a controversy over a comment he made about putting “lipstick on a pig.” \emph{(NY~Times, 11.~September 2008)}
-\end{quote}
-
-
-
-%%%%% MWE %%%%%%%
-\section{MWE}
+\chapter{Multiword expressions}
+%Even ``non-compositional'' idioms are actually (originally) metaphorical or metonymical.  Even though sometimes it is hard to see that. At other times a speaker may forget that rather straightforward metaphoric aspect:
+%
+%\begin{quote}
+%Barack Obama accused his Republican rivals of stirring a controversy over a comment he made about putting “lipstick on a pig.” \emph{(NY~Times, 11.~September 2008)}
+%\end{quote}
+%
+%
+%
+%%%%%% MWE %%%%%%%
+%\section{MWE}
 
 \citet{baldwin:2004} defines MWEs very broadly as entities that are:
 \begin{itemize}
@@ -25,17 +25,38 @@ His examples are as follows: \emph{``San Francisco, ad hoc, by and large, Where 
 
 From the definition and the examples it is clear that Baldwin includes not only idioms and complex verbs, but also any named entities and even any statistically or pragmatically important\footnote{We avoid a MWE (sic!) ``statistically significant'' on purpose, because we assume that Baldwin also avoids it on purpose when using a word ``idiosyncratic''. As far as we know ``statistically idiosyncratic'' is not a well defined term byt we understand it as saying that not any statistically significant difference in distribution is peculiar enough to be called ``idiosyncratic''. We are fully aware how imprecise this sounds.} collocations. At least that is what we understand as ``statistically idiosyncratic''. Such expressions include ``environmental policy'' but also ``salt and pepper'', which is semantically quite compositional and simple, but statistically the order of its components is significant. In the Corpus of Contemporary American English (COCA, \url{http://www.americancorpus.org/}), there are 3648 occurrences of ``salt and pepper'' vs. 62 occurrences of ``pepper and salt''. Of the 62 occurrences 60 are in recipes. This is rather extreme case of ``statistical idiosyncrasy''; as such it well illustrates the point.
 
-Such a broad definition basically says that MWEs are ``interesting collocations'' but in its broadness it is not suitable for our purpose. Since we base our work on the concept of (monosemic) lexeme, we are more interested in the more conventional approach that Baldwin has in most of his other (co-authored) papers \citep{baldwin:2003,sag:2002}. MWEs are viewed as ``cohesive lexemes that cross word boundaries''. This seems to be the most common definition of MWEs in NLP, as long as we abstract from subtle differences in terminology \citep{calzolari, copestake, dalsi?}. \xxx{je to taky shodne s tradicnimi lingvisty? Cruse? Lyons? cesti?}
+Such a broad definition basically says that MWEs are ``interesting collocations'' but in its broadness it is not suitable for our purpose. We are more interested in the more conventional approach that Baldwin has in most of his other (co-authored) papers \citep{baldwin:2003,sag:2002}. MWEs are viewed as ``cohesive lexemes that cross word boundaries''. This seems to be the most common definition of MWEs in NLP, as long as we abstract from differences in terminology.
+
+There are of course many definitions of multiword expressions, multiword lexemes, phrasemes, idioms, and many other concepts that are more or less closely related. They are classified by many criteria, often into fine hierarchies of types and subtypes. Several of the important classifications are presented in \citet{pecina:2009}. For an exhaustive treatment of the issue see \citet{cermak:2010}. 
+
+We shall not go into detail of these conceptions, however, because the rather intuitive view of MWEs as presented above is rather close to our view: idiosyncratic expressions that cross word boundaries. This way the definition is broad enough to account for idioms, as well as multiword terminology, and also many named entities, as discussed in \Sref{mwe:ne}.
 
 
-\section{ToAdd}
-Pecina, Cruse, Filipec, Čermák (rozdelit, nebo spojit se ZŽ?), Hanks. Zminit clanek SC, MH a Lenky?? o Hanksove CPA jako realizaci Sinclairova pristupu k lexikalnimu vyznamu.
+\section{Named entities}
+\label{mwe:ne}
+\emph{Named entities} are a concept originating in information retrieval (??, quote). This concept is well rooted in NLP but it does not exist in classical lexicology and its defining criteria do not correspond with a definition of a lexical unit, lexeme, or any other lexicological or lexicographic concept of our knowledge.
 
-Valencni slovniky a \emph{anotace valence}.
+We use the NE classification by \citet{sevcikova:2007} as a starting point and modify it a bit (see \Sref{sec:semlex:ne}). However the definition of what named entities are is problematic:
+\begin{quote}
+\textczech{\em „Pojmenované entity jsou jednotlivá slova nebo slovní spojení, která v textu vystupují jako
+pojmenování osob, míst, firem apod. Cílem anotace je označení všech pojmenovaných entit v 
+předloženém lineárním textu. Současná anotace bude zaměřena na identifikaci
+především těch pojmenovaných entit, které jsou zapsány s velkým počátečním písmenem.“}
+\end{quote}
+The definition basically says that named entities are single- or multi-word units that are used to name persons, locations, firms, etc. I.e. named entities are the expressions used to name entities. It is actually hard to call this a definition at all.
 
-\section{Statistical approach to MWEs}
-Normally when we consider inter-annotator agreement, we think about is as a measure of reliability of annotations. We start from an axiom (although usually implicit), that there are some abstract entities\footnote{i.e. we suppose that MWEs exist in langue} -- MWEs, and there are instances of these entities in text. Annotators have to find these instances and tag them. We then measure quality of annotators work by estimating for instance presision and recall of their search. The more consistent they are, of course, the better.
+It is nevertheless not easy to define named entities properly. Other authors do not fare much better.
+For instance \citet{salp} say that ``By \textbf{named entity}, we simply mean anything that can be referred to with a proper name.'' They further explain that for practical concerns the notion of NEs is often extended ``to include things that aren't entities per se, but nevertheless have practical importance and do have characteristic signatures that signal their presence; examples include dates, times, named events, and other kinds of temporal expressions, as well as measurements, counts, prices, and other kinds of numerical expressions.''
 
-Let us try to forget this approach for a moment altogether. Let us leave the assumption of well defined MWEs existing in \emph{langue} behind. Let us, in fact, forget also an assumption of \emph{langue $\times$ parolle} for a while. Now we can look at the annotators' work again, and try to see a different picture: They are not trying to identify any a priori entities. They \emph{do not strive for any consistency}, because consistency presupposes that there ARE pre-existing entities that are to be found in particular contexts. We are not interested in achieving high inter-annotator agreement, or even agreement in the work of each single annotator. Instead of agreement we ARE interested in \emph{distribution} of annotations for each \xxx{MWE-candidate-formeme}\footnote{a set of related forms that is sometimes annotated as a MWE. We would use a term lexeme, but there would be a presupposition we are trying to avoid here hidden in it.}. 
+We believe we can now provide at least some additional constraints to the definition by \citeauthor{sevcikova:2007} above: To be considered a named entity an expression must share at least some 
+% \xxx{(or all ??)} 
+\emph{features of idioms}: it cannot be an exploitation \citep[see][]{hanks:norms}, i.e. it must fulfil some criteria of stability. However, unlike idioms, NEs can still vary significantly in form. An address can be tweaked in many small ways, still being the same address. So the stability of NEs can be described as normality: observance of common ``design patterns'', or ``signatures'', as they are called by \citeauthor{salp}. 
 
-With this distributional approach we can look at MWEs as a feature, some multi-word-expressionality, that is not binary, or classifiable into a colsed set of classes. Instead it is a continuum. Now we can view the annotations as a probability estimation, measure of this MWE-feature.
+%Valencni slovniky a \emph{anotace valence}.
+
+%\section{Statistical approach to MWEs}
+%Normally when we consider inter-annotator agreement, we think about is as a measure of reliability of annotations. We start from an axiom (although usually implicit), that there are some abstract entities\footnote{i.e. we suppose that MWEs exist in langue} -- MWEs, and there are instances of these entities in text. Annotators have to find these instances and tag them. We then measure quality of annotators work by estimating for instance presision and recall of their search. The more consistent they are, of course, the better.
+%
+%Let us try to forget this approach for a moment altogether. Let us leave the assumption of well defined MWEs existing in \emph{langue} behind. Let us, in fact, forget also an assumption of \emph{langue $\times$ parolle} for a while. Now we can look at the annotators' work again, and try to see a different picture: They are not trying to identify any a priori entities. They \emph{do not strive for any consistency}, because consistency presupposes that there ARE pre-existing entities that are to be found in particular contexts. We are not interested in achieving high inter-annotator agreement, or even agreement in the work of each single annotator. Instead of agreement we ARE interested in \emph{distribution} of annotations for each \xxx{MWE-candidate-formeme}\footnote{a set of related forms that is sometimes annotated as a MWE. We would use a term lexeme, but there would be a presupposition we are trying to avoid here hidden in it.}. 
+%
+%With this distributional approach we can look at MWEs as a feature, some multi-word-expressionality, that is not binary, or classifiable into a colsed set of classes. Instead it is a continuum. Now we can view the annotations as a process of explication of what MWEs are. What features participate in the complex behaviour we describe as MWEs?

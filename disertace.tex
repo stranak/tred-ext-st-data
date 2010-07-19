@@ -1,6 +1,6 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
-\documentclass[11pt, a4paper, twopage, titlepage]{book}
+\documentclass[12pt, a4paper, twopage, titlepage]{book}
 \usepackage{listings}
 \usepackage{my-additions-x}
 % fonts
@@ -35,6 +35,7 @@
 \def\xx#1{\colorbox{red}{#1}}
 \def\see#1{(see Section~\ref{#1})}
 
+\sloppy
 
 
 \begin{document}
@@ -95,7 +96,7 @@ Ireland\\
 %%%%%%%%%%%%%
 %\mainmatter
 \include{chapters/intro}
-\include{chapters/meaning-lexeme}
+%\include{chapters/meaning-lexeme}
 \include{chapters/idioms}
 \include{chapters/pdt}
 \include{chapters/sdata}

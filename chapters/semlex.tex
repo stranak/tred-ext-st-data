@@ -4,33 +4,33 @@
 \chapter{SemLex}
 \label{sec:semlex}
 
-\section{Building SemLex – based on the JLRE article}
-\label{sec:semlex:build}
-Each entry we add into SemLex is considered to be a monosemic MWE. 
-We have also added nine special entries to identify NE types, so we do not need to add all the expressions themselves.
+%\section{Building SemLex – based on the JLRE article}
+%\label{sec:semlex:build}
+%Each entry we add into SemLex is considered to be a monosemic MWE. 
+%We have also added nine special entries to identify NE types, so we do not need to add all the expressions themselves.
 
 \section{Named entities}
 \label{sec:semlex:ne}
-\emph{Named entities} are a concept originating in information retrieval (??, quote). This concept is well rooted in NLP but it does not exist in classical lexicology and its defining criteria do not correspond with a definition of a lexical unit, lexeme, or any other lexicological or lexicographic concept of our knowledge.
+%\emph{Named entities} are a concept originating in information retrieval (??, quote). This concept is well rooted in NLP but it does not exist in classical lexicology and its defining criteria do not correspond with a definition of a lexical unit, lexeme, or any other lexicological or lexicographic concept of our knowledge.
+%
+%We used the NE classification by \citet{sevcikova:2007} as a starting point. However the definition of what the named entities are is problematic:
+%\begin{quote}
+%\textczech{\em „Pojmenované entity jsou jednotlivá slova nebo slovní spojení, která v textu vystupují jako
+%pojmenování osob, míst, firem apod. Cílem anotace je označení všech pojmenovaných entit v 
+%předloženém lineárním textu. Současná anotace bude zaměřena na identifikaci
+%především těch pojmenovaných entit, které jsou zapsány s velkým počátečním písmenem.“}
+%\end{quote}
+%The definition basically says that named entities are single- or multi-word units that are used to name persons, locations, firms, etc. I.e. named entities are the expressions used to name entities. It is actually hard to call this a definition at all.
+%
+%It is nevertheless not easy to define named entities properly. Other authors do not fare much better.
+%%: \xxx{definice sem!}
+%
+%We believe we can provide at least some additional constraints to the definition above: To be considered a named entity an expression must share at least some 
+%% \xxx{(or all ??)} 
+%\emph{features of idioms}: it cannot be an exploitation \citep[see][]{hanks:norms}, i.e. it must fulfil some criteria of stability. However, unlike idioms, NEs can still vary significantly in form. An address can be tweaked in many small ways, still being the same address. So the stability of NEs can be described as normality: observance of common ``design patterns''. That is our adaptation of ``not being an exploitation'' to NEs.
+%%\xxx{Any more??}
 
-We used the NE classification by \citet{sevcikova:2007} as a starting point. However the definition of what the named entities are is problematic:
-\begin{quote}
-\textczech{\em „Pojmenované entity jsou jednotlivá slova nebo slovní spojení, která v textu vystupují jako
-pojmenování osob, míst, firem apod. Cílem anotace je označení všech pojmenovaných entit v 
-předloženém lineárním textu. Současná anotace bude zaměřena na identifikaci
-především těch pojmenovaných entit, které jsou zapsány s velkým počátečním písmenem.“}
-\end{quote}
-The definition basically says that named entities are single- or multi-word units that are used to name persons, locations, firms, etc. I.e. named entities are the expressions used to name entities. It is actually hard to call this a definition at all.
-
-It is nevertheless not easy to define named entities properly. Other authors do not fare much better.
-%: \xxx{definice sem!}
-
-We believe we can provide at least some additional constraints to the definition above: To be considered a named entity an expression must share at least some 
-% \xxx{(or all ??)} 
-\emph{features of idioms}: it cannot be an exploitation \citep[see][]{hanks:norms}, i.e. it must fulfill some criteria of stability. 
-%\xxx{Any more??}
-
-Our types of entities are:
+As we have already stated, we use a modified version of NE classification by \citet{sevcikova:2007}  Our types of entities are:
 \begin{compactenum}
 \item ``a~name of a person or an animal'', 
 \item``institution'', 
