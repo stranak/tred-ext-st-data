@@ -10,7 +10,7 @@ This thesis explores annotation of multiword expressions in the Prague Dependenc
 
 
 %%%%%
-\section{Motivation – JLRE} 
+\section{Motivation} 
 \label{sec:intro:motiv}
 
 Various projects involving lexico-semantic annotation have been ongoing for many years. 
@@ -24,10 +24,10 @@ There is also another group of projects that have to tackle the problem of lexic
 \nocite{erbach:1993}
 
 %%%%%
-\section{Introduction – JLRE}
+\section{Introduction}
 \label{sec:intro}
 In our project we annotate all occurrences of MWEs (including named entities, see below) in PDT 2.0. 
-When we speak of \textbf{multiword expressions} we mean ``idiosyncratic interpretations that cross word boundaries'' \citep{sag:2002}. We do not inspect various types of MWEs, because we are not concerned in their grammatical attributes. We only want to identify them. Once there will be a lexicon with them and their occurrences annotated in corpora, the description and sorting of MWEs will take place. We hope that annotation of a treebank will help -- MWEs with fixed syntactic form will be easily distinguished from the others that can be modified by added words.
+When we speak of \textbf{multiword expressions} we simply mean ``idiosyncratic interpretations that cross word boundaries'' \citep{sag:2002}, see \Sref{mwe}. We do not inspect various types of MWEs, because we are not concerned in their grammatical attributes. We only want to identify them. Once there is a lexicon with them and their occurrences annotated in a corpus, the description and classification of MWEs can take place, but that is a new, different project. %We hope that annotation of a treebank can help -- MWEs with fixed syntactic form will be easily distinguished from the others that can be modified by added words.
 
 %, i.e. ``the conjunction of the lexical form and the individual meaning'' \cite{filipec:1994}.
 % TODO Nasledujici vetu rozvest, rozdelit na vic, zduraznit, ze prirazujeme typ.
@@ -48,7 +48,7 @@ That is why we need each NE to be combined into a single node, just like we do i
 %% It is desirable to
 %keep this information up to date, where needed (e.g. for persons).
 
-For the purpose of annotation we have built a repository of MWEs, which we call SemLex. We have built it using entries from some existing dictionaries and it is being enriched during the annotation in order to contain every MWE that was annotated. We explain this in detail in Chapter~\ref{sec:semlex}. 
+For the purpose of annotation we have built a repository of MWEs, which we call SemLex. We have built it using entries from some existing dictionaries, but it was significantly enriched during the annotation in order to contain every MWE that was annotated. We explain this in detail in Chapters~\ref{sec:semlex} and \ref{sec:annot}. 
 
 %Various projects involving lexico-semantic annotation have been ongoing for many years. Majority of these however only annotated very limited number of word senses. Even among those that aimed towards ``all words'' word sense annotation, MWE were usually disregarded. Reason for this is, that these projects were annotations of plain text and so the units they work on are words. These are usually not involved in the question of What is a lexical meaning? What is a unit on the level of lexical meaning? And what level is that?
 
