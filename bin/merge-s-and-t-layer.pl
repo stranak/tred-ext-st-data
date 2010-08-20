@@ -24,7 +24,7 @@ use lib "$FindBin::Bin";
 use SDataMerge;
 use Getopt::Long;
 GetOptions("stdout|S" => \ our $use_stdout,
-           "unique|U" => \ our $skip_existing_st_files)
+           "skip|K" => \ our $skip_existing_st_files)
   or die "Usage: $0 [--stdout|-S --skip|-K] <st-files>\n";
 
 my $st_suffix = qr/\.st\.g?zi?p?$/;
