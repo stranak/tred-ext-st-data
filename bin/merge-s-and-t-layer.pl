@@ -3,7 +3,7 @@
 #
 #         FILE:  merge-s-and-t-layer.pl
 #
-#        USAGE:  ./merge-s-and-t-layer.pl [--stdout|-S] <st-files>
+#        USAGE:  ./merge-s-and-t-layer.pl [--stdout|-S  --skip|-K] <st-files>
 #
 #  DESCRIPTION:  Integrate the s-layer annotation into the t-layer files.
 #
@@ -23,16 +23,24 @@ use FindBin qw($Bin);
 use lib "$FindBin::Bin";
 use SDataMerge;
 use Getopt::Long;
-GetOptions("stdout|S" => \ our $use_stdout)
-  or die "Usage: $0 [--stdout|-S] <st-files>\n";
+GetOptions("stdout|S" => \ our $use_stdout,
+           "unique|U" => \ our $skip_existing_st_files)
+  or die "Usage: $0 [--stdout|-S --skip|-K] <st-files>\n";
 
 my $st_suffix = qr/\.st\.g?zi?p?$/;
 
 foreach my $s_filename (@ARGV) {
 
     # Parse s-file and get a DOM
+    chomp $s_filename;
     if ($s_filename !~ $st_suffix ) {
         warn "$s_filename is not an 'st' file.";
+        next;
+    }
+    my $t_mwe_file = $s_filename;
+    $t_mwe_file =~ s/$st_suffix/\.t\.mwe\.gz/;
+    if ($skip_existing_st_files and -s $t_mwe_file){
+        warn "$t_mwe_file already exists.";
         next;
     }
     my $parser = XML::LibXML->new();
