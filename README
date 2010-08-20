@@ -1,8 +1,8 @@
 This repository was originally a subdirectory of my Ph.D. thesis repository.
 That was not and is not public. Thus the commit logs are in Czech, since they
-were intended only for me at the time. Also sometimes the logs mostly are about
-things that are part of the larger private thesis repository, but are not part
-of this repository. I am sorry about the inconvenience.
+were intended only for me at the time. Also sometimes the logs are about things
+that are part of the larger private thesis repository, but are not part of this
+repository. I am sorry about the inconvenience.
 
 This is an extension to the tree editor TrEd
 (http://ufal.mff.cuni.cz/~pajas/tred/). Extensions are described
