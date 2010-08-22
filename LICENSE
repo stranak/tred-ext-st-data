@@ -1,0 +1,22 @@
+This work is available under CC-BY (Creative Commons Attribution) licence. 
+A simple human-readable summary is available at 
+http://creativecommons.org/licenses/by/3.0/
+
+
+The code is free for whatever use. We only ask for acknowledgement.
+If you use this code in your project, you must:
+
+ - Acknowledge Institute of Formal and Applied Linguistics, Charles University
+   in Prague (http://ufal.mff.cuni.cz), where TrEd was developed, as well as
+   this extension.
+
+ - If you publish a paper, book, or anything else about your work based on this
+   code, cite my Ph.D. thesis, that describes the extension:
+   
+   Straňák Pavel: Annotation of Multiword Expressions in The Prague Dependency
+   Treebank, Ph.D. thesis, Univerzita Karlova v Praze, Prague, Czech Republic,
+   79 pp., Jul 2010. http://goo.gl/Uocf 
+
+ - Link to the repository http://github.com/stranak/tred-ext-st-data 
+
+ - Please, let me know (stranak@ufal.mff.cuni.cz)
