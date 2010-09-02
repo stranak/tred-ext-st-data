@@ -25,7 +25,7 @@ use SDataMerge;
 use Getopt::Long;
 GetOptions("stdout|S" => \ our $use_stdout,
            "skip|K" => \ our $skip_existing_st_files)
-  or die "Usage: $0 [--stdout|-S --skip|-K] <st-files>\n";
+  or die "Usage: $0 [--stdout|-S] [--skip|-K] <st-files>\n";
 
 my $st_suffix = qr/\.st\.g?zi?p?$/;
 
@@ -34,7 +34,7 @@ foreach my $s_filename (@ARGV) {
     # Parse s-file and get a DOM
     chomp $s_filename;
     if ($s_filename !~ $st_suffix ) {
-        warn "$s_filename is not an 'st' file.";
+        warn "$s_filename is not named like an 'st' file.";
         next;
     }
     my $t_mwe_file = $s_filename;
