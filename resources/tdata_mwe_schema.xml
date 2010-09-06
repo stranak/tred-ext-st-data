@@ -8,23 +8,13 @@
   <derive type="st-node.type">
       <structure name="s-node">
         <member as_attribute="1" name="id" required="1"><cdata format="ID"/></member>
+        <member as_attribute="1" name="annotator" required="1"><cdata format="any"/></member>
       </structure>
   </derive>
   <derive type="t-root.type">
     <structure role="#NODE" name="t-root">
       <member name="mwes" required="0">
-        <sequence content_pattern="(annotator)+">
-          <element name="annotator">
-            <container>
-              <attribute name="name" required="1">
-                <cdata format="any"/>
-              </attribute>
-              <sequence>
-                <element name="st" type="st-node.type"/>
-              </sequence>
-            </container>
-          </element>
-        </sequence>
+         <list ordered=0 type="st-node.type"/>
       </member>
     </structure>
   </derive>
