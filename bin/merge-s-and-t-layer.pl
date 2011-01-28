@@ -31,7 +31,7 @@ my $st_suffix = qr/\.st\.g?zi?p?$/;
 
 foreach my $s_filename (@ARGV) {
 
-    # Parse s-file and get a DOM
+    # Check which files to merge
     chomp $s_filename;
     if ($s_filename !~ $st_suffix ) {
         warn "$s_filename is not named like an 'st' file.";
@@ -43,10 +43,13 @@ foreach my $s_filename (@ARGV) {
         warn "$t_mwe_file already exists.";
         next;
     }
+    # Parse s-file and get a DOM
     my $parser = XML::LibXML->new();
     $parser->keep_blanks(0);
     my $sdoc   = $parser->parse_file($s_filename);
+    # The merge itself (an external lib function)
     my $tdoc = SDataMerge::transform($sdoc);
+    # And output of the merged PML file
     if ($use_stdout) {
       $tdoc->toFH(\*STDOUT);
     } else {
