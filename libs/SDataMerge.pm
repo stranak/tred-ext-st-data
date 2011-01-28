@@ -10,6 +10,14 @@ use List::Util qw(first);
 
 use constant PML_NS => 'http://ufal.mff.cuni.cz/pdt/pml/';
 
+
+
+=head1 upgrade_st() - Upgrade (i.e. correct) the st-file, if needed.
+
+ Original s-files produced during annotations are not valid (according to the
+ sdata schema) and they need to be transformed. This function checks whether
+ the s_file needs to be corrected, and does so if needed.
+=cut
 sub upgrade_st {
     my ($sdoc) = @_;
     my $s_cont = XML::LibXML::XPathContext->new( $sdoc->documentElement() );
@@ -24,6 +32,13 @@ sub upgrade_st {
     }
     return $sdoc;
 }
+
+
+
+=head1 transform() - Merge st-layer information into t-layer
+
+ This is the main merging function.
+=cut
 
 sub transform {
     my ($sdoc) = @_;
@@ -75,8 +90,14 @@ sub transform {
     return $tdoc;
 }
 
-#Check the version of an s-file. Original s-files produced during annotations
-#are not valid (according to the sdata schema) and they need to be transformed.
+
+
+=head1 is_sfile_format_old() - Check the version of an s-file (return BOOL)
+
+ Original s-files produced during annotations are not valid (according to the
+ sdata schema) and they need to be transformed.
+=cut
+
 sub is_sfile_format_old {
     my $s_cont = shift;
     if ( $s_cont->findnodes('/pml:sdata/pml:wsd/pml:st/pml:t.rf') ) {
@@ -90,7 +111,13 @@ sub is_sfile_format_old {
     }
 }
 
-sub get_annot_mwes {
+
+=head1 get_annot_mwes() - Get the element $troot/mwes/$annotator
+
+ #TODO uplne predelat, pokud je potreba. Kde se vola?
+=cut
+
+sub get_annot_mwes { #TODO
     my ( $tdoc, $t_cont, $troot, $annotator ) = @_;
     my $mwes;
     if ( $t_cont->exists( './pml:mwes', $troot ) ) {
@@ -162,6 +189,18 @@ sub get_t_trees {
     my ($t_schema) = $t_cont->findnodes('/pml:tdata/pml:head/pml:schema');
     return ( \@t_trees, $tdoc, $t_cont, $t_schema );
 }
+
+
+
+=head1 correct_snode() - Correct the s-node into a valid form. 
+
+Transform the list of references to t-nodes in the st-node into the valid
+format.
+
+If the function is called in the context of merging st-layer into t-layer, it
+also removes t# prefix from t-node refs, so that they remain valid when they
+are moved directly into the resulting (t-mwe) t-file.
+=cut
 
 sub correct_snode {
     my ( $sdoc, $s_cont, $snode, $merge_st_into_t ) = @_;
