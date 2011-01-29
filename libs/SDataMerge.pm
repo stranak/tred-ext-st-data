@@ -23,13 +23,8 @@ sub upgrade_st {
     my $s_cont = XML::LibXML::XPathContext->new( $sdoc->documentElement() );
     $s_cont->registerNs( pml => PML_NS );
     my @snodes    = $s_cont->findnodes('/pml:sdata/pml:wsd/pml:st');
-    my $sfile_old = is_sfile_format_old($s_cont);
-  SNODE:
-    foreach my $snode (@snodes) {
-        if ($sfile_old) {
-            correct_snode( $sdoc, $s_cont, $snode );
-        }
-    }
+    map correct_snode( $sdoc, $s_cont, $_, 'yes'), @snodes 
+        if is_sfile_format_old($s_cont);
     return $sdoc;
 }
 
@@ -54,23 +49,11 @@ sub transform {
 
     # Modify the s-nodes to the correct form and merge them into t-trees
     my @snodes    = $s_cont->findnodes('/pml:sdata/pml:wsd/pml:st');
-    my $sfile_old = is_sfile_format_old($s_cont);
+    my $is_sfile_old = is_sfile_format_old($s_cont);
   SNODE:
     foreach my $snode (@snodes) { 
-        if ($sfile_old) {
-            correct_snode( $sdoc, $s_cont, $snode, $annotator, 'merge' );
-        }
-        else {
-        #TODO this code has an overlap with correct_snode(). Perhaps merge it.
-            my @tnode_rf =
-              $s_cont->findnodes( './pml:tnode.rfs/pml:LM', $snode );
-            map {
-                my ($textchild) = $_->childNodes;
-                $textchild->replaceDataRegEx( 't#t', 't' );
-            } @tnode_rf;
-            $snode->setNodeName('LM');
-            $snode->setAttribute( 'annotator', "$annotator" );
-        }
+        correct_snode( $sdoc, $s_cont, $snode,
+            $is_sfile_old, $annotator, 'merge' );
 
         # ID of the first t-node in this s-node
         my $s_first_tnode =
@@ -82,6 +65,7 @@ sub transform {
             my @tnode_ids = map $_->getAttribute('id'), @nodes_in_this_tree;
             my $match = first { $_ eq $s_first_tnode } @tnode_ids;
             if ($match) { # The s-node belongs here (to this t-root)
+                # get the 'mwes' node (t-root attr)
                 my $mwes;
                 if ( $t_cont->exists( './pml:mwes', $troot ) ) {
                     ($mwes) = $t_cont->findnodes( './pml:mwes', $troot );
@@ -179,26 +163,31 @@ are moved directly into the resulting (t-mwe) t-file.
 =cut
 
 sub correct_snode { 
-    my ( $sdoc, $s_cont, $snode, $annotator, $merge_st_into_t ) = @_;
+    my ( $sdoc, $s_cont, $snode, $is_sfile_old, $annotator, $merge_st_into_t ) = @_;
 
     # Modify the s-node to the correct form:
-    # the t-node refs
-    my @tnode_rf = $s_cont->findnodes( './pml:t.rf', $snode );
-    map $_->unbindNode, @tnode_rf;
-    my $tnode_rfs = $sdoc->createElementNS( PML_NS, 'tnode.rfs' );
-    $tnode_rfs = $snode->appendChild($tnode_rfs);
-    map {
-        $_->setNodeName('LM');
-        if ($merge_st_into_t){
-            my ($textchild) = $_->childNodes;
-            $textchild->replaceDataRegEx( 't#t', 't' )
-        }
-        $tnode_rfs->appendChild($_);
-    } @tnode_rf;
-    # and now, if it is to be be merged into t-layer, the s-node itself
+    # if the s-file is in the old (original) format, 
+    # the t-node refs in a s-node must be changed to a proper PML list
+    if ($is_sfile_old) {
+        my $tnode_rfs = $sdoc->createElementNS( PML_NS, 'tnode.rfs' );
+        $tnode_rfs = $snode->appendChild($tnode_rfs);
+        my @tnode_rf = $s_cont->findnodes( './pml:t.rf', $snode );
+        map {
+            $_->unbindNode;
+            $_->setNodeName('LM');
+            $tnode_rfs->appendChild($_);
+        } @tnode_rf;
+    }
+    # and now, if it is to be be merged into t-layer:
     if ($merge_st_into_t){
         $snode->setAttribute( 'annotator', "$annotator" );
         $snode->setNodeName('LM');
+        # correct the t-node refs (not stand-off any more)
+        map {
+                my ($textchild) = $_->childNodes;
+                $textchild->replaceDataRegEx( 't#t', 't' )
+            } $s_cont->findnodes( './pml:tnode.rfs/pml:LM', $snode );
+
     }
     return;
 }
