@@ -12,7 +12,7 @@ use constant PML_NS => 'http://ufal.mff.cuni.cz/pdt/pml/';
 
 
 
-=head1 upgrade_st() - Upgrade (i.e. correct) the st-file, if needed.
+=head1 upgrade_st() - Upgrade (i.e. correct) the st-file, if needed
 
  Original s-files produced during annotations are not valid (according to the
  sdata schema) and they need to be transformed. This function checks whether
@@ -56,17 +56,20 @@ sub transform {
     my @snodes    = $s_cont->findnodes('/pml:sdata/pml:wsd/pml:st');
     my $sfile_old = is_sfile_format_old($s_cont);
   SNODE:
-    foreach my $snode (@snodes) {
+    foreach my $snode (@snodes) { 
         if ($sfile_old) {
-            correct_snode( $sdoc, $s_cont, $snode, 'merge' );
+            correct_snode( $sdoc, $s_cont, $snode, $annotator, 'merge' );
         }
         else {
+        #TODO this code has an overlap with correct_snode(). Perhaps merge it.
             my @tnode_rf =
               $s_cont->findnodes( './pml:tnode.rfs/pml:LM', $snode );
             map {
                 my ($textchild) = $_->childNodes;
                 $textchild->replaceDataRegEx( 't#t', 't' );
             } @tnode_rf;
+            $snode->setNodeName('LM');
+            $snode->setAttribute( 'annotator', "$annotator" );
         }
 
         # ID of the first t-node in this s-node
@@ -78,12 +81,19 @@ sub transform {
               $t_cont->findnodes( './/pml:children/pml:LM', $troot );
             my @tnode_ids = map $_->getAttribute('id'), @nodes_in_this_tree;
             my $match = first { $_ eq $s_first_tnode } @tnode_ids;
-            if ($match) {
-                my $annotators_mwes =
-                  get_annot_mwes( $tdoc, $t_cont, $troot, $annotator );
+            if ($match) { # The s-node belongs here (to this t-root)
+                my $mwes;
+                if ( $t_cont->exists( './pml:mwes', $troot ) ) {
+                    ($mwes) = $t_cont->findnodes( './pml:mwes', $troot );
+                }
+                else {
+                    $mwes = $tdoc->createElementNS( PML_NS, 'mwes' );
+                    $troot->insertBefore( $mwes, $troot->firstChild );
+                }
+                # cut the s-node from s-file and attach it here
                 my $snode_parent = $snode->parentNode;
                 $snode = $snode_parent->removeChild($snode);
-                $annotators_mwes->appendChild($snode);
+                $mwes->appendChild($snode);
             }
         }
     }
@@ -111,40 +121,6 @@ sub is_sfile_format_old {
     }
 }
 
-
-=head1 get_annot_mwes() - Get the element $troot/mwes/$annotator
-
- #TODO uplne predelat, pokud je potreba. Kde se vola?
-=cut
-
-sub get_annot_mwes { #TODO
-    my ( $tdoc, $t_cont, $troot, $annotator ) = @_;
-    my $mwes;
-    if ( $t_cont->exists( './pml:mwes', $troot ) ) {
-        ($mwes) = $t_cont->findnodes( './pml:mwes', $troot );
-    }
-    else {
-        $mwes = $tdoc->createElementNS( PML_NS, 'mwes' );
-        $troot->insertBefore( $mwes, $troot->firstChild );
-    }
-
-    # get the <annotator> element of this t-root for the
-    # $annotator (from the s-file). Create it, if it doesn't exist.
-    my $annot_mwes;
-    if ( $t_cont->exists( './pml:annotator', $mwes ) ) {
-        my @annotators = $t_cont->findnodes( './pml:annotator', $mwes );
-        $annot_mwes =
-          first { $_->getAttribute('name') =~ $annotator } @annotators;
-    }
-    if ( not $annot_mwes )
-    {    # an element for this annotator's MWEs doesn't exist
-        $annot_mwes = $tdoc->createElementNS( PML_NS, 'annotator' );
-        my $name_attr = $tdoc->createAttribute( 'name', $annotator );
-        $name_attr = $annot_mwes->addChild($name_attr);
-        $mwes->insertBefore( $annot_mwes, $mwes->firstChild );
-    }
-    return $annot_mwes;
-}
 
 
 
@@ -192,7 +168,7 @@ sub get_t_trees {
 
 
 
-=head1 correct_snode() - Correct the s-node into a valid form. 
+=head1 correct_snode() - Correct the s-node into a valid form 
 
 Transform the list of references to t-nodes in the st-node into the valid
 format.
@@ -202,20 +178,28 @@ also removes t# prefix from t-node refs, so that they remain valid when they
 are moved directly into the resulting (t-mwe) t-file.
 =cut
 
-sub correct_snode {
-    my ( $sdoc, $s_cont, $snode, $merge_st_into_t ) = @_;
+sub correct_snode { 
+    my ( $sdoc, $s_cont, $snode, $annotator, $merge_st_into_t ) = @_;
 
-    # Modify the s-node to the correct form
+    # Modify the s-node to the correct form:
+    # the t-node refs
     my @tnode_rf = $s_cont->findnodes( './pml:t.rf', $snode );
     map $_->unbindNode, @tnode_rf;
     my $tnode_rfs = $sdoc->createElementNS( PML_NS, 'tnode.rfs' );
     $tnode_rfs = $snode->appendChild($tnode_rfs);
     map {
         $_->setNodeName('LM');
-        my ($textchild) = $_->childNodes;
-        $textchild->replaceDataRegEx( 't#t', 't' ) if $merge_st_into_t;
+        if ($merge_st_into_t){
+            my ($textchild) = $_->childNodes;
+            $textchild->replaceDataRegEx( 't#t', 't' )
+        }
         $tnode_rfs->appendChild($_);
     } @tnode_rf;
+    # and now, if it is to be be merged into t-layer, the s-node itself
+    if ($merge_st_into_t){
+        $snode->setAttribute( 'annotator', "$annotator" );
+        $snode->setNodeName('LM');
+    }
     return;
 }
 
