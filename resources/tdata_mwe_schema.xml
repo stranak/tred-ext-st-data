@@ -14,7 +14,7 @@
   <derive type="t-root.type">
     <structure role="#NODE" name="t-root">
       <member name="mwes" required="0">
-         <list ordered=0 type="st-node.type"/>
+         <list ordered="0" type="st-node.type"/>
       </member>
     </structure>
   </derive>
