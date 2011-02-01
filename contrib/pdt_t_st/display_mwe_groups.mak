@@ -50,7 +50,7 @@
 # The same colours as those used in the annotation tool sem-ann, 
 # except for red for 'real mwes' - i.e. SemLex entries other than NEs
         my %mwe_colours = ( 
-            semlex      => 'red',
+            semlex      => 'red', #originally 'maroon'
             person      => 'olive drab',
             institution => 'hot pink',
             location    => 'Turquoise1',
