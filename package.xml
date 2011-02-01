@@ -6,7 +6,7 @@
   <pkgname>pdt_t_st</pkgname>
   <repository href="http://ufal.mff.cuni.cz/~pajas/tred/extensions/"/>
   <title>Display st-data in the tectogrammatical trees</title>
-  <version>0.8</version>
+  <version>0.9</version>
   <copyright year="2010">Pavel Straňák</copyright>
   <description>Allows to open PML "*.st" files and display the multiword
       expressions annotated therein as node groups in tectogrammatical trees. 
