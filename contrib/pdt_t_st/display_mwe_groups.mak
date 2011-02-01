@@ -1,12 +1,14 @@
-# vim: set ft=perl:
-
 {
 
     package PML_ST_Data;
     use strict;
     BEGIN { import TredMacro; }
 
-    our %annotator;    #to keep stable order of annotators between trees;
+    our %annotator;    
+    #This hash and its use in after_redraw_hook() is needed to keep constant
+    #order of annotators between trees in files that include multiple
+    #annotators' annotations. 
+
 
     sub detect {
         return ( ( PML::SchemaName() || '' ) =~ /tdata/
@@ -45,8 +47,10 @@
     }
 
     sub after_redraw_hook {
-        my %mwe_colours = (
-            semlex      => 'maroon',
+# The same colours as those used in the annotation tool sem-ann, 
+# except for red for 'real mwes' - i.e. SemLex entries other than NEs
+        my %mwe_colours = ( 
+            semlex      => 'red',
             person      => 'olive drab',
             institution => 'hot pink',
             location    => 'Turquoise1',
@@ -57,36 +61,27 @@
             foreign     => '#8a535c',
             other       => 'orange1',
         );
-
-        # cyklus pres anotatory
         my @stipples = (qw(dense1 dense2 dense5 dense6));
-        foreach my $element ( ListV( $root->attr('mwes/annotator' || '') ) ) {
-            my $name = $element->{name};
+        foreach my $snode ( ListV( $root->attr('mwes' || '') ) ) {
+            my $name = $snode->{annotator};
             $annotator{$name} = (keys %annotator)+ 1 if not $annotator{$name};
-            my @stnodes =
-              $element->value()->values();    # get a seq. of st-node values
-            foreach my $mwe_type ( keys %mwe_colours ) {
-                my @these_mwes =
-                  $mwe_type eq 'semlex'
-                  ? grep { $_->{'lexicon-id'} =~ /^s#\d+$/ } @stnodes
-                  : grep { $_->{'lexicon-id'} eq "s##$mwe_type" } @stnodes;
-                foreach my $st (@these_mwes) {
-                    my @group =
-                      map { PML_T::GetNodeByID($_) }
-                      ListV( $st->{'tnode.rfs'} );
-                    TrEd::NodeGroups::draw_groups(
-                        $grp,
-                        [ [@group] ],
-                        {
-                            colors   => [ $mwe_colours{$mwe_type} ],
-                            stipples => [ $stipples[ $annotator{$name} -1 ] ]
-                          # group_line_width => 30, # default
-                        }
-                    );
+            my $mwe_type = $snode->{'lexicon-id'};
+            $mwe_type =~ s/^s#//;
+            if ($mwe_type =~ /^\d+$/){ $mwe_type = 'semlex' }
+            else { $mwe_type =~ s/^#// }
+            my @group = map { PML_T::GetNodeByID($_) } ListV( $snode->{'tnode.rfs'} );
+            TrEd::NodeGroups::draw_groups(
+                $grp,
+                [ [@group] ],
+                {
+                    colors   => [ $mwe_colours{$mwe_type} ],
+                    stipples => [ $stipples[ $annotator{$name} -1 ] ]
                 }
-            }
+            );
         }
     }
 
 }
+# vim: set ft=perl:
+
 1;
