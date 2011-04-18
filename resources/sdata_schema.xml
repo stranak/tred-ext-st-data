@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <pml_schema xmlns="http://ufal.mff.cuni.cz/pdt/pml/schema/" version="1.1">
  <description>PDT 2.0 sense (WSD) annotation</description>
- <reference name="mdata" readas="dom"/>
- <reference name="adata" readas="dom"/>
+<!-- <reference name="mdata" readas="dom"/>-->
+<!-- <reference name="adata" readas="dom"/>-->
  <reference name="tdata" readas="dom"/>
- <reference name="semlex"/> <!-- for SemLex as well as Vallex, etc. -->
+<!-- <reference name="semlex"/> |+ for SemLex as well as Vallex, etc. +|-->
 
  <root name="sdata">
    <structure>
