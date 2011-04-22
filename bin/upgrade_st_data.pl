@@ -1,4 +1,4 @@
-#!/usr/bin/perl 
+#!/usr/bin/env perl 
 # author: Pavel Stranak (stranak@ufal.mff.cuni.cz),
 use strict;
 use warnings;
