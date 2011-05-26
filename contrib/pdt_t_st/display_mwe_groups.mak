@@ -12,7 +12,7 @@
 
     sub detect {
         return ( ( PML::SchemaName() || '' ) =~ /tdata/
-              and PML::Schema->find_type_by_path('!t-root.type/mwes') ? 1 : 0 );
+             and PML::Schema($root)->find_type_by_path('!t-root.type/mwes') ? 1 : 0 );
     }
 
     unshift @TredMacro::AUTO_CONTEXT_GUESSING, sub {
@@ -53,7 +53,7 @@
             semlex      => 'red', #originally 'maroon'
             person      => 'olive drab',
             institution => 'hot pink',
-            location    => 'Turquoise1',
+            location    => 'turquoise1',
             object      => 'plum',
             address     => 'light slate blue',
             time        => 'lime green',
@@ -62,7 +62,12 @@
             other       => 'orange1',
         );
         my @stipples = (qw(dense1 dense2 dense5 dense6));
-        foreach my $snode ( ListV( $root->attr('mwes' || '') ) ) {
+
+        my @groups;
+        my @group_colors;
+        my @group_stipples;
+
+        foreach my $snode ( ListV( $win->{root}->attr('mwes' || '') ) ) {
             my $name = $snode->{annotator};
             $annotator{$name} = (keys %annotator)+ 1 if not $annotator{$name};
             my $mwe_type = $snode->{'lexicon-id'};
@@ -70,15 +75,18 @@
             if ($mwe_type =~ /^\d+$/){ $mwe_type = 'semlex' }
             else { $mwe_type =~ s/^#// }
             my @group = map { PML_T::GetNodeByID($_) } ListV( $snode->{'tnode.rfs'} );
-            TrEd::NodeGroups::draw_groups(
-                $grp,
-                [ [@group] ],
-                {
-                    colors   => [ $mwe_colours{$mwe_type} ],
-                    stipples => [ $stipples[ $annotator{$name} -1 ] ]
-                }
-            );
+            push @groups, [@group];
+            push @group_colors, $mwe_colours{$mwe_type};
+            push @group_stipples, $stipples[ $annotator{$name} -1 ];
         }
+        TrEd::NodeGroups::draw_groups(
+            $grp,
+            \@groups,
+            {
+                colors   => \@group_colors,
+                stipples => \@group_stipples
+            }
+        );
     }
 
 }
