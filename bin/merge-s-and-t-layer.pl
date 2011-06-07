@@ -1,4 +1,4 @@
-#!/usr/bin/perl 
+#!/usr/bin/env perl 
 #===============================================================================
 #
 #         FILE:  merge-s-and-t-layer.pl
@@ -24,7 +24,7 @@ use lib "$FindBin::Bin";
 use SDataMerge;
 use Getopt::Long;
 GetOptions("stdout|S" => \ our $use_stdout,
-           "skip|K" => \ our $skip_existing_st_files)
+           "skip|K" => \ our $skip_existing_tmwe_files)
   or die "Usage: $0 [--stdout|-S] [--skip|-K] <st-files>\n";
 
 my $st_suffix = qr/\.st\.g?zi?p?$/;
@@ -39,8 +39,9 @@ foreach my $s_filename (@ARGV) {
     }
     my $t_mwe_file = $s_filename;
     $t_mwe_file =~ s/$st_suffix/\.t\.mwe\.gz/;
-    if ($skip_existing_st_files and -s $t_mwe_file){
-        warn "$t_mwe_file already exists.";
+    if ($skip_existing_tmwe_files and -s $t_mwe_file){
+        warn 
+         "$t_mwe_file already exists and you wanted to skip existing t-mwe files.";
         next;
     }
     # Parse s-file and get a DOM
