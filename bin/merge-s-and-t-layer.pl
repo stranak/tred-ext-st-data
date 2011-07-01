@@ -20,7 +20,7 @@ use warnings;
 use XML::LibXML;
 
 use FindBin qw($Bin);
-use lib "$FindBin::Bin";
+use lib "$Bin/../libs/";
 use SDataMerge;
 use Getopt::Long;
 GetOptions("stdout|S" => \ our $use_stdout,
