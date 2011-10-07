@@ -67,30 +67,36 @@
 
  <!-- s-node linking a sense to a set of t-nodes -->
  <derive name="st-node.type" type="s-node.type">
-   <structure name="st-node">
+   <structure>
      <member name="consists-of">
-       <list ordered="0">
-           <structure name="component">
-               <member name="ref" required="1"> <cdata format="PMLREF"/> </member>
-               <!-- address components -->
-               <member name="continent" required="0" as_attribute="1"> <cdata format="any"/> </member>
-               <member name="country" required="0" as_attribute="1"> <cdata format="any"/> </member>
-               <member name="state" required="0" as_attribute="1"> <cdata format="any"/> </member>
-               <member name="town" required="0" as_attribute="1"> <cdata format="any"/> </member>
-               <member name="town_part" required="0" as_attribute="1"> <cdata format="any"/> </member>
-               <member name="street" required="0" as_attribute="1"> <cdata format="any"/> </member>
-               <member name="street_number" required="0" as_attribute="1"> <cdata format="any"/> </member>
-               <member name="building" required="0" as_attribute="1"> <cdata format="any"/> </member>
-               <member name="floor" required="0" as_attribute="1"> <cdata format="any"/> </member>
-               <member name="unit_in_building" required="0" as_attribute="1"> <cdata format="any"/> </member>
-               <member name="telephone" required="0" as_attribute="1"> <cdata format="any"/> </member>
-               <member name="fax" required="0" as_attribute="1"> <cdata format="any"/> </member>
-               <member name="email" required="0" as_attribute="1"> <cdata format="any"/> </member>
-               <member name="po_box" required="0" as_attribute="1"> <cdata format="any"/> </member>
-           </structure>
-       </list>
+       <list ordered="0" type="mwe-component.type"/>
      </member> 
    </structure>
  </derive>
+
+ <type name="mwe-component.type">
+     <structure>
+         <member name="ref" required="1"><cdata format="any"/></member>
+         <member name="basic-form" as_attribute="1"><cdata format="string"/></member>
+         <member name="addr-part" as_attribute="1" type="addr-part.type"/>
+     </structure>
+ </type>
+
+<type name="addr-part.type">
+    <choice>
+        <value>country</value>
+        <value>state</value>
+        <value>town</value>
+        <value>town_part</value>
+        <value>street</value>
+        <value>street_nr</value>
+        <value>zip</value>
+        <value>building_name</value>
+        <value>unit</value>
+        <value>email</value>
+        <value>phone</value>
+        <value>fax</value>
+    </choice>
+</type>
 
 </pml_schema>

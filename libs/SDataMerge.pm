@@ -52,9 +52,9 @@ sub transform {
         correct_snode( $sdoc, $s_cont, $snode, $is_sfile_old, $annotator,
             'merge' );
 
-        # ID of the first t-node in this s-node
+# ID of the first t-node in this s-node
         my $s_first_tnode =
-          $s_cont->findvalue( './pml:tnode.rfs/pml:LM[1]', $snode );
+          $s_cont->findvalue( './pml:consists-of/pml:LM/pml:ref[1]', $snode );
 
       TROOT: foreach my $troot ( @{$t_tree_listref} ) {
             my @nodes_in_this_tree =
@@ -92,7 +92,7 @@ sub is_sfile_format_old {
     my $s_cont = shift;
     if ( $s_cont->findnodes('/pml:sdata/pml:wsd/pml:st/pml:t.rf') ) {
         print STDERR
-"Looks like old, not valid s-data file. I will transform its contents.\n";
+"Looks like s-data format v0.1. Applying a small transformation.\n";
         return 1;
     }
     else {
@@ -161,13 +161,13 @@ sub correct_snode {
     # if the s-file is in the old (original) format,
     # the t-node refs in a s-node must be changed to a proper PML list
     if ($is_sfile_old) {
-        my $tnode_rfs = $sdoc->createElementNS( PML_NS, 'tnode.rfs' );
-        $tnode_rfs = $snode->appendChild($tnode_rfs);
+        my $consists_of = $sdoc->createElementNS( PML_NS, 'consists-of' );
+        $consists_of = $snode->appendChild($consists_of);
         my @tnode_rf = $s_cont->findnodes( './pml:t.rf', $snode );
         map {
             $_->unbindNode;
             $_->setNodeName('LM');
-            $tnode_rfs->appendChild($_);
+            $consists_of->appendChild($_);
         } @tnode_rf;
     }
 
@@ -180,7 +180,7 @@ sub correct_snode {
         map {
             my ($textchild) = $_->childNodes;
             $textchild->replaceDataRegEx( 't#t', 't' )
-        } $s_cont->findnodes( './pml:tnode.rfs/pml:LM', $snode );
+        } $s_cont->findnodes( './pml:consists-of/pml:ref', $snode );
 
     }
     return;

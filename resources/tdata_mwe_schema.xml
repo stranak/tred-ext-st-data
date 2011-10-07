@@ -6,7 +6,7 @@
   <import schema="tdata_schema.xml"/>
   <import type="st-node.type" schema="sdata_schema.xml"/>
   <derive type="st-node.type">
-      <structure name="s-node">
+      <structure>
         <member as_attribute="1" name="id" required="1"><cdata format="ID"/></member>
         <member as_attribute="1" name="annotator" required="1"><cdata format="any"/></member>
       </structure>
