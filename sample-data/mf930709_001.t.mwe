@@ -286,6 +286,12 @@
             <LM basic-form="Nerudova" addr-part="street">
               <ref>t#t-mf930709-001-p3s1Bw10</ref>
             </LM>
+            <LM basic-form="testWord" addr-part="zip">
+              <ref>t#t-mf930709-001-p3s1Bw11</ref>
+            </LM>
+            <LM basic-form="4th" addr-part="state">
+              <ref>t#t-mf930709-001-p3s1Bw13</ref>
+            </LM>
           </consists-of>
         </LM>
         <LM id="s-mf930709-001-l61" annotator="stastna">

@@ -22,7 +22,7 @@ sub upgrade_st {
     my $s_cont = XML::LibXML::XPathContext->new( $sdoc->documentElement() );
     $s_cont->registerNs( pml => PML_NS );
     my @snodes = $s_cont->findnodes('/pml:sdata/pml:wsd/pml:st');
-    map correct_snode( $sdoc, $s_cont, $_, 'yes' ), @snodes
+    map correct_snode( $sdoc, $s_cont, $_, 'yes', '', '' ), @snodes
       if is_sfile_format_old($s_cont);
     return $sdoc;
 }
@@ -54,7 +54,7 @@ sub transform {
 
 # ID of the first t-node in this s-node
         my $s_first_tnode =
-          $s_cont->findvalue( './pml:consists-of/pml:LM/pml:ref[1]', $snode );
+          $s_cont->findvalue( './pml:consists-of/pml:LM[1]/pml:ref', $snode );
 
       TROOT: foreach my $troot ( @{$t_tree_listref} ) {
             my @nodes_in_this_tree =
@@ -101,7 +101,7 @@ sub is_sfile_format_old {
     }
 }
 
-=head1 get_t_trees() - Find the relevant t-trees for this st-doc
+=head1 get_t_trees() - Find the relevant t-file for this st-file
 
 Gets DOM and XPath context of an st-file and returns information about
 tectogrammatical file that this st-file will be merged into.
@@ -166,8 +166,10 @@ sub correct_snode {
         my @tnode_rf = $s_cont->findnodes( './pml:t.rf', $snode );
         map {
             $_->unbindNode;
-            $_->setNodeName('LM');
-            $consists_of->appendChild($_);
+            $_->setNodeName('ref');
+            my $LM = $sdoc->createElementNS( PML_NS, 'LM' );
+            $consists_of->appendChild($LM);
+            $LM->appendChild($_);
         } @tnode_rf;
     }
 
@@ -180,7 +182,7 @@ sub correct_snode {
         map {
             my ($textchild) = $_->childNodes;
             $textchild->replaceDataRegEx( 't#t', 't' )
-        } $s_cont->findnodes( './pml:consists-of/pml:ref', $snode );
+        } $s_cont->findnodes( './pml:consists-of/pml:LM/pml:ref', $snode );
 
     }
     return;
