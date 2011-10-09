@@ -67,7 +67,6 @@
         my @group_colors;
         my @group_stipples;
 
-#        use Data::Dumper;
         foreach my $snode ( ListV( $root->attr('mwes' || '') ) ) {
             my $name = $snode->{annotator};
             $annotator{$name} = (keys %annotator)+ 1 if not $annotator{$name};
@@ -76,10 +75,8 @@
             if ($mwe_type =~ /^\d+$/){ $mwe_type = 'semlex' }
             else { $mwe_type =~ s/^#// }
             my @group = map { 
-#                print Dumper $_->{ref};
                 PML_T::GetNodeByID($_->{ref}); 
                  } ListV( $snode->{'consists-of'} );
-#            print "@group\n";
             push @groups, [@group];
             push @group_colors, $mwe_colours{$mwe_type};
             push @group_stipples, $stipples[ $annotator{$name} -1 ];

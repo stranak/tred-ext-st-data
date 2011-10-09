@@ -52,7 +52,7 @@ sub transform {
         correct_snode( $sdoc, $s_cont, $snode, $is_sfile_old, $annotator,
             'merge' );
 
-# ID of the first t-node in this s-node
+        # ID of the first t-node in this s-node
         my $s_first_tnode =
           $s_cont->findvalue( './pml:consists-of/pml:LM[1]/pml:ref', $snode );
 
@@ -92,7 +92,7 @@ sub is_sfile_format_old {
     my $s_cont = shift;
     if ( $s_cont->findnodes('/pml:sdata/pml:wsd/pml:st/pml:t.rf') ) {
         print STDERR
-"Looks like s-data format v0.1. Applying a small transformation.\n";
+          "Looks like s-data format v0.1. Applying a small transformation.\n";
         return 1;
     }
     else {
