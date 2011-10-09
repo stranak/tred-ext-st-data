@@ -12,7 +12,7 @@
 
     sub detect {
         return ( ( PML::SchemaName() || '' ) =~ /tdata/
-             and PML::Schema($root)->find_type_by_path('!t-root.type/mwes') ? 1 : 0 );
+             and PML::Schema->find_type_by_path('!t-root.type/mwes') ? 1 : 0 );
     }
 
     unshift @TredMacro::AUTO_CONTEXT_GUESSING, sub {
@@ -67,14 +67,19 @@
         my @group_colors;
         my @group_stipples;
 
-        foreach my $snode ( ListV( $win->{root}->attr('mwes' || '') ) ) {
+#        use Data::Dumper;
+        foreach my $snode ( ListV( $root->attr('mwes' || '') ) ) {
             my $name = $snode->{annotator};
             $annotator{$name} = (keys %annotator)+ 1 if not $annotator{$name};
             my $mwe_type = $snode->{'lexicon-id'};
             $mwe_type =~ s/^s#//;
             if ($mwe_type =~ /^\d+$/){ $mwe_type = 'semlex' }
             else { $mwe_type =~ s/^#// }
-            my @group = map { PML_T::GetNodeByID($_) } ListV( $snode->{'tnode.rfs'} );
+            my @group = map { 
+#                print Dumper $_->{ref};
+                PML_T::GetNodeByID($_->{ref}); 
+                 } ListV( $snode->{'consists-of'} );
+#            print "@group\n";
             push @groups, [@group];
             push @group_colors, $mwe_colours{$mwe_type};
             push @group_stipples, $stipples[ $annotator{$name} -1 ];
