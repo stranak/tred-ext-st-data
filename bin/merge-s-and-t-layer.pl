@@ -23,40 +23,50 @@ use FindBin qw($Bin);
 use lib "$Bin/../libs/";
 use SDataMerge;
 use Getopt::Long;
-GetOptions("stdout|S" => \ our $use_stdout,
-           "skip|K" => \ our $skip_existing_tmwe_files)
-  or die "Usage: $0 [--stdout|-S] [--skip|-K] <st-files>\n";
+GetOptions(
+    "stdout|S" => \our $use_stdout,
+    "skip|K"   => \our $skip_existing_tmwe_files
+) or die "Usage: $0 [--stdout|-S] [--skip|-K] <st-files>\n";
 
 my $st_suffix = qr/\.st\.g?zi?p?$/;
 
-foreach my $s_filename (@ARGV) {
+SFILE: foreach my $s_filename (@ARGV) {
 
     # Check which files to merge
     chomp $s_filename;
-    if ($s_filename !~ $st_suffix ) {
+    if ( $s_filename !~ $st_suffix ) {
         warn "$s_filename is not named like an 'st' file.";
-        next;
+        next SFILE;
     }
     my $t_mwe_file = $s_filename;
     $t_mwe_file =~ s/$st_suffix/\.t\.mwe\.gz/;
-    if ($skip_existing_tmwe_files and -s $t_mwe_file){
-        warn 
-         "$t_mwe_file already exists and you wanted to skip existing t-mwe files.";
-        next;
+    if ( $skip_existing_tmwe_files and -s $t_mwe_file ) {
+        warn
+"$t_mwe_file already exists and you wanted to skip existing t-mwe files.";
+        next SFILE;
     }
+
     # Parse s-file and get a DOM
     my $parser = XML::LibXML->new();
     $parser->keep_blanks(0);
-    my $sdoc   = $parser->parse_file($s_filename);
+    my $sdoc = $parser->parse_file($s_filename);
+
     # The merge itself (an external lib function)
     my $tdoc = SDataMerge::transform($sdoc);
+    if ( $tdoc eq 'empty s-file' ) {
+        print STDERR
+          "Skipping the file $s_filename, because it contains no st-nodes.";
+        next SFILE;
+    }
+
     # And output of the merged PML file
     if ($use_stdout) {
-      $tdoc->toFH(\*STDOUT);
-    } else {
-      my $tmwe_filename = $tdoc->URI;
-      $tmwe_filename =~ s/t\.gz$/t\.mwe\.gz/;
-      $tdoc->setCompression('6');
-      $tdoc->toFile( $tmwe_filename, 1 );
+        $tdoc->toFH( \*STDOUT );
+    }
+    else {
+        my $tmwe_filename = $tdoc->URI;
+        $tmwe_filename =~ s/t\.gz$/t\.mwe\.gz/;
+        $tdoc->setCompression('6');
+        $tdoc->toFile( $tmwe_filename, 1 );
     }
 }
