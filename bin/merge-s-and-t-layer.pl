@@ -49,7 +49,7 @@ foreach my $s_filename (@ARGV) {
     $parser->keep_blanks(0);
     my $sdoc   = $parser->parse_file($s_filename);
     # The merge itself (an external lib function)
-    my $tdoc = SDataMerge::transform($sdoc);
+    my $tdoc = SDataMerge::transform($sdoc, $s_filename);
     # And output of the merged PML file
     if ($use_stdout) {
       $tdoc->toFH(\*STDOUT);

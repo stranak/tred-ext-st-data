@@ -33,12 +33,25 @@ sub upgrade_st {
 =cut
 
 sub transform {
-    my ($sdoc) = @_;
+    my ( $sdoc, $s_filename ) = @_;
     my $s_cont = XML::LibXML::XPathContext->new( $sdoc->documentElement() );
     $s_cont->registerNs( pml => PML_NS );
-    my $annotator = $s_cont->findvalue(
+    my $annot_string = $s_cont->findvalue(
         '/pml:sdata/pml:meta/pml:annotation_info/pml:annotator');
-    $annotator =~ s/.*?(\w+)$/$1/;
+    my $annotator = $annot_string;
+    $annotator =~ s/.*?(\w+)\W*$/$1/;
+
+    # Warning with a filename and the node "annotator" from the
+    # s-file metadata, in case we can't get a word by parsing the
+    # element
+    if ( not $annotator ) {
+        if (not $s_filename){ 
+            # the function is being used interactively from TrEd
+            $s_filename = 'this file';
+        }
+        print STDERR
+"No annotator name in $s_filename\'s annotator node: \'$annot_string\'.";
+    }
 
     my ( $t_tree_listref, $tdoc, $t_cont, $t_schema ) =
       get_t_trees( $sdoc, $s_cont );
