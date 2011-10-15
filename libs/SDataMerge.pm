@@ -53,7 +53,7 @@ sub transform {
 "No annotator name in $s_filename\'s annotator node: \'$annot_string\'.";
     }
 
-    my ( $t_tree_listref, $tdoc, $t_cont, $t_schema ) =
+    my ( $t_tree_listref, $tdoc, $t_cont, $t_schema, $last_annot_id_suffix ) =
       get_t_trees( $sdoc, $s_cont );
     $t_schema->setAttribute( 'href', 'tdata_mwe_schema.xml' );
 
@@ -86,6 +86,8 @@ sub transform {
                 my $mwes;
                 if ( $t_cont->exists( './pml:mwes', $troot ) ) {
                     ($mwes) = $t_cont->findnodes( './pml:mwes', $troot );
+                    # check for existing annotators, get this annotator the
+                    # next unocuppied letter-suffix (A-Z).
                 }
                 else {
                     $mwes = $tdoc->createElementNS( PML_NS, 'mwes' );
@@ -164,7 +166,30 @@ sub get_t_trees {
     $t_cont->registerNs( pml => PML_NS );
     my @t_trees = $t_cont->findnodes('/pml:tdata/pml:trees/pml:LM');
     my ($t_schema) = $t_cont->findnodes('/pml:tdata/pml:head/pml:schema');
-    return ( \@t_trees, $tdoc, $t_cont, $t_schema );
+
+    # s-node IDs are unique only for a given annotator.
+    # So they can conflict, if merging several annotators' s-nodes. 
+    # So, if we are taking an existing tmwe-file:
+    if ( -s $t_mwe_file_abs_path ){
+        # - get the s-node (MWE) IDs already in the t-file.
+        my @this_file_mwe_ids = ();
+        foreach my $t_tree (@t_trees){
+            my @mwes = $t_tree->findnodes('pml:mwes/pml:LM');
+            my @mwe_ids = map { $_->getAttribute('id') } @mwes;
+            push @this_file_mwe_ids, @mwe_ids;
+        }
+    
+        # - check for the last annotator-suffix used
+        # TODO
+
+        # - get the next letter and set it as the suffix for this s-file's
+        # annotator
+        # TODO
+    }
+
+
+
+    return ( \@t_trees, $tdoc, $t_cont, $t_schema, $last_annot_id_suffix );
 }
 
 =head1 correct_snode() - Correct the s-node into a valid form 
