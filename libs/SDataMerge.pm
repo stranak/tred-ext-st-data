@@ -57,8 +57,15 @@ sub transform {
       get_t_trees( $sdoc, $s_cont );
     $t_schema->setAttribute( 'href', 'tdata_mwe_schema.xml' );
 
-    # Modify the s-nodes to the correct form and merge them into t-trees
-    my @snodes       = $s_cont->findnodes('/pml:sdata/pml:wsd/pml:st');
+    # Modify the s-nodes to the correct form and merge them into t-trees ...
+    my @snodes = $s_cont->findnodes('/pml:sdata/pml:wsd/pml:st');
+
+    # ... if there are any s-nodes, of course
+    if ( scalar(@snodes) == 0 ) {
+        $tdoc = 'empty s-file';
+        return $tdoc;
+    }
+
     my $is_sfile_old = is_sfile_format_old($s_cont);
   SNODE:
     foreach my $snode (@snodes) {
@@ -107,6 +114,10 @@ sub is_sfile_format_old {
         print STDERR
           "Looks like s-data format v0.1. Applying a small transformation.\n";
         return 1;
+    }
+    elsif ( not $s_cont->findnodes('/pml:sdata/pml:wsd/pml:st') ) {
+        print STDERR "The s-data file contains no st-node.\n";
+        return;
     }
     else {
         print STDERR "Looks like a valid s-data file.\n";
