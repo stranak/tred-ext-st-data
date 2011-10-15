@@ -22,7 +22,7 @@ sub upgrade_st {
     my $s_cont = XML::LibXML::XPathContext->new( $sdoc->documentElement() );
     $s_cont->registerNs( pml => PML_NS );
     my @snodes = $s_cont->findnodes('/pml:sdata/pml:wsd/pml:st');
-    map correct_snode( $sdoc, $s_cont, $_, 'yes', '', '' ), @snodes
+    map correct_snode( $sdoc, $s_cont, $_, 'yes', '', '', '' ), @snodes
       if is_sfile_format_old($s_cont);
     return $sdoc;
 }
@@ -45,7 +45,8 @@ sub transform {
     # s-file metadata, in case we can't get a word by parsing the
     # element
     if ( not $annotator ) {
-        if (not $s_filename){ 
+        if ( not $s_filename ) {
+
             # the function is being used interactively from TrEd
             $s_filename = 'this file';
         }
@@ -53,24 +54,26 @@ sub transform {
 "No annotator name in $s_filename\'s annotator node: \'$annot_string\'.";
     }
 
-    my ( $t_tree_listref, $tdoc, $t_cont, $t_schema ) =
+    my ( $t_tree_listref, $tdoc, $t_cont, $t_schema, $annot_id_suffix ) =
       get_t_trees( $sdoc, $s_cont );
     $t_schema->setAttribute( 'href', 'tdata_mwe_schema.xml' );
 
-    # Modify the s-nodes to the correct form and merge them into t-trees ...
-    my @snodes = $s_cont->findnodes('/pml:sdata/pml:wsd/pml:st');
+    # if this t-file does not yet include any MWE annotations, this annotator
+    # is the first. Thus his IDs get the suffix 'A'.
+    $annot_id_suffix = 'A' if not $annot_id_suffix;
 
+    # Modify the s-nodes to the correct form and merge them into t-trees ...
     # ... if there are any s-nodes, of course
+    my @snodes = $s_cont->findnodes('/pml:sdata/pml:wsd/pml:st');
     if ( scalar(@snodes) == 0 ) {
         $tdoc = 'empty s-file';
         return $tdoc;
     }
-
     my $is_sfile_old = is_sfile_format_old($s_cont);
   SNODE:
     foreach my $snode (@snodes) {
         correct_snode( $sdoc, $s_cont, $snode, $is_sfile_old, $annotator,
-            'merge' );
+            $annot_id_suffix, 'merge' );
 
         # ID of the first t-node in this s-node
         my $s_first_tnode =
@@ -137,6 +140,11 @@ exist, the original PDT t-file is taken.
 
 The function returns a list of t-trees, DOM of the t-document, its XPath
 context and name of its PML schema (to be modified for t.mwe file).
+
+In case of merging with an existing t.mwe file the existing s-node IDs are
+checked and a unique single-letter suffix for this annotator (to be added to
+his s-node IDs) is returned as the last argument.
+
 =cut
 
 sub get_t_trees {
@@ -164,7 +172,36 @@ sub get_t_trees {
     $t_cont->registerNs( pml => PML_NS );
     my @t_trees = $t_cont->findnodes('/pml:tdata/pml:trees/pml:LM');
     my ($t_schema) = $t_cont->findnodes('/pml:tdata/pml:head/pml:schema');
-    return ( \@t_trees, $tdoc, $t_cont, $t_schema );
+
+    # s-node IDs are unique only for a given annotator.
+    # So they can conflict, if merging several annotators' s-nodes.
+    # So, if we are taking an existing tmwe-file:
+    my $annot_id_suffix;
+    if ( -s $t_mwe_file_abs_path ) {
+
+        # 1) get the s-node (MWE) IDs already in the t-file.
+        my @this_file_mwe_ids = ();
+        foreach my $t_tree (@t_trees) {
+            my @mwes = $t_tree->findnodes('pml:mwes/pml:LM');
+            my @mwe_ids = map { $_->getAttribute('id') } @mwes;
+            push @this_file_mwe_ids, @mwe_ids;
+        }
+
+        print STDERR "IDs: ", join ', ', @this_file_mwe_ids, "\n";
+
+        # 2) check for the last annotator-suffix used
+        my @suffixes = map chop, grep /[A-Z]$/, @this_file_mwe_ids;
+        @suffixes = sort @suffixes;
+        print STDERR "SUF: ", join ', ', @suffixes, "\n";
+        $annot_id_suffix = pop @suffixes;
+
+        # 3) get the next letter and set it as the suffix for this s-file's
+        # annotator
+        $annot_id_suffix = chr( ord($annot_id_suffix) + 1 );
+        say STDERR "MY ID: $annot_id_suffix";
+    }
+
+    return ( \@t_trees, $tdoc, $t_cont, $t_schema, $annot_id_suffix );
 }
 
 =head1 correct_snode() - Correct the s-node into a valid form 
@@ -173,13 +210,17 @@ Transform the list of references to t-nodes in the st-node into the valid
 format.
 
 If the function is called in the context of merging st-layer into t-layer, it
-also removes t# prefix from t-node refs, so that they remain valid when they
-are moved directly into the resulting (t-mwe) t-file.
+also: 
+1) removes t# prefix from t-node refs, so that they remain valid when they
+are moved directly into the resulting (t-mwe) t-file, and
+2) gives each s-node (mwes/LM now) ID a suffix, so that s-node IDs are unique
+even in case we merge several annotators' s-nodes into one t-tree.
 =cut
 
 sub correct_snode {
-    my ( $sdoc, $s_cont, $snode, $is_sfile_old, $annotator, $merge_st_into_t ) =
-      @_;
+    my ( $sdoc, $s_cont, $snode, $is_sfile_old, $annotator, $annot_suffix,
+        $merge_st_into_t )
+      = @_;
 
     # Modify the s-node to the correct form:
     # if the s-file is in the old (original) format,
@@ -201,6 +242,12 @@ sub correct_snode {
     if ($merge_st_into_t) {
         $snode->setAttribute( 'annotator', "$annotator" );
         $snode->setNodeName('LM');
+
+        # add the annotator-specific suffix to the s-node ID
+        # see the function get_t_trees() for its setting
+        my $id = $snode->getAttribute('id');
+        $id = $id . $annot_suffix;
+        $snode->setAttribute( 'id', "$id" );
 
         # correct the t-node refs (not stand-off any more)
         map {
