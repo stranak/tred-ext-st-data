@@ -1,4 +1,15 @@
-#       AUTHOR:  Pavel Stranak (stranak@ufal.mff.cuni.cz),
+=head1 SDataMerge: the s-data merging library
+
+=head2 AUTHOR:  Pavel Stranak (C<stranak@ufal.mff.cuni.cz>)
+
+The library that handles merging PML s-files into t-files of the
+Prague dependency treebank. It also allows to upgrade various legacy versions
+of s-data to the current specification.
+
+The documentation below describes the functions of this library. The function 
+L<transform()|transform> is the transformation used in the C<TrEd> extension.
+=cut
+
 package SDataMerge;
 
 use strict;
@@ -10,7 +21,7 @@ use List::Util qw(first);
 
 use constant PML_NS => 'http://ufal.mff.cuni.cz/pdt/pml/';
 
-=head1 upgrade_st() - Upgrade (i.e. correct) the st-file, if needed
+=head2 upgrade_st() - Upgrade (i.e. correct) the st-file, if needed
 
  Original s-files produced during annotations are not valid (according to the
  sdata schema) and they need to be transformed. This function checks whether
@@ -27,7 +38,7 @@ sub upgrade_st {
     return $sdoc;
 }
 
-=head1 transform() - Merge st-layer information into t-layer
+=head2 transform() - Merge st-layer information into t-layer
 
  This is the main merging function.
 =cut
@@ -108,7 +119,7 @@ sub transform {
     return $tdoc;
 }
 
-=head1 is_sfile_format_old() - Check the version of an s-file (return BOOL)
+=head2 is_sfile_format_old() - Check the version of an s-file (return BOOL)
 
  Original s-files produced during annotations are not valid (according to the
  sdata schema) and they need to be transformed.
@@ -131,7 +142,7 @@ sub is_sfile_format_old {
     }
 }
 
-=head1 get_t_trees() - Find the relevant t-file for this st-file
+=head2 get_t_trees() - Find the relevant t-file for this st-file
 
 Gets DOM and XPath context of an st-file and returns information about
 tectogrammatical file that this st-file will be merged into.
@@ -148,7 +159,7 @@ In case of merging with an existing t.mwe file the existing s-node IDs are
 checked and a unique single-letter suffix for this annotator (to be added to
 his s-node IDs) is returned as the last argument. 
 
-Warning: If a single document is merged twice, this functon will generate a
+B<Warning:> If a single document is merged twice, this functon will generate a
 unique suffix each time and the duplicate s-nodes are generated, only with
 unique ID, due to the new suffix.
 
@@ -209,17 +220,28 @@ sub get_t_trees {
     return ( \@t_roots, $tdoc, $t_cont, $t_schema, $annot_id_suffix );
 }
 
-=head1 correct_snode() - Correct the s-node into a valid form 
+=head2 correct_snode() - Correct the s-node into a valid form 
 
 Transform the list of references to t-nodes in the st-node into the valid
 format.
 
 If the function is called in the context of merging st-layer into t-layer, it
 also: 
-1) removes t# prefix from t-node refs, so that they remain valid when they
+
+=over 2
+
+=item *
+
+Removes C<t#> prefix from t-node refs, so that they remain valid when they
 are moved directly into the resulting (t-mwe) t-file, and
-2) gives each s-node (mwes/LM now) ID a suffix, so that s-node IDs are unique
+
+=item *
+
+Gives each s-node (C<mwes/LM> now) ID a suffix, so that s-node IDs are unique
 even in case we merge several annotators' s-nodes into one t-tree.
+
+=back
+
 =cut
 
 sub correct_snode {
