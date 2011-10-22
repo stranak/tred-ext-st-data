@@ -5,7 +5,7 @@ use warnings;
 use XML::LibXML;
 
 use FindBin qw($Bin);
-use lib "$FindBin::Bin";
+use lib "$Bin/../libs/";
 use File::Copy;
 use SDataMerge;
 use Getopt::Long;

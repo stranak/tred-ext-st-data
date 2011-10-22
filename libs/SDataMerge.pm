@@ -146,7 +146,11 @@ context and name of its PML schema (to be modified for t.mwe file).
 
 In case of merging with an existing t.mwe file the existing s-node IDs are
 checked and a unique single-letter suffix for this annotator (to be added to
-his s-node IDs) is returned as the last argument.
+his s-node IDs) is returned as the last argument. 
+
+Warning: If a single document is merged twice, this functon will generate a
+unique suffix each time and the duplicate s-nodes are generated, only with
+unique ID, due to the new suffix.
 
 =cut
 
@@ -173,7 +177,7 @@ sub get_t_trees {
     my $tdoc   = $parser->parse_file($t_file_URI);
     my $t_cont = XML::LibXML::XPathContext->new( $tdoc->documentElement() );
     $t_cont->registerNs( pml => PML_NS );
-    my @t_trees = $t_cont->findnodes('/pml:tdata/pml:trees/pml:LM');
+    my @t_roots = $t_cont->findnodes('/pml:tdata/pml:trees/pml:LM');
     my ($t_schema) = $t_cont->findnodes('/pml:tdata/pml:head/pml:schema');
 
     # s-node IDs are unique only for a given annotator.
@@ -184,27 +188,25 @@ sub get_t_trees {
 
         # 1) get the s-node (MWE) IDs already in the t-file.
         my @this_file_mwe_ids = ();
-        foreach my $t_tree (@t_trees) {
-            my @mwes = $t_tree->findnodes('pml:mwes/pml:LM');
+        foreach my $t_root (@t_roots) {
+            my @mwes = $t_cont->findnodes( 'pml:mwes/pml:LM', $t_root );
             my @mwe_ids = map { $_->getAttribute('id') } @mwes;
             push @this_file_mwe_ids, @mwe_ids;
         }
 
-        print STDERR "IDs: ", join ', ', @this_file_mwe_ids, "\n";
-
         # 2) check for the last annotator-suffix used
-        my @suffixes = map chop, grep /[A-Z]$/, @this_file_mwe_ids;
-        @suffixes = sort @suffixes;
-        print STDERR "SUF: ", join ', ', @suffixes, "\n";
-        $annot_id_suffix = pop @suffixes;
+        my %seen;
+        my @suff = sort grep { $_ = chop; !$seen{$_}++ } @this_file_mwe_ids;
+        print STDERR "MWE annot. suffixes used: ", join ', ', @suff, "\n";
+        $annot_id_suffix = pop @suff;
 
         # 3) get the next letter and set it as the suffix for this s-file's
         # annotator
         $annot_id_suffix = chr( ord($annot_id_suffix) + 1 );
-        say STDERR "MY ID: $annot_id_suffix";
+        print STDERR "This annotator's MWE ID suffix: $annot_id_suffix\n";
     }
 
-    return ( \@t_trees, $tdoc, $t_cont, $t_schema, $annot_id_suffix );
+    return ( \@t_roots, $tdoc, $t_cont, $t_schema, $annot_id_suffix );
 }
 
 =head1 correct_snode() - Correct the s-node into a valid form 
