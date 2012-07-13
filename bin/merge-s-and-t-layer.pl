@@ -1,9 +1,9 @@
 #!/usr/bin/env perl 
 #===============================================================================
 #
-#         FILE:  merge-s-and-t-layer.pl
+#   FILE:  merge-s-and-t-layer.pl
 #
-#        USAGE:  ./merge-s-and-t-layer.pl [--stdout|-S  --skip|-K] <st-files>
+#   USAGE:  ./merge-s-and-t-layer.pl [--stdout|-S  --skip|-K --compress|-c] <st-files>
 #
 #  DESCRIPTION:  Integrate the s-layer annotation into the t-layer files.
 #
@@ -24,11 +24,17 @@ use lib "$Bin/../libs/";
 use SDataMerge;
 use Getopt::Long;
 GetOptions(
-    "stdout|S" => \our $use_stdout,
-    "skip|K"   => \our $skip_existing_tmwe_files
-) or die "Usage: $0 [--stdout|-S] [--skip|-K] <st-files>\n";
+    "stdout|S"   => \our $use_stdout,
+    "skip|K"     => \our $skip_existing_tmwe_files,
+    "compress=i" => \our $compress
+) or die "Usage: $0 [--stdout|-S --skip|-K --compress=(0|1)] <st-files>\n";
 
-my $st_suffix = qr/\.st\.g?zi?p?$/;
+if ( defined $compress and $compress != 0 and $compress != 1 ) {
+    die
+"The option --compress specifies whether the output should be gzipped. Its value must be 0 or 1.";
+}
+
+my $st_suffix = qr/\.st(?:\.gz|\.zip)?$/;
 
 SFILE: foreach my $s_filename (@ARGV) {
 
@@ -38,11 +44,17 @@ SFILE: foreach my $s_filename (@ARGV) {
         warn "$s_filename is not named like an 'st' file.";
         next SFILE;
     }
+
+    # check for pre-existing t-mwe files and whether we should skip them
+    # or not. We look for ANY (gzipped or not) t-mwe files.
     my $t_mwe_file = $s_filename;
-    $t_mwe_file =~ s/$st_suffix/\.t\.mwe\.gz/;
-    if ( $skip_existing_tmwe_files and -s $t_mwe_file ) {
+    $t_mwe_file =~ s/$st_suffix/\.t\.mwe/;
+    my $t_mwe_file_gzipped = "$t_mwe_file" . ".gz";
+    if ( $skip_existing_tmwe_files
+        and ( -s $t_mwe_file or -s $t_mwe_file_gzipped ) )
+    {
         warn
-"$t_mwe_file already exists and you wanted to skip existing t-mwe files.";
+"$t_mwe_file already exists and you wanted to skip existing t-mwe files . ";
         next SFILE;
     }
 
@@ -52,21 +64,30 @@ SFILE: foreach my $s_filename (@ARGV) {
     my $sdoc = $parser->parse_file($s_filename);
 
     # The merge itself (an external lib function)
-    my $tdoc = SDataMerge::transform($sdoc);
+    my $tdoc = SDataMerge::transform( $sdoc, $s_filename );
     if ( $tdoc eq 'empty s-file' ) {
         print STDERR
-          "Skipping the file $s_filename, because it contains no st-nodes.";
+          " Skipping the file $s_filename, because it contains no st-nodes . ";
         next SFILE;
     }
 
-    # And output of the merged PML file
+    # And output of the merged PML file to STDOUT or write to a file.
+    # If the compression was not explicitly set (requested or forbidden),
+    # then if the s-file was gzipped, compress the t-mwe file too.
     if ($use_stdout) {
         $tdoc->toFH( \*STDOUT );
     }
     else {
         my $tmwe_filename = $tdoc->URI;
-        $tmwe_filename =~ s/t\.gz$/t\.mwe\.gz/;
-        $tdoc->setCompression('6');
+        $tmwe_filename =~ s/t\.gz$/t\.mwe/;
+
+        $compress = 1 if !$compress and $s_filename =~ /\.gz|\.zip/;
+        if ( $compress == 1 ) { 
+            $tmwe_filename .= " . gz ";
+            $tdoc->setCompression('6');
+        }
+        else { $tdoc->setCompression('-1') }
+
         $tdoc->toFile( $tmwe_filename, 1 );
     }
 }
