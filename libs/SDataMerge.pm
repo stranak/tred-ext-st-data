@@ -147,9 +147,9 @@ sub is_sfile_format_old {
 Gets DOM and XPath context of an st-file and returns information about
 tectogrammatical file that this st-file will be merged into.
 
-First candidate is a *.t.mwe.gz file of the same basename, i.e. a t-layer
+First candidate is a *.t.mwe file of the same basename, i.e. a t-layer
 file that has already been merged with some st-file. This is done to merge
-multiple annotations into the t.mwe.gz file. Only if this file dosn't yet
+multiple annotations into the t.mwe file. Only if this file dosn't yet
 exist, the original PDT t-file is taken.
 
 The function returns a list of t-trees, DOM of the t-document, its XPath
@@ -158,6 +158,12 @@ context and name of its PML schema (to be modified for t.mwe file).
 In case of merging with an existing t.mwe file the existing s-node IDs are
 checked and a unique single-letter suffix for this annotator (to be added to
 his s-node IDs) is returned as the last argument. 
+
+B<Warning:> It is not advisable to keep bot compressed and uncompressed t.mwe
+files in the same directory. Should they be there the behaviour if as follows:
+The uncompressed t.mwe file has a precedence and so it is chosen for merging.
+However the output can still end up in the t.mwe.gz file. This depends on the
+caller script that uses this library!
 
 B<Warning:> If a single document is merged twice, this functon will generate a
 unique suffix each time and the duplicate s-nodes are generated, only with
@@ -176,12 +182,14 @@ sub get_t_trees {
       URI->new_abs( $t_filename,
         URI->new( $sdoc->URI )->abs( URI::file->cwd ) );
 
-    # Take t.mwe.gz instead, if it exists!
+    # Take t.mwe(.gz) instead, if it exists!
     my $t_mwe_file_URI = $t_file_URI;
-    $t_mwe_file_URI =~ s/t\.gz$/t\.mwe\.gz/;
+    $t_mwe_file_URI =~ s/t\.gz$/t\.mwe/;
     my $t_mwe_file_abs_path = $t_mwe_file_URI;
     $t_mwe_file_abs_path =~ s{file://}{};
-    $t_file_URI = -s $t_mwe_file_abs_path ? $t_mwe_file_URI : $t_file_URI;
+    $t_file_URI = -s $t_mwe_file_abs_path       ? $t_mwe_file_URI
+                : -s $t_mwe_file_abs_path.".gz" ? $t_mwe_file_URI.".gz"
+                :                                 $t_file_URI;
 
     my $parser = XML::LibXML->new();
     $parser->keep_blanks(0);
