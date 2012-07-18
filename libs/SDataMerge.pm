@@ -218,6 +218,7 @@ sub get_t_trees {
         my @suff = sort grep { $_ = chop; !$seen{$_}++ } @this_file_mwe_ids;
         print STDERR "MWE annot. suffixes used: ", join ', ', @suff, "\n";
         $annot_id_suffix = pop @suff;
+        die "There are 25 annotations already! We do not support more." if $annot_id_suffix eq 'Z';
 
         # 3) get the next letter and set it as the suffix for this s-file's
         # annotator
