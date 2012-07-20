@@ -91,8 +91,11 @@ sub transform {
           $s_cont->findvalue( './pml:consists-of/pml:LM[1]/pml:ref', $snode );
 
       TROOT: foreach my $troot ( @{$t_tree_listref} ) {
-            my @nodes_in_this_tree =
-              $t_cont->findnodes( './/pml:children/pml:LM', $troot );
+            my @nodes_in_this_tree = (
+                $t_cont->findnodes( './/pml:children/pml:LM', $troot ),
+                # and just in case the t-files use the PML 1-member-list folding
+                $t_cont->findnodes( './/pml:children[@id]',   $troot ),
+            );
             my @tnode_ids = map $_->getAttribute('id'), @nodes_in_this_tree;
             my $match = first { $_ eq $s_first_tnode } @tnode_ids;
             if ($match) {    # The s-node belongs here (to this t-root)
