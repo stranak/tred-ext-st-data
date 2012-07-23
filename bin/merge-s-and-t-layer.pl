@@ -85,7 +85,7 @@ SFILE: foreach my $s_filename (@ARGV) {
             $compress = $s_filename =~ /\.gz|\.zip/ ? 1 : 0;
         }
         if ( $compress == 1 ) { 
-            $tmwe_filename .= " . gz ";
+            $tmwe_filename .= ".gz";
             $tdoc->setCompression('6');
         }
         else { $tdoc->setCompression('-1') }
