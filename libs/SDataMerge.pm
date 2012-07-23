@@ -34,7 +34,7 @@ sub upgrade_st {
     $s_cont->registerNs( pml => PML_NS );
     my @snodes = $s_cont->findnodes('/pml:sdata/pml:wsd/pml:st');
     map correct_snode( $sdoc, $s_cont, $_, 'yes', '', '', '' ), @snodes
-      if is_sfile_format_old($s_cont);
+      if is_sfile_format_old($s_cont); # TODO 'yes' should be either 1 or 2
     return $sdoc;
 }
 
@@ -89,6 +89,10 @@ sub transform {
         # ID of the first t-node in this s-node
         my $s_first_tnode =
           $s_cont->findvalue( './pml:consists-of/pml:LM[1]/pml:ref', $snode );
+        if ( !$s_first_tnode ) {
+          warn "There is no such node: consists-of/LM/ref. Skipped.\n";
+          next;
+        }
 
       TROOT: foreach my $troot ( @{$t_tree_listref} ) {
             my @nodes_in_this_tree = (
@@ -135,13 +139,22 @@ sub is_sfile_format_old {
           "Looks like s-data format v0.1. Applying a small transformation.\n";
         return 1;
     }
+    elsif ( $s_cont->findnodes('/pml:sdata/pml:wsd/pml:st/pml:tnode.rfs') ) {
+        print STDERR
+          "Looks like s-data format v0.2. Applying a small transformation.\n";
+        return 2;
+    }
     elsif ( not $s_cont->findnodes('/pml:sdata/pml:wsd/pml:st') ) {
         print STDERR "The s-data file contains no st-node.\n";
         return;
     }
-    else {
+    elsif ( $s_cont->findnodes('/pml:sdata/pml:wsd/pml:LM/pml:consists-of/pml:LM/pml:ref') ) { # FIXME
         print STDERR "Looks like a valid s-data file.\n";
         return 0;
+    }
+    else {
+        print STDERR "Looks like an invalid s-data file.\n";
+        return -1; # TODO handle this return value properly!
     }
 }
 
@@ -267,7 +280,15 @@ sub correct_snode {
     if ($is_sfile_old) {
         my $consists_of = $sdoc->createElementNS( PML_NS, 'consists-of' );
         $consists_of = $snode->appendChild($consists_of);
-        my @tnode_rf = $s_cont->findnodes( './pml:t.rf', $snode );
+        my @tnode_rf;
+        if ($is_sfile_old == 1) {
+            @tnode_rf = $s_cont->findnodes( './pml:t.rf', $snode );
+        } elsif ($is_sfile_old == 2) {
+            @tnode_rf = $s_cont->findnodes( './pml:tnode.rfs/pml:LM', $snode );
+        } else {
+            warn "Internal error: unknown format type, neither 0.1, nor 0.2";
+            return -1;
+        }
         map {
             $_->unbindNode;
             $_->setNodeName('ref');
