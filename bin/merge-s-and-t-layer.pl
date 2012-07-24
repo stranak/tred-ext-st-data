@@ -3,7 +3,7 @@
 #
 #   FILE:  merge-s-and-t-layer.pl
 #
-#   USAGE:  ./merge-s-and-t-layer.pl [--stdout|-S  --skip|-K --compress|-c] <st-files>
+#   USAGE:  ./merge-s-and-t-layer.pl [--stdout|-S  --skip|-K --compress|-c] (<st-files> or -f <filelist>)
 #
 #  DESCRIPTION:  Integrate the s-layer annotation into the t-layer files.
 #
@@ -27,7 +27,9 @@ GetOptions(
     "stdout|S"   => \our $use_stdout,
     "skip|K"     => \our $skip_existing_tmwe_files,
     "compress=i" => \our $compress
-) or die "Usage: $0 [--stdout|-S --skip|-K --compress=(0|1)] <st-files>\n";
+    "filelist|f" => \our $filelist);
+die "Usage: $0 [--stdout|-S --skip|-K --compress=(0|1)] (<st-files> or -f <filelist>)\n"
+    if not @ARGV;
 
 if ( defined $compress and $compress != 0 and $compress != 1 ) {
     die
@@ -35,6 +37,19 @@ if ( defined $compress and $compress != 0 and $compress != 1 ) {
 }
 
 my $st_suffix = qr/\.st(?:\.gz|\.zip)?$/;
+my @st_files;
+
+if ($filelist){
+    print STDERR "Filelist: $filelist\n;"
+    open(my $fh, '<:encoding(UTF-8)', $filelist);
+    @st_files = <$fh>;
+    print "FILES: ", scalar @st_files, "\n";
+    die;
+}
+# TODO: 
+# - correctly extract filenames (above)
+# - push @st_files, @ARGV;
+# - SFILE: foreach my $s_filename (@st_files) {
 
 SFILE: foreach my $s_filename (@ARGV) {
 
