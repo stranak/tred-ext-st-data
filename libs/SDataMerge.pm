@@ -24,9 +24,10 @@ use constant PML_NS => 'http://ufal.mff.cuni.cz/pdt/pml/';
 
 =head2 upgrade_st() - Upgrade (i.e. correct) the st-file, if needed
 
- Original s-files produced during annotations are not valid (according to the
- sdata schema) and they need to be transformed. This function checks whether
- the s_file needs to be corrected, and does so if needed.
+Original s-files produced during annotations are not valid (according to the
+sdata schema) and they need to be transformed. This function checks whether
+the s_file needs to be corrected, and does so if needed.
+
 =cut
 
 sub upgrade_st {
@@ -41,7 +42,7 @@ sub upgrade_st {
 
 =head2 transform() - Merge st-layer information into t-layer
 
- This is the main merging function.
+This is the main merging function.
 =cut
 
 sub transform {
@@ -125,8 +126,46 @@ sub transform {
 
 =head2 is_sfile_format_old() - Check the version of an s-file (return BOOL)
 
- Original s-files produced during annotations are not valid (according to the
- sdata schema) and they need to be transformed.
+Original s-files produced during annotations are not valid (according to the
+sdata schema) and they need to be transformed. That is the s-data format
+v0.1:
+  <st id="s-mf930709-001-l18">
+    <lexicon-id>s##person</lexicon-id>
+    <t.rf>t#t-mf930709-001-p4s1w22</t.rf>
+    <t.rf>t#t-mf930709-001-p4s1w23</t.rf>
+  </st>
+
+
+Then there is a format that is valid, but obsolete. That is the s-data format
+v0.2:
+  <wsd>
+    <st id="s-cmpr9410-005-l1">
+      <lexicon-id>s#0000024608</lexicon-id>
+      <tnode.rfs>
+        <LM>t#t-cmpr9410-005-p4s3w1</LM>
+        <LM>t#t-cmpr9410-005-p4s3w2</LM>
+      </tnode.rfs>
+    </st>
+    ...
+  </wsd>
+
+The new (and output) format has a MWE structure in the element C<< <consists-of> >>:
+  <st id="s-mf930709-001-l70">
+    <lexicon-id>s#0000031207</lexicon-id>
+    <consists-of>
+      <LM>
+        <ref>t#t-mf930709-001-p1s1w6</ref>
+      </LM>
+      <LM>
+        <ref>t#t-mf930709-001-p1s1w7</ref>
+      </LM>
+    </consists-of>
+  </st>
+
+This is basically the v0.2 with a possibility to add more information to each
+part of a MWE, not just a t-node reference. Other than that, only C<<
+<tnode.rfs> >> is renamed to C<< <consists-of> >>.
+
 =cut
 
 sub is_sfile_format_old {
@@ -227,17 +266,18 @@ sub get_t_trees {
             push @this_file_mwe_ids, @this_tree_mwe_ids;
         }
 
-        # 2) check for the last annotator-suffix used
+        # 2) check for the last annotator-suffix used.
+        # FRAGILE: This relis on the fact that PDT IDs end with numbers.
         my %seen;
         my @suff = sort grep { $_ = chop; !$seen{$_}++ } @this_file_mwe_ids;
 print STDERR "MWE annot. suffixes used: ", join ', ', @suff, "\n";
         $annot_id_suffix = pop @suff;
 
-        # 3) get the next letter and set it as the suffix for this s-file's
-        # annotator
+        # 3) get the next letter and set it as the suffix 
+        # for this s-file's annotator
         given($annot_id_suffix){
             when(/\d/){ 
-                # a number as the "last annotator's suffix" means 
+                # a number as the "last annotator's suffix" means that
                 # it was the first annotator. The next one (2nd) will be "A".
                 $annot_id_suffix = 'A';
             }
@@ -248,7 +288,8 @@ print STDERR "This annotator's MWE ID suffix: $annot_id_suffix\n";
             when( $_ eq 'Z' ) {
                 die "There are 25 annotations already! We do not support more.";
             }
-            when( undef ){ # no mwes in the tmwe file
+            when( undef ){ 
+                # no mwes in the tmwe file. Consider this the first annotator.
                 $annot_id_suffix = '';
             }
             default { 
