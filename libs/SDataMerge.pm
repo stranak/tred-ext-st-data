@@ -35,9 +35,13 @@ sub upgrade_st {
     my ($sdoc) = @_;
     my $s_cont = XML::LibXML::XPathContext->new( $sdoc->documentElement() );
     $s_cont->registerNs( pml => PML_NS );
-    my @snodes = $s_cont->findnodes('/pml:sdata/pml:wsd/pml:st');
-    map correct_snode( $sdoc, $s_cont, $_, 'yes', '', '', '' ), @snodes
-      if is_sfile_format_old($s_cont);    # TODO 'yes' should be either 1 or 2
+    my @snodes       = $s_cont->findnodes('/pml:sdata/pml:wsd/pml:st');
+    my $sdata_format = detect_sdata_format($s_cont);
+    if ( $sdata_format == 1 or $sdata_format == 2 )
+    {    # old sdata format was detected
+        map correct_snode( $sdoc, $s_cont, $_, $sdata_format, '', '', '' ),
+          @snodes;
+    }
     return $sdoc;
 }
 
@@ -79,11 +83,14 @@ sub transform {
         $tdoc = 'empty s-file';
         return $tdoc;
     }
-    my $is_sfile_old = is_sfile_format_old($s_cont);
+    my $sdata_format = detect_sdata_format($s_cont);
   SNODE:
     foreach my $snode (@snodes) {
-        correct_snode( $sdoc, $s_cont, $snode, $is_sfile_old, $annotator,
-            $annot_id_suffix, 'merge' );
+        correct_snode( $sdoc, $s_cont, $snode, $sdata_format, $annotator,
+                $annot_id_suffix, 'merge' );
+        # whan merging, all s-nodes must be corrected: at least renamed and the
+        # links to t-nodes must be corrected too, even if the s-file format is
+        # current.
 
         # ID of the first t-node in this s-node
         my $s_first_tnode =
@@ -126,7 +133,7 @@ sub transform {
     return $tdoc;
 }
 
-=head2 is_sfile_format_old() - Check the version of an s-file (return BOOL)
+=head2 detect_sdata_format() - Check the version of an s-file (return BOOL)
 
 Original s-files produced during annotations are not valid (according to the
 sdata schema) and they need to be transformed. That is the s-data format
@@ -140,16 +147,13 @@ B<v0.1>:
 
 Then there is a format that is valid, but obsolete. That is the s-data format
 B<v0.2>:
-  <wsd>
-    <st id="s-cmpr9410-005-l1">
-      <lexicon-id>s#0000024608</lexicon-id>
-      <tnode.rfs>
-        <LM>t#t-cmpr9410-005-p4s3w1</LM>
-        <LM>t#t-cmpr9410-005-p4s3w2</LM>
-      </tnode.rfs>
-    </st>
-    ...
-  </wsd>
+  <st id="s-cmpr9410-005-l1">
+    <lexicon-id>s#0000024608</lexicon-id>
+    <tnode.rfs>
+      <LM>t#t-cmpr9410-005-p4s3w1</LM>
+      <LM>t#t-cmpr9410-005-p4s3w2</LM>
+    </tnode.rfs>
+  </st>
 
 The B<new (and output) format> has a MWE structure in the element C<< <consists-of> >>:
   <st id="s-mf930709-001-l70">
@@ -170,7 +174,7 @@ part of a MWE, not just a t-node reference. Other than that, only C<<
 
 =cut
 
-sub is_sfile_format_old {
+sub detect_sdata_format {
     my $s_cont = shift;
     if ( $s_cont->findnodes('/pml:sdata/pml:wsd/pml:st/pml:t.rf') ) {
         print STDERR
@@ -188,15 +192,15 @@ sub is_sfile_format_old {
     }
     elsif (
         $s_cont->findnodes(
-            '/pml:sdata/pml:wsd/pml:LM/pml:consists-of/pml:LM/pml:ref')
+            '/pml:sdata/pml:wsd/pml:st/pml:consists-of/pml:LM/pml:ref')
       )
-    {    # FIXME
+    {   
         print STDERR "Looks like a valid s-data file.\n";
         return 0;
     }
     else {
         print STDERR "Looks like an invalid s-data file.\n";
-        return -1;    # TODO handle this return value properly!
+        return -1;
     }
 }
 
@@ -205,7 +209,7 @@ sub is_sfile_format_old {
 Gets DOM and XPath context of an st-file and returns information about
 tectogrammatical file that this st-file will be merged into.
 
-First candidate is a *.t.mwe file of the same basename, i.e. a t-layer
+First candidate is a C<*.t.mwe> file of the same basename, i.e. a t-layer
 file that has already been merged with some st-file. This is done to merge
 multiple annotations into the t.mwe file. Only if this file dosn't yet
 exist, the original PDT t-file is taken.
@@ -216,7 +220,7 @@ context and name of its PML schema (to be modified for t.mwe file).
 In case of merging with an existing t.mwe file the existing s-node IDs are
 checked and a unique single-letter suffix for this annotator (to be added to
 his s-node IDs) is returned as the last argument. The first annotator has no
-suffix. The second one gets "A", etc.
+suffix. The second one gets C<A>, etc.
 
 B<Warning:> It is not advisable to keep bot compressed and uncompressed t.mwe
 files in the same directory. Should they be there the behaviour if as follows:
@@ -262,7 +266,7 @@ sub get_t_trees {
     # s-node IDs are unique only for a given annotator.
     # So they can conflict, if merging several annotators' s-nodes.
     # So, if we are taking an existing tmwe-file:
-    my $annot_id_suffix;
+    my $annot_id_suffix = '';
     if ( -s $t_mwe_file_abs_path ) {
 
         # 1) get the s-node (MWE) IDs already in the t-file.
@@ -288,6 +292,8 @@ sub get_t_trees {
                 # a number as the "last annotator's suffix" means that
                 # it was the first annotator. The next one (2nd) will be "A".
                 $annot_id_suffix = 'A';
+                print STDERR
+                  "This annotator's MWE ID suffix: $annot_id_suffix\n";
             }
             when (/[A-Y]/) {
                 $annot_id_suffix = chr( ord($annot_id_suffix) + 1 );
@@ -297,19 +303,11 @@ sub get_t_trees {
             when ( $_ eq 'Z' ) {
                 die "There are 25 annotations already! We do not support more.";
             }
-            when (undef) {
-
-                # no mwes in the tmwe file. Consider this the first annotator.
-                $annot_id_suffix = '';
-            }
             default {
                 die
 "mwe ID ending in something other than number or [A-Z]: \"$annot_id_suffix\"";
             }
         }
-    }
-    else {    # not merging with an existing tmwe file - the first annotator
-        $annot_id_suffix = '';
     }
 
     return ( \@t_roots, $tdoc, $t_cont, $t_schema, $annot_id_suffix );
@@ -333,33 +331,30 @@ are moved directly into the resulting (t-mwe) t-file, and
 =item *
 
 Gives each s-node (C<mwes/LM> now) ID a suffix, so that s-node IDs are unique
-even in case we merge several annotators' s-nodes into one t-tree.
+even in case we merge several annotators' s-nodes into one t-tree. The first
+annotator does not get a prefix, because it is not needed.
 
 =back
 
 =cut
 
 sub correct_snode {
-    my ( $sdoc, $s_cont, $snode, $is_sfile_old, $annotator, $annot_suffix,
+    my ( $sdoc, $s_cont, $snode, $sdata_format, $annotator, $annot_suffix,
         $merge_st_into_t )
       = @_;
 
     # Modify the s-node to the correct form:
     # if the s-file is in the old (original) format,
     # the t-node refs in a s-node must be changed to a proper PML list
-    if ($is_sfile_old) {
+    if ($sdata_format ==1 or $sdata_format == 2) {
         my $consists_of = $sdoc->createElementNS( PML_NS, 'consists-of' );
         $consists_of = $snode->appendChild($consists_of);
         my @tnode_rf;
-        if ( $is_sfile_old == 1 ) {
+        if ( $sdata_format == 1 ) {
             @tnode_rf = $s_cont->findnodes( './pml:t.rf', $snode );
         }
-        elsif ( $is_sfile_old == 2 ) {
+        elsif ( $sdata_format == 2 ) {
             @tnode_rf = $s_cont->findnodes( './pml:tnode.rfs/pml:LM', $snode );
-        }
-        else {
-            warn "Internal error: unknown format type, neither 0.1, nor 0.2";
-            return -1;
         }
         map {
             $_->unbindNode;
@@ -368,6 +363,13 @@ sub correct_snode {
             $consists_of->appendChild($LM);
             $LM->appendChild($_);
         } @tnode_rf;
+    }
+    elsif ( $sdata_format == 0 ) {
+        # current format, nothing to do here
+    }
+    else {
+        warn "Unknown sdata format, neither 0.1, nor 0.2, nor current";
+        return -1;
     }
 
     # and now, if it is to be be merged into t-layer:
