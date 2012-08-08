@@ -12,6 +12,7 @@ L<transform()|transform> is the transformation used in the C<TrEd> extension.
 
 package SDataMerge;
 
+use v5.10;
 use strict;
 use warnings;
 use XML::LibXML;
@@ -68,10 +69,6 @@ sub transform {
     my ( $t_tree_listref, $tdoc, $t_cont, $t_schema, $annot_id_suffix ) =
       get_t_trees( $sdoc, $s_cont );
     $t_schema->setAttribute( 'href', 'tdata_mwe_schema.xml' );
-
-    # if this t-file does not yet include any MWE annotations, this annotator
-    # is the first. Thus his IDs get the suffix 'A'.
-    $annot_id_suffix = 'A' if not $annot_id_suffix;
 
     # Modify the s-nodes to the correct form and merge them into t-trees ...
     # ... if there are any s-nodes, of course
@@ -173,7 +170,8 @@ context and name of its PML schema (to be modified for t.mwe file).
 
 In case of merging with an existing t.mwe file the existing s-node IDs are
 checked and a unique single-letter suffix for this annotator (to be added to
-his s-node IDs) is returned as the last argument. 
+his s-node IDs) is returned as the last argument. The first annotator has no
+suffix. The second one gets "A", etc.
 
 B<Warning:> It is not advisable to keep bot compressed and uncompressed t.mwe
 files in the same directory. Should they be there the behaviour if as follows:
@@ -225,21 +223,41 @@ sub get_t_trees {
         my @this_file_mwe_ids = ();
         foreach my $t_root (@t_roots) {
             my @mwes = $t_cont->findnodes( 'pml:mwes/pml:LM', $t_root );
-            my @mwe_ids = map { $_->getAttribute('id') } @mwes;
-            push @this_file_mwe_ids, @mwe_ids;
+            my @this_tree_mwe_ids = map { $_->getAttribute('id') } @mwes;
+            push @this_file_mwe_ids, @this_tree_mwe_ids;
         }
 
         # 2) check for the last annotator-suffix used
         my %seen;
         my @suff = sort grep { $_ = chop; !$seen{$_}++ } @this_file_mwe_ids;
-        print STDERR "MWE annot. suffixes used: ", join ', ', @suff, "\n";
+print STDERR "MWE annot. suffixes used: ", join ', ', @suff, "\n";
         $annot_id_suffix = pop @suff;
-        die "There are 25 annotations already! We do not support more." if $annot_id_suffix eq 'Z';
 
         # 3) get the next letter and set it as the suffix for this s-file's
         # annotator
-        $annot_id_suffix = chr( ord($annot_id_suffix) + 1 );
-        print STDERR "This annotator's MWE ID suffix: $annot_id_suffix\n";
+        given($annot_id_suffix){
+            when(/\d/){ 
+                # a number as the "last annotator's suffix" means 
+                # it was the first annotator. The next one (2nd) will be "A".
+                $annot_id_suffix = 'A';
+            }
+            when(/[A-Y]/){
+                $annot_id_suffix = chr( ord($annot_id_suffix) + 1 );
+print STDERR "This annotator's MWE ID suffix: $annot_id_suffix\n";
+            }
+            when( $_ eq 'Z' ) {
+                die "There are 25 annotations already! We do not support more.";
+            }
+            when( undef ){ # no mwes in the tmwe file
+                $annot_id_suffix = '';
+            }
+            default { 
+die "mwe ID ending in something other than number or [A-Z]: \"$annot_id_suffix\"";
+                }
+        }
+    }
+    else { # not merging with an existing tmwe file - the first annotator
+        $annot_id_suffix = '';
     }
 
     return ( \@t_roots, $tdoc, $t_cont, $t_schema, $annot_id_suffix );
@@ -304,7 +322,8 @@ sub correct_snode {
         $snode->setNodeName('LM');
 
         # add the annotator-specific suffix to the s-node ID
-        # see the function get_t_trees() for its setting
+        # see the function get_t_trees() for its setting.
+        # It is an empty string if this is the first annotator.
         my $id = $snode->getAttribute('id');
         $id = $id . $annot_suffix;
         $snode->setAttribute( 'id', "$id" );
