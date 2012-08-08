@@ -1,3 +1,4 @@
+
 =head1 SDataMerge: the s-data merging library
 
 =head2 AUTHOR:  Pavel Stranak (C<stranak@ufal.mff.cuni.cz>)
@@ -36,7 +37,7 @@ sub upgrade_st {
     $s_cont->registerNs( pml => PML_NS );
     my @snodes = $s_cont->findnodes('/pml:sdata/pml:wsd/pml:st');
     map correct_snode( $sdoc, $s_cont, $_, 'yes', '', '', '' ), @snodes
-      if is_sfile_format_old($s_cont); # TODO 'yes' should be either 1 or 2
+      if is_sfile_format_old($s_cont);    # TODO 'yes' should be either 1 or 2
     return $sdoc;
 }
 
@@ -88,15 +89,16 @@ sub transform {
         my $s_first_tnode =
           $s_cont->findvalue( './pml:consists-of/pml:LM[1]/pml:ref', $snode );
         if ( !$s_first_tnode ) {
-          warn "There is no such node: consists-of/LM/ref. Skipped.\n";
-          next;
+            warn "There is no such node: consists-of/LM/ref. Skipped.\n";
+            next;
         }
 
       TROOT: foreach my $troot ( @{$t_tree_listref} ) {
             my @nodes_in_this_tree = (
                 $t_cont->findnodes( './/pml:children/pml:LM', $troot ),
+
                 # and just in case the t-files use the PML 1-member-list folding
-                $t_cont->findnodes( './/pml:children[@id]',   $troot ),
+                $t_cont->findnodes( './/pml:children[@id]', $troot ),
             );
             my @tnode_ids = map $_->getAttribute('id'), @nodes_in_this_tree;
             my $match = first { $_ eq $s_first_tnode } @tnode_ids;
@@ -128,7 +130,7 @@ sub transform {
 
 Original s-files produced during annotations are not valid (according to the
 sdata schema) and they need to be transformed. That is the s-data format
-v0.1:
+B<v0.1>:
   <st id="s-mf930709-001-l18">
     <lexicon-id>s##person</lexicon-id>
     <t.rf>t#t-mf930709-001-p4s1w22</t.rf>
@@ -137,7 +139,7 @@ v0.1:
 
 
 Then there is a format that is valid, but obsolete. That is the s-data format
-v0.2:
+B<v0.2>:
   <wsd>
     <st id="s-cmpr9410-005-l1">
       <lexicon-id>s#0000024608</lexicon-id>
@@ -149,7 +151,7 @@ v0.2:
     ...
   </wsd>
 
-The new (and output) format has a MWE structure in the element C<< <consists-of> >>:
+The B<new (and output) format> has a MWE structure in the element C<< <consists-of> >>:
   <st id="s-mf930709-001-l70">
     <lexicon-id>s#0000031207</lexicon-id>
     <consists-of>
@@ -184,13 +186,17 @@ sub is_sfile_format_old {
         print STDERR "The s-data file contains no st-node.\n";
         return;
     }
-    elsif ( $s_cont->findnodes('/pml:sdata/pml:wsd/pml:LM/pml:consists-of/pml:LM/pml:ref') ) { # FIXME
+    elsif (
+        $s_cont->findnodes(
+            '/pml:sdata/pml:wsd/pml:LM/pml:consists-of/pml:LM/pml:ref')
+      )
+    {    # FIXME
         print STDERR "Looks like a valid s-data file.\n";
         return 0;
     }
     else {
         print STDERR "Looks like an invalid s-data file.\n";
-        return -1; # TODO handle this return value properly!
+        return -1;    # TODO handle this return value properly!
     }
 }
 
@@ -240,9 +246,10 @@ sub get_t_trees {
     $t_mwe_file_URI =~ s/t\.gz$/t\.mwe/;
     my $t_mwe_file_abs_path = $t_mwe_file_URI;
     $t_mwe_file_abs_path =~ s{file://}{};
-    $t_file_URI = -s $t_mwe_file_abs_path       ? $t_mwe_file_URI
-                : -s $t_mwe_file_abs_path.".gz" ? $t_mwe_file_URI.".gz"
-                :                                 $t_file_URI;
+    $t_file_URI =
+        -s $t_mwe_file_abs_path         ? $t_mwe_file_URI
+      : -s $t_mwe_file_abs_path . ".gz" ? $t_mwe_file_URI . ".gz"
+      :                                   $t_file_URI;
 
     my $parser = XML::LibXML->new();
     $parser->keep_blanks(0);
@@ -270,34 +277,38 @@ sub get_t_trees {
         # FRAGILE: This relis on the fact that PDT IDs end with numbers.
         my %seen;
         my @suff = sort grep { $_ = chop; !$seen{$_}++ } @this_file_mwe_ids;
-print STDERR "MWE annot. suffixes used: ", join ', ', @suff, "\n";
+        print STDERR "MWE annot. suffixes used: ", join ', ', @suff, "\n";
         $annot_id_suffix = pop @suff;
 
-        # 3) get the next letter and set it as the suffix 
+        # 3) get the next letter and set it as the suffix
         # for this s-file's annotator
-        given($annot_id_suffix){
-            when(/\d/){ 
+        given ($annot_id_suffix) {
+            when (/\d/) {
+
                 # a number as the "last annotator's suffix" means that
                 # it was the first annotator. The next one (2nd) will be "A".
                 $annot_id_suffix = 'A';
             }
-            when(/[A-Y]/){
+            when (/[A-Y]/) {
                 $annot_id_suffix = chr( ord($annot_id_suffix) + 1 );
-print STDERR "This annotator's MWE ID suffix: $annot_id_suffix\n";
+                print STDERR
+                  "This annotator's MWE ID suffix: $annot_id_suffix\n";
             }
-            when( $_ eq 'Z' ) {
+            when ( $_ eq 'Z' ) {
                 die "There are 25 annotations already! We do not support more.";
             }
-            when( undef ){ 
+            when (undef) {
+
                 # no mwes in the tmwe file. Consider this the first annotator.
                 $annot_id_suffix = '';
             }
-            default { 
-die "mwe ID ending in something other than number or [A-Z]: \"$annot_id_suffix\"";
-                }
+            default {
+                die
+"mwe ID ending in something other than number or [A-Z]: \"$annot_id_suffix\"";
+            }
         }
     }
-    else { # not merging with an existing tmwe file - the first annotator
+    else {    # not merging with an existing tmwe file - the first annotator
         $annot_id_suffix = '';
     }
 
@@ -340,11 +351,13 @@ sub correct_snode {
         my $consists_of = $sdoc->createElementNS( PML_NS, 'consists-of' );
         $consists_of = $snode->appendChild($consists_of);
         my @tnode_rf;
-        if ($is_sfile_old == 1) {
+        if ( $is_sfile_old == 1 ) {
             @tnode_rf = $s_cont->findnodes( './pml:t.rf', $snode );
-        } elsif ($is_sfile_old == 2) {
+        }
+        elsif ( $is_sfile_old == 2 ) {
             @tnode_rf = $s_cont->findnodes( './pml:tnode.rfs/pml:LM', $snode );
-        } else {
+        }
+        else {
             warn "Internal error: unknown format type, neither 0.1, nor 0.2";
             return -1;
         }
