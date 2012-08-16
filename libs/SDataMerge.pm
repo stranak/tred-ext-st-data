@@ -116,7 +116,7 @@ sub transform {
                     ($mwes) = $t_cont->findnodes( './pml:mwes', $troot );
 
                     # check for existing annotators, get this annotator the
-                    # next unocuppied letter-suffix (A-Z).
+                    # next unocuppied letter-suffix (B-Z).
                 }
                 else {
                     $mwes = $tdoc->createElementNS( PML_NS, 'mwes' );
@@ -220,7 +220,7 @@ context and name of its PML schema (to be modified for t.mwe file).
 In case of merging with an existing t.mwe file the existing s-node IDs are
 checked and a unique single-letter suffix for this annotator (to be added to
 his s-node IDs) is returned as the last argument. The first annotator has no
-suffix. The second one gets C<A>, etc.
+suffix. The second one gets C<B>, etc.
 
 B<Warning:> It is not advisable to keep bot compressed and uncompressed t.mwe
 files in the same directory. Should they be there the behaviour if as follows:
@@ -278,17 +278,17 @@ sub get_t_trees {
         }
 
         # 2) check for the last annotator-suffix used.
-        # FRAGILE: This relis on the fact that PDT IDs end with numbers.
+        # FRAGILE: This relis on the fact that PDT IDs don't end with letters.
         my %seen;
         my @suff = sort
             grep { !$seen{$_}++ }
-            grep { /[A-Z]/ }
+            grep { /[B-Z]/ }
             map  { $_ = chop }
                 @this_file_mwe_ids;
         if (@suff) {
             print STDERR "MWE annot. suffixes used: ", join(', ', @suff), "\n";
         } else {
-            print STDERR "No MWE annot. suffixes used so far. "
+            print STDERR "MWEs present, but no parallel annotation so far. "
                 . "(I.e. 2nd annotator is being added now.)\n";
         }
         $annot_id_suffix = pop @suff;
@@ -299,12 +299,12 @@ sub get_t_trees {
             when (undef) {
 
                 # an undef as the "last annotator's suffix" means that
-                # it was the first annotator. The next one (2nd) will be "A".
-                $annot_id_suffix = 'A';
+                # it was the first annotator. The next one (2nd) will be "B".
+                $annot_id_suffix = 'B';
                 print STDERR
                   "This annotator's MWE ID suffix: $annot_id_suffix\n";
             }
-            when (/[A-Y]/) {
+            when (/[B-Y]/) {
                 $annot_id_suffix = chr( ord($annot_id_suffix) + 1 );
                 print STDERR
                   "This annotator's MWE ID suffix: $annot_id_suffix\n";
@@ -314,7 +314,7 @@ sub get_t_trees {
             }
             default {
                 die
-"mwe ID ending in something other than number or [A-Z]: \"$annot_id_suffix\"";
+"mwe ID ending in something other than number or [B-Z]: \"$annot_id_suffix\"";
             }
         }
     }
