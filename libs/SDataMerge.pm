@@ -280,7 +280,10 @@ sub get_t_trees {
         # 2) check for the last annotator-suffix used.
         # FRAGILE: This relis on the fact that PDT IDs end with numbers.
         my %seen;
-        my @suff = sort grep { $_ = chop; !$seen{$_}++ } @this_file_mwe_ids;
+        my @suff = sort
+            grep { !$seen{$_}++ }
+            map  { $_ = chop }
+                @this_file_mwe_ids;
         print STDERR "MWE annot. suffixes used: ", join(', ', @suff), "\n";
         $annot_id_suffix = pop @suff;
 
