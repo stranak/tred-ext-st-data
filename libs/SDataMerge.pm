@@ -372,6 +372,9 @@ sub correct_snode {
             $consists_of->appendChild($LM);
             $LM->appendChild($_);
         } @tnode_rf;
+        if ( $sdata_format == 2 ) {
+            ${$s_cont->findnodes( './pml:tnode.rfs', $snode )}[0]->unbindNode;
+        }
     }
     elsif ( $sdata_format == 0 ) {
         # current format, nothing to do here
