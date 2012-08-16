@@ -281,7 +281,7 @@ sub get_t_trees {
         # FRAGILE: This relis on the fact that PDT IDs end with numbers.
         my %seen;
         my @suff = sort grep { $_ = chop; !$seen{$_}++ } @this_file_mwe_ids;
-        print STDERR "MWE annot. suffixes used: ", join ', ', @suff, "\n";
+        print STDERR "MWE annot. suffixes used: ", join(', ', @suff), "\n";
         $annot_id_suffix = pop @suff;
 
         # 3) get the next letter and set it as the suffix
