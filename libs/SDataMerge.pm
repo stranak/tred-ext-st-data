@@ -1,4 +1,3 @@
-
 =head1 SDataMerge: the s-data merging library
 
 =head2 AUTHOR:  Pavel Stranak (C<stranak@ufal.mff.cuni.cz>)
@@ -114,9 +113,6 @@ sub transform {
                 my $mwes;
                 if ( $t_cont->exists( './pml:mwes', $troot ) ) {
                     ($mwes) = $t_cont->findnodes( './pml:mwes', $troot );
-
-                    # check for existing annotators, get this annotator the
-                    # next unocuppied letter-suffix (B-Z).
                 }
                 else {
                     $mwes = $tdoc->createElementNS( PML_NS, 'mwes' );
