@@ -219,8 +219,8 @@ checked and a unique single-letter suffix for this annotator (to be added to
 his s-node IDs) is returned as the last argument. The first annotator has no
 suffix. The second one gets C<B>, etc.
 
-B<Warning:> It is not advisable to keep bot compressed and uncompressed t.mwe
-files in the same directory. Should they be there the behaviour if as follows:
+B<Warning:> It is not advisable to keep both compressed and uncompressed t.mwe
+files in the same directory. Should they be there the behaviour is as follows:
 The uncompressed t.mwe file has a precedence and so it is chosen for merging.
 However the output can still end up in the t.mwe.gz file. This depends on the
 caller script that uses this library!

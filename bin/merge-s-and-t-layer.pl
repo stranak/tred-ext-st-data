@@ -24,10 +24,10 @@ use lib "$Bin/../libs/";
 use SDataMerge;
 use Getopt::Long;
 GetOptions(
-    "stdout|S"        => \our $use_stdout,
-    "skip|K"          => \our $skip_existing_tmwe_files,
-    "compress=i"      => \our $compress,
-    "output-format=s" => \our $output_version,
+    "stdout|S"        => \my $use_stdout,
+    "skip|K"          => \my $skip_existing_tmwe_files,
+    "compress=i"      => \my $compress,
+    "output-format=s" => \my $output_version,
         # needs string -- '0.2' is not a number for GetOpt::Long
 ) or die "Usage: $0 [--stdout|-S --skip|-K --compress=(0|1)] "
 		."[--output-format 0.2] <st-files>\n";
