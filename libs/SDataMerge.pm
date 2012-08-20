@@ -122,7 +122,9 @@ sub transform {
                 # cut the s-node from s-file and attach it here
                 my $snode_parent = $snode->parentNode;
                 $snode = $snode_parent->removeChild($snode);
-                $snode = transform_to_format($snode, $s_cont, $output_version);
+                $snode = transform_to_format($snode, $s_cont,
+                    ($output_version eq "input_version"
+                        ? $sdata_format : $output_version));
                 $mwes->appendChild($snode);
             }
         }
@@ -219,8 +221,8 @@ checked and a unique single-letter suffix for this annotator (to be added to
 his s-node IDs) is returned as the last argument. The first annotator has no
 suffix. The second one gets C<B>, etc.
 
-B<Warning:> It is not advisable to keep bot compressed and uncompressed t.mwe
-files in the same directory. Should they be there the behaviour if as follows:
+B<Warning:> It is not advisable to keep both compressed and uncompressed t.mwe
+files in the same directory. Should they be there the behaviour is as follows:
 The uncompressed t.mwe file has a precedence and so it is chosen for merging.
 However the output can still end up in the t.mwe.gz file. This depends on the
 caller script that uses this library!
@@ -405,6 +407,7 @@ sub correct_snode {
 
 sub transform_to_format {
     my ($snode, $s_cont, $version) = @_;
+    $version = "0.$version" if $version =~ /^[123]$/;
 
     given ($version) {
         when (undef) { return $snode }  # unspecified -> last version
