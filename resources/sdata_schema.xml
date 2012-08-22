@@ -68,6 +68,7 @@
  <!-- s-node linking a sense to a set of t-nodes -->
  <derive name="st-node.type" type="s-node.type">
    <structure>
+     <member name="basic-form" as_attribute="1"><cdata format="string"/></member>
      <member name="consists-of">
        <list ordered="0" type="mwe-component.type"/>
      </member> 
@@ -77,7 +78,6 @@
  <type name="mwe-component.type">
      <structure>
          <member name="ref" required="1"><cdata format="any"/></member>
-         <member name="basic-form" as_attribute="1"><cdata format="string"/></member>
          <member name="addr-part" as_attribute="1" type="addr-part.type"/>
      </structure>
  </type>
