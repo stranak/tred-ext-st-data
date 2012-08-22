@@ -1,4 +1,3 @@
-
 =head1 SDataMerge: the s-data merging library
 
 =head2 AUTHOR:  Pavel Stranak (C<stranak@ufal.mff.cuni.cz>)
@@ -51,7 +50,7 @@ This is the main merging function.
 =cut
 
 sub transform {
-    my ( $sdoc, $s_filename ) = @_;
+    my ( $sdoc, $s_filename, $output_version ) = @_;
     my $s_cont = XML::LibXML::XPathContext->new( $sdoc->documentElement() );
     $s_cont->registerNs( pml => PML_NS );
     my $annot_string = $s_cont->findvalue(
@@ -88,7 +87,7 @@ sub transform {
     foreach my $snode (@snodes) {
         correct_snode( $sdoc, $s_cont, $snode, $sdata_format, $annotator,
                 $annot_id_suffix, 'merge' );
-        # whan merging, all s-nodes must be corrected: at least renamed and the
+        # when merging, all s-nodes must be corrected: at least renamed and the
         # links to t-nodes must be corrected too, even if the s-file format is
         # current.
 
@@ -114,9 +113,6 @@ sub transform {
                 my $mwes;
                 if ( $t_cont->exists( './pml:mwes', $troot ) ) {
                     ($mwes) = $t_cont->findnodes( './pml:mwes', $troot );
-
-                    # check for existing annotators, get this annotator the
-                    # next unocuppied letter-suffix (B-Z).
                 }
                 else {
                     $mwes = $tdoc->createElementNS( PML_NS, 'mwes' );
@@ -126,6 +122,9 @@ sub transform {
                 # cut the s-node from s-file and attach it here
                 my $snode_parent = $snode->parentNode;
                 $snode = $snode_parent->removeChild($snode);
+                $snode = transform_to_format($snode, $s_cont,
+                    ($output_version eq "input_version"
+                        ? $sdata_format : $output_version));
                 $mwes->appendChild($snode);
             }
         }
@@ -222,8 +221,8 @@ checked and a unique single-letter suffix for this annotator (to be added to
 his s-node IDs) is returned as the last argument. The first annotator has no
 suffix. The second one gets C<B>, etc.
 
-B<Warning:> It is not advisable to keep bot compressed and uncompressed t.mwe
-files in the same directory. Should they be there the behaviour if as follows:
+B<Warning:> It is not advisable to keep both compressed and uncompressed t.mwe
+files in the same directory. Should they be there the behaviour is as follows:
 The uncompressed t.mwe file has a precedence and so it is chosen for merging.
 However the output can still end up in the t.mwe.gz file. This depends on the
 caller script that uses this library!
@@ -404,6 +403,37 @@ sub correct_snode {
 
     }
     return;
+}
+
+sub transform_to_format {
+    my ($snode, $s_cont, $version) = @_;
+    $version = "0.$version" if $version =~ /^[123]$/;
+
+    given ($version) {
+        when (undef) { return $snode }  # unspecified -> last version
+        when ("0.3") { return $snode }  # 0.3 is the last version
+        when ("0.2") {
+            # from <consists-of> <LM> <ref> id </ref> </LM> </consists-of>
+            # to   <tnode.rfs>   <LM>       id        </LM> </tnode.rfs>
+            foreach my $packing_node
+                    ($s_cont->findnodes( './pml:consists-of', $snode )) {
+                $packing_node->setNodeName( 'pml:tnode.rfs' );
+                foreach my $LM_ref
+                        ($s_cont->findnodes(
+                                './pml:LM/pml:ref', $packing_node )) {
+                    $LM_ref->parentNode->appendText($LM_ref->textContent());
+                    $LM_ref->unbindNode;
+                }
+            }
+        }
+        when ("0.1") {
+            print( "Format v0.1 is not supported for the output.\n" );
+            print( "Format v0.3 is used, instead.\n" );
+        }
+        default { print( "Unrecognised format specification: $version.\n" ); }
+    }
+
+    return $snode;
 }
 
 1;

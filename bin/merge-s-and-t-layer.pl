@@ -24,15 +24,20 @@ use lib "$Bin/../libs/";
 use SDataMerge;
 use Getopt::Long;
 GetOptions(
-    "stdout|S"   => \our $use_stdout,
-    "skip|K"     => \our $skip_existing_tmwe_files,
-    "compress=i" => \our $compress
-) or die "Usage: $0 [--stdout|-S --skip|-K --compress=(0|1)] <st-files>\n";
+    "stdout|S"        => \my $use_stdout,
+    "skip|K"          => \my $skip_existing_tmwe_files,
+    "compress=i"      => \my $compress,
+    "output-format=s" => \my $output_version,
+    "preserve-format" => \my $preserve_format,
+        # needs string -- '0.2' is not a number for GetOpt::Long
+) or die "Usage: $0 [--stdout|-S --skip|-K --compress=(0|1)]\n"
+        ."\t[--output-format 0.2 | --preserve-format] <st-files>\n";
 
 if ( defined $compress and $compress != 0 and $compress != 1 ) {
     die
 "The option --compress specifies whether the output should be gzipped. Its value must be 0 or 1.";
 }
+$output_version = "input_version" if defined($preserve_format);
 
 my $st_suffix = qr/\.st(?:\.gz|\.zip)?$/;
 
@@ -64,7 +69,7 @@ SFILE: foreach my $s_filename (@ARGV) {
     my $sdoc = $parser->parse_file($s_filename);
 
     # The merge itself (an external lib function)
-    my $tdoc = SDataMerge::transform( $sdoc, $s_filename );
+    my $tdoc = SDataMerge::transform( $sdoc, $s_filename, $output_version );
     if ( $tdoc eq 'empty s-file' ) {
         print STDERR
           " Skipping the file $s_filename, because it contains no st-nodes . ";
