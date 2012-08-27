@@ -123,7 +123,7 @@ sub transform {
                 my $snode_parent = $snode->parentNode;
                 $snode = $snode_parent->removeChild($snode);
                 $snode = transform_to_format($snode, $s_cont,
-                    ($output_version eq "input_version"
+                    ($output_version and $output_version eq "input_version"
                         ? $sdata_format : $output_version));
                 $mwes->appendChild($snode);
             }
@@ -407,7 +407,7 @@ sub correct_snode {
 
 sub transform_to_format {
     my ($snode, $s_cont, $version) = @_;
-    $version = "0.$version" if $version =~ /^[123]$/;
+    $version = "0.$version" if $version and $version =~ /^[123]$/;
 
     given ($version) {
         when (undef) { return $snode }  # unspecified -> last version
