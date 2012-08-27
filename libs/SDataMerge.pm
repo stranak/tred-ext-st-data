@@ -50,7 +50,7 @@ This is the main merging function.
 =cut
 
 sub transform {
-    my ( $sdoc, $s_filename, $output_version ) = @_;
+    my ( $sdoc, $s_filename, $output_version, $verbose ) = @_;
     my $s_cont = XML::LibXML::XPathContext->new( $sdoc->documentElement() );
     $s_cont->registerNs( pml => PML_NS );
     my $annot_string = $s_cont->findvalue(
@@ -72,7 +72,7 @@ sub transform {
     }
 
     my ( $t_tree_listref, $tdoc, $t_cont, $t_schema, $annot_id_suffix ) =
-      get_t_trees( $sdoc, $s_cont );
+      get_t_trees( $sdoc, $s_cont, $verbose );
     $t_schema->setAttribute( 'href', 'tdata_mwe_schema.xml' );
 
     # Modify the s-nodes to the correct form and merge them into t-trees ...
@@ -82,7 +82,7 @@ sub transform {
         $tdoc = 'empty s-file';
         return $tdoc;
     }
-    my $sdata_format = detect_sdata_format($s_cont);
+    my $sdata_format = detect_sdata_format($s_cont, $verbose);
   SNODE:
     foreach my $snode (@snodes) {
         correct_snode( $sdoc, $s_cont, $snode, $sdata_format, $annotator,
@@ -99,6 +99,7 @@ sub transform {
             next;
         }
 
+        my $snode_was_inserted = 0;
       TROOT: foreach my $troot ( @{$t_tree_listref} ) {
             my @nodes_in_this_tree = (
                 $t_cont->findnodes( './/pml:children/pml:LM', $troot ),
@@ -123,11 +124,14 @@ sub transform {
                 my $snode_parent = $snode->parentNode;
                 $snode = $snode_parent->removeChild($snode);
                 $snode = transform_to_format($snode, $s_cont,
-                    ($output_version eq "input_version"
+                    ($output_version and $output_version eq "input_version"
                         ? $sdata_format : $output_version));
                 $mwes->appendChild($snode);
+                $snode_was_inserted = 1;
             }
         }
+        warn "WARNING: s-node with $s_first_tnode was skipped (no match)!\n"
+            if !$snode_was_inserted;
     }
     return $tdoc;
 }
@@ -174,15 +178,17 @@ part of a MWE, not just a t-node reference. Other than that, only C<<
 =cut
 
 sub detect_sdata_format {
-    my $s_cont = shift;
+    my ( $s_cont, $verbose ) = @_;
     if ( $s_cont->findnodes('/pml:sdata/pml:wsd/pml:st/pml:t.rf') ) {
         print STDERR
-          "Looks like s-data format v0.1. Applying a small transformation.\n";
+          "Looks like s-data format v0.1. Applying a small transformation.\n"
+            if $verbose;
         return 1;
     }
     elsif ( $s_cont->findnodes('/pml:sdata/pml:wsd/pml:st/pml:tnode.rfs') ) {
         print STDERR
-          "Looks like s-data format v0.2. Applying a small transformation.\n";
+          "Looks like s-data format v0.2. Applying a small transformation.\n"
+            if $verbose;
         return 2;
     }
     elsif ( not $s_cont->findnodes('/pml:sdata/pml:wsd/pml:st') ) {
@@ -194,7 +200,7 @@ sub detect_sdata_format {
             '/pml:sdata/pml:wsd/pml:st/pml:consists-of/pml:LM/pml:ref')
       )
     {   
-        print STDERR "Looks like a valid s-data file.\n";
+        print STDERR "Looks like a valid s-data file.\n" if $verbose;
         return 0;
     }
     else {
@@ -234,7 +240,7 @@ unique ID, due to the new suffix.
 =cut
 
 sub get_t_trees {
-    my ( $sdoc, $s_cont ) = @_;
+    my ( $sdoc, $s_cont, $verbose ) = @_;
 
     # Parse t-file and get t-trees
     my $t_filename = $s_cont->findvalue(
@@ -284,11 +290,14 @@ sub get_t_trees {
             grep { /[B-Z]/ }
             map  { $_ = chop }
                 @this_file_mwe_ids;
-        if (@suff) {
-            print STDERR "MWE annot. suffixes used: ", join(', ', @suff), "\n";
-        } else {
-            print STDERR "MWEs present, but no parallel annotation so far. "
-                . "(I.e. 2nd annotator is being added now.)\n";
+        if ($verbose) {
+            if (@suff) {
+                print STDERR "MWE annot. suffixes used: ",
+                    join(', ', @suff), "\n";
+            } else {
+                print STDERR "MWEs present, but no parallel annotation so far. "
+                    . "(I.e. 2nd annotator is being added now.)\n";
+            }
         }
         $annot_id_suffix = pop @suff;
 
@@ -301,12 +310,14 @@ sub get_t_trees {
                 # it was the first annotator. The next one (2nd) will be "B".
                 $annot_id_suffix = 'B';
                 print STDERR
-                  "This annotator's MWE ID suffix: $annot_id_suffix\n";
+                  "This annotator's MWE ID suffix: $annot_id_suffix\n"
+                    if $verbose;
             }
             when (/[B-Y]/) {
                 $annot_id_suffix = chr( ord($annot_id_suffix) + 1 );
                 print STDERR
-                  "This annotator's MWE ID suffix: $annot_id_suffix\n";
+                  "This annotator's MWE ID suffix: $annot_id_suffix\n"
+                    if $verbose;
             }
             when ( $_ eq 'Z' ) {
                 die "There are 25 annotations already! We do not support more.";
@@ -407,7 +418,7 @@ sub correct_snode {
 
 sub transform_to_format {
     my ($snode, $s_cont, $version) = @_;
-    $version = "0.$version" if $version =~ /^[123]$/;
+    $version = "0.$version" if $version and $version =~ /^[123]$/;
 
     given ($version) {
         when (undef) { return $snode }  # unspecified -> last version
