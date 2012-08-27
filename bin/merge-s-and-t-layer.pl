@@ -29,9 +29,11 @@ GetOptions(
     "compress=i"      => \my $compress,
     "output-format=s" => \my $output_version,
     "preserve-format" => \my $preserve_format,
+    "verbose|V"       => \my $verbose,
         # needs string -- '0.2' is not a number for GetOpt::Long
 ) or die "Usage: $0 [--stdout|-S --skip|-K --compress=(0|1)]\n"
-        ."\t[--output-format 0.2 | --preserve-format] <st-files>\n";
+        ."\t[--output-format 0.2 | --preserve-format]\n"
+        ."\t[--verbose|V] <st-files>\n";
 
 if ( defined $compress and $compress != 0 and $compress != 1 ) {
     die
@@ -69,10 +71,12 @@ SFILE: foreach my $s_filename (@ARGV) {
     my $sdoc = $parser->parse_file($s_filename);
 
     # The merge itself (an external lib function)
-    my $tdoc = SDataMerge::transform( $sdoc, $s_filename, $output_version );
+    my $tdoc = SDataMerge::transform( $sdoc, $s_filename,
+                                      $output_version, $verbose );
     if ( $tdoc eq 'empty s-file' ) {
         print STDERR
-          " Skipping the file $s_filename, because it contains no st-nodes . ";
+          "Skipping the file $s_filename, because it contains no st-nodes.\n"
+            if $verbose;
         next SFILE;
     }
 
