@@ -72,7 +72,7 @@ SFILE: foreach my $s_filename (@ARGV) {
     my $tdoc = SDataMerge::transform( $sdoc, $s_filename, $output_version );
     if ( $tdoc eq 'empty s-file' ) {
         print STDERR
-          " Skipping the file $s_filename, because it contains no st-nodes . ";
+          "Skipping the file $s_filename, because it contains no st-nodes.\n";
         next SFILE;
     }
 
