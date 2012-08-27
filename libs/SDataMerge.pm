@@ -99,6 +99,7 @@ sub transform {
             next;
         }
 
+        my $snode_was_inserted = 0;
       TROOT: foreach my $troot ( @{$t_tree_listref} ) {
             my @nodes_in_this_tree = (
                 $t_cont->findnodes( './/pml:children/pml:LM', $troot ),
@@ -126,8 +127,11 @@ sub transform {
                     ($output_version and $output_version eq "input_version"
                         ? $sdata_format : $output_version));
                 $mwes->appendChild($snode);
+                $snode_was_inserted = 1;
             }
         }
+        warn "WARNING: s-node with $s_first_tnode was skipped (no match)!\n"
+            if !$snode_was_inserted;
     }
     return $tdoc;
 }
