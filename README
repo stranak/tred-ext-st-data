@@ -1,6 +1,6 @@
 This is an extension to the tree editor TrEd
 (http://ufal.mff.cuni.cz/tred/). Extensions are described
-here: http://ufal.mff.cuni.cz/~pajas/tred/ar01s17.html
+here: http://ufal.mff.cuni.cz/tred/documentation/ar01s17.html
 
 It allows to visualise and search for multiword-expressions and named entities
 (or anything else that somebody annotates) in the PML st-files. st-files
